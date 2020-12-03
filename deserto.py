@@ -1,6 +1,5 @@
 # MÓDULO "DESERTO"
 
-
 ###########################################################################################################
 
 import Batalha # Importando o módulo "Batalha"
@@ -8,14 +7,11 @@ import Batalha # Importando o módulo "Batalha"
 # Definição de funções
 
 def enter(): # "botão" para prosseguir
-
     return input('\naperte enter para continuar')
 
 def dunas(objetos_coletados): # função que representa a trajetória do jogador nas dunas de areia do deserto
-
     i = 0
     j = 0
-
     if "pedra" and "poção" in objetos_coletados:
         print("Você ja coletou o objeto que necessitava aqui!")
     elif "pedra" in objetos_coletados and "poção" not in objetos_coletados:
@@ -70,10 +66,8 @@ def dunas(objetos_coletados): # função que representa a trajetória do jogador
     return objetos_coletados
 
 def topo_da_montanha(objetos_coletados): # funçao que representa a trajetória do jogador no topo de uma montanha no deserto
-
     i = 0
     j = 0
-
     if "flor" and "chave" in objetos_coletados:
         print("Você ja coletou o objeto que necessitava aqui!")
     elif "flor" in objetos_coletados and "chave" not in objetos_coletados:
@@ -112,9 +106,7 @@ def topo_da_montanha(objetos_coletados): # funçao que representa a trajetória 
             else:
                 print("Digite uma opção válida!")
                 i = 0
-
         print("Descrição do caminho pelas dunas")
-
         while j < 1:
             escolha = int(input("Você encontrou uma flor do deserto! Deseja coletá-la? 1 - Sim ou 2 - Não"))
             if escolha == 1:
@@ -130,16 +122,11 @@ def topo_da_montanha(objetos_coletados): # funçao que representa a trajetória 
     return objetos_coletados
 
 def oasis(objetos_coletados, atributos): # função que representa a trajetória do jogador em um oasis no deserto
-
     # puzzle
-
     i = -1
     desbloqueio = False
-
     combinacao_correta = ["poção", "flor", "runa", "pedra"]
-
     print("Apresente a combinação de 4 objetos que é o código para desbloquear a passagem ao oasis!")
-
     objeto_1 = input("Qual o primeiro objeto da sequência?")
     if objeto_1 not in objetos_coletados:
         return(f'Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto e colete-o. Em seguida, tente conseguir acesso ao oasis novamente!')
@@ -177,7 +164,6 @@ hp =
 # Introdução do ambiente (deserto) ao jogador
 print("Você chegou ao deserto!")
 print("ADICIONAR DESCRIÇÃO INTRODUTÓRIA DO DESERTO")
-
 enter()
 
 # O jogador escolhe para qual local deseja ir primeiro (dunas de areia, topo da montanha ou oasis)
@@ -193,11 +179,9 @@ if escolha_1 == 1:
 
     # Descrição do ambiente ao jogador
     print("ADICIONAR DESCRIÇÃO DAS DUNAS DE AREIA")
-
     enter()
 
     # Chama função dunas()
-
     dunas(meus_objetos_coletados)
 
     print("Você está prosseguindo sua caminhada...")
