@@ -164,17 +164,13 @@ def oasis(objetos_coletados, atributos): # função que representa a trajetória
                         #print(
                         return(f'Parabéns! Você desbloqueou o acesso ao oasis e seus atributos melhoraram! Força: {atributos[0]}; destreza: {atributos[1]}; inteligência: {atributos[2]}; sorte: {atributos[3]}; carisma:  {atributos[4]}.') 
 
-def puzzle_2():
- 
-    pass
-
 ############################################################################################################################
 
 x = 0 # Variável utilizada para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
 
 meus_objetos_coletados = [] # Lista para incluir os objetos que o jogador coleta ao logo da trajetória no deserto
-meus_atributos = [5, 4, 2, -1, 3] # Valores dos atributos do jogador: força, (...), (...), (...) e (...), respectivamente 
-# hp = 
+meus_atributos =  # Valores dos atributos do jogador: força, destreza, inteligência, sorte e carisma, respectivamente 
+hp = 
 
 # Ao longo da trajetória pelo deserto, o jogador encontrará objetos e decidirá se quer coletá-los ou não.
 
@@ -208,7 +204,6 @@ if escolha_1 == 1:
 
     # O jogador escolhe para onde ir em seguida
     escolha_2 == int(input("Qual é o seu próximo destino? 1 - Topo da montanha / 2 - Oasis"))
-
     
 # DAS DUNAS DECIDIU SEGUIR PARA O TOPO DA MONTANHA
 
@@ -223,7 +218,7 @@ if escolha_1 == 1:
 
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
         #if coleta_de_objetos == 1:
-         #   batalha() # chamada da função para batalhas do módulo principal
+         #   Batalha.funcao() # chamada da função para batalhas do módulo principal
         #else:
          #   enter()
 
@@ -300,7 +295,7 @@ if escolha_1 == 1:
 
             # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
             #if coleta_de_objetos == 1:
-             #   batalha() # chamada da função para batalhas do módulo principal
+             #   Batalha.funcao() # chamada da função para batalhas do módulo principal
             #else:
              #   enter()
 
@@ -317,7 +312,6 @@ if escolha_1 == 1:
                     enter()
         else:
             enter()
-
 
 elif escolha_1 == 2:
 
@@ -411,10 +405,10 @@ elif escolha_1 == 2:
         elif escolha_2 == 2:
 
 # DO TOPO DA MONTANHA DECIDIU SEGUIR PARA O OASIS
-
-
+# Implementar
+				    
 # Do oasis segiu às dunas
-
+# Implementar
             
 if escolha_1 == 3:
 
@@ -453,9 +447,10 @@ if escolha_1 == 3:
     elif escolha_2 == 2:
 
 # DO OASIS DECIDIU SEGUIR PARA O TOPO DA MONTANHA
-
+# Implementar
+				    
 # Do topo da montanha seguiu para as dunas
-
+# Implementar
         
 while x < 1:
 
