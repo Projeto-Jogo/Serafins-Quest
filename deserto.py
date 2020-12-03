@@ -214,11 +214,11 @@ if escolha_1 == 1:
         print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE AS DUNAS E O TOPO DA MONTANHA")
 
         # O jogador encontra uma serpente no caminho e decide se deseja coletá-la ou não
-        #coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
+        coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
 
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
-        #if coleta_de_objetos == 1:
-         #   Batalha.funcao() # chamada da função para batalhas do módulo principal
+        if coleta_de_objetos == 1:
+            Batalha.funcao() # chamada da função para batalhas do módulo principal
         #else:
          #   enter()
 
@@ -339,10 +339,10 @@ elif escolha_1 == 2:
 
         #coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
 
-        #if coleta_de_objetos == 1:
-         #   Batalha.batalha(Serpente, jogador) # Chama a função "batalha" do módulo Batalha
-        #else:
-         #   enter()
+        if coleta_de_objetos == 1:
+            Batalha.batalha(Serpente, jogador) # Chama a função "batalha" do módulo Batalha
+        else:
+            enter()
 
         if "chave" not in meus_objetos_coletados:
             coleta_de_objetos = int(input("Você encontrou uma chave! Deseja coletá-la? 1 - Sim / 2 - Não")
@@ -413,8 +413,7 @@ elif escolha_1 == 2:
 if escolha_1 == 3:
 
 # ESCOLHEU OASIS PRIMEIRO:
-
-
+				    
     print("Você chegou a um oasis!")
 
     enter()
@@ -435,10 +434,10 @@ if escolha_1 == 3:
 
         #coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
 
-        #if coleta_de_objetos == 1:
-         #   Batalha.batalha(Serpente, jogador) # chama a função "batalha" do módulo Batalha
-        #else:
-         #   enter()
+        if coleta_de_objetos == 1:
+            Batalha.batalha(Serpente, jogador) # chama a função "batalha" do módulo Batalha
+        else:
+            enter()
          
         print("Só resta um local para explorar agora...")
 
