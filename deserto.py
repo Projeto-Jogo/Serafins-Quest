@@ -1,7 +1,9 @@
-# MÓDULO DO DESERTO
+# MÓDULO "DESERTO"
 
 
 ###########################################################################################################
+
+import Batalha # Importando o módulo "Batalha"
 
 # Definição de funções
 
@@ -169,11 +171,8 @@ def oasis(objetos_coletados, atributos): # função que representa a trajetória
 x = 0 # Variável utilizada para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
 
 meus_objetos_coletados = [] # Lista para incluir os objetos que o jogador coleta ao logo da trajetória no deserto
-meus_atributos = [5, 4, 2, -1, 3] # Valores dos atributos do jogador: força, destreza, inteligência, sorte e carisma, respectivamente 
-# hp = 
-
-# Ao longo da trajetória pelo deserto, o jogador encontrará objetos e decidirá se quer coletá-los ou não.
-
+meus_atributos =  # Valores dos atributos do jogador: força, destreza, inteligência, sorte e carisma, respectivamente 
+hp = 
 
 # Introdução do ambiente (deserto) ao jogador
 print("Você chegou ao deserto!")
@@ -181,17 +180,18 @@ print("ADICIONAR DESCRIÇÃO INTRODUTÓRIA DO DESERTO")
 
 enter()
 
-# O jogador escolhe para qual local deseja ir (dunas de areia, topo da montanha ou oasis)
+# O jogador escolhe para qual local deseja ir primeiro (dunas de areia, topo da montanha ou oasis)
 escolha_1 = int(input("Qual local deseja explorar primeiro? 1 - Dunas de areia / 2 - Topo da montanha / 3 - Oasis"))
 
 # Se a escolha for dunas de areia:
 if escolha_1 == 1:
 
-# ESCOLHEU DUNAS PRIMEIRO:
+# CAMINHO 1
+# O jogador escolhe as dunas de areia primeiro:
 
-    print("Você chegou às dunas!")
+    print("Você está nas dunas!")
 
-    # Descrição do ambiente (dunas) ao jogador
+    # Descrição do ambiente ao jogador
     print("ADICIONAR DESCRIÇÃO DAS DUNAS DE AREIA")
 
     enter()
@@ -205,28 +205,26 @@ if escolha_1 == 1:
     # O jogador escolhe para onde ir em seguida
     escolha_2 == int(input("Qual é o seu próximo destino? 1 - Topo da montanha / 2 - Oasis"))
 
-    
-# DAS DUNAS DECIDIU SEGUIR PARA O TOPO DA MONTANHA
-
-    # Se a escolha for topo da montanha:
+	
     if escolha_2 == 1:
+# O jogador escolhe seguir das dunas para o topo da montanha:
         
-        # Descrição do caminho entre as dunas de areia ao topo da montanha
+        # Descrição do caminho
         print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE AS DUNAS E O TOPO DA MONTANHA")
 
         # O jogador encontra uma serpente no caminho e decide se deseja coletá-la ou não
-        #coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
+        coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
 
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
-        #if coleta_de_objetos == 1:
-         #   batalha() # chamada da função para batalhas do módulo principal
-        #else:
-         #   enter()
+        if coleta_de_objetos == 1:
+            Batalha.batalha() # chamada da função "batalha" do módulo "Batalha"
+        else:
+            enter()
 
         # Verifica se o jogador já coletou o objeto "chave" anteriormente ou não
         if "chave" not in meus_objetos_coletados:
             # Se ainda não foi coletado, o objeto aparece no caminho entre as dunas e o topo da montanha e o jogador escolhe se quer coletá-lo
-            coleta_de_objetos = int(input("Você encontrou uma chave! Deseja coletá-la? 1 - Sim / 2 - Não")
+            coleta_de_objetos = int(input("Você encontrou uma chave! Deseja coletá-la? 1 - Sim / 2 - Não"))
 
             # Se o jogador optar por coletá-lo, o objeto será adicionado a lista de objetos coletados
             if coleta_de_objetos == 1:
@@ -251,10 +249,10 @@ if escolha_1 == 1:
 
         print("Só resta um local para explorar agora...")
         
-# Do topo da montanha seguiu ao oasis
+# Finalmente, o jogador segue do topo da montanha a um oasis
 
-        # O jogador encontra um oasis
-
+	print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE O TOPO DA MONTANHA ATÉ O ENCONTRO DE UM OASIS NO DESERTO")
+				
         print("Há um oasis a alguns metros!")
 
         if "runa" not in meus_objetos_coletados:
@@ -265,14 +263,13 @@ if escolha_1 == 1:
                 enter()
         else:
             enter()
-   
-        print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE O TOPO DA MONTANHA ATÉ O ENCONTRO DE UM OASIS NO DESERTO")
 
         oasis(meus_objetos_coletados, meus_atributos)     
-
-# DAS DUNAS DECIDIU SEGUIR AO OASIS
+				    
 
         elif escolha_2 == 2:
+	
+# DAS DUNAS DECIDIU SEGUIR AO OASIS
 
             # O jogador encontra uma serpente no caminho e decide se deseja coletá-la ou não
             #coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
