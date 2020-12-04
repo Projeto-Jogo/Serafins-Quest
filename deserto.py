@@ -479,7 +479,7 @@ if escolha_1 == 3:
         enter()
         print("ADICIONAR DESCRIÇÃO DAS DUNAS DE AREIA")
         dunas(meus_objetos_coletados)
-        print("Você está prosseguindo sua caminhada...")j
+        print("Você está prosseguindo sua caminhada...")
         enter()
 				    
 
