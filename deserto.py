@@ -6,9 +6,9 @@ import Batalha # Importando o módulo "Batalha"
 
 # Definição de funções
 
-def enter(): # "botão" para prosseguir
+def enter(): # "Botão" para prosseguir
     return input('\naperte enter para continuar')
-def dunas(objetos_coletados): # função que representa a trajetória do jogador nas dunas de areia do deserto
+def dunas(objetos_coletados): # Função para a trajetória do jogador nas dunas de areia do deserto
     # i, j, k, w são variáveis utilizadas
     i = 0
     j = 0
@@ -22,9 +22,11 @@ def dunas(objetos_coletados): # função que representa a trajetória do jogador
             if escolha == 1:
                 objetos_coletados.append("poção")
                 print("Poção coletada!")
+                print("Seu novo item é 'poção'!")
                 i += 1
             elif escolha == 2:
                 print("OK!")
+                print("Você não coletou nenhum novo item!")
                 i += 1
             else:
                 print("Escolha uma opção válida!")
@@ -34,9 +36,11 @@ def dunas(objetos_coletados): # função que representa a trajetória do jogador
             if escolha == 1:
                 objetos_coletados.append("pedra")
                 print("Pedra coletada!")
+                print("Seu novo item é 'pedra'!")
                 j += 1
             elif escolha == 2:
                 print("OK!")
+                print("Você não coletou nenhum novo item!")
                 j += 1
             else:
                 print("Escolha uma opção válida!")
@@ -65,7 +69,14 @@ def dunas(objetos_coletados): # função que representa a trajetória do jogador
                 w += 1
             else:
                 print("Escolha uma opção válida!")
-    return objetos_coletados
+        if "poção" in objetos_coletados and "pedra" in objetos_coletados:
+            print("Seus novos itens são 'poção' e 'pedra'!")
+        elif "poção" in objetos_coletados and "pedra" not in objetos_coletados:
+            print("Seu novo item é 'poção'!")
+        elif "pedra" in objetos_coletdos and "poção" not in objetos_coletados:
+            print("Seu novo item é 'pedra'!")
+        else:
+            print("Você não coletou novos itens!")
 def topo_da_montanha(objetos_coletados): # funçao que representa a trajetória do jogador no topo de uma montanha no deserto
     i = 0
     if "flor" in objetos_coletados:
@@ -430,13 +441,12 @@ if escolha_1 == 3:
 
     elif escolha_2 == 2:
 
-# CAMINHO 6:
+# CAMINHO 6
 # O jogador segue do oasis ao topo da montanha
-
-        if "runa" not in meus_objetos_coletados:
-            coleta_de_objetos = int(input("Você encontrou uma runa! Deseja coletá-la? 1 - Sim / 2 - Não")
+        if "runa" not in meus_objetos_coletados: # Se o jogador não coletou a runa antes, ele encontra uma no caminho
+            coleta_de_objetos = int(input("Você encontrou uma runa! Deseja coletá-la? 1 - Sim / 2 - Não") # O jogador decide se quer coletá-la ou não
             if coleta_de_objetos == 1:
-                meus_objetos_coletados.append("runa")
+                meus_objetos_coletados.append("runa") # Caso o jogador escolha coletá-la, a runa é adicionada à sua lista
             else:
                 enter()
         else:
@@ -481,6 +491,4 @@ if escolha_1 == 3:
         dunas(meus_objetos_coletados)
         print("Você está prosseguindo sua caminhada...")
         enter()
-				    
-
 				    
