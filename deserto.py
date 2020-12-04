@@ -52,6 +52,8 @@ def dunas(objetos_coletados): # função que representa a trajetória do jogador
                 k += 1
             else:
                 print("Escolha uma opção válida!")
+        print("ADICIONAR DESCRIÇÃO DE UM CAMINHO")
+        enter()
         while w < 1:
             escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
             if escolha == 1:
