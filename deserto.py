@@ -10,11 +10,7 @@ def enter(): # (OK) "Botão" para prosseguir
     return input('\naperte enter para continuar')
 def dunas(objetos_coletados): # (OK) Função que representa a trajetória do jogador nas dunas de areia do deserto 
     # i, j, k, w e z são variáveis utilizadas para o mecaismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
-    i = 0
-    j = 0
-    k = 0
-    w = 0
-    z = 0
+    i = j = k = w = z = 0
     if "pedra" in objetos_coletados and "poção" in objetos_coletados: # Se o jogador já coletou a pedra e a poção, aparece um aviso de que não há mais objetos para coletar no local
         print("Você ja coletou os objetos que necessitava aqui!") 
     elif "pedra" in objetos_coletados and "poção" not in objetos_coletados: # Se o jogador já coletou a pedra, encontra apenas uma poção
@@ -88,11 +84,11 @@ def topo_da_montanha(objetos_coletados): # (OK) Funçao para a trajetória do jo
             escolha = int(input("Você encontrou uma flor do deserto! Deseja coletá-la? 1 - Sim ou 2 - Não"))
             if escolha == 1:
                 objetos_coletados.append("flor")
-                print("Seu novo item é uma flor do deserto!")
+                return(f"Seu novo item é uma flor do deserto!")
 		i += 1
             elif escolha == 2:
                 print("OK!")
-                return(f'Você não coletou novos itens!')
+                return(f"Você não coletou novos itens!")
                 i += 1
 	    else:
 		print("Escolha uma opção válida!")
@@ -105,19 +101,19 @@ def oasis(objetos_coletados, atributos): # função que representa a trajetória
     print("Apresente a combinação de 4 objetos que é o código para desbloquear a passagem ao oasis!")
     objeto_1 = input("Qual o primeiro objeto da sequência?")
     if objeto_1 not in objetos_coletados and objetos in combinacao_correta:
-        return(f'Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto, coletando objetos. Em seguida, tente conseguir acesso ao oasis novamente!')
+        return(f"Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto, coletando objetos. Em seguida, tente conseguir acesso ao oasis novamente!")
     else:
         objeto_2 = input("Qual o primeiro objeto da sequência?")
         if objeto_2 not in objetos_coletados:
-            return(f'Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto, coletando objetos. Em seguida, tente conseguir acesso ao oasis novamente!')
+            return(f"Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto, coletando objetos. Em seguida, tente conseguir acesso ao oasis novamente!")
         else:
             objeto_3 = input("Qual o primeiro objeto da sequência?")
             if objeto_3 not in objetos_coletados:
-                return(f'Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto, coletando objetos. Em seguida, tente conseguir acesso ao oasis novamente!')
+                return(f"Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto, coletando objetos. Em seguida, tente conseguir acesso ao oasis novamente!")
             else:
                 objeto_4 = input("Qual o primeiro objeto da sequência?")
                 if objeto_4 not in objetos_coletados:
-                    return(f'Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto, coletando objetos. Em seguida, tente conseguir acesso ao oasis novamente!')
+                    return(f"Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto, coletando objetos. Em seguida, tente conseguir acesso ao oasis novamente!")
                 else:
                     if(objeto_1 == combinacao_correta[0] and objeto_2 == combinacao_correta[1] and objeto_3 == combinacao_correta[2] and objeto_4 == combinacao_correta[3]):
                         desbloqueio = True
@@ -126,9 +122,9 @@ def oasis(objetos_coletados, atributos): # função que representa a trajetória
                              if atributos[i] < 5:
                                  atributos[i] += 2
                         #print(
-                        return(f'Parabéns! Você desbloqueou o acesso ao oasis e seus atributos melhoraram! Força: {atributos[0]}; destreza: {atributos[1]}; inteligência: {atributos[2]}; sorte: {atributos[3]}; carisma:  {atributos[4]}.')
+                        return(f"Parabéns! Você desbloqueou o acesso ao oasis e seus atributos melhoraram! Força: {atributos[0]}; destreza: {atributos[1]}; inteligência: {atributos[2]}; sorte: {atributos[3]}; carisma:  {atributos[4]}.")
     if desbloqueio == False:
-        return(f'Combinação incorreta! Você não conseguiu acesso ao oasis! Tente novamente!')
+        return(f"Combinação incorreta! Você não conseguiu acesso ao oasis! Tente novamente!")
 def retornar(local, meus_objetos_coletados, *atributos):
     if local == "Dunas":
         return dunas(objetos_coletados)
@@ -140,8 +136,7 @@ def retornar(local, meus_objetos_coletados, *atributos):
 ############################################################################################################################
 
 # x e y são variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
-x = 0 
-y = 0
+x = y = 0
 meus_objetos_coletados = [] # Lista para incluir os objetos que o jogador coleta ao logo da trajetória no deserto
 meus_atributos =  # Valores dos atributos do jogador: força, destreza, inteligência, sorte e carisma, respectivamente 
 hp = 
