@@ -1,17 +1,40 @@
-# FUNCOES
 
 import random as rd
 
+import os
 
-# DADO
-def dado(x, y):
-    return rd.randint(x, y)
+os.system("cls")
+
+import sys
+
+import time
+
+import Batalha as bt
+
+import Floresta as fl
+
+import Deserto as ds
+
+
+
+# Função para gerar números aleatórios
+def dado(min, max):
+    return rd.randint(min, max)
 
 
 # BOTAO PARA PROGREDIR
 def enter():
-    return input('\naperte enter para continuar')
+    input('\n\u001b[37;1maperte enter para continuar\u001b[0m')
+    delete_last_lines(1)
+    return
 
+# Função para apagar linhas
+def delete_last_lines(n):
+    cursor_up_one = '\x1b[1A'
+    erase_line = '\x1b[2K'
+    for _ in range(n):
+        sys.stdout.write(cursor_up_one)
+        sys.stdout.write(erase_line)
 
 # Dicionários para as armas
 mao = {"nome": "mão", "atributo": "FOR", "dano": "0-1", "min": 0, "max": 1}
@@ -36,6 +59,7 @@ Serpente = {"nome": "Serpente", 'hp': 30, 'defesa': 2, 'força': 2, 'destreza': 
 
 Urso = {"nome": "Urso", 'hp': 70, 'defesa': 2, 'força': 3, 'destreza': 1, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
 
+personagem = ""
 
 # INTRODUCAO
 
@@ -49,8 +73,6 @@ print('(historia de introducao)')
 enter()
 
 # GERACAO INICIAL DOS ATRIBUTOS
-# LEMBRETE:adicionar uma soma minima dos atributos
-
 def atriubutos_gen():
 
     global personagem
@@ -94,14 +116,15 @@ def atriubutos_gen():
             if Ladrao['defesa'] + Ladrao['força'] + Ladrao['destreza'] + Ladrao['inteligência'] + Ladrao['sorte'] + Ladrao['carisma'] >= 19:
                 break
 
-
-
+atriubutos_gen()
 
 
 # APRESENTACAO DOS ATRIBUTOS AO JOGADOR
-print(f'Seus atributos:\n força = {forca}\n destreza = {destreza}\n inteligência = {inteligencia}\n sorte = {sorte}\n carisma =  {carisma} ')
+print(f'\nVoce vai jogar de {personagem["nome"]}\nSeus atributos:\n defesa = {personagem["defesa"]}\n força = {personagem["força"]}\n destreza = {personagem["destreza"]}\n inteligência = {personagem["inteligência"]}\n sorte = {personagem["sorte"]}\n carisma = {personagem["carisma"]}')
 
 enter()
+
+bt.batalha(Goblin, Soldado)
 
 # PRIMEIRA PARTE: CASTELO
 
@@ -198,6 +221,9 @@ while x < 1:
 
     else:
         print('\ndigite apenas o numero')
+
+
+
 
 
 
