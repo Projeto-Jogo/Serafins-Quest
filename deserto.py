@@ -300,6 +300,8 @@ elif escolha_1 == 2:
         
 
         elif escolha_2 == 2:
+
+# CAMINHO 4
 # O jogador segue do topo da montanha ao oasis
 
             print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE O TOPO DA MONTANHA E O OASIS")
@@ -342,7 +344,7 @@ elif escolha_1 == 2:
     
 if escolha_1 == 3:
 
-# CAMINHO 4: 
+# CAMINHO 5: 
 # O jogador escolhe seguir ao oasis primeiro 
 
     print("Você chegou a um oasis!")
@@ -400,7 +402,7 @@ if escolha_1 == 3:
 
     elif escolha_2 == 2:
 
-# CAMINHO 5:
+# CAMINHO 6:
 # O jogador segue do oasis ao topo da montanha
 
         if "runa" not in meus_objetos_coletados:
