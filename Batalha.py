@@ -301,6 +301,8 @@ forte = False
 
 final = False
 
+inimigo_acao = ""
+
 divisoria = '~'
 
 divisoria2 = '/'
@@ -456,23 +458,7 @@ def batalha(inimigo, jogador):
     fugir = False
 
 
-batalha(Goblin, Soldado)
 
-game_over(Soldado)
-
-Soldado["arma"] = adaga
-
-game_over(Soldado)
-
-batalha(Esqueleto, Soldado)
-
-game_over(Soldado)
-
-final = True
-
-batalha(Esqueleto, Mercenario)
-
-game_over(Mercenario)
 
 
 """
