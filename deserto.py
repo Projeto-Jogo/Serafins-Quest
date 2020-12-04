@@ -6,9 +6,9 @@ import Batalha # Importando o módulo "Batalha"
 
 # Definição de funções
 
-def enter(): # "Botão" para prosseguir
+def enter(): # "botão" para prosseguir
     return input('\naperte enter para continuar')
-def dunas(objetos_coletados): # Função para a trajetória do jogador nas dunas de areia do deserto
+def dunas(objetos_coletados): # (OK) Função que representa a trajetória do jogador nas dunas de areia do deserto 
     # i, j, k, w são variáveis utilizadas
     i = 0
     j = 0
@@ -23,6 +23,7 @@ def dunas(objetos_coletados): # Função para a trajetória do jogador nas dunas
                 objetos_coletados.append("poção")
                 print("Poção coletada!")
                 print("Seu novo item é 'poção'!")
+                #escolha_2 = int(input("Beber poção?"))
                 i += 1
             elif escolha == 2:
                 print("OK!")
@@ -73,7 +74,7 @@ def dunas(objetos_coletados): # Função para a trajetória do jogador nas dunas
             print("Seus novos itens são 'poção' e 'pedra'!")
         elif "poção" in objetos_coletados and "pedra" not in objetos_coletados:
             print("Seu novo item é 'poção'!")
-        elif "pedra" in objetos_coletdos and "poção" not in objetos_coletados:
+        elif "pedra" in objetos_coletados and "poção" not in objetos_coletados:
             print("Seu novo item é 'pedra'!")
         else:
             print("Você não coletou novos itens!")
@@ -441,12 +442,13 @@ if escolha_1 == 3:
 
     elif escolha_2 == 2:
 
-# CAMINHO 6
+# CAMINHO 6:
 # O jogador segue do oasis ao topo da montanha
-        if "runa" not in meus_objetos_coletados: # Se o jogador não coletou a runa antes, ele encontra uma no caminho
-            coleta_de_objetos = int(input("Você encontrou uma runa! Deseja coletá-la? 1 - Sim / 2 - Não") # O jogador decide se quer coletá-la ou não
+
+        if "runa" not in meus_objetos_coletados:
+            coleta_de_objetos = int(input("Você encontrou uma runa! Deseja coletá-la? 1 - Sim / 2 - Não")
             if coleta_de_objetos == 1:
-                meus_objetos_coletados.append("runa") # Caso o jogador escolha coletá-la, a runa é adicionada à sua lista
+                meus_objetos_coletados.append("runa")
             else:
                 enter()
         else:
