@@ -114,9 +114,19 @@ def oasis(objetos_coletados, atributos): # função que representa a trajetória
                         #print(
                         return(f'Parabéns! Você desbloqueou o acesso ao oasis e seus atributos melhoraram! Força: {atributos[0]}; destreza: {atributos[1]}; inteligência: {atributos[2]}; sorte: {atributos[3]}; carisma:  {atributos[4]}.') 
 
+def retornar(local, meus_objetos_coletados, *atributos):
+    if local == "Dunas":
+        return dunas(objetos_coletados)
+    elif local == "Topo da montanha":
+        return topo_da_montanha(objetos_coletados)
+    elif local == "Oasis":
+        return oasis(objetos_coletados, atributos)
+
 ############################################################################################################################
 
-x = 0 # Variável utilizada para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
+# x e y são variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
+x = 0 
+y = 0
 meus_objetos_coletados = [] # Lista para incluir os objetos que o jogador coleta ao logo da trajetória no deserto
 meus_atributos =  # Valores dos atributos do jogador: força, destreza, inteligência, sorte e carisma, respectivamente 
 hp = 
@@ -195,10 +205,28 @@ if escolha_1 == 1:
                 enter()
         else:
             enter()
-        oasis(meus_objetos_coletados, meus_atributos)     
-				    
+        oasis(meus_objetos_coletados, meus_atributos)   
+	missao = oasis(meus_objetos_coletados, meus_atributos) 
+	if missao != " ":
+	    while x < 0:
+	        escolha_1 = int(input("1 - Retornar a algum dos locais que já explorou / 2 - Seguir no caminho?")
+	            if escolha_1 == 1:
+	                x += 1
+	                while y < 0:
+	                    escolha_2 = int(input("Para qual local quer retornar? 1 - Dunas de areia / 2 - Topo da montanha / 3 - Oasis")
+			        if escolha_2 == 1:
+	                            retornar("Dunas", meus_objetos_coletados)
+				    y += 1
+			        elif escolha_2 == 2:
+			            retornar("Topo da montanha")
+				    y += 1
+			        elif escolha_2 == 3:
+		                    retornar("Oasis" meus_objetos_coletados, atributos)
+				    y += 1
+			        else:
+			            print("Escolha uma opção válida!")
+				    	
         elif escolha_2 == 2:
-				    
 # CAMINHO 2
 # O jogador escolhe seguir das dunas de areia ao oasis:
 
@@ -451,35 +479,8 @@ if escolha_1 == 3:
         enter()
         print("ADICIONAR DESCRIÇÃO DAS DUNAS DE AREIA")
         dunas(meus_objetos_coletados)
-        print("Você está prosseguindo sua caminhada...")
+        print("Você está prosseguindo sua caminhada...")j
         enter()
+				    
 
-while x < 1:
-    if x == -1:
-        escolha = int(input("2 - Retornar às dunas ou 3 - Retornar ao topo da montanha?"))
-    else:
-        escolha = int(input("1 - Prosseguir no caminho, 2 - Retornar às dunas ou 3 - Retornar ào topo da montanha?"))
-    # continua o caminho ao oasis
-    if escolha == 1:
-        x += 1
-    # retorna às dunas
-    elif escolha == 2:
-        print("Você retornou às dunas de areia.")
-        dunas(meus_objetos_coletados)    
-        escolha = int(input("1 - Prosseguir no caminho ou 2 - Retornar a um dos locais anteriores?"))  
-        if escolha == 1:
-            x += 1
-        else: 
-            x = -1
-    # retorna ao topo da montanha
-    elif escolha == 3:
-        print("Você retornou ao topo da montanha.")
-        topo_da_montanha(meus_objetos_coletados)    
-        escolha = int(input("1 - Prosseguir no caminho ou 2 - Retornar a um dos locais anteriores"))  
-        if escolha == 1:
-            if x == 0:
-                x += 1
-            if x == -1:
-                x += 2
-        else:
-            x = -1
+				    
