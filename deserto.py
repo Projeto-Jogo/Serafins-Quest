@@ -270,7 +270,7 @@ elif escolha_1 == 2:
         coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
         if coleta_de_objetos == 1:
-            Batalha.batalha() # Chamada da função "batalha" do módulo "Batalha"
+            Batalha.batalha(Serpente, jogador) # Chamada da função "batalha" do módulo "Batalha"
         else:
             enter()
         print("Você chegou às dunas!")
@@ -288,7 +288,7 @@ elif escolha_1 == 2:
         coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
         if coleta_de_objetos == 1:
-            Batalha.batalha() # Chamada da função "batalha" do módulo "Batalha"
+            Batalha.batalha(Serpente, jogador) # Chamada da função "batalha" do módulo "Batalha"
         else:
             enter()
          
@@ -321,7 +321,7 @@ elif escolha_1 == 2:
         coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
         if coleta_de_objetos == 1:
-            Batalha.batalha() # Chamada da função "batalha" do módulo "Batalha"
+            Batalha.batalha(Serpente, jogador) # Chamada da função "batalha" do módulo "Batalha"
         else:
             enter()
         print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE O OASIS E AS DUNAS DE AREIA")
@@ -358,7 +358,7 @@ if escolha_1 == 3:
         coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
         if coleta_de_objetos == 1:
-            Batalha.batalha() # Chamada da função "batalha" do módulo "Batalha"
+            Batalha.batalha(Serpente, jogador) # Chamada da função "batalha" do módulo "Batalha"
         else:
             enter()
         print("Você chegou às dunas de areia!")
@@ -374,7 +374,7 @@ if escolha_1 == 3:
         coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
         if coleta_de_objetos == 1:
-            Batalha.batalha() # Chamada da função "batalha" do módulo "Batalha"
+            Batalha.batalha(Serpente, jogador) # Chamada da função "batalha" do módulo "Batalha"
         else:
             enter()
         # Verifica se o jogador já coletou o objeto "chave" anteriormente ou não
@@ -428,7 +428,7 @@ if escolha_1 == 3:
 
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
         if coleta_de_objetos == 1:
-            Batalha.batalha() # Chamada da função "batalha" do módulo "Batalha"
+            Batalha.batalha(Serpente, jogador) # Chamada da função "batalha" do módulo "Batalha"
         else:
             enter()
         # Verifica se o jogador já coletou o objeto "chave" anteriormente ou não
