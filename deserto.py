@@ -9,35 +9,61 @@ import Batalha # Importando o módulo "Batalha"
 def enter(): # "botão" para prosseguir
     return input('\naperte enter para continuar')
 def dunas(objetos_coletados): # função que representa a trajetória do jogador nas dunas de areia do deserto
+    # i, j, k, w são variáveis utilizadas
+    i = 0
+    j = 0
+    k = 0
+    w = 0
     if "pedra" in objetos_coletados and "poção" in objetos_coletados:
         print("Você ja coletou os objetos que necessitava aqui!")
     elif "pedra" in objetos_coletados and "poção" not in objetos_coletados:
-        escolha = int(input("Você encontrou uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não"))
-        if escolha == 1:
-            objetos_coletados.append("poção")
-            print("Poção coletada!")
-        elif escolha == 2:
-            print("OK!")
-    elif "poção" in objetos_coletados and "pedra" not in objetos_coletados:
-        escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
-        if escolha == 1:
-            objetos_coletados.append("pedra")
-            print("Pedra coletada!")
-        elif escolha == 2:
-            print("OK!")
-    else:
-        escolha = int(input("Você encontrou uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não"))
-        if escolha == 1:
-            objetos_coletados.append("poção")
-            print("Poção coletada!")
-        elif escolha == 2:
-            print("OK!")
-        escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
-        if escolha == 1:
-            objetos_coletados.append("pedra")
-            print("Pedra coletada!")
-        elif escolha == 2:
-            print("OK!")
+	while i < 1:
+            escolha = int(input("Você encontrou uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não"))
+            if escolha == 1:
+                objetos_coletados.append("poção")
+                print("Poção coletada!")
+		i += 1
+	    elif escolha == 2:
+                print("OK!")
+		i += 1
+	    else:
+		print("Escolha uma opção válida!")
+		
+     elif "poção" in objetos_coletados and "pedra" not in objetos_coletados:
+         escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
+	 while j < 1:
+             if escolha == 1:
+                 objetos_coletados.append("pedra")
+                 print("Pedra coletada!")
+		 i += 1
+             elif escolha == 2:
+                 print("OK!")
+		 i += 1
+	     else:
+		 print("Escolha uma opção válida!")
+     else:
+         escolha = int(input("Você encontrou uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não"))
+	 while k < 1:
+             if escolha == 1:
+                 objetos_coletados.append("poção")
+                 print("Poção coletada!")
+		 k += 1
+             elif escolha == 2:
+                 print("OK!")
+	  	 k += 1
+	     else:
+		 print("Escolha uma opção válida!")
+         escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
+	 while w < 1
+             if escolha == 1:
+                 objetos_coletados.append("pedra")
+                 print("Pedra coletada!")
+		 while += 1
+             elif escolha == 2:
+                 print("OK!")
+		 w += 1
+	     else:
+		 print("Escolha uma opção válida!")
 
     return objetos_coletados
 def topo_da_montanha(objetos_coletados): # funçao que representa a trajetória do jogador no topo de uma montanha no deserto
