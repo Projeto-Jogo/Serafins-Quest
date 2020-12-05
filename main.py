@@ -87,38 +87,38 @@ def atributos_gen():
 
     Ladrao = {"nome": "Ladrão", 'hp': 100, 'defesa': 4, 'força': 2, 'destreza': 5, 'inteligência': 3, 'sorte': 3, 'carisma': 5, "arma": mao}          #Ladrao tem      defesa baixa, força baixa, destreza alta,  inteligência media, sorte media, carisma alta
 
-        if a == 1:
-            personagem = Soldado
-            Soldado['defesa'] = dado(4,6)
-            Soldado['força'] = dado(3,5)
-            Soldado['destreza'] = dado(2,4)
-            Soldado['inteligência'] = dado(1,3)
-            Soldado['sorte'] = dado(4,6)
-            Soldado['carisma'] = dado(2,4)
-            if Soldado['defesa'] + Soldado['força'] + Soldado['destreza'] + Soldado['inteligência'] + Soldado['sorte'] + Soldado['carisma'] >= 19:
-                break
+    if a == 1:
+        personagem = Soldado
+        Soldado['defesa'] = dado(4,6)
+        Soldado['força'] = dado(3,5)
+        Soldado['destreza'] = dado(2,4)
+        Soldado['inteligência'] = dado(1,3)
+        Soldado['sorte'] = dado(4,6)
+        Soldado['carisma'] = dado(2,4)
+        if Soldado['defesa'] + Soldado['força'] + Soldado['destreza'] + Soldado['inteligência'] + Soldado['sorte'] + Soldado['carisma'] >= 19:
+            break
 
-        elif a == 2:
-            personagem = Mercenario
-            Mercenario['defesa'] = dado(5,7)
-            Mercenario['força'] = dado(2,4)
-            Mercenario['destreza'] = dado(3,5)
-            Mercenario['inteligência'] = dado(4,6)
-            Mercenario['sorte'] = dado(1,3)
-            Mercenario['carisma'] = dado(1,3)
-            if Mercenario['defesa'] + Mercenario['força'] + Mercenario['destreza'] + Mercenario['inteligência'] + Mercenario['sorte'] + Mercenario['carisma'] >= 19:
-                break
+    elif a == 2:
+        personagem = Mercenario
+        Mercenario['defesa'] = dado(5,7)
+        Mercenario['força'] = dado(2,4)
+        Mercenario['destreza'] = dado(3,5)
+        Mercenario['inteligência'] = dado(4,6)
+        Mercenario['sorte'] = dado(1,3)
+        Mercenario['carisma'] = dado(1,3)
+        if Mercenario['defesa'] + Mercenario['força'] + Mercenario['destreza'] + Mercenario['inteligência'] + Mercenario['sorte'] + Mercenario['carisma'] >= 19:
+            break
 
-        elif a == 3:
-            personagem = Ladrao
-            Ladrao['defesa'] = dado(3,5)
-            Ladrao['força'] = dado(1,3)
-            Ladrao['destreza'] = dado(4,6)
-            Ladrao['inteligência'] = dado(2,4)
-            Ladrao['sorte'] = dado(2,4)
-            Ladrao['carisma'] = dado(4,6)
-            if Ladrao['defesa'] + Ladrao['força'] + Ladrao['destreza'] + Ladrao['inteligência'] + Ladrao['sorte'] + Ladrao['carisma'] >= 19:
-                break
+    else:
+        personagem = Ladrao
+        Ladrao['defesa'] = dado(3,5)
+        Ladrao['força'] = dado(1,3)
+        Ladrao['destreza'] = dado(4,6)
+        Ladrao['inteligência'] = dado(2,4)
+        Ladrao['sorte'] = dado(2,4)
+        Ladrao['carisma'] = dado(4,6)
+        if Ladrao['defesa'] + Ladrao['força'] + Ladrao['destreza'] + Ladrao['inteligência'] + Ladrao['sorte'] + Ladrao['carisma'] >= 19:
+            break
         
     return personagem
 
