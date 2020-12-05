@@ -103,7 +103,6 @@ def topo_da_montanha(objetos_coletados): # (OK) Funçao para a trajetória do jo
 	    else:
 		print("Escolha uma opção válida!")
 def oasis(objetos_coletados, atributos): # Função para a trajetória do jogador em um oasis no deserto
-    # puzzle
     a = b = c = d = e = 0 # 
     i = -1
     desbloqueio = False
@@ -172,8 +171,12 @@ def oasis(objetos_coletados, atributos): # Função para a trajetória do jogado
                                             print("Seus atributos melhoraram!")
                                             hp = hp += 2
                                             print(f'Você ganhou 2 HPs!')
-                                        
-                                            
+                                            print("Ha uma nota lá dentro também...")
+					    decisao = input("Pressione 'enter' para ler!")
+					    print("Na nota está escrito: 'URSO'")
+				            print("Hmm... o que será que isto quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
+					    enter()
+					    missao_cumprida = True
                             elif escolha_1 == 2:
                                 a += 1
                                 print("Você mergulhou no lago!")
@@ -183,14 +186,12 @@ def oasis(objetos_coletados, atributos): # Função para a trajetória do jogado
                                 print("Nadando e chegando mais perto, você vê que é um báu!")
                                 escolha_3 = int(input("Deseja coletar o bau?"))
                                     while c < 1:
-
     if desbloqueio == False:
         print(f"Combinação incorreta! Você não conseguiu acesso ao oasis! Tente novamente!")
     if missao_cumprida == False:
         return("Você não conseguiu cumprir sua missão no oasis!")
     else:
-        return("Parabéns! Você cumpriu sua missão, obtendo uma dica valiosa para continuar!")
-
+        return("Parabéns! Você cumpriu sua missão, aumentando seus atributos, ganhando HPs e obtendo uma dica para continuar!")
 def retornar(local, objetos_coletados, *atributos): # (OK) Funçao utilizada para que o jogador possa retornar a lugares por quais já passou anteriormente
     if local == "Dunas":
         print("Bem vindo(a) de volta ao oasis!")
@@ -204,8 +205,7 @@ def retornar(local, objetos_coletados, *atributos): # (OK) Funçao utilizada par
 
 ############################################################################################################################
 
-# x e y são variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
-x = y = 0 # 
+x = y = z = 0 # x, y e z são variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
 meus_objetos_coletados = [] # Lista para incluir os objetos que o jogador coleta ao logo da trajetória no deserto
 meus_atributos = [1, 2, -3, 4, 5]  # Valores dos atributos do jogador: força, destreza, inteligência, sorte e carisma, respectivamente 
 #hp = 
@@ -495,10 +495,8 @@ if escolha_1 == 3:
         enter()
 
     elif escolha_2 == 2:
-
 # CAMINHO 6:
 # O jogador segue do oasis ao topo da montanha
-
         if "runa" not in meus_objetos_coletados:
             coleta_de_objetos = int(input("Você encontrou uma runa! Deseja coletá-la? 1 - Sim / 2 - Não")
             if coleta_de_objetos == 1:
@@ -517,13 +515,10 @@ if escolha_1 == 3:
         enter()
         
 # O jogador segue do topo da montanha às dunas de areia
-
          # Descrição do caminho entre o topo da montanha e as dunas de areia
         print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE AS DUNAS E O TOPO DA MONTANHA")
-
         # O jogador encontra uma serpente no caminho e decide se deseja coletá-la ou não
         coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim ou 2 - Não")
-
         # Se o jogador optar por coletar a serpente, haverá uma batalha com ela
         if coleta_de_objetos == 1:
             Batalha.batalha(Serpente, jogador) # Chamada da função "batalha" do módulo "Batalha"
@@ -547,4 +542,11 @@ if escolha_1 == 3:
         dunas(meus_objetos_coletados)
         print("Você está prosseguindo sua caminhada...")
         enter()
-				   
+				    
+missao_cumprida = oasis(meus_objetos_coletados, meus_atributos)
+while z < 1:
+    if missao_cumprida == "Parabéns! Você cumpriu sua missão, aumentando seus atributos, ganhando HPs e obtendo uma dica para continuar!":
+        print("Você está pronto para prosseguir em sua jornada...")
+        z += 1
+    else:
+        print("Você ainda não completou essa etapa!")
