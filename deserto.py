@@ -10,7 +10,7 @@ def enter(): # (OK) "Botão" para prosseguir
     return input('\naperte enter para continuar')
 def dunas(objetos_coletados): # (OK) Função que representa a trajetória do jogador nas dunas de areia do deserto 
     # a, b, c e d são variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
-    a = b = c = d = 0
+    a = b = c = d = e = 0
     if "pedra" in objetos_coletados and "poção" in objetos_coletados: # Se o jogador já coletou a pedra e a poção, aparece um aviso de que não há mais objetos para coletar no local
         return(f'Você ja coletou os objetos que necessitava aqui!') 
     elif "pedra" in objetos_coletados and "poção" not in objetos_coletados: # Se o jogador já coletou a pedra, encontra apenas uma poção
@@ -20,7 +20,17 @@ def dunas(objetos_coletados): # (OK) Função que representa a trajetória do jo
                 objetos_coletados.append("poção")
                 print("Poção coletada!")
                 return(f'Seu novo item é poção')
-                #escolha_2 = int(input("Beber poção?"))
+                while b < 1:
+                    escolha_2 = int(input("Beber poção? 1 - Sim / 2 - Não"))
+                    if escolha_2 == 1:
+                        hp -= 1
+                        print(f'Ah, não! Esta poção é perigosa! Você perdeu 1 HP!')
+                        b += 1
+                    elif escolha_2 == 2:
+                        print("OK!")
+                        b += 1
+                    else:
+                        print("Escolha uma opção válida!")
                 a += 1
             elif escolha == 2:
                 print("OK!")
@@ -29,42 +39,42 @@ def dunas(objetos_coletados): # (OK) Função que representa a trajetória do jo
             else:
                 print("Escolha uma opção válida!")
     elif "poção" in objetos_coletados and "pedra" not in objetos_coletados:
-        while b < 1:
+        while c < 1:
             escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
             if escolha == 1:
                 objetos_coletados.append("pedra")
                 print("Pedra coletada!")
                 return(f'Seu novo item é pedra!')
-                b += 1
+                c += 1
             elif escolha == 2:
                 print("OK!")
                 return(f'Você não coletou nenhum novo item!')
-                b += 1
+                c += 1
             else:
                 print("Escolha uma opção válida!")
     else:
-        while c < 1:
+        while d < 1:
             escolha = int(input("Você encontrou uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não"))
             if escolha == 1:
                 objetos_coletados.append("poção")
                 print("Poção coletada!")
-                c += 1
+                d += 1
             elif escolha == 2:
                 print("OK!")
-                c += 1
+                d += 1
             else:
                 print("Escolha uma opção válida!")
         print("ADICIONAR DESCRIÇÃO DE UM CAMINHO")
         enter()
-        while d < 1:
+        while e < 1:
             escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
             if escolha == 1:
                 objetos_coletados.append("pedra")
                 print("Pedra coletada!")
-                d += 1
+                e += 1
             elif escolha == 2:
                 print("OK!")
-                d += 1
+                e += 1
             else:
                 print("Escolha uma opção válida!")
         if "poção" in objetos_coletados and "pedra" in objetos_coletados:
@@ -92,9 +102,9 @@ def topo_da_montanha(objetos_coletados): # (OK) Funçao para a trajetória do jo
                 a += 1
 	    else:
 		print("Escolha uma opção válida!")
-def oasis(objetos_coletados, atributos): # função que representa a trajetória do jogador em um oasis no deserto
+def oasis(objetos_coletados, atributos): # Função para a trajetória do jogador em um oasis no deserto
     # puzzle
-    a = b = c = 0
+    a = b = c = d = e = 0 # 
     i = -1
     desbloqueio = False
     missao_cumprida = False
@@ -120,14 +130,12 @@ def oasis(objetos_coletados, atributos): # função que representa a trajetória
                         desbloqueio = True
                         while i < len(atributos) - 1:
                             i += 1
-                            if atributos[i] <= 3:
-                                atributos[i] += 2
-                            elif atributos[i] > 3 and atributos[i] < 5:
-                                atributos[i] += 1                 
+                            if atributos[i] < 5:
+                                atributos[i] += 1
                         print(f'Parabéns! Você desbloqueou o acesso ao oasis e seus atributos melhoraram! Força: {atributos[0]}; destreza: {atributos[1]}; inteligência: {atributos[2]}; sorte: {atributos[3]}; carisma:  {atributos[4]}.')
                         print("ADICIONAR DESCRIÇÃO DO OASIS")
                         while a < 1:
-                            escolha_1_1 = int(input("Qual local do oasis gostaria de explorar? 1 - Coqueiros / 2 - Lago "))
+                            escolha_1 = int(input("Qual local do oasis gostaria de explorar primeiro? 1 - Coqueiros / 2 - Lago "))
                             if escolha_1 == 1:
                                 a += 1
                                 print("ADICIONAR DESCRIÇÃO DOS COQUEIROS")
@@ -146,6 +154,26 @@ def oasis(objetos_coletados, atributos): # função que representa a trajetória
                                 print("Você mergulhou no lago!")
                                 enter()
                                 print("ADICIONAR DESCRIÇÃO DO LAGO")
+                                print("Parece que á algo lá no fundo, há alguns metros...")
+                                print("Nadando e chegando mais perto, você vê que é um báu!")
+                                while c < 1:
+                                    escolha_3 = int(input("Deseja coletar o bau? 1 - Sim / 2 - Não"))
+                                    if escolha_3 == 1:
+                                        print("Você coletou o baú!")
+                                        print("Saia do lago agora e veja o que há dentro dele...")
+                                        enter()
+                                        if "chave" in objetos_coletados:
+                                            print("Você conseguiu abrir o baú com a chave coletada!")
+                                            i = 0
+                                            while i < len(atributos) - 1:
+                                                i += 1
+                                                if atributos[i] < 5:
+                                                    atributos[i] += 1
+                                            print("Seus atributos melhoraram!")
+                                            hp = hp += 2
+                                            print(f'Você ganhou 2 HPs!')
+                                        
+                                            
                             elif escolha_1 == 2:
                                 a += 1
                                 print("Você mergulhou no lago!")
@@ -159,11 +187,11 @@ def oasis(objetos_coletados, atributos): # função que representa a trajetória
     if desbloqueio == False:
         print(f"Combinação incorreta! Você não conseguiu acesso ao oasis! Tente novamente!")
     if missao_cumprida == False:
-        return()
+        return("Você não conseguiu cumprir sua missão no oasis!")
     else:
-        return()
+        return("Parabéns! Você cumpriu sua missão, obtendo uma dica valiosa para continuar!")
 
-def retornar(local, objetos_coletados, *atributos):
+def retornar(local, objetos_coletados, *atributos): # (OK) Funçao utilizada para que o jogador possa retornar a lugares por quais já passou anteriormente
     if local == "Dunas":
         print("Bem vindo(a) de volta ao oasis!")
         return dunas(objetos_coletados)
@@ -177,10 +205,10 @@ def retornar(local, objetos_coletados, *atributos):
 ############################################################################################################################
 
 # x e y são variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
-x = y = 0
+x = y = 0 # 
 meus_objetos_coletados = [] # Lista para incluir os objetos que o jogador coleta ao logo da trajetória no deserto
-meus_atributos =  # Valores dos atributos do jogador: força, destreza, inteligência, sorte e carisma, respectivamente 
-hp = 
+meus_atributos = [1, 2, -3, 4, 5]  # Valores dos atributos do jogador: força, destreza, inteligência, sorte e carisma, respectivamente 
+#hp = 
 
 # Introdução do ambiente (deserto) ao jogador
 print("Você chegou ao deserto!")
