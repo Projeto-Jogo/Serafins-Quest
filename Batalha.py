@@ -22,6 +22,7 @@ def delete_last_lines(n):
         sys.stdout.write(cursor_up_one)
         sys.stdout.write(erase_line)
 
+
 # Função pra reiniciar o programa
 def restart_program():
     python = sys.executable
@@ -274,22 +275,22 @@ mao = {"nome": "mão", "atributo": "FOR", "dano": "0-1", "min": 0, "max": 1}
 adaga = {"nome": "adaga", "atributo": "DES", "dano": "1-3", "min": 1, "max": 3}
 
 
-# Dicionários para atributos do jogador
-Soldado = {"nome": "Soldado", 'hp': 100, 'defesa': 5, 'força': 5, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3, "arma": mao}       #Soldado tem     defesa media, força alta,  destreza baixa, inteligência baixa, sorte alta,  carisma media
-
-Mercenario = {"nome": "Fernando", 'hp': 100, 'defesa': 6, 'força': 3, 'destreza': 4, 'inteligência': 5, 'sorte': 3, 'carisma': 2, "arma": mao}  #Mercenario tem  defesa alta,  força media, destreza media, inteligência alta,  sorte media, carisma baixa
-
-Ladrao = {"nome": "Fernando", 'hp': 100, 'defesa': 4, 'força': 2, 'destreza': 5, 'inteligência': 3, 'sorte': 2, 'carisma': 5, "arma": mao}      #Ladrao tem      defesa baixa, força baixa, destreza alta,  inteligência media, sorte baixa, carisma alta
+# Dicionários para atributos do jogador                                                                                                                                    atributos de batalha                             atributos gerais
+Soldado =    {"nome": "Soldado",    'hp': 100, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3, "arma": mao}  # Soldado      defesa media, força alta,  destreza baixa, | inteligência baixa, sorte alta,  carisma media
+                                                                                                                                                  #                                                         |
+Mercenario = {"nome": "Mercenário", 'hp': 100, 'defesa': 6, 'força': 2, 'destreza': 4, 'inteligência': 5, 'sorte': 3, 'carisma': 2, "arma": mao}  # Mercenario   defesa alta,  força baixa, destreza media, | inteligência alta,  sorte media, carisma baixa
+                                                                                                                                                  #                                                         |
+Ladrao =     {"nome": "Ladrão",     'hp': 100, 'defesa': 4, 'força': 3, 'destreza': 5, 'inteligência': 3, 'sorte': 2, 'carisma': 5, "arma": mao}  # Ladrao       defesa baixa, força media, destreza alta,  | inteligência media, sorte baixa, carisma alta
 
 
 # Dicionários para atributos dos inimigos
-Goblin = {"nome": "Goblin", 'hp': 85, 'defesa': 3, 'força': 1, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+Goblin =    {"nome": "Goblin",    'hp': 85, 'defesa': 3, 'força': 1, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
 
 Esqueleto = {"nome": "Esqueleto", 'hp': 65, 'defesa': 5, 'força': 2, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
 
-Serpente = {"nome": "Serpente", 'hp': 30, 'defesa': 2, 'força': 2, 'destreza': 5, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+Serpente =  {"nome": "Serpente",  'hp': 30, 'defesa': 2, 'força': 2, 'destreza': 5, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
 
-Urso = {"nome": "Urso", 'hp': 70, 'defesa': 2, 'força': 3, 'destreza': 1, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+Urso =      {"nome": "Urso",      'hp': 70, 'defesa': 2, 'força': 3, 'destreza': 1, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
 
 
 fugir = False
@@ -463,4 +464,5 @@ LEMBRETES:
 -balanceamento dos valores
 -cores para os comandos
 """
+
 
