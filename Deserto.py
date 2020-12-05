@@ -576,4 +576,4 @@ def Deserto(jogador):
         else:
             return("Você ainda não completou essa etapa! Tente novamente antes de prosseguir")
 	    
-	    
+	   
