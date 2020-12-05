@@ -64,7 +64,7 @@ def game_over(jogador):
 
 
 # Função para pausar a progressão da batalha, e dar opções para o jogador escolher
-def acoes(inimigo, jogador, arma):
+def acoes(inimigo, jogador, arma, final):
 
     loop = True
 
@@ -74,7 +74,6 @@ def acoes(inimigo, jogador, arma):
 
     global forte
 
-    global final
 
     # O while apenas serve para repetir o input caso o jogador ponha um comando não reconhecido
     while loop == True:
@@ -299,7 +298,6 @@ defende = False
 
 forte = False
 
-final = False
 
 inimigo_acao = ""
 
@@ -309,7 +307,7 @@ divisoria2 = '/'
 
 
 # Função para as batalha entre jogador e inimigo
-def batalha(inimigo, jogador):
+def batalha(inimigo, jogador, final = False):
     global inimigo_acao
 
     global fugir
@@ -340,7 +338,7 @@ def batalha(inimigo, jogador):
 
         print(f'\n\u001b[36m\n{divisoria * 90}\nSeu turno\u001b[0m')
         print("\nSua ação:\n")
-        acoes(inimigo, jogador, jogador["arma"])
+        acoes(inimigo, jogador, jogador["arma"], final)
 
         # Checar se o jogador não escolheu fugir da batalha
         if fugir == False:
@@ -460,9 +458,9 @@ def batalha(inimigo, jogador):
 
 
 
-
 """
 LEMBRETES:
 -balanceamento dos valores
 -cores para os comandos
 """
+
