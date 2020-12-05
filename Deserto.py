@@ -24,6 +24,8 @@ def dunas(objetos_coletados): # (OK) Função que representa a trajetória do jo
                     if escolha_2 == 1:
                         hp -= 1
                         print(f'Ah, não! Esta poção é perigosa! Você perdeu 1 HP!')
+                        if hp <= 0:
+                            Batalha.game_over()
                         b += 1
                     elif escolha_2 == 2:
                         print("OK!")
@@ -36,7 +38,7 @@ def dunas(objetos_coletados): # (OK) Função que representa a trajetória do jo
                 return(f'Você não coletou nenhum novo item!')
                 a += 1
             else:
-                print("Escolha uma opção válida!")
+                print("Comando não conhecido, tente novamente.")
     elif "poção" in objetos_coletados and "pedra" not in objetos_coletados:
         while c < 1:
             escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
@@ -50,7 +52,7 @@ def dunas(objetos_coletados): # (OK) Função que representa a trajetória do jo
                 return(f'Você não coletou nenhum novo item!')
                 c += 1
             else:
-                print("Escolha uma opção válida!")
+                print("Comando não conhecido, tente novamente.")
     else:
         while d < 1:
             escolha = int(input("Você encontrou uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não"))
@@ -62,7 +64,7 @@ def dunas(objetos_coletados): # (OK) Função que representa a trajetória do jo
                 print("OK!")
                 d += 1
             else:
-                print("Escolha uma opção válida!")
+                print("Comando não conhecido, tente novamente.")
         print("ADICIONAR DESCRIÇÃO DE UM CAMINHO")
         enter()
         while e < 1:
@@ -100,7 +102,7 @@ def topo_da_montanha(objetos_coletados): # (OK) Funçao para a trajetória do jo
                 return(f'Você não coletou novos itens!')
                 a += 1
 	    else:
-		print("Escolha uma opção válida!")
+		print("Comando não conhecido, tente novamente.")
 def oasis(objetos_coletados, atributos): # Função para a trajetória do jogador em um oasis no deserto
     a = b = c = d = e = 0 # 
     i = -1
@@ -232,7 +234,8 @@ def retornar(local, objetos_coletados, *atributos): # (OK) Funçao utilizada par
 x = y = z = 0 # x, y e z são variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
 meus_objetos_coletados = [] # Lista para incluir os objetos que o jogador coleta ao logo da trajetória no deserto
 meus_atributos = [1, 2, -3, 4, 5]  # Valores dos atributos do jogador: força, destreza, inteligência, sorte e carisma, respectivamente 
-#hp = 
+hp = jogador['hp'] 
+Serpente = Batalha.Serpente
 
 # Introdução do ambiente (deserto) ao jogador
 print("Você chegou ao deserto!")
@@ -570,7 +573,7 @@ if escolha_1 == 3:
 missao_cumprida = oasis(meus_objetos_coletados, meus_atributos)
 while z < 1:
     if missao_cumprida == "Parabéns! Você cumpriu sua missão, aumentando seus atributos, ganhando HPs e obtendo uma dica para continuar!":
-        print("Você está pronto para prosseguir em sua jornada...")
+        print("Você está pronto para seguir em sua jornada...")
         z += 1
     else:
         print("Você ainda não completou essa etapa!")
