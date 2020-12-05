@@ -73,7 +73,7 @@ print('(historia de introducao)')
 enter()
 
 # GERACAO INICIAL DOS ATRIBUTOS
-def atriubutos_gen():
+def atributos_gen():
 
     global personagem
 
@@ -81,7 +81,11 @@ def atriubutos_gen():
 
     a = dado(1, 3)
 
-    while loop == True:
+    Soldado = {"nome": "Soldado", 'hp': 100, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3, "arma": mao}        #Soldado tem     defesa media, força alta,  destreza baixa, inteligência baixa, sorte alta,  carisma media
+
+    Mercenario = {"nome": "Mercenário", 'hp': 100, 'defesa': 6, 'força': 3, 'destreza': 4, 'inteligência': 5, 'sorte': 2, 'carisma': 2, "arma": mao}  #Mercenario tem  defesa alta,  força media, destreza media, inteligência alta,  sorte baixa, carisma baixa
+
+    Ladrao = {"nome": "Ladrão", 'hp': 100, 'defesa': 4, 'força': 2, 'destreza': 5, 'inteligência': 3, 'sorte': 3, 'carisma': 5, "arma": mao}          #Ladrao tem      defesa baixa, força baixa, destreza alta,  inteligência media, sorte media, carisma alta
 
         if a == 1:
             personagem = Soldado
@@ -118,7 +122,7 @@ def atriubutos_gen():
         
     return personagem
 
-atriubutos_gen()
+personagem = atriubutos_gen()
 
 
 # APRESENTACAO DOS ATRIBUTOS AO JOGADOR
