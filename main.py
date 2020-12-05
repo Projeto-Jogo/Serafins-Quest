@@ -115,6 +115,8 @@ def atriubutos_gen():
             Ladrao['carisma'] = dado(4,6)
             if Ladrao['defesa'] + Ladrao['força'] + Ladrao['destreza'] + Ladrao['inteligência'] + Ladrao['sorte'] + Ladrao['carisma'] >= 19:
                 break
+        
+    return personagem
 
 atriubutos_gen()
 
