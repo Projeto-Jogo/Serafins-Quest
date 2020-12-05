@@ -1,5 +1,4 @@
 
-
 import random as rd
 
 import os
@@ -65,21 +64,12 @@ def atriubutos_gen():
 
             while loop == True:
 
-                Soldado = {"nome": "Soldado", 'hp': 100, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2,
-                           'sorte': 5,
-                           'carisma': 3,
-                           "arma": mao}  # Soldado tem     defesa media, força alta,  destreza baixa, inteligência baixa, sorte alta,  carisma media
-
-                Mercenario = {"nome": "Mercenário", 'hp': 100, 'defesa': 6, 'força': 3, 'destreza': 4,
-                              'inteligência': 5,
-                              'sorte': 2, 'carisma': 2,
-                              "arma": mao}  # Mercenario tem  defesa alta,  força media, destreza media, inteligência alta,  sorte baixa, carisma baixa
-
-                Ladrao = {"nome": "Ladrão", 'hp': 100, 'defesa': 4, 'força': 2, 'destreza': 5, 'inteligência': 3,
-                          'sorte': 3,
-                          'carisma': 5,
-                          "arma": mao}  # Ladrao tem      defesa baixa, força baixa, destreza alta,  inteligência media, sorte media, carisma alta
-
+                # Dicionários para atributos do jogador                                                                                                                                    atributos de batalha                             atributos gerais
+                Soldado =    {"nome": "Soldado",    'hp': 100, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3,"arma": mao}  #  Soldado      defesa media, força alta,  destreza baixa, | inteligência baixa, sorte alta,  carisma media
+                                                                                                                                                                 #                                                          |
+                Mercenario = {"nome": "Mercenário", 'hp': 100, 'defesa': 6, 'força': 2, 'destreza': 4, 'inteligência': 5, 'sorte': 3, 'carisma': 2,"arma": mao}  #  Mercenario   defesa alta,  força baixa, destreza media, | inteligência alta,  sorte media, carisma baixa
+                                                                                                                                                                 #                                                          |
+                Ladrao =     {"nome": "Ladrão",     'hp': 100, 'defesa': 4, 'força': 3, 'destreza': 5, 'inteligência': 3, 'sorte': 2, 'carisma': 5,"arma": mao}  #  Ladrao       defesa baixa, força media, destreza alta,  | inteligência media, sorte baixa, carisma alta
 
                 if a == "1":
 
@@ -96,10 +86,10 @@ def atriubutos_gen():
                 elif a == "2":
 
                     Mercenario['defesa'] = bt.dado(5,7)
-                    Mercenario['força'] = bt.dado(2,4)
+                    Mercenario['força'] = bt.dado(1,3)
                     Mercenario['destreza'] = bt.dado(3,5)
                     Mercenario['inteligência'] = bt.dado(4,6)
-                    Mercenario['sorte'] = bt.dado(1,3)
+                    Mercenario['sorte'] = bt.dado(2,4)
                     Mercenario['carisma'] = bt.dado(1,3)
                     personagem = Mercenario
                     if Mercenario['defesa'] + Mercenario['força'] + Mercenario['destreza'] + Mercenario['inteligência'] + Mercenario['sorte'] + Mercenario['carisma'] >= 19:
@@ -108,10 +98,10 @@ def atriubutos_gen():
                 elif a == "3":
 
                     Ladrao['defesa'] = bt.dado(3,5)
-                    Ladrao['força'] = bt.dado(1,3)
+                    Ladrao['força'] = bt.dado(2,4)
                     Ladrao['destreza'] = bt.dado(4,6)
                     Ladrao['inteligência'] = bt.dado(2,4)
-                    Ladrao['sorte'] = bt.dado(2,4)
+                    Ladrao['sorte'] = bt.dado(1,3)
                     Ladrao['carisma'] = bt.dado(4,6)
                     personagem = Ladrao
                     if Ladrao['defesa'] + Ladrao['força'] + Ladrao['destreza'] + Ladrao['inteligência'] + Ladrao['sorte'] + Ladrao['carisma'] >= 19:
@@ -155,7 +145,7 @@ while x < 1:
 
             # MERETRIZ
             elif escolha_2 == '2':
-                bt.()
+                bt.enter()
                 y += 1
 
             # BARTENDER
@@ -229,8 +219,6 @@ while x < 1:
 
     else:
         print('\ndigite apenas o numero')
-
-
 
 
 
