@@ -219,7 +219,7 @@ def oasis(objetos_coletados, atributos):
                                                     print("Na nota está escrito: 'URSO'")
                                                     print("Hmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
                                                     missao_cumprida = True
-						    return(f'Parabéns! Você cumpriu sua missão, obtendo uma dica para seguir em sua jornada!')
+						    return(f'Parabéns! Você cumpriu esta etapa, obtendo uma dica para seguir em sua jornada!')
                                         else:
                                             print(f'Oops! Você ainda não tem a chave para abrir o baú! Continue sua exploração pelo deserto e colete-a!')
                                     else:
@@ -228,7 +228,7 @@ def oasis(objetos_coletados, atributos):
     if desbloqueio == False:
         return(f'Combinação incorreta! Você não conseguiu acesso ao oasis! Tente novamente!')
     if missao_cumprida == False:
-        return(f'Você não conseguiu cumprir sua missão no deserto! Continue sua exploração e tente novamente...')
+        return(f'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...')
     
 def retornar(local, objetos_coletados, *atributos): 
 # Funçao utilizada para que o jogador possa retornar a lugares por quais já passou anteriormente
