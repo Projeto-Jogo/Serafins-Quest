@@ -100,7 +100,7 @@ def topo_da_montanha(objetos_coletados):
                 return(f'Você não coletou novos itens!')
             else:
                 print("Comando não conhecido, tente novamente.")
-		
+
 def oasis(objetos_coletados, atributos): 
 # Função utilizada para a trajetória do jogador em um oasis no deserto
     hp = atributos[5]
@@ -134,101 +134,60 @@ def oasis(objetos_coletados, atributos):
                                 atributos[i] += 1
                         print(f'Parabéns! Você desbloqueou o acesso ao oasis e seus atributos melhoraram! Força: {atributos[0]} - destreza: {atributos[1]} - intelig ência: {atributos[2]} - sorte: {atributos[3]} - carisma:  {atributos[4]}.')
                         print("ADICIONAR DESCRIÇÃO DO OASIS")
-                        while a < 1:
-                            escolha_1 = int(input("Qual local do oasis gostaria de explorar primeiro? 1 - Coqueiros / 2 - Lago "))
+                        coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim / 2 - Não"))
+                        if coleta_de_objetos == 1:
+                            a += 1
+                            bt.batalha(Serpente, jogador)
+                        else:
+                            bt.enter()   
+                        print("Siga para o lago agora...")
+                        enter()
+                        print("Você mergulhou no lago!")
+                        enter()
+                        print("ADICIONAR DESCRIÇÃO DO LAGO")
+                        print("Parece que há algo lá no fundo, há alguns metros...")
+                        print("Nadando e chegando mais perto, você vê que é um báu!")
+                        while c < 1:
+                            escolha_1 = int(input("O que desejaa fazer? 1 - Coletar o baú / 2 - Sair do lago "))
                             if escolha_1 == 1:
-                                a += 1
-                                print("ADICIONAR DESCRIÇÃO DOS COQUEIROS")
-                                while b < 1:
-                                    escolha_2 = int(input("Há uma (...) embaixo daquele coqueiro, há alguns metros! Deseja coletá-la? 1 - Sim / 2 - Não "))
-                                    if escolha_2 == 1:
-                                        b += 1
-                                        # acontece alguma coisa
-                                    elif escolha_2 == 2:                                   
-                                        b += 1
-                                        print("OK!")
-                                    else:
-                                        print("Escolha uma opção válida!")
-                                print("Siga para o lago agora...")
+                                c += 1
+                                print("Você coletou o baú!")
+                                print("Saia do lago agora e veja o que há dentro dele...")
                                 enter()
-                                print("Você mergulhou no lago!")
-                                enter()
-                                print("ADICIONAR DESCRIÇÃO DO LAGO")
-                                print("Parece que há algo lá no fundo, há alguns metros...")
-                                print("Nadando e chegando mais perto, você vê que é um báu!")
-                                while c < 1:
-                                    if escolha_3 == 1:
-                                        c += 1
-                                        print("Você coletou o baú!")
-                                        print("Saia do lago agora e veja o que há dentro dele...")
-                                        enter()
-                                        if "chave" in objetos_coletados:
-                                            while d < 1:
-                                                abertura_do_bau = input("Você possui a chave! Digite 1 para utilizá-la: ")
-                                                if abertura_do_bau == 1:
-                                                    d += 1
-                                                    print("Você conseguiu abrir o baú!")
-                                                    i = 0
-                                                    while i < len(atributos) - 1:
-                                                        i += 1
-                                                        if atributos[i] < 5:
-                                                            atributos[i] += 1
-                                                    hp += 2
-                                                    print("Por conta disso, seus atributos aumetaram e você ganhou 2 HPs!")
-                                                    print(f'força: atributos[0], destreza: atributos[1], inteligência: atributos[2], carisma: atributos[3], sorte: atributos[4]')
-                                                    print("Também há uma nota dentro do baú... leia!")
-                                                    enter()
-                                                    print("Na nota está escrito 'URSO'..")
-                                                    print("Hmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
-                                                    missao_cumprida = True
-                                                else:
-                                                    print("Abra o baú!")
-                                    else:
-                                        print("Oops! Você ainda não tem a chave para abrir o baú! Continue sua exploração pelo deserto e colete-a!")                                                  
-                            elif escolha_1 == 2:
-                                a += 1
-                                print("Você mergulhou no lago!")
-                                enter()
-                                print("ADICIONAR DESCRIÇÃO DO LAGO")
-                                print("Parece que há algo lá no fundo, há alguns metros...")
-                                print("Nadando e chegando mais perto, você vê que é um bau!")
-                                while c < 1:
-                                    escolha_3 = int(input("Deseja coletar o bau? 1 - Sim / 2 - Não"))
-                                    if escolha_3 == 1:
-                                        c += 1
-                                        print("Você pegou o bau!")
-                                        print("Agora saia do lago e veja o que há dentro dele...")
-                                        enter()
-                                        if "chave" in objetos_coletados:
-                                            while d < 1:
-                                                abertura_do_bau = int(input("Você possui a chave! Digite 1 para utilizá-la: "))
-                                                if abertura_do_bau == 1:
-                                                    d += 1
-                                                    print("Você conseguiu abrir o baú!")
-                                                    i = 0
-                                                    while i < len(atributos) - 1:
-                                                        i += 1
-                                                        if atributos[i] < 5:
-                                                            atributos[i] += 1
-                                                    hp += 2
-                                                    print("Por conta disso, seus atributos aumetaram e você ganhou 2 HPs!")
-                                                    print(f'força: atributos[0], destreza: atributos[1], inteligência: atributos[2], carisma: atributos[3], sorte: atributos[4]')
-                                                    print(f'HPs: atributos[5]')
-                                                    print("Há uma nota lá dentro também... leia!")
-                                                    enter()
-                                                    print("Na nota está escrito: 'URSO'")
-                                                    print("Hmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
-                                                    missao_cumprida = True
-						    return(f'Parabéns! Você cumpriu esta etapa, obtendo uma dica para seguir em sua jornada!')
+                                if "chave" in objetos_coletados:
+                                    while d < 1:
+                                        abertura_do_bau = int(input("Você possui a chave! Digite 1 para utilizá-la: "))
+                                        if abertura_do_bau == 1:
+                                            d += 1
+                                            print("Você conseguiu abrir o baú!")
+                                            i = 0
+                                            while i < len(atributos) - 1:
+                                                i += 1
+                                                if atributos[i] < 5:
+                                                    atributos[i] += 1
+                                            hp += 2
+                                            print("Por conta disso, seus atributos aumetaram e você ganhou 2 HPs!")
+                                            print(f'força: atributos[0], destreza: atributos[1], inteligência: atributos[2], carisma: atributos[3], sorte: atributos[4]')
+                                            print("Também há uma nota dentro do baú... leia!")
+                                            enter()
+                                            print("Na nota está escrito 'URSO'..")
+                                            print("Hmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
+                                            missao_cumprida = True
                                         else:
-                                            print(f'Oops! Você ainda não tem a chave para abrir o baú! Continue sua exploração pelo deserto e colete-a!')
-                                    else:
-                                        print("Você saiu do lago. Parece que não há mais nada para fazer por aqui...")
-                                        c += 1
+                                            print("Abra o baú!")
+                                else:
+                                    print("Oops! Você ainda não tem a chave para abrir o baú! Continue sua exploração pelo deserto e colete-a!")                                                  
+                            elif escolha_1 == 2:
+                                c += 1
+                                print("Você saiu do lago. Parece que não há mais nada para fazer aqui...")
+                            else:
+                                print("Comando não conhecido, tente novamente.")
     if desbloqueio == False:
         return(f'Combinação incorreta! Você não conseguiu acesso ao oasis! Tente novamente!')
     if missao_cumprida == False:
         return(f'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...')
+    elif missao_cumprida == True:
+        return(f'Parabéns! Você cumpriu esta etapa, obtendo uma dica para seguir em sua jornada!')
     
 def retornar(local, objetos_coletados, *atributos): 
 # Funçao utilizada para que o jogador possa retornar a lugares por quais já passou anteriormente
@@ -552,7 +511,7 @@ def Deserto(jogador):
     missao_cumprida = oasis(meus_objetos_coletados, meus_atributos)
     while z < 1:
         if missao_cumprida == "Parabéns! Você cumpriu sua missão, aumentando seus atributos, ganhando HPs e obtendo uma dica para continuar!":
-            print("Você está pronto(a) para continuar seu caminho...")
+            print("Você está pronto para seguir em sua jornada...")
             z += 1
         else:
             print("Você ainda não completou essa etapa!")
