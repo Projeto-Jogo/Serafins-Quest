@@ -297,19 +297,30 @@ def floresta(jogador):
         bt.enter()
         print('Você caminha em direção a cabana e abre a porta com cuidado, escutando o rangir da porta.')
         bt.enter()
-        print('Ao entrar você percebe é capaz de enxergar uma mesa no centro do comodo, um suporte de madeira onde deveria ser a cama e um armário ao lado de uma janela.')
-        voltar = 0 
         #explorando a cabana
-        while escolha != 4:  
+        voltar = 0
+        while escolha != 4: 
+          print('Ao entrar você percebe é capaz de enxergar uma mesa no centro do comodo, um suporte de madeira onde deveria ser a cama e um armário ao lado de uma janela.')
           print('Assim você decidi: \n1.Olhar a mesa \n2. Se aproximar da cama \n3. Ir até o armário \n4. Voltar')
           escolha = int(input('>>>')) #jogador escolhe para onde ir
           prob = chance(1,21) #chance de encontrar uma arma
           #mesa
           if escolha == 1: 
             if prob <=5:
-              print('Ao se aproximar da mesa, você encontra uma adaga. Agora você possui uma nova arma.')
-              bt.enter()
-              jogador['arma'] = 'adaga'
+              print('Ao se aproximar da mesa, você encontra uma adaga. Você quer pegas a arma?.\n1.sim\n2.não')
+              pegar = int(input('>>>')) #jogador escolhe se quer equipar a arma ou não
+              #jogador pega a arma
+              if pegar == 1: 
+                print('Sem saber o que lhe aguarda pela fente, você decidi pegar a adaga. Isso faz com que você se sinta mais seguro.')
+                jogador['arma'] = 'adaga'
+                bt.enter()
+              #jogador não pega a arma
+              elif pegar == 2: 
+                print('Você olha a arma e decidi que é melhor não pega-la')
+                bt.enter()
+              #erro
+              else: 
+                print('Ao se aproximar da mesa, você encontra uma adaga. Você quer pegas a arma?.\n1.sim\n2.não') 
             else:
               print('Você se aproxima da mesa vendo nada além de poeira em cima dela.')
               bt.enter()
@@ -318,17 +329,40 @@ def floresta(jogador):
             if prob <=10 and prob >=6:
               print('Ao aproximar do suporte de madeira epercebe algo brilhando no chão.')
               bt.enter()
-              print('Você se abaixa e pega, percebendo que se trata de uma adaga. Agora você possui uma nova arma.')
-              bt.enter()
-              jogador['arma'] = 'adaga'
+              print('Você se abaixa e pega, percebendo que se trata de uma adaga. Você quer pegar a arma:\n1.sim\n2.não')
+              pegar = int(input('>>>')) #jogador escolhe se pega ou não a arma
+              #jogador pega a arma
+              if pegar == 1:
+                print('Incerto sobre o que lhe aguarde, você decidi pegar a adaga.')
+                jogador['arma'] = 'adaga'
+                bt.enter()
+              #jogador não pega a arma
+              if pegar == 2: 
+                print('Você acaba achando que não seria uma boa ideia pegar a arma e deixa-a no lugar em que encontrou.')
+              #erro
+              else:
+                print('Você se abaixa e pega, percebendo que se trata de uma adaga. Você quer pegar a arma:\n1.sim\n2.não')
+                pegar = int(input('>>>')
             else:
               print('Você se aproxima do suporte de madeira e olha ao redor dele, mas não encontra nada.')
               bt.enter()
           #armário
           elif escolha== 3: 
             if prob <= 15 and prob >= 11:
-              print('Você anda até o armário e o abre, e para sua surpresa você encontra uma única adaga. Agora você possui uma nova arma.')
-              bt.enter()
+              print('Você anda até o armário e o abre, e para sua surpresa você encontra uma única adaga. Você quer pegar a arma:\n1.sim\n2.não')
+              pegar=int(input('>>>'))
+              #jogador pega a arma
+              if pegar == 1:
+                print('Não sabendo o que vem pela frente, você decidi pegar a adaga para poder se proteger melhor.')
+                jogador['arma'] = 'adaga'
+              #jogador não pega a arma
+              elif pegar ==2:
+                print('Você observa a adaga, mas decidi não pegar.')
+                bt.enter()
+              #erro
+              else:
+                print('Você anda até o armário e o abre, e para sua surpresa você encontra uma única adaga. Você quer pegar a arma:\n1.sim\n2.não')
+                pegar=int(input('>>>'))
             else:
               print('Você vai até o armário na esperança de encontrar algo, mas ao abri-lo você nã encontra nada.')
               bt.enter()
