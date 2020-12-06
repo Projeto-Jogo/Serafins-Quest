@@ -20,6 +20,7 @@ def floresta(jogador):
   Eventos extras:  - batalha: 105
                    - cabana com possibilidade de arma: sala 113
                    - possiveis eventos: 110 e 117
+                   - poção para passar de nível: 120
   '''
   
   #variaveis
