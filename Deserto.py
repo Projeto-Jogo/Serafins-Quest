@@ -2,8 +2,6 @@
 
 import Batalha as bt # Importa o módulo "Batalha"
 
-# Definição de funções
-
 def dunas(objetos_coletados): 
 # Função utilizada para a trajetória do jogador nas dunas de areia do deserto 
     a = b = c = d = e = 0 # Variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
@@ -85,7 +83,7 @@ def dunas(objetos_coletados):
             return(f'Você não coletou novos itens!')
 
 def topo_da_montanha(objetos_coletados): 
-# Funçao para a trajetória do jogador no topo de uma montanha no deserto
+# Funçao autilizada para a trajetória do jogador no topo de uma montanha no deserto
     a = 0
     if "flor" in objetos_coletados:
         print("Você ja coletou o objeto que necessitava aqui!")
@@ -103,7 +101,8 @@ def topo_da_montanha(objetos_coletados):
 	    else:
 		print("Comando não conhecido, tente novamente.")
 		
-def oasis(objetos_coletados, atributos): # Função para a trajetória do jogador em um oasis no deserto
+def oasis(objetos_coletados, atributos): 
+# Função utilizada para a trajetória do jogador em um oasis no deserto
     hp = atributos[5]
     a = b = c = d = e = 0 # 
     i = -1
@@ -240,10 +239,9 @@ elif local == "Topo da montanha":
 elif local == "Oasis":
     print("Bem vindo(a) de volta ao oasis!")
     return oasis(objetos_coletados, atributos)
-							  
-############################################################################################################################
 
-def Deserto(jogador):						  
+def Deserto(jogador):	
+# Função principal do módulo, que chama as demais funções e define a trajetória do jogador pelo deserto						
     x = y = z = 0 # x, y e z são variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não informe uma escolha válida
     meus_objetos_coletados = [] # Lista para incluir os objetos que o jogador coleta ao logo da trajetória no deserto
     forca = jogador['forca']
