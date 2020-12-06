@@ -102,7 +102,7 @@ def floresta(jogador):
         
     elif sala == 105:
       #batalha com um urso
-      if primeira_vez == True 
+      if primeira_vez == True: 
         print('Enquanto você caminhava, você se depara com um urso.')
         #inimigo
         Urso = {"nome": "Urso", 'hp': 70, 'defesa': 2, 'força': 3, 'destreza': 1, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
