@@ -499,4 +499,6 @@ def floresta(jogador):
         print ('Você decidi:\n1. voltar')
         dir = int(input('>>>'))
   
-  print('Depois de uma longa caminhada pela floresta finalmete é possível ver a luz do dia novamente.')
+  print('Depois de uma longa caminhada pela floresta finalmete é possível ver a luz do dia novamente e aolonge você avista o castelo.')
+  bt.enter()
+ 
