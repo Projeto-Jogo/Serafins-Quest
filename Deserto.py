@@ -134,16 +134,16 @@ def oasis(objetos_coletados, atributos):
                                 atributos[i] += 1
                         print(f'Parabéns! Você desbloqueou o acesso ao oasis e seus atributos melhoraram! Força: {atributos[0]} - destreza: {atributos[1]} - intelig ência: {atributos[2]} - sorte: {atributos[3]} - carisma:  {atributos[4]}.')
                         print("ADICIONAR DESCRIÇÃO DO OASIS")
-                        coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim / 2 - Não"))
-                        if coleta_de_objetos == 1:
-                            a += 1
-                            bt.batalha(Serpente, jogador)
-                        else:
-                            bt.enter()   
+                        #coleta_de_objetos = int(input("Você encontrou uma serpente! Deseja coletá-la? 1 - Sim / 2 - Não"))
+                        #if coleta_de_objetos == 1:
+                         #   a += 1
+                          #  bt.batalha(Serpente, jogador)
+                        #else:
+                         #   bt.enter()   
                         print("Siga para o lago agora...")
-                        enter()
+                        bt.enter()
                         print("Você mergulhou no lago!")
-                        enter()
+                        bt.enter()
                         print("ADICIONAR DESCRIÇÃO DO LAGO")
                         print("Parece que há algo lá no fundo, há alguns metros...")
                         print("Nadando e chegando mais perto, você vê que é um báu!")
@@ -153,7 +153,7 @@ def oasis(objetos_coletados, atributos):
                                 c += 1
                                 print("Você coletou o baú!")
                                 print("Saia do lago agora e veja o que há dentro dele...")
-                                enter()
+                                bt.enter()
                                 if "chave" in objetos_coletados:
                                     while d < 1:
                                         abertura_do_bau = int(input("Você possui a chave! Digite 1 para utilizá-la: "))
@@ -167,9 +167,9 @@ def oasis(objetos_coletados, atributos):
                                                     atributos[i] += 1
                                             hp += 2
                                             print("Por conta disso, seus atributos aumetaram e você ganhou 2 HPs!")
-                                            print(f'força: atributos[0], destreza: atributos[1], inteligência: atributos[2], carisma: atributos[3], sorte: atributos[4]')
+                                            print(f'força: atributos[0], destreza: {atributos[1]}, inteligência: {atributos[2]}, carisma: {atributos[3]}, sorte: {atributos[5]}')
                                             print("Também há uma nota dentro do baú... leia!")
-                                            enter()
+                                            bt.enter()
                                             print("Na nota está escrito 'URSO'..")
                                             print("Hmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
                                             missao_cumprida = True
@@ -188,6 +188,7 @@ def oasis(objetos_coletados, atributos):
         return(f'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...')
     elif missao_cumprida == True:
         return(f'Parabéns! Você cumpriu esta etapa, obtendo uma dica para seguir em sua jornada!')
+
     
 def retornar(local, objetos_coletados, *atributos): 
 # Funçao utilizada para que o jogador possa retornar a lugares por quais já passou anteriormente
@@ -295,11 +296,11 @@ def Deserto(jogador):
                 if coleta_de_objetos == 1:
                     bt.batalha(Serpente, jogador) # chamada da função "batalha" do módulo "Batalha"
                 else:
-                    enter()
+                    bt.enter()
                 print("Você chegou a um oasis!")
                 oasis(meus_objetos_coletados, meus_atributos)
                 print("Você está prosseguindo sua caminhada...")
-                enter()
+                bt.enter()
                 print("Só resta um local para explorar agora...")
 # Finalmente, o jogador segue do oasis ao topo da montanha
             # Descrição do caminho
@@ -354,7 +355,7 @@ def Deserto(jogador):
             bt.enter()
             print("Você chegou às dunas!")
 	    print("ADICIONAR DESCRIÇÃO DAS DUNAS DE AREIA")
-            enter()
+            bt.enter()
     	#chama função "dunas"
 	    dunas(meus_objetos_coletados)
 	    print("Você está prosseguindo sua caminhada...")
@@ -474,7 +475,7 @@ def Deserto(jogador):
                 bt.enter()
             print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE O OASIS E O TOPO DA MONTANHA")
             print("Você chegou ao topo da montanha!")
-            enter()
+            bt.enter()
             print("Descrição de ambiente - Topo da montanha")
             topo_da_montanha(meus_objetos_coletados)
             print("Você está prosseguindo sua caminhada...")
@@ -503,7 +504,7 @@ def Deserto(jogador):
             else:
                 bt.enter()
             print("Você está chegando às dunas de areia...")
-            enter()
+            bt.enter()
             print("ADICIONAR DESCRIÇÃO DAS DUNAS DE AREIA")
             dunas(meus_objetos_coletados)
             print("Você está prosseguindo sua caminhada...")
