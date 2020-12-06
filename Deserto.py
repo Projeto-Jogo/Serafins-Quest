@@ -219,7 +219,7 @@ def oasis(objetos_coletados, atributos):
                                                     print("Na nota está escrito: 'URSO'")
                                                     print("Hmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
                                                     missao_cumprida = True
-						    return(f'Parabéns! Você cumpriu sua missão, melhorando seus atributos, ganhando HPs e obtendo uma dica para seguir em sua jornada!')
+						    return(f'Parabéns! Você cumpriu sua missão, obtendo uma dica para seguir em sua jornada!')
                                         else:
                                             print(f'Oops! Você ainda não tem a chave para abrir o baú! Continue sua exploração pelo deserto e colete-a!')
                                     else:
@@ -552,7 +552,7 @@ def Deserto(jogador):
     missao_cumprida = oasis(meus_objetos_coletados, meus_atributos)
     while z < 1:
         if missao_cumprida == "Parabéns! Você cumpriu sua missão, aumentando seus atributos, ganhando HPs e obtendo uma dica para continuar!":
-            print("Você está pronto para seguir em sua jornada...")
+            print("Você está pronto(a) para continuar seu caminho...")
             z += 1
         else:
             print("Você ainda não completou essa etapa!")
