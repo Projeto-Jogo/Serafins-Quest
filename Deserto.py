@@ -1,13 +1,12 @@
 # MÓDULO "DESERTO"
-###########################################################################################################
 
-import Batalha as bt # Importando o módulo "Batalha"
+import Batalha as bt # Importa o módulo "Batalha"
 
 # Definição de funções
 
-def dunas(objetos_coletados): # Função que representa a trajetória do jogador nas dunas de areia do deserto 
-    # a, b, c e d são variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
-    a = b = c = d = e = 0
+def dunas(objetos_coletados): 
+# Função utilizada para a trajetória do jogador nas dunas de areia do deserto 
+    a = b = c = d = e = 0 # Variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
     if "pedra" in objetos_coletados and "poção" in objetos_coletados: # Se o jogador já coletou a pedra e a poção, aparece um aviso de que não há mais objetos para coletar no local
         return(f'Você ja coletou os objetos que necessitava aqui!') 
     elif "pedra" in objetos_coletados and "poção" not in objetos_coletados: # Se o jogador já coletou a pedra, encontra apenas uma poção
@@ -85,7 +84,8 @@ def dunas(objetos_coletados): # Função que representa a trajetória do jogador
         else:
             return(f'Você não coletou novos itens!')
 
-def topo_da_montanha(objetos_coletados): # Funçao para a trajetória do jogador no topo de uma montanha no deserto
+def topo_da_montanha(objetos_coletados): 
+# Funçao para a trajetória do jogador no topo de uma montanha no deserto
     a = 0
     if "flor" in objetos_coletados:
         print("Você ja coletou o objeto que necessitava aqui!")
@@ -229,16 +229,17 @@ def oasis(objetos_coletados, atributos): # Função para a trajetória do jogado
     elif missao_cumprida == True:
         return(f'Parabéns! Você cumpriu sua missão, melhorando seus atributos, ganhando HPs e obtendo uma dica para seguir em sua jornada!')
 							  
-    def retornar(local, objetos_coletados, *atributos): # (OK) Funçao utilizada para que o jogador possa retornar a lugares por quais já passou anteriormente
-    if local == "Dunas":
-        print("Bem vindo(a) de volta ao oasis!")
-        return dunas(objetos_coletados)
-    elif local == "Topo da montanha":
-        print("Bem vindo(a) de volta ao topo da montanha!")
-        return topo_da_montanha(objetos_coletados)
-    elif local == "Oasis":
-        print("Bem vindo(a) de volta ao oasis!")
-        return oasis(objetos_coletados, atributos)
+def retornar(local, objetos_coletados, *atributos): 
+# Funçao utilizada para que o jogador possa retornar a lugares por quais já passou anteriormente
+if local == "Dunas":
+    print("Bem vindo(a) de volta ao oasis!")
+    return dunas(objetos_coletados)
+elif local == "Topo da montanha":
+    print("Bem vindo(a) de volta ao topo da montanha!")
+    return topo_da_montanha(objetos_coletados)
+elif local == "Oasis":
+    print("Bem vindo(a) de volta ao oasis!")
+    return oasis(objetos_coletados, atributos)
 							  
 ############################################################################################################################
 
