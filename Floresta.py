@@ -214,6 +214,7 @@ def floresta(jogador):
           else:
             print('Enquanto tentava empurrar a árvore caida, você acaba se machucando')
             jogador['hp'] -= 5 #jogador se machuca e perde vida
+            bt.game_over(jogador) #confirmar que o hp do jogador é maior que zero
         #usar destreza para pular a árvore
         elif escolha == 2:
           des = chance(1,16) + jogador['destreza']
@@ -223,7 +224,8 @@ def floresta(jogador):
           #destreza insuficiente para pular a árvore
           else:
             print('Após pular a árvore, ao aterrissar você acaba caindo e torcendo o tornozelo')
-            jogador['hp'] -= 5
+            jogador['hp'] -= 5 #jogador se machuca e perde vida
+            bt.game_over(jogador) #confirmar que o hp do jogador é maior que zero
         #erro
         else:
           print('Vendo isso você decidi: \n1. empurrar a árvore caida /n2. pular por cima da árvore caida')
@@ -417,7 +419,8 @@ def floresta(jogador):
             print('Feliz pela refeição repentina, você começa a comer as deliciosas frutinhas. Já se sentindo satisfeito você se levanta, ao fazer isso você se sente zonzo, o que lhe obriga a se apoiar em uma árvore.')
             bt.enter()
             print('Imediatamente você liga ao seu mal estar repentino as pequenas frutinhas recem ingeridas. Arrependido você continua sua viajem.')
-            jogador['hp'] -=5 
+            jogador['hp'] -=5 #jogador perde vida
+            bt.game_over(jogador) #confirmar que o jogador ainda possui hp
           # são frutinhas normais
           else: 
             print('Você colha algumas frutinhas e as coloca na boca. Imediatamente você sente o sabor azedo lhe atingir.')
