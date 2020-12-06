@@ -228,7 +228,7 @@ def oasis(objetos_coletados, atributos):
     if desbloqueio == False:
         return(f'Combinação incorreta! Você não conseguiu acesso ao oasis! Tente novamente!')
     if missao_cumprida == False:
-        return(f'Você não conseguiu cumprir sua missão no oasis!')
+        return(f'Você não conseguiu cumprir sua missão no deserto! Continue sua exploração e tente novamente...')
     
 def retornar(local, objetos_coletados, *atributos): 
 # Funçao utilizada para que o jogador possa retornar a lugares por quais já passou anteriormente
