@@ -1,5 +1,4 @@
 # MÓDULO "DESERTO"
-
 ###########################################################################################################
 
 import Batalha as bt # Importando o módulo "Batalha"
@@ -240,7 +239,6 @@ def oasis(objetos_coletados, atributos): # Função para a trajetória do jogado
     elif local == "Oasis":
         print("Bem vindo(a) de volta ao oasis!")
         return oasis(objetos_coletados, atributos)
-
 							  
 ############################################################################################################################
 
