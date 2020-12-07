@@ -6,6 +6,8 @@ import Batalha as bt # Importa o módulo "Batalha"
 def dunas(objetos_coletados): 
 	
 # Função utilizada para a trajetória do jogador nas dunas de areia do deserto 
+
+    print("ADICIONAR DESCRIÇÃO DAS DUNAS DO DESERTO")
     a = b = c = d = e = 0 # Variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
     if "pedra" in objetos_coletados and "poção" in objetos_coletados: # Se o jogador já coletou a pedra e a poção, aparece um aviso de que não há mais objetos para coletar no local
         return(f'Você ja coletou os objetos que necessitava aqui!') 
@@ -247,13 +249,37 @@ def oasis(objetos_coletados, atributos):
     elif missao_cumprida == True:
         return(f'Parabéns! Você cumpriu esta etapa, obtendo uma dica para seguir em sua jornada!')
 
-def retornar(local, objetos_coletados, *atributos):
+def retornar(local, objetos_coletados, atributos):
 	
 	if local == "Topo da montanha":
 	    print("ADICIONAR DESCRIÇÃO DO CAMINHO ATÉ O TOPO DA MONTANHA")
+	    print("Você voltou ao topo da montanha!")
 	    print(topo_da_montanha(objetos_coletados))
+	    print("Siga às dunas agora...")
+	    bt.enter()
+	    print(dunas(objetos_coletados))
+	    print("Agora só resta explorar o oasis novamente...")
+	    resultado = oasis(objetos_coletados, atributos)
+	    print(resultado)							  
+	    if resultado == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+	        return retornar("Topo da montanha", objetos_coletados, atributos)
+	    else:
+		return(f'Dessa vez você conseguiu!')
 	    
-		
+        elif local == "Dunas:
+	    print("ADICIONAR DESCRIÇÃO DO CAMINHO ATÉ AS DUNAS")
+	    print("Você voltou às dunas")
+	    print(dunas(objetos_coletados))
+	    print("Siga ao topo da montanha agora...")
+	    bt.enter()
+	    print(topo_da_montanha(objetos_coletados))
+	    print("Agora só resta explorar o oasis novamente...")
+	    resultado = oasis(objetos_coletados, atributos)
+	    print(resultado)							  
+	    if resultado == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+	        return retornar("Dunas", objetos_coletados, atributos)
+	    else:
+		return(f'Dessa vez você conseguiu!')
 
 def Deserto(jogador):
 
@@ -469,30 +495,32 @@ def Deserto(jogador):
 			if resultado_etapa == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
 			    i = 0
 		            j = 0
+			    k = 0
 			    print("Você tem duas chances para retornar aos locais anteriores e tentar cumprir esta etapa!")
-			    while i < 2:
-			        retorno = int(input("Para onde deseja retornar? 1 - Dunas / 2 - Topo da montanha "))
-				while j < 1:	
-				    if retorno == 1:
-					j += 1
-				        resultado_etapa = retornar("Dunas")
-					print(resultado_etapa)
+			    retorno = int(input("Para onde deseja retornar? 1 - Dunas / 2 - Topo da montanha "))
+			    while i < 1:	
+			        if retorno == 1:
+			            i += 1
+				    resultado_etapa = retornar("Dunas")
+			            print(resultado_etapa)
+			            if resultado_etapa == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+			                resultado_etapa = retornar("Dunas")
+				        print(resultado_etapa)
+				        
 				    if retorno == 2:
 					j += 1
-					resultado_etapa = retornar("Topo da montanha")
-					print(resultado_etapa)
+					while k < 1:
+					    resultado_etapa = retornar("Topo da montanha")
+					    print(resultado_etapa)
+					    if resultado_etapa =! 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+					        k += 1
 				i += 1
 			    if resultado_etapa == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
 			        return(f'Você não conseguiu cumprir sua missão nesta etapa, mas está livre para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')				  
                             else:
 				return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')
 			else:
-			    return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')
-									  
-									  
-									  
-									  
-									  
+			    return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')					  
 									  
 									  
 									  
