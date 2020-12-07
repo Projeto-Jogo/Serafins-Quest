@@ -162,22 +162,94 @@ while loop:
             # BEBADO
             if escolha_2 == '1':
 
-                
-                bt.enter()
+                # print as opcoes de fala do jogador
 
+                while loop:
+
+                    escolha_3 = input(">>>")
+
+                    if escolha_3 == "1":
+                        intro.bebado_1
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "2":
+                        intro.bebado_2
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "3":
+                        intro.bebado_3
+                        bt.enter()
+                        break
+
+                    else:
+                        print("\nComando não reconhecido, tente novamente")
+                        time.sleep(2)
+                        bt.delete_last_lines(4)
 
             # MERETRIZ
             elif escolha_2 == '2':
 
-                bt.enter()
+                # print as opcoes de fala do jogador
+
+                while loop:
+
+                    escolha_3 = input(">>>")
+
+                    if escolha_3 == "1":
+                        intro.meretriz_1
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "2":
+                        intro.meretriz_2
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "3":
+                        intro.meretriz_3
+                        bt.enter()
+                        break
+
+                    else:
+                        print("\nComando não reconhecido, tente novamente")
+                        time.sleep(2)
+                        bt.delete_last_lines(4)
 
             # BARTENDER
             elif escolha_2 == '3':
 
-                bt.enter()
+                # print as opcoes de fala do jogador
+
+                while loop:
+
+                    escolha_3 = input(">>>")
+
+                    if escolha_3 == "1":
+                        intro.bartender_1
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "2":
+                        intro.bartender_2
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "3":
+                        intro.bartender_3
+                        bt.enter()
+                        break
+
+                    else:
+                        print("\nComando não reconhecido, tente novamente")
+                        time.sleep(2)
+                        bt.delete_last_lines(4)
 
             else:
-                print('\ndigite apenas o numero')
+                print("\nComando não reconhecido, tente novamente")
+                time.sleep(2)
+                bt.delete_last_lines(4)
 
         break
 
@@ -195,21 +267,94 @@ while loop:
             # BIBLIOTECARIA
             if escolha_2 == '1':
 
-                bt.enter()
+                # print as opcoes de fala do jogador
+
+                while loop:
+
+                    escolha_3 = input(">>>")
+
+                    if escolha_3 == "1":
+                        intro.bibliotecaria_1
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "2":
+                        intro.bibliotecaria_2
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "3":
+                        intro.bibliotecaria_3
+                        bt.enter()
+                        break
+
+                    else:
+                        print("\nComando não reconhecido, tente novamente")
+                        time.sleep(2)
+                        bt.delete_last_lines(4)
 
             # LIVROS
             elif escolha_2 == '2':
 
-                bt.enter()
+                # print as opcoes de fala do jogador
+
+                while loop:
+
+                    escolha_3 = input(">>>")
+
+                    if escolha_3 == "1":
+                        intro.livros_1
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "2":
+                        intro.livros_2
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "3":
+                        intro.livros_3
+                        bt.enter()
+                        break
+
+                    else:
+                        print("\nComando não reconhecido, tente novamente")
+                        time.sleep(2)
+                        bt.delete_last_lines(4)
 
             # PESSOA ESTUDANDO
             elif escolha_2 == '3':
 
-                bt.enter()
+                # print as opcoes de fala do jogador
+
+                while loop:
+
+                    escolha_3 = input(">>>")
+
+                    if escolha_3 == "1":
+                        intro.estudante_1
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "2":
+                        intro.estudante_2
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "3":
+                        intro.estudante_3
+                        bt.enter()
+                        break
+
+                    else:
+                        print("\nComando não reconhecido, tente novamente")
+                        time.sleep(2)
+                        bt.delete_last_lines(4)
 
             else:
-                print('\ndigite apenas o numero')
-
+                print("\nComando não reconhecido, tente novamente")
+                time.sleep(2)
+                bt.delete_last_lines(4)
         break
 
     # BECO
@@ -226,22 +371,97 @@ while loop:
             # SABIO
             if escolha_2 == '1':
 
-                bt.enter()
+                # print as opcoes de fala do jogador
+
+                while loop:
+
+                    escolha_3 = input(">>>")
+
+                    if escolha_3 == "1":
+                        intro.sabio_1
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "2":
+                        intro.sabio_2
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "3":
+                        intro.sabio_3
+                        bt.enter()
+                        break
+
+                    else:
+                        print("\nComando não reconhecido, tente novamente")
+                        time.sleep(2)
+                        bt.delete_last_lines(4)
 
             # MENDIGO
             elif escolha_2 == '2':
 
-                bt.enter()
+                # print as opcoes de fala do jogador
+
+                while loop:
+
+                    escolha_3 = input(">>>")
+
+                    if escolha_3 == "1":
+                        intro.mendigo_1
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "2":
+                        intro.mendigo_2
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "3":
+                        intro.mendigo_3
+                        bt.enter()
+                        break
+
+                    else:
+                        print("\nComando não reconhecido, tente novamente")
+                        time.sleep(2)
+                        bt.delete_last_lines(4)
 
             # VIAJANTE
             elif escolha_2 == '3':
 
-                bt.enter()
+                # print as opcoes de fala do jogador
+
+                while loop:
+
+                    escolha_3 = input(">>>")
+
+                    if escolha_3 == "1":
+                        intro.viajante_1
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "2":
+                        intro.viajente_2
+                        bt.enter()
+                        break
+
+                    elif escolha_3 == "3":
+                        intro.viajante_3
+                        bt.enter()
+                        break
+
+                    else:
+                        print("\nComando não reconhecido, tente novamente")
+                        time.sleep(2)
+                        bt.delete_last_lines(4)
 
             else:
-                print('\ndigite apenas o numero')
-
+                print("\nComando não reconhecido, tente novamente")
+                time.sleep(2)
+                bt.delete_last_lines(4)
         break
 
     else:
-        print('\ndigite apenas o numero')
+        print("\nComando não reconhecido, tente novamente")
+        time.sleep(2)
+        bt.delete_last_lines(4)
