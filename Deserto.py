@@ -170,7 +170,7 @@ def oasis(objetos_coletados, atributos):
                                             print("Você conseguiu abrir o baú!")
                                             i = 0
 					    while d < 1:
-					        aumento_de_atributos = int(input("Você pode ter aumento em um dos seus atributos! Qual você escolhe? 1 - Força / 2 - Destreza / 3 - Inteligência / 4 - Sorte / 5 - Carisma "))
+					        aumento_de_atributos = int(input("Você pode ter aumento em um dos seus atributos! Qual atributo você escolhe? 1 - Força / 2 - Destreza / 3 - Inteligência / 4 - Sorte / 5 - Carisma "))
                                                 if aumento_de_atributos == 1:
 						    d += 1
 						    atributos[0] += 1
@@ -247,8 +247,13 @@ def oasis(objetos_coletados, atributos):
     elif missao_cumprida == True:
         return(f'Parabéns! Você cumpriu esta etapa, obtendo uma dica para seguir em sua jornada!')
 
-def retornar(local, *atributos):
+def retornar(local, objetos_coletados, *atributos):
 	
+	if local == "Topo da montanha":
+	    print("ADICIONAR DESCRIÇÃO DO CAMINHO ATÉ O TOPO DA MONTANHA")
+	    print(topo_da_montanha(objetos_coletados))
+	    
+		
 
 def Deserto(jogador):
 
@@ -315,8 +320,31 @@ def Deserto(jogador):
 			#print(bt.enter())
 			print("Você chegou às dunas de areia...")
 			print(dunas(meus_objetos_coletados))
-			#print(retornar())
-		elif escolha_1 == 2:
+			resultado_etapa = oasis(meus_objetos_coletados, meus_atributos)
+	                if resultado_etapa == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+			    i = 0
+		            j = 0
+			    print("Você tem duas chances para retornar aos locais anteriores e tentar cumprir esta etapa!")
+			    while i < 2:
+			        retorno = int(input("Para onde deseja retornar? 1 - Dunas / 2 - Topo da montanha "))
+				while j < 1:	
+				    if retorno == 1:
+					j += 1
+				        resultado_etapa = retornar("Dunas")
+					print(resultado_etapa)
+				    if retorno == 2:
+					j += 1
+					resultado_etapa = retornar("Topo da montanha")
+					print(resultado_etapa)
+				i += 1
+			    if resultado_etapa == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+			        return(f'Você não conseguiu cumprir sua missão nesta etapa, mas está livre para continuar sua jornada. Antes de prosseguir, você d           ecide parar e descansar por uma noite...')
+			    else:
+				return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')
+			else:
+			    return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')
+						  
+  		elif escolha_1 == 2:
 			# CAMINHO 2: DUNAS - TOPO DA MONTANHA - OASIS
 			s += 1
 			print("Você está nas dunas do deserto...")
@@ -325,6 +353,7 @@ def Deserto(jogador):
 			print(dunas(meus_objetos_coletados))
 			print("Você está prosseguindo sua caminhada...")
 			print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE AS DUNAS E O TOPO DA MONTANHA")
+									  
 			if "chave" not in meus_objetos_coletados:
 				while v < 1:
 					coleta_de_objetos = int(input("Você encontrou uma chave! Deseja coletá-la? 1 - Sim / 2 - Não"))
@@ -336,12 +365,14 @@ def Deserto(jogador):
 					elif coleta_de_objetos == 2:
 						v += 1
 						print("OK!")
+									  
 			print(bt.enter())
 			print("Você chegou ao topo da montanha...")
 			print(topo_da_montanha(meus_objetos_coletados))
 			print("Só resta um local para explorar agora...")
 			print("Um oasis está há alguns metros... siga até lá!")
 			print(bt.enter())
+									  
 			if "runa" not in meus_objetos_coletados:
 				while w < 1:
 					coleta_de_objetos = int(input("Você encontrou uma runa! Deseja coletá-la? 1 - Sim / 2 - Não"))
@@ -356,7 +387,30 @@ def Deserto(jogador):
 			print(bt.enter())
 			print("Você chegou ao oásis...")
 			print(oasis(meus_objetos_coletados, meus_atributos))
-			#print(retornar())
+			resultado_etapa = oasis(meus_objetos_coletados, meus_atributos)
+	                if resultado_etapa == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+			    i = 0
+		            j = 0
+			    print("Você tem duas chances para retornar aos locais anteriores e tentar cumprir esta etapa!")
+			    while i < 2:
+			        retorno = int(input("Para onde deseja retornar? 1 - Dunas / 2 - Topo da montanha "))
+				while j < 1:	
+				    if retorno == 1:
+					j += 1
+				        resultado_etapa = retornar("Dunas")
+					print(resultado_etapa)
+				    if retorno == 2:
+					j += 1
+					resultado_etapa = retornar("Topo da montanha")
+					print(resultado_etapa)
+				i += 1
+			    if resultado_etapa == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+			        return(f'Você não conseguiu cumprir sua missão nesta etapa, mas está livre para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')				  
+			    else:
+				return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')
+			else:
+			    return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')
+					  
 		elif escolha_1 == 3:
 			# CAMINHO 3: OASIS - DUNAS - TOPO DA MONTANHA
 			t += 1
@@ -411,4 +465,35 @@ def Deserto(jogador):
 			print("Você chegou ao topo da montanha...")
 			print(bt.enter())
 			print(topo_da_montanha(meus_objetos_coletados))
-			#retornar()
+			resultado_etapa = oasis(meus_objetos_coletados, meus_atributos)
+			if resultado_etapa == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+			    i = 0
+		            j = 0
+			    print("Você tem duas chances para retornar aos locais anteriores e tentar cumprir esta etapa!")
+			    while i < 2:
+			        retorno = int(input("Para onde deseja retornar? 1 - Dunas / 2 - Topo da montanha "))
+				while j < 1:	
+				    if retorno == 1:
+					j += 1
+				        resultado_etapa = retornar("Dunas")
+					print(resultado_etapa)
+				    if retorno == 2:
+					j += 1
+					resultado_etapa = retornar("Topo da montanha")
+					print(resultado_etapa)
+				i += 1
+			    if resultado_etapa == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
+			        return(f'Você não conseguiu cumprir sua missão nesta etapa, mas está livre para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')				  
+                            else:
+				return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')
+			else:
+			    return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')
+									  
+									  
+									  
+									  
+									  
+									  
+									  
+									  
+									  
