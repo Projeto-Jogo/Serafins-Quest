@@ -57,6 +57,19 @@ def dunas(objetos_coletados):
                 d += 1
                 objetos_coletados.append("poção")
                 print("Poção coletada!")
+		while b < 1:
+                    escolha_2 = int(input("Beber poção? 1 - Sim / 2 - Não"))
+                    if escolha_2 == 1:
+                        b += 1
+                        hp -= 10
+                        print(f'Ah, não! Esta poção é perigosa! Você perdeu 10 HPs!')
+                        #if hp <= 0:
+                         #   bt.game_over()
+                    elif escolha_2 == 2:
+                        b += 1
+                        print("OK!")
+                    else:
+                        print("Escolha uma opção válida!")
             elif escolha == 2:
                 d += 1
                 print("OK!")
