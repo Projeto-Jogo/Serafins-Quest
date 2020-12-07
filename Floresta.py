@@ -520,20 +520,36 @@ def floresta(jogador):
         dir = int(input('>>>'))
     
     elif sala == 120: #sem saida
-      print('Ao longe é possível ver a luz do sol novamente, ansioso, você se apressa.')
+      print('Ao longe é possível ver a luz do sol novamente, ansioso, você se apressa. Contudo, você repara que essa não era a saída e sim uma clareira com um lago de águas cristalinas.')
       bt.enter()
-      print('Contudo, você repara que essa não era a saída e sim uma clareira com um lago de águas cristalinas.')
-      bt.enter()
-      print ('Você decidi:\n1. voltar')
+      print('Ao olhar ao redor você repara em algo que parece um acampamento improvisado. Você decidi:\n1.olhar o acampamento\n2.voltar')
       dir = int(input('>>>'))
+      #olhar o acampamento
+      if dir == 1:
+        print('Ao se aproximar você vê os requicíos de um fogueira e uma cabana mal feita. Olhando dentro você repara que há alguns frascos vazios, exceto por um preeenchido por um líquido brilhante. Assim você dicidi:\n1. beber o frasco\n2. não beber')
+        beber = int(input('>>>'))
+        #jogador bebe a poção
+        if beber == 1: 
+          print('Curioso para saber o que aconteceria você bebe a poção e imediatamente se sente bem.')
+          bt.passar_nivel(jogador)
+          print('Vendo que nã há mais nada de interessante, você decidi retornar pelo caminho que veio.')
+          sala = 119
+        # jogador não bebe a poção
+        if beber == 2:
+          print('O bom censo fala mais alto e você decidi que seria melho não arriscar. Então você decidi voltar pelo caminho que você veio.')
+          sala = 119
+        # erro
+        else:
+        print('Ao se aproximar você vê os requicíos de um fogueira e uma cabana mal feita. Olhando dentro você repara que há alguns frascos vazios, exceto por um preeenchido por um líquido brilhante. Assim você dicidi:\n1. beber o frasco\n2. não beber')
+        beber = int(input('>>>'))         
       # voltar
-      if dir ==1:
+      if dir ==2:
         sala = 119
       #erro
       else:
         print ('Você decidi:\n1. voltar')
         dir = int(input('>>>'))
   
-  print('Depois de uma longa caminhada pela floresta finalmete é possível ver a luz do dia novamente e aolonge você avista o castelo.')
+  print('Depois de uma longa caminhada pela floresta finalmete é possível ver a luz do dia novamente e ao longe você avista o castelo.')
   bt.enter()
  
