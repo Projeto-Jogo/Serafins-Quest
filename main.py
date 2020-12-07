@@ -146,7 +146,7 @@ loop = True
 while loop:
 
     # ESCOLHA DO LOCAL DE BUSCA: TAVERNA; BIBLIOTECA; BECO
-    escolha_1 = input('\nProcurar informacoes:\n(1) na Taverna\n(2) na Biblioteca\n(3) no Beco')
+    escolha_1 = input('\nProcurar informacoes:\n (1) na Taverna\n (2) na Biblioteca\n (3) no Beco\n>>>')
 
     # TAVERNA
     if escolha_1 == '1':
@@ -465,3 +465,36 @@ while loop:
         print("\nComando não reconhecido, tente novamente")
         time.sleep(2)
         bt.delete_last_lines(4)
+
+if trigger_deserto == True and trigger_floresta == True:
+
+    while loop:
+
+        caminho = input(" (1) Seguir pelo deserto\n (2) Seguir pela floresta\n>>>")
+    
+        if caminho == "1":
+            ds.deserto
+            break
+    
+        elif caminho == "2":
+            fr.floresta
+            break
+    
+        else:
+            print("\nComando não reconhecido, tente novamente")
+            time.sleep(2)
+            bt.delete_last_lines(4)
+            
+elif trigger_deserto == True:
+    
+#   print(historinha)
+
+elif trigger_floresta == True:
+    
+#   print(historinha)
+
+else:
+    
+    print("voce nao sabe aonde ir e sua jornada termina aqui")
+
+fn.final
