@@ -467,6 +467,7 @@ def batalha(inimigo, jogador, final = False):
         # Checar se o jogador morreu após o turno do inimigo
         if jogador['hp'] <= 0:
             print(f'\nVocê morreu')
+            game_over(jogador)
 
     fugir = False
 
