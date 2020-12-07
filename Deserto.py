@@ -3,6 +3,7 @@
 import Batalha as bt # Importa o módulo "Batalha"
 
 def dunas(objetos_coletados): 
+	
 # Função utilizada para a trajetória do jogador nas dunas de areia do deserto 
     a = b = c = d = e = 0 # Variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
     if "pedra" in objetos_coletados and "poção" in objetos_coletados: # Se o jogador já coletou a pedra e a poção, aparece um aviso de que não há mais objetos para coletar no local
@@ -83,6 +84,7 @@ def dunas(objetos_coletados):
             return(f'Você não coletou novos itens!')
 
 def topo_da_montanha(objetos_coletados): 
+	
 # Funçao autilizada para a trajetória do jogador no topo de uma montanha no deserto
     a = 0
     if "flor" in objetos_coletados:
@@ -102,6 +104,7 @@ def topo_da_montanha(objetos_coletados):
                 print("Comando não conhecido, tente novamente.")
                 
 def oasis(objetos_coletados, atributos): 
+	
 # Função utilizada para a trajetória do jogador em um oasis no deserto
     hp = atributos[5]
     a = b = c = d = e = 0 # 
@@ -193,6 +196,8 @@ def retornar():
 	pass
 
 def Deserto(jogador):
+	
+	# Função principal utilizada para descrever toda a trajetória do jogador no deserto
 	x = y = z = w = 0
 	meus_objetos_coletados = []
 	forca = jogador["forca"]
