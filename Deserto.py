@@ -2,6 +2,7 @@
 
 import Batalha as bt # Importa o módulo "Batalha"
 
+
 def dunas(objetos_coletados): 
 	
 # Função utilizada para a trajetória do jogador nas dunas de areia do deserto 
