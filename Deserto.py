@@ -20,8 +20,8 @@ def dunas(objetos_coletados):
                     escolha_2 = int(input("Beber poção? 1 - Sim / 2 - Não"))
                     if escolha_2 == 1:
                         b += 1
-                        hp -= 1
-                        print(f'Ah, não! Esta poção é perigosa! Você perdeu 1 HP!')
+                        hp -= 10
+                        print(f'Ah, não! Esta poção é perigosa! Você perdeu 10 HPs!')
                         #if hp <= 0:
                          #   bt.game_over()
                     elif escolha_2 == 2:
@@ -164,15 +164,35 @@ def oasis(objetos_coletados, atributos):
                                             d += 1
                                             print("Você conseguiu abrir o baú!")
                                             i = 0
-                                            while i < len(atributos) - 1:
-                                                i += 1
-                                                if atributos[i] < 5:
-                                                    atributos[i] += 1
-                                            hp += 2
-                                            print("Por conta disso, seus atributos aumetaram e você ganhou 2 HPs!")
+					    while d < 1:
+					        aumento_de_atributos = int(input("Você pode ter aumento em um dos seus atributos! Qual você escolhe? 1 - Força / 2 - Destreza / 3 - Inteligência / 4 - Sorte / 5 - Carisma "))
+                                                if aumento_de_atributos == 1:
+						    d += 1
+						    atributos[0] += 1
+						    print(f'Voce tem atributos[0] de forca agora!')
+					        elif aumento_de_atributos == 2:
+						    d += 1
+						    atributos[1] += 1
+						    print(f'Voce tem atributos[1] de forca agora!')
+					        eli f aumento_de_atributos == 3:
+					            d += 1
+						    atributos[2] += 1
+						    print(f'Voce tem atributos[0] de forca agora!')
+					        elif aumento_de_atributos == 4:
+						    d += 1
+						    atributos[3] += 1
+						    print(f'Voce tem atributos[0] de forca agora!')
+                                                elif aumento_de_atributos == 5:
+						    d += 1
+						    atributos[4] += 1
+					            print(f'Voce tem atributos[0] de forca agora!')
+					        else:
+						    print("Comando não reconhecido, tente novamente")
+                                            hp += 20
+                                            print("Você também ganhou 20 HPs!")
                                             print(f'força: atributos[0], destreza: {atributos[1]}, inteligência: {atributos[2]}, carisma: {atributos[3]}, sorte: {atributos[5]}')
                                             print("Também há uma nota dentro do baú... leia!")
-                                            enter()
+                                            bt.enter()
                                             print("Na nota está escrito 'URSO'..")
                                             print("Hmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
                                             missao_cumprida = True
