@@ -117,7 +117,7 @@ def topo_da_montanha(objetos_coletados):
             if escolha == 1:
                 objetos_coletados.append("flor")
                 a += 1
-		#bt.delete_last_lines(1)
+                #bt.delete_last_lines(1)
                 return(f'Seu novo item é uma flor do deserto!')
             elif escolha == 2:
                 a += 1
