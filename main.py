@@ -25,17 +25,37 @@ import Final as fn
 # Dicionários para as armas
 mao = {"nome": "mão", "atributo": "FOR", "dano": "0-1", "min": 0, "max": 1}
 
-adaga = {"nome": "adaga", "atributo": "DES", "dano": "1-3", "min": 1, "max": 3}
+adaga = {"nome": "adaga", "atributo": "DES", "dano": "2-4", "min": 2, "max": 4}
+
+chicote = {"nome": "chicote", "atributo": "DES", "dano": "2-4", "min": 2, "max": 4}
+
+espada_longa = {"nome": "espada longa", "atributo": "FOR", "dano": "3-5", "min": 3, "max": 5}
 
 
-# Dicionários para atributos dos inimigos
-Goblin = {"nome": "Goblin", 'hp': 85, 'defesa': 3, 'força': 1, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+# Dicionários para atributos dos inimigos                                                Ordem de encontro
+Serpente =         {"nome": "Serpente",              'hp': 30,  'defesa': 2, 'força': 2} # 1                       level up
 
-Esqueleto = {"nome": "Esqueleto", 'hp': 65, 'defesa': 5, 'força': 2, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+Urso =             {"nome": "Urso",                  'hp': 45,  'defesa': 3, 'força': 3} # 1                       level up
 
-Serpente = {"nome": "Serpente", 'hp': 30, 'defesa': 2, 'força': 2, 'destreza': 5, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+Goblin =           {"nome": "Goblin",                'hp': 55,  'defesa': 4, 'força': 3} # 2
 
-Urso = {"nome": "Urso", 'hp': 70, 'defesa': 2, 'força': 3, 'destreza': 1, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+Seguranca =        {"nome": "Segurança",             'hp': 60,  'defesa': 5, 'força': 3} # 3
+
+Esqueleto_1 =      {"nome": "Esqueleto",             'hp': 65,  'defesa': 4, 'força': 2} # 4
+
+Esqueleto_2 =      {"nome": "Esqueleto",             'hp': 35,  'defesa': 6, 'força': 5} # 5
+
+Troll =            {"nome": "Troll",                 'hp': 70,  'defesa': 5, 'força': 2} # 4
+
+Escorpiao_enorme = {"nome": "Escorpião enorme",      'hp': 60,  'defesa': 4, 'força': 3} # 6
+
+Morto_vivo =       {"nome": "Morto vivo",            'hp': 45,  'defesa': 2, 'força': 5} # 7                       level up
+
+Javali =           {"nome": "Javali",                'hp': 65,  'defesa': 5, 'força': 3} # 5
+
+Boss_1 =           {"nome": "Guardião do relicario", 'hp': 75,  'defesa': 5, 'força': 4} # 8
+
+Boss_2 =           {"nome": "Guardião renascido",    'hp': 100, 'defesa': 6, 'força': 5} # 9
 
 
 # INTRODUCAO
@@ -122,104 +142,106 @@ bt.enter()
 print('\n(narracao)')
 
 # O WHILE SERVE PARA REPETIR A PERGUNTA AO JOGADOR CASO ELE NAO TENHA ESCOLHIDO DIREITO
-x = 0
-y = 0
-while x < 1:
+loop = True
+while loop:
 
     # ESCOLHA DO LOCAL DE BUSCA: TAVERNA; BIBLIOTECA; BECO
     escolha_1 = input('\nProcurar informacoes:\n(1) na Taverna\n(2) na Biblioteca\n(3) no Beco')
 
     # TAVERNA
     if escolha_1 == '1':
+
         print('\n(narracao)')
         bt.enter()
-        x += 1
-        while y < 1:
+
+        while loop:
+
             # ESCOLHA DA CONVERSA: BEBADO; MERETRIZ; BARTENDER
             escolha_2 = input('\nConversar com:\n(1) Bebado\n(2) Meretriz\n(3) Bartender')
 
             # BEBADO
             if escolha_2 == '1':
+
+                
                 bt.enter()
-                y += 1
+
 
             # MERETRIZ
             elif escolha_2 == '2':
+
                 bt.enter()
-                y += 1
 
             # BARTENDER
             elif escolha_2 == '3':
+
                 bt.enter()
-                y += 1
 
             else:
                 print('\ndigite apenas o numero')
 
+        break
 
     # BIBLIOTECA
     elif escolha_1 == '2':
 
         print('\n(narracao)')
         bt.enter()
-        x += 1
 
-        while y < 1:
+        while loop:
+
             # ESCOLHA DE PESQUISA: BIBLIOTECARIA; LIVROS; PESSOA ESTUDANDO
             escolha_2 = input('\nProcurar com:\n(1) Bibliotecaria\n(2) Livros\n(3) Pessoa estudando')
 
             # BIBLIOTECARIA
             if escolha_2 == '1':
+
                 bt.enter()
-                y += 1
 
             # LIVROS
             elif escolha_2 == '2':
+
                 bt.enter()
-                y += 1
 
             # PESSOA ESTUDANDO
             elif escolha_2 == '3':
+
                 bt.enter()
-                y += 1
 
             else:
                 print('\ndigite apenas o numero')
 
+        break
 
     # BECO
     elif escolha_1 == '3':
 
         print('\n(narracao)')
         bt.enter()
-        x += 1
 
-        while y < 1:
+        while loop:
+
             # ESCOLHA DA CONVERSA: SABIO; MENDIGO; VIAJANTE
             escolha_2 = input('\nConversar com:\n(1) Sabio\n(2) Mendigo\n(3) Viajante')
 
             # SABIO
             if escolha_2 == '1':
+
                 bt.enter()
-                y += 1
 
             # MENDIGO
             elif escolha_2 == '2':
+
                 bt.enter()
-                y += 1
 
             # VIAJANTE
             elif escolha_2 == '3':
+
                 bt.enter()
-                y += 1
 
             else:
                 print('\ndigite apenas o numero')
 
+        break
 
     else:
         print('\ndigite apenas o numero')
-
-
-
-
