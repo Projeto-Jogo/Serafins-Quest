@@ -167,6 +167,43 @@ def acao_inimigo():
     elif chance == 3:
         inimigo_acao = 0
 
+def passar_nivel(jogador):
+    '''
+    Define o que acontece quando o jogador passa um nível.
+    Entrada: dicionário com os atributos do jogador
+    '''
+    print('Você subiu um nível!\nVocê ganhou um ponto de atributo.')
+    enter()
+    flag_atributo = False #Flag para resposta de qual atributo aumentar
+    while flag_atributo == False:
+        print('\nQual atributo deseja aumentar?\n1 - defesa\n2 - força\n3 - destreza\n4 - inteligência\n5 - sorte\n6 - carisma')
+        ponto = input('>>>')
+        if ponto == '1': #Aumenta a defesa
+            flag_atributo = True
+            jogador['defesa'] += 1
+            print(f'Sua defesa: {jogador["defesa"]}')
+        elif ponto == '2': #Aumenta a força
+            flag_atributo = True
+            jogador['força'] += 1
+            print(f'Sua força: {jogador["força"]}')
+        elif ponto == '3': #Aumenta a destreza
+            flag_atributo = True
+            jogador['destreza'] += 1
+            print(f'Sua destreza: {jogador["destreza"]}')
+        elif ponto == '4': #Aumenta a inteligência
+            flag_atributo = True
+            jogador['inteligência'] += 1
+            print(f'Sua inteligência: {jogador["inteligência"]}')
+        elif ponto == '5': #Aumenta a sorte
+            flag_atributo = True
+            jogador['sorte'] += 1
+            print(f'Sua sorte: {jogador["sorte"]}')
+        elif ponto == '6': #Aumenta o carisma
+            flag_atributo = True
+            jogador['carisma'] += 1
+            print(f'Seu carisma: {jogador["carisma"]}')
+        if flag_atributo == False:
+            print('Comando não reconhecido, tente novamente.')
 
 # Função para calcular o dano dado pelo jogador
 def calculo_dano(d20,jogador,inimigo):
@@ -268,29 +305,6 @@ def calculo_dano(d20,jogador,inimigo):
             print('\nAtaque mal sucedido')
             enter()
 
-
-# Dicionários para as armas
-mao = {"nome": "mão", "atributo": "FOR", "dano": "0-1", "min": 0, "max": 1}
-
-adaga = {"nome": "adaga", "atributo": "DES", "dano": "1-3", "min": 1, "max": 3}
-
-
-# Dicionários para atributos do jogador                                                                                                                                    atributos de batalha                             atributos gerais
-Soldado =    {"nome": "Soldado",    'hp': 100, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3, "arma": mao}  # Soldado      defesa media, força alta,  destreza baixa, | inteligência baixa, sorte alta,  carisma media
-                                                                                                                                                  #                                                         |
-Mercenario = {"nome": "Mercenário", 'hp': 100, 'defesa': 6, 'força': 2, 'destreza': 4, 'inteligência': 5, 'sorte': 3, 'carisma': 2, "arma": mao}  # Mercenario   defesa alta,  força baixa, destreza media, | inteligência alta,  sorte media, carisma baixa
-                                                                                                                                                  #                                                         |
-Ladrao =     {"nome": "Ladrão",     'hp': 100, 'defesa': 4, 'força': 3, 'destreza': 5, 'inteligência': 3, 'sorte': 2, 'carisma': 5, "arma": mao}  # Ladrao       defesa baixa, força media, destreza alta,  | inteligência media, sorte baixa, carisma alta
-
-
-# Dicionários para atributos dos inimigos
-Goblin =    {"nome": "Goblin",    'hp': 85, 'defesa': 3, 'força': 1, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
-
-Esqueleto = {"nome": "Esqueleto", 'hp': 65, 'defesa': 5, 'força': 2, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
-
-Serpente =  {"nome": "Serpente",  'hp': 30, 'defesa': 2, 'força': 2, 'destreza': 5, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
-
-Urso =      {"nome": "Urso",      'hp': 70, 'defesa': 2, 'força': 3, 'destreza': 1, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
 
 
 fugir = False
@@ -464,5 +478,3 @@ LEMBRETES:
 -balanceamento dos valores
 -cores para os comandos
 """
-
-
