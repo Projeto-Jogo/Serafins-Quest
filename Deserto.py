@@ -335,15 +335,8 @@ def Deserto(jogador):
 			print(bt.enter())
 			print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE O OASIS E AS DUNAS")
 		        print("Você encontrou uma serpente no caminho!")
-			#while u < 1:
-	                 #   fugir_da_batalha = int(input("
-			  #  u += 1
-			#       bt.batalha(Serpente, jogador) # chamada da função "batalha" do módulo "Batalha"
-			#	elif coleta_de_objetos == 2:
-			#		u += 1
-			#	else:
-			#		print("Comando não conhecido, tente novamente.")
-			#print(bt.enter())
+			bt.batalha(Serpente, jogador) # chamada da função "batalha" do módulo "Batalha"
+			print(bt.enter())
 			print("Você chegou às dunas de areia...")
 			print(dunas(meus_objetos_coletados))
 			resultado_etapa = oasis(meus_objetos_coletados, meus_atributos)
@@ -514,7 +507,4 @@ def Deserto(jogador):
 				return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')
 			else:
 			    return(f'Parabéns! Você conseguiu cumprir esta etapa e está pronto(a) para continuar sua jornada! Você conta agora com atributo_melhorado = , hp = e obteve uma nova arma! Antes de prosseguir, você decide parar e descansar por uma noite...')					  
-									  
-									  
-									  
 									  
