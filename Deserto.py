@@ -445,15 +445,8 @@ def Deserto(jogador):
 			print("Você está prosseguindo sua caminhada...")
 			print(bt.enter())
 			print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE O OASIS E AS DUNAS")
-			#while x < 1:
-				#coleta_de_objetos = int(input("Você encontrou uma serpente no caminho!"))
-				#if coleta_de_objetos == 1:
-				#	x += 1
-				#    	bt.batalha(Serpente, jogador) # chamada da função "batalha" do módulo "Batalha"
-				#elif coleta_de_objetos == 2:
-				#	x += 1
-				#else:
-				#	print("Comando não reconhecido, tente novamente.")
+			print("Você encontrou uma serpente no caminho!")
+			bt.batalha(Serpente, jogador) # Chamada da função "batalha" do módulo "Batalha"
 			print("ADICIONAR MAIS DESCRIÇÃO DE CAMINHO")
 			if "runa" not in meus_objetos_coletados:
 				while y < 1:
