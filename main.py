@@ -463,7 +463,7 @@ while loop:
             print(f">>>{caminho}\u001b[0m\n")
 
             if caminho == "1":
-                ds.deserto()
+                ds.deserto(personagem)
                 break
 
             elif caminho == "2":
@@ -480,7 +480,7 @@ while loop:
     elif trigger_deserto == True:
 
     #   print(historinha)
-        ds.deserto()
+        ds.deserto(personagem)
         break
 
     elif trigger_floresta == True:
