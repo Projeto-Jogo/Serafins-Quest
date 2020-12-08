@@ -3,13 +3,13 @@
 import Batalha as bt # Importa o módulo "Batalha"
 
 
-def dunas(objetos_coletados): 
+def dunas(jogador, objetos_coletados): 
 	
 # Função utilizada para a trajetória do jogador nas dunas de areia do deserto 
 
     print("ADICIONAR DESCRIÇÃO DAS DUNAS DO DESERTO")
     a = b = c = d = e = f = 0 # Variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
-    hp = 70
+    hp = jogador["hp"]
     objetos_coletados_nas_dunas = []
     
     if "pedra" in objetos_coletados and "poção" in objetos_coletados: # Se o jogador já coletou a pedra e a poção, aparece um aviso de que não há mais objetos para coletar no local
@@ -75,7 +75,7 @@ def dunas(objetos_coletados):
                         e += 1
                  #      bt.delete_last_lines(1)
                         hp -= 10
-                        print(f'Ah, não! Esta poção é perigosa! Você perdeu 10 HPs!')
+                        print(f'Ah, não! Esta poção é perigosa! Você perdeu 10 HPs! Seus HPs: {hp}')
                     elif escolha_2 == 2:
                         e += 1
                         print("OK!")
