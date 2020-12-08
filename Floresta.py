@@ -338,7 +338,7 @@ def floresta(jogador):
                 jogador['arma'] = 'adaga'
                 bt.enter()
               #jogador não pega a arma
-              if pegar == 2: 
+              elif pegar == 2: 
                 print('Você acaba achando que não seria uma boa ideia pegar a arma e deixa-a no lugar em que encontrou.')
               #erro
               else:
