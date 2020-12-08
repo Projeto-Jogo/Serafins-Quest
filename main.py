@@ -45,6 +45,9 @@ def atriubutos_gen():
 
             while loop == True:
 
+                # Dicionario da arma inicial
+                mao = {"nome": "mão", "atributo": "FOR", "dano": "0-1", "min": 0, "max": 1}
+
                 # Dicionários para atributos do jogador                                                                                                                                    atributos de batalha                             atributos gerais
                 Soldado =    {"nome": "Soldado",    'hp': 100, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3,"arma": mao}  #  Soldado      defesa media, força alta,  destreza baixa, | inteligência baixa, sorte alta,  carisma media
                                                                                                                                                                  #                                                          |
@@ -90,7 +93,14 @@ def atriubutos_gen():
                     personagem = Ladrao
                     if Ladrao['defesa'] + Ladrao['força'] + Ladrao['destreza'] + Ladrao['inteligência'] + Ladrao['sorte'] + Ladrao['carisma'] >= 19:
                         return personagem
+
             break
+
+        else:
+            print("\nComando não reconhecido, tente novamente")
+            time.sleep(2)
+            bt.delete_last_lines(4)
+
 
 personagem = atriubutos_gen()
 
