@@ -668,11 +668,12 @@ def salao_final(jogador):
         if final == '1': #Final 1 - o jogador devolve o artefato para o rei
             flag = True
             print('Você tinha uma vida antes de ser preso e gostaria muito de recuperá-la. Sem perder tempo, você sai da casa, percebendo que agora todas as portas estão abertas. '
-                  'Agora que conhece o caminho, não tem problemas para voltar para o castelo. O mesmo soldado que te guiou para fora te espera nos portões. Você é guiado até a presença do rei. ')
+                  'Agora que conhece o caminho, não tem problemas para voltar para o castelo. O mesmo soldado que te guiou para fora te espera nos portões. Você é guiado até a presença do rei. '
+                  'Você recebe a liberdade e uma grande recompensa em ouro e terras. Quando a guerra finalmente estoura, seu reino possui vantagem por conta do artefato e vence a guerra.')
         elif final == '2': #Final 2 - o jogador foge com o artefato
             flag = True
             print('Sua vida anterior não era assim tão boa e nada que o rei possa oferecer é tão bom quanto à grande quantidade de poder que o artefato lhe fornece. Além de tudo, não importa o resultado da guerra se você já estiver longe. '
-                  '')
+                  'Com o artefato em mãos, você segue para outro país se aprofundar no estudo da magia de artefatos. Em menos de um ano, se torna um poderoso e temido mago e ninguém ousa te desafiar ou entrar em seu caminho.')
         if flag == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
     
@@ -680,7 +681,7 @@ def salao_final(jogador):
 def final(jogador):
     '''
     Define os acontecimentos e sua ordem dentro da mansão
-    Entrada: dicionário com os atributos do jogador e string com o local que ele foi 
+    Entrada: dicionário com os atributos do jogador 
     '''
     print('Depois de seguir alguns metros na estrada, a noite cai e você decide que é melhor esperar o sol voltar. Você sai e encontra uma pedra grande o bastante para que você possa deitar atrás dela e não ser visto da estrada. '
           'Ao acordar, sente suas energias renovadas e feridas curadas.')
@@ -708,6 +709,7 @@ def final(jogador):
         elif sala_atual == 8:
             sala8(jogador)
     salao_final(jogador)
+    bt.enter()
     print('Você terminou o jogo!\n\nDeseja jogar outra vez:\n1 - sim\n2 - não')
     jogar_nov = input('>>>')
     if jogar_nov == '1':
