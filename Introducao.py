@@ -170,11 +170,25 @@ string = "O conhecimento presente entre os livros e as pessoas no lugar podem pr
 for ch in string:
     time.sleep(0.08)
     print(ch, end='', flush=True)
+    
+# opcao prcurar um livro
+
+
+def livro():
+
+    return
+
+
+string = "Voce procura algum livro que possa te ajudar mas nao esta conseguindo achar, talvez alguem possa te ajudar"
+for ch in string:
+    time.sleep(0.08)
+    print(ch, end='', flush=True)
 
 
 # opcoes pra falar com a bibiotecaria bibliotecaria = input('\nFalar:\n(1) Com licenca, a senhora sabe me dizer como descobrir o caminho para Nimide?\n(2) Hey, voce aí, como eu faco pra descobrir o caminho pra Nimide?\n Oh velha senhora atras do balcao, onde eu descubro como chegar em Nimide?\n')
 
 # conversa bibliotecaria
+
 def bibliotecaria1():
 
     return
@@ -305,4 +319,59 @@ for ch in string:
 
 # conversa com o viajante
 
-# opcoes para falar com o viajante viajante = input('n(1)
+# opcoes para falar com o viajante viajante = ('\nFalar:\n(1) Com liceça, o senhor me parece ser um viajante, por acaso voce conhece o melhor caminho para Nimide?\n(2) Hey andarilho, voce sabe o melhor caminho para Nimide?\n(3) Oh  seu nomadiznho, voce deve saber como chegar a Nimide, me conte.\n')
+
+
+def viajante1():
+
+    return
+
+
+string = "O senhor está certo e eu conheco o caminho, eu vou pela floresta, o segredo é seguir as cores frias."
+
+for ch in string:
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
+
+
+def viajante2():
+
+    return
+
+
+string = "Que agressivo, o melhor caminho é a floresta meu senhor"
+
+for ch in string:
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
+
+
+def viajante3():
+
+    return
+
+
+string = "Mas que grosseiro, nao tenho nada pra te falar, segue o seu caminho"
+
+for ch in string:
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
+
+# conversa com o medigo
+
+# opcoes para falar com o mendigo mendigo = ('\nFalar:\n(1) Pobre senhor, voce saberia me dizer o caminho para Nimide.\n(2) Oh mendigo, voce nao sabe o caminho para Nimide nao né?\n(3) Hey voce ai largado na rua, se voce souber me conta, como eu chego na fronteira norte do país?\n')
+
+# qualquer que seja a fala a resposta sera essa
+
+
+def mendigo123():
+    
+    return
+
+
+string = "Oh meu senhor, eu lá tenho cara de quem viaja pra fora do reino? Eu nao sei nao"
+
+for ch in string:
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
+
