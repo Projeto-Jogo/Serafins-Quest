@@ -95,20 +95,20 @@ def acoes(inimigo, jogador, arma, final):
 
         # Opcão do jogador receber informações sobre si mesmo, e do oponente
         if acao == "info":
-            print(f"\nVocê:\nHP {jogador['hp']}  DEF {jogador['defesa']}  FOR {jogador['força']}  DES {jogador['destreza']}  INT {jogador['inteligência']}\n\nArma:   {arma['nome']}\nAtr. {arma['atributo']}  Dano {arma['dano']}\n\n{inimigo['nome']}:\nHP {inimigo['hp']}  DEF {inimigo['defesa']}  FOR {inimigo['força']}  DES {inimigo['destreza']}  INT {inimigo['inteligência']}")
+            print(f"\nVocê:\nHP {jogador['hp']}  DEF {jogador['defesa']}  FOR {jogador['força']}  DES {jogador['destreza']}\n\nArma:   {arma['nome']}\nAtr. {arma['atributo']}  Dano {arma['dano']}\n\n{inimigo['nome']}:\nHP {inimigo['hp']}  DEF {inimigo['defesa']}  FOR {inimigo['força']}  DES {inimigo['destreza']}")
 
         # Se o jogador tiver escolhido fugir de uma batalha em que ele pode, nao vai chegar a esse ponto do codigo e nao vai repetir o input
         elif acao == "fugir":
             print("Você não pode fugir dessa batalha")
 
         # Opção do jogador usar um ataque forte, que aumenta sua força mas diminui sua defesa por um turno
-        elif acao == "forte":
+        elif acao == "1":
             forte = True
             print("\nVocê deu um ataque forte")
             return
 
         # Opção do jogador se defender do próximo ataque, aumentando sua defesa, mas não atacando naquela rodada
-        elif acao == "defesa":
+        elif acao == "2":
             defende = True
             print("\nVocê levanta a guarda")
             return
@@ -120,7 +120,7 @@ def acoes(inimigo, jogador, arma, final):
         # Exibir os comandos possiveis
         elif acao == "comandos":
             if final == False:
-                print("comandos\ninfo 'comando'\ninfo\nforte\ndefesa\nfugir\n")
+                print(" (1) forte\n (2) defesa\n fugir\n comandos\n info 'comando'\n info\n")
             else:
                 print("comandos\ninfo 'comando'\ninfo\nforte\ndefesa\n")
 
