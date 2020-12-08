@@ -39,12 +39,14 @@ for ch in string:
     print(ch, end='', flush=True)
 
 
-def bebado():
 
 
+#bebado = input('\nFalar:\n(1) Com licenca o senhor sabe como eu faco para chegar na fronteira com ---?\n(2) Meu companheiro, me fale com chegar a fronteira norte\n(3) Oh seu vagabunda, como que faz pra cruzar a fronteira de ----')
 
- bebado1 = input('\nFalar:\n(1) Com licenca o senhor sabe como eu faco para chegar na fronteira com ---?\n(2) Meu companheiro, me fale com chegar a fronteira norte\n(3) Oh seu vagabunda, como que faz pra cruzar a fronteira de ----')
 
+def bebado123():
+
+    return
 
 import time
 
@@ -54,13 +56,19 @@ for ch in string:
     time.sleep(0.09)
     print(ch, end='', flush=True)
 
+def bebadoresp():
+
+    return
 
 bebado2 = input(
     '\nfalar:\n(1) Calma senhor senhor nao quero problemas.\n(2) O que vc falou de mim? vem brigar seu bebado')
 
-if bebado2 == '1':
+def bebeadoresp1():
 
-    import time
+
+    return
+
+import time
 
 string = "Voce se afasta do bebado e volta a procurar novas fonte de informaçao"
 
@@ -69,65 +77,94 @@ for ch in string:
     print(ch, end='', flush=True)
 
 
-def barman():
+def bebeadoresp2():
+    return
+
+
+import time
+
+string = "Os segurancao da taverna vem a briga e separam voce antes que alguma coisa aconteça, entao voce volta a procurar informaçoes"
+
+for ch in string:
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
+
+
+
+
+
+#barman = input('\nFalar:\n(1) Meu camarada ,voce sabe me falar como eu faço para chegar na fronteira ao norte?\n(2) Com a sua licença, o senhor sabe me dizer como eu faço para chegar até Nimide?\n(3) Oh seuzinho, me fala como eu chego na fronteira norte')
+
+
+
+def barman1():
+
+
+    return
+
+import time
+
+string = "Mas é claro, com todos esses anos atendendo clientes eu descobri que o melhor jeito é cruzar o deserto, no caminho existem varios objetos que podem te ajudar no seu caminho, mas tome cuidado, nem tudo sao flores"
+
+for ch in string:
+        time.sleep(0.09)
+        print(ch, end='', flush=True)
+
+def barman2():
 
     return
 
 
-barman1 = input('\nFalar:\n(1) Meu camarada ,voce sabe me falar como eu faço para chegar na fronteira ao norte?\n(2) Com a sua licença, o senhor sabe me dizer como eu faço para chegar até Nimide?\n(3) Oh seuzinho, me fala como eu chego na fronteira norte')
+import time
 
-if barman1 == '1':
+string = "Mas que desnecessario esse seu jeito de falar, voce esta em uma taverna, é só voce pegar o caminho do deserto que voce chega."
 
-    import time
-
-    string = "Mas é claro, com todos esses anos atendendo clientes eu descobri que o melhor jeito é cruzar o deserto, no caminho existem varios objetos que podem te ajudar no seu caminho, mas tome cuidado, nem tudo sao flores"
-
-    for ch in string:
-        time.sleep(0.09)
-        print(ch, end='', flush=True)
-
-if barman1 == '2':
-
-    import time
-
-    string = "Mas que desnecessario esse seu jeito de falar, voce esta em uma taverna, é só voce pegar o caminho do deserto que voce chega."
-
-    for ch in string:
-        time.sleep(0.09)
-        print(ch, end='', flush=True)
-
-if barman == '3':
-
-    import time
-
-    string = "Quem voce pensa q é pra falar comigo assim, saia da minha frente"
-
-    for ch in string:
+for ch in string:
         time.sleep(0.09)
         print(ch, end='', flush=True)
 
 
-def meretriz():
+def barman3():
 
     return
 
 
-meretriz1 = input('\nFalar:\n(1) Madame, a senhora sabe me dizer como eu faco pra chegar na fronteira norte?\n(2) Hey, voce ai, como que faz pra chegar em Nimide?\n(3) Oh velha senhora, me conta como faz pra chegar na fronteira de Nimide.\n')
+import time
 
-if meretriz1 == '1':
+string = "Quem voce pensa q é pra falar comigo assim, saia da minha frente"
 
-    import time
-
-    string = "Oh darling, minhas garotas recebm muitos viajantes e eles dizem que o melhor é ir pela floresta, e eles falam pra seguir as cores frias no caminha, seja lá o que isso for."
-
-
-    for ch in string:
+for ch in string:
         time.sleep(0.09)
         print(ch, end='', flush=True)
 
-if meretriz1 == '2':
 
-    import time
+
+
+
+#meretriz = input('\nFalar:\n(1) Madame, a senhora sabe me dizer como eu faco pra chegar na fronteira norte?\n(2) Hey, voce ai, como que faz pra chegar em Nimide?\n(3) Oh velha senhora, me conta como faz pra chegar na fronteira de Nimide.\n')
+
+
+def meretriz1():
+
+    return
+
+
+import time
+
+
+string = "Oh darling, minhas garotas recebm muitos viajantes e eles dizem que o melhor é ir pela floresta, e eles falam pra seguir as cores frias no caminha, seja lá o que isso for."
+
+for ch in string:
+        time.sleep(0.09)
+        print(ch, end='', flush=True)
+
+
+def meretriz2():
+
+    return
+
+
+import time
 
 string = "Mas respeito garoto, por favor. Vá pela floresta que voce conseguira chegar até a fronteira."
 
@@ -135,23 +172,78 @@ for ch in string:
     time.sleep(0.09)
     print(ch, end='', flush=True)
 
-if meretriz1 == '3':
 
-    import time
+def meretriz3():
 
-    string = "Quem voce é pensa que é garoto pr falar comigo assim? Saia da minha frente."
+    return
 
-    for ch in string:
+
+import time
+
+string = "Quem voce é pensa que é garoto pr falar comigo assim? Saia da minha frente."
+
+for ch in string:
         time.sleep(0.09)
         print(ch, end='', flush=True)
 
 
 def narracaobiblioteca():
 
-    import time
+    return
 
-    string = "O conhecimento dos livros e das pessoas a sua volta deve ser util"
 
-    for ch in string:
+import time
+
+string = "O conhecimento presente entre os livros e as pessoas no lugar podem provar-se muito uteis para voce, mas onde seria o melhor lugar para descobrir essa informaçao"
+for ch in string:
+    time.sleep(0.08)
+    print(ch, end='', flush=True)
+
+
+#bibliotecaria = input('\nFalar:\n(1) Com licenca, a senhora sabe me dizer como descobrir o caminho para Nimide?\n(2) Hey, voce aí, como eu faco pra descobrir o caminho pra Nimide?\n Oh velha senhora atras do balcao, onde eu descubro como chegar em Nimide?\n')
+
+def bibliotecaria1():
+
+    return
+
+import time
+
+string = "Mas é claro meu jovem rapaz, veja nesse livro aqui (a bibliotecar lhe dá um livro de viagens com anotacoes de outros viajantes mostrando que o melhor caminho é o deserto e que para ajudar na jornada existem alguns objetos no caminho mas que nem todos sao confiaveis."
+
+
+for ch in string:
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
+
+
+def bibliotecaria2():
+
+    return
+
+
+import time
+
+string = "Um pouco de respeito a mais seria bom meu jovem, veja nesse livro ( a bibliotecaria lhe da um livre de mapas indicando que é possivel chegar a fronteira de Nimide ao cruzar o deserto."
+
+for ch in string:
         time.sleep(0.09)
         print(ch, end='', flush=True)
+
+
+def bibliotecaria3():
+
+    return
+
+
+import time
+
+string = "Mas que desrespeito meu jovem, ao irei te ajudar em nada."
+
+for ch in string:
+        time.sleep(0.09)
+        print(ch, end='', flush=True)
+        
+#pessoa_estudando = input('\nFalar:\n(1) Minha jovem, voce parece ser uma pessoa muito inteligente, a senhorita sabe me dizer como chegar a fronteira norte do reino?\n(2) Oh garota, voce sabe me falar como chegar em Nimide?\n(3) oh sua jovenzinha ai, voce nao sabe como faz pra chegar em Nimide nao né?\n')
+
+
+def pessoa_estudando1
