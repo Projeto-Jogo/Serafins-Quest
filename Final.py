@@ -92,7 +92,7 @@ def armadilha_armario(jogador):
                 if gaveta == '1': #Abre a gaveta
                     flag_gaveta = True
                     print('Você gira a chave e a gaveta se abre. 3 itens no interior chamam a sua atenção:\n'
-                          '1 - Um frasco com uma poção verde\n2 - Um frasco com uma poção vermelha\n3 - uma espada')
+                          '1 - Um frasco com uma poção verde\n2 - Um frasco com uma poção vermelha\n3 - Uma espada longa')
                     #Teste de inteligência para saber se o jogador reconhece as poções
                     pocoes = teste_atributo(jogador['inteligência'])
                     if pocoes == True: #Passa no teste
@@ -138,10 +138,10 @@ def armadilha_armario(jogador):
                         pegar = input('>>>')
                         if pegar == '1': #Pega a espada
                             flag_espada = True
-                            print('Você pegou a espada!')
+                            print(f'Você deixou {jogador["arma"]} e pegou a espada!')
                             #Dicionário com os atributos da espada
-                            espada = {"nome": "espada", "atributo": "DES", "dano": "1-3", "min": 2, "max": 4}
-                            jogador['arma'] = espada #definir atributos da espada
+                            espada_longa = {'nome': 'espada longa', 'atributo': 'FOR', 'dano': '3-5', 'min': 3, 'max': 5}
+                            jogador['arma'] = espada_longa #definir atributos da espada
                         elif pegar == '2': #Não pega a espada
                             flag_espada = True
                             print('Você deixa a espada onde ela está.')
@@ -176,14 +176,14 @@ def sala1(jogador):
           'O lugar estava vazio até um pequeno Goblin entrar. Ele não perde tempo e logo te ataca!')
     bt.enter()
     #Dicionário do Goblin
-    Goblin1 = {"nome" : "Goblin",    'hp': 55,  'defesa': 3, 'força': 1, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
-    bt.batalha(Goblin1, jogador, True)
+    Goblin = {'nome': 'Goblin', 'hp': 55,  'defesa': 4, 'força': 3}
+    bt.batalha(Goblin, jogador, True)
     bt.enter()
     print('Os sons da batalha atraem um Segurança para a sala!')
     bt.enter()
     #Dicionário do Segurança 
-    Segurança = {"nome" : "Segurança",    'hp': 60,  'defesa': 3, 'força': 2, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
-    bt.batalha(Segurança, jogador, True)
+    Seguranca = {'nome': 'Segurança', 'hp': 60,  'defesa': 5, 'força': 3}
+    bt.batalha(Seguranca, jogador, True)
     bt.enter()
     #Nesse momento, o jogador tem dois caminhos a seguir, um mais longo e um mais curto
     print('Há duas portas de madeira lisa na sala: uma na parede em frente a você e outra à esquerda.')
@@ -248,8 +248,8 @@ def sala2(jogador):
             print('\nVocê ouve um barulho estranho vindo de uma caixa, mas continua mexendo e um escorpião do tamanho de um filhote de cachorro pula da caixa.')
             bt.enter()
             #Dicionário dos atributos do escorpião (ajustar atributos)
-            escorpiao = {"nome" : 'Escorpião Anormalmente Grande',    'hp': 50,  'defesa': 1, 'força': 2, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
-            bt.batalha(escorpiao, jogador, True)
+            Escorpiao_enorme = {'nome': 'Escorpião enorme', 'hp': 60,  'defesa': 4, 'força': 3}
+            bt.batalha(Escorpiao_enorme, jogador, True)
             bt.enter()
             print('Após derrotar o escorpião, você olha a caixa em que ele estava e encontra uma espada em seu interior!')
             flag_espada = False #Flag para resposta de pegar ou não a espada
@@ -258,10 +258,10 @@ def sala2(jogador):
                 pegar = input('>>>')
                 if pegar == '1': #Pega a espada
                     flag_espada = True
-                    print('Você pegou a espada!')
+                    print(f'Você deixa sua arma no local e pega a espada!')
                     #Dicionário com os atributos da espada
-                    espada = {"nome": "espada", "atributo": "DES", "dano": "1-3", "min": 2, "max": 4}
-                    jogador['arma'] = espada #definir atributos da espada
+                    espada_longa = {'nome': 'espada longa', 'atributo': 'FOR', 'dano': '3-5', 'min': 3, 'max': 5}
+                    jogador['arma'] = espada_longa #definir atributos da espada
                 elif pegar == '2': #Não pega a espada
                     flag_espada = True
                     print('Você deixa a espada onde ela está.')
@@ -325,7 +325,7 @@ def sala2(jogador):
                     print('\nComando não reconhecido, tente novamente.\n')
         elif caixa == '2': #Não olha as caixas
             flag_caixa = True
-            print('\nVocê não tem tempo para ficar mexendo em nada, está com pressa para encontrar TAL COISA.')
+            print('\nVocê não tem tempo para ficar mexendo em nada, está com pressa para encontrar a relíquia.')
         if flag_caixa == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
     bt.enter()
@@ -335,7 +335,7 @@ def sala2(jogador):
     print('Um estranho morto vivo estava parado e te ataca!')
     bt.enter()
     #Dicionário com os atributos do Morto Vivo:
-    Morto_vivo = {"nome" : "Morto Vivo",    'hp': 45,  'defesa': 2, 'força': 2, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+    Morto_vivo = {'nome': 'Morto vivo', 'hp': 45,  'defesa': 2, 'força': 5}
     bt.batalha(Morto_vivo, jogador, True)
     bt.enter()
     print('Ao seguir pelo corredor, você vê que na parede esquerda existem duas ramificações.')
@@ -365,7 +365,7 @@ def sala3(jogador):
     print('Quando você entra na sala, a luz se acende e a porta se fecha atrás de você. Apenas para ter certeza, você tenta abrí-la, mas já está trancada.')
     print('Três beliches e um armário vazio são, aparentemente, a única mobilia do local. Um Goblin dorme em uma das camas, mas quando a luz acende ele levanta e não perde tempo antes de te atacar.')
     #dicionário com os atributos do Goblin
-    Goblin = {"nome" : "Goblin",    'hp': 55,  'defesa': 3, 'força': 1, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+    Goblin = Goblin = {'nome': 'Goblin', 'hp': 55,  'defesa': 4, 'força': 3}
     bt.enter()
     bt.batalha(Goblin, jogador, True)
     bt.enter()
@@ -461,7 +461,7 @@ def sala4(jogador):
             armadilha_armario(jogador)
         elif armario == '2': #Não abre o armário
             flag_armario = True
-            print('O que pode ser mais importante que recuperar TAL COISA? Seja lá o que tem nesse armário, a recompensa do rei deve ser melhor.')
+            print('O que pode ser mais importante que recuperar a relíquia? Seja lá o que tem nesse armário, a recompensa do rei deve ser melhor.')
         if flag_armario == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
     bt.enter()
@@ -481,11 +481,11 @@ def sala5(jogador):
     print('Você decide seguir pela porta da esquerda, pensando que poderia tentar o outro caminho caso necessário, porém a porta se tranca sozinha assim que você passa por ela. Sem outra opção, você olha a sala em que entrou. '
           'Não há nenhum móvel no local, apenas o que parece ser uma grande escultura. Mas quando você se aproxima ela se levanta e se vira para você, que percebe que na verdade a estátua era um Troll adormecido!')
     #Dicionário com os atributos do troll
-    troll = {"nome" : 'Troll',    'hp': 60,  'defesa': 1, 'força': 2, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+    Troll = {'nome': 'Troll', 'hp': 70,  'defesa': 5, 'força': 2}
     bt.enter()
-    bt.batalha(troll, jogador, True)
+    bt.batalha(Troll, jogador, True)
     bt.enter()
-    print('Assim que o Troll morre, um leve tremor percorre a sala. O contorno de uma porta que não existia antes surge na parede a sua frente. Ela se abre e você continua sua busca por TAL COISA. '
+    print('Assim que o Troll morre, um leve tremor percorre a sala. O contorno de uma porta que não existia antes surge na parede a sua frente. Ela se abre e você continua sua busca pelo artefato. '
           'O corredor mal iluminado vira à esquerda e depois à direita antes de chegar a uma porta feita de grossas barras de ferro cruzadas formando uma grade, como a prisão de algo ou alguém.')
     bt.enter()
     sala_atual = 8 #Manda o jogador para a sala 8
@@ -503,10 +503,10 @@ def sala6(jogador):
     print('Sem esperar uma resposta, o guardião se levanta e te ataca sem nenhuma misericórdia.')
     bt.enter()
     #Dicionário com os atributos da primeira parte do boss
-    Guardiao = {"nome" : 'Guardião',    'hp': 85,  'defesa': 3, 'força': 1, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+    Guardiao = {'nome': 'Guardião da relíquia', 'hp': 75,  'defesa': 5, 'força': 4}
     bt.batalha(Guardiao, jogador, True)
     sala_atual = 0 #Encerra a parte das salas para seguir para o final
-    print('Após derrotar o guardião, ele se desfaz em um pequeno monte de poeira. Você faz uma busca pela sala, mas não encontra nada. Todas as portas estão trancadas e, aparentemente, não há uma saída. '
+    print('Após derrotar o guardião, ele se desfaz em um pequeno monte de poeira verde. Você faz uma busca pela sala, mas não encontra nada. Todas as portas estão trancadas e, aparentemente, não há uma saída. '
           'Começando a acreditar que está no lugar errado, você se senta na cadeira em que ele estava e vê um discreto botão camuflado na lateral do tampo da mesa. '
           'Você o aperta, o teto começa a se mexer e uma nuvem de poeira cai por todo o local. Quando finalmente a poeira abaixa, você vê uma escada circular no canto da sala e resolve subir.')
     return sala_atual
@@ -520,14 +520,14 @@ def sala7(jogador):
           'Uma pilha de ossos no canto começa a se mexer, formando um esqueleto vivo que te ataca!')
     bt.enter()
     #Dicionário com os atributos do Esqueleto parte 1
-    Esqueleto = {"nome" : "Esqueleto", 'hp': 55,  'defesa': 3, 'força': 2, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
-    bt.batalha(Esqueleto, jogador, True)
+    Esqueleto_1 = {'nome': 'Esqueleto', 'hp': 65,  'defesa': 4, 'força': 2}
+    bt.batalha(Esqueleto_1, jogador, True)
     bt.enter()
     #Dicionário com os atributos do Esqueleto remontado
-    Esqueleto2 = {"nome" : "Esqueleto", 'hp': 45,  'defesa': 2, 'força': 3, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+    Esqueleto_2 = {'nome': 'Esqueleto', 'hp': 35,  'defesa': 6, 'força': 5}
     print('Você pensa ter derrotado o esqueleto, mas assim que se vira, escuta barulhos de ossos batendo e gira outra vez a tempo de ver o esqueleto se montando e ficando em pé outra vez.')
     bt.enter()
-    bt.batalha(Esqueleto2, jogador, True)
+    bt.batalha(Esqueleto_2, jogador, True)
     bt.enter()
     print('Dessa vez, ao derrortá-lo você separa os ossos, prendendo um pouco dentro do forno, um tanto na geladeira e um tanto na pia, utilizando alguns pedaços de corda que encontrou para amarrá-lo.')
     bt.enter()
@@ -541,7 +541,7 @@ def sala8(jogador):
           'Como esperado, ele olha para você, pronto para devorar o novo jantar.')
     bt.enter()
     #Dicionário do Javali
-    Javali = {"nome" : "Javali", 'hp': 65,  'defesa': 5, 'força': 2, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
+    Javali = {'nome': 'Javali', 'hp': 65,  'defesa': 5, 'força': 3}
     bt.batalha(Javali, jogador, True)
     bt.enter()
     print('O Javali desaparece quase por inteiro na frente dos seus olhos, restando apenas sua pele. Você a observa e vê que está limpa por dentro e é mais leve do que parece.')
@@ -599,8 +599,8 @@ def sala8(jogador):
                 print('Você observa atentamente as paredes e consegue ver através de um buraco na parede o mecanismo da armadilha. Pega então uma pedra no chão e joga nesse buraco. '
                       'Escuta-se um barulho de algo quebrando e as paredes param de se aproximar.\n\nParabéns! Você conseguiu travar o sistema da armadilha!')
             if inteligencia == False: #Não passa no teste
-                print('Você tenta parar as paredes prendendo sua ARMA em uma fresta entre a parede e o chão. Até funciona por um tempo e você começa a correr para sair do corredor, '
-                      'mas então a ARMA se solta e acerta seu braço esquerdo. As paredes voltam a se fechar e agora você tem menos tempo para encontrar uma solução.')
+                print('Você tenta parar as paredes prendendo sua arma em uma fresta entre a parede e o chão. Até funciona por um tempo e você começa a correr para sair do corredor, '
+                      'mas então a arma se solta e acerta seu braço esquerdo. As paredes voltam a se fechar e agora você tem menos tempo para encontrar uma solução.')
                 jogador['hp'] -= 5
                 bt.game_over(jogador)
         elif armadilha == '3': #Tenta desarmar usando a sorte
@@ -633,17 +633,32 @@ def sala8(jogador):
     return sala_atual
 
 def salao_final(jogador):
-    print('Após subir toda a escada, você chega em uma sala no alto da torre. O artefato estava lá, em cima de uma mesa e você corre pegá-lo.')
-    #Acrescentar o que acontece ao pegar o artefato e breve descrição da sala
+    print('Após subir toda a escada, você chega em um grande salão no alto da torre. O artefato está lá, em cima de uma mesa ao lado da porta e você corre pegá-lo. Nesse momento você entende o que o guardião disse sobre o encanto dele. '
+          'Subtamente, seus ferimentos se curam e você se sente mais forte do que em qualquer outro momento da vida.')
     bt.enter()
-    print('Uma risada faz você olhar para o sofá. Um homem se levanta e te olha. Surpreso, você percebe ser o mesmo mago que enfrentou ateriormente.')
-    #Adicionar pequeno diálogo
+    #Recupera toda a vida do jogador e aumenta todos os atributos em um ponto
+    jogador['hp'] = 100 
+    jogador['defesa'] += 1
+    jogador['força'] += 1
+    jogador['destreza'] += 1
+    jogador['inteligência'] += 1
+    jogador['sorte'] += 1
+    jogador['carisma'] += 1
+    print(f'Seus atributos:\n defesa = {jogador.get("defesa")}\n força = {jogador.get("força")}\n destreza = {jogador.get("destreza")}\n inteligência = {jogador.get("inteligência")}\n sorte = {jogador.get("sorte")}\n carisma = {jogador.get("carisma")}')
     bt.enter()
-    #Dicionário do Boss2 (ajustar atributos)
-    boss2 = {"nome" : 'Boss2',    'hp': 85,  'defesa': 3, 'força': 1, 'destreza': 2, 'inteligência': 1, 'sorte': 0, 'carisma': 0}
-    bt.batalha(boss2, jogador, True)
+    print('Você então olha para o ambiente. O primeiro cômodo que não parecia totalmente abandonado. Além da pequena mesa, há um longo sofá branco e vazio de frente para a sacada aberta, de onde se tem uma bela vista da noite na fronteira entre os reinos. '
+          'Tapeçarias representando a criação do artefato e diferentes batalhas cobrem as paredes. Um belo lustre de cristal no alto do teto ilumina o ambiente.')
     bt.enter()
-    print('Após finalmente derrotá-lo, você percebe que o artefato realmente te deixa mais forte. Você poderia ser o mais forte do reino com ele. '
+    print('Quando você se prepara para voltar, uma risada faz você olhar para o sofá. Um homem se levanta e te olha. Surpreso, você percebe ser o guardião que derrotou ateriormente. Ele sorri antes de começar a falar, sua voz grave ecoando no ambiente.')
+    bt.enter()
+    print('- Você não pode ter achado que seria tão fácil. Eu observei sua jornada, jovem guerreiro. Apesar de ter matado meus criados, meu animal de estimação e minha marionete, se mostrou merecedor de encontrar esse local e a relíquia. '
+          'Mas isso não é o bastante. Eu não posso deixá-lo sair daqui com isso, sem mais nem menos.')
+    bt.enter()
+    #Dicionário do Guardião real
+    Guardiao_real = {"nome": "Guardião real", 'hp': 100, 'defesa': 6, 'força': 5}
+    bt.batalha(Guardiao_real, jogador, True)
+    bt.enter()
+    print('Após finalmente derrotá-lo, você tem a certeza que o artefato realmente te deixa mais forte. Você poderia ser o mais forte de todos os reinos com ele. '
           'Voltar a ser um homem livre, obter todas as recompensas do rei deve ser bom, mas será que vale a pena? As opções passam por sua mente e você precisa decidir logo.')
     bt.enter()
     flag = False
@@ -653,20 +668,26 @@ def salao_final(jogador):
         if final == '1': #Final 1 - o jogador devolve o artefato para o rei
             flag = True
             print('Você tinha uma vida antes de ser preso e gostaria muito de recuperá-la. Sem perder tempo, você sai da casa, percebendo que agora todas as portas estão abertas. '
-                  'Agora que conhece o caminho, não tem problemas para voltar para o castelo. O mesmo soldado que te guiou para fora te espera nos portões. Você é guiado até a presença do rei.')
+                  'Agora que conhece o caminho, não tem problemas para voltar para o castelo. O mesmo soldado que te guiou para fora te espera nos portões. Você é guiado até a presença do rei. ')
         elif final == '2': #Final 2 - o jogador foge com o artefato
             flag = True
-            print('Sua vida anterior não era assim tão boa e nada que o rei possa oferecer é tão bom quanto à grande quantidade de poder que o artefato lhe fornece. Além de tudo, não importa o resultado da guerra se você já estiver longe.')
+            print('Sua vida anterior não era assim tão boa e nada que o rei possa oferecer é tão bom quanto à grande quantidade de poder que o artefato lhe fornece. Além de tudo, não importa o resultado da guerra se você já estiver longe. '
+                  '')
         if flag == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
     
 
-def final(jogador, lugar):
+def final(jogador):
     '''
     Define os acontecimentos e sua ordem dentro da mansão
     Entrada: dicionário com os atributos do jogador e string com o local que ele foi 
     '''
-    print(f'Após finalmente atravessar o {lugar}, seu destino surge frente aos seus olhos.')
+    print('Depois de seguir alguns metros na estrada, a noite cai e você decide que é melhor esperar o sol voltar. Você sai e encontra uma pedra grande o bastante para que você possa deitar atrás dela e não ser visto da estrada. '
+          'Ao acordar, sente suas energias renovadas e feridas curadas.')
+    jogador['hp'] = 100
+    print(f'Seu hp: {jogador["hp"]}')
+    bt.enter()
+    print('Volta então retorna para a estrada e continua o caminho até finalmente avistar seu destino.')
     print('Uma casa comum, de pedra cinza, sem muitos detalhes a vista. O que chama a atenção, porém, é uma grande torre do lado direito, sem portas ou janelas. '
           'A porta preta da frente não é exatamente convidativa, mas mesmo assim você adentra o local.')
     bt.enter()
