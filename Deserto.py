@@ -127,96 +127,115 @@ def topo_da_montanha(objetos_coletados):
             else:
                 print("Comando não conhecido, tente novamente.")
                 
-def oasis(objetos_coletados, atributos): 
-	
+def oasis(objetos_coletados, atributos):
+
 # Função utilizada para a trajetória do jogador em um oasis no deserto
     hp = atributos[5]
-    a = b = c = d = e = 0 # 
+    a = b = c = d = e = f = 0 #
     i = -1
     desbloqueio = False
     missao_cumprida = False
     combinacao_correta = ["poção", "flor", "runa", "pedra"]
     print("Apresente uma sequência de 4 objetos como código para desbloquear a passagem ao oasis!")
     objeto_1 = input("Qual é o primeiro objeto da sequência?")
-    if objeto_1 not in objetos_coletados:
-        return(f"Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!")
+    if objeto_1 not in combinacao_correta:
+        print("Objeto não identificado, tente novamente.")
+        return oasis(objetos_coletados, atributos)
+    elif objeto_1 in combinacao_correta and objeto_1 not in objetos_coletados:
+        return(f'Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente desbloquear a passagem ao oasis novamente!1')
     else:
         objeto_2 = input("Qual é o segundo objeto da sequência?")
-        if objeto_2 not in objetos_coletados:
-            return(f'Você não possui o objeto {objeto_2}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!')
+        if objeto_2 not in combinacao_correta:
+            print("Objeto não identificado, tente novamente.")
+            return oasis(objetos_coletados, atributos)
+        elif objeto_2 in combinacao_correta and objeto_2 not in objetos_coletados:
+            return(f'Você não possui o objeto {objeto_2}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!')    
         else:
             objeto_3 = input("Qual é o terceiro objeto da sequência?")
-            if objeto_3 not in objetos_coletados:
+            if objeto_3 not in combinacao_correta:
+                print("Objeto não identificado, tente novamente.")
+                return oasis(objetos_coletados, atributos)         
+            elif objeto_3 in combinacao_correta and objeto_3 not in objetos_coletados:
                 return(f'Você não possui o objeto {objeto_3}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!')
             else:
                 objeto_4 = input("Qual é o quarto objeto da sequência?")
-                if objeto_4 not in objetos_coletados:
+                if objeto_4 not in combinacao_correta:
+                    print("Objeto não identificado, tente novamente.")
+                    return oasis(objetos_coletados, atributos)
+                elif objeto_4 in combinacao_correta and objeto_4 not in objetos_coletados:
                     return(f'Você não possui o objeto {objeto_4}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!')
                 else:
                     if(objeto_1 == combinacao_correta[0] and objeto_2 == combinacao_correta[1] and objeto_3 == combinacao_correta[2] and objeto_4 == combinacao_correta[3]):
                         desbloqueio = True
-                        print(f'Parabéns! Você desbloqueou o acesso ao oasis!')
-                        bt.passar_nivel(jogador)
+                        print(f'Parabéns! Você conseguiu entrar no ao oasis!')
+                        enter()
+
+                        #bt.passar_nivel(jogador)
                         print("ADICIONAR DESCRIÇÃO DO OASIS")
+                        enter()
+
                         print("Há uma serpente no caminho!")
-                        print(bt.batalha(Serpente, jogador))
+                        #print(bt.batalha(Serpente, jogador))
+
                         print("Siga para o lago agora...")
                         enter()
-                        bt.delete_last_lines(1)
+                        #bt.delete_last_lines(1)
                         print("Você mergulhou no lago!")
                         enter()
-                        bt.delete_last_lines(1)
+                        #bt.delete_last_lines(1)
                         print("ADICIONAR DESCRIÇÃO DO LAGO")
-                        print("Parece que há algo lá no fundo, há alguns metros...")
+                        print("Parece que há algo lá no fundo, a alguns metros...")
                         enter()
-                        bt.delete_last_lines(1)
+                        #bt.delete_last_lines(1)
                         print("Nadando e chegando mais perto, você vê que é um báu!")
                         while c < 1:
                             escolha_1 = int(input("O que deseja fazer? 1 - Coletar o baú / 2 - Sair do lago "))
                             if escolha_1 == 1:
                                 c += 1
-                                bt.delete_last_lines(1)
-                                print("Você coletou o baú!")
+                         #       bt.delete_last_lines(1)
+                                print("Você pegou o baú!")
                                 print("Saia do lago agora e veja o que há dentro dele...")
                                 enter()
-                                bt.delete_last_lines(1)
+                                print("ADICIONAR DESCRIÇÃO DO JOGADOR SAINDO DO LAGO")
+                          #      bt.delete_last_lines(1)
                                 abertura_do_bau = int(input("Digite 1 para abrir o baú! "))
                                 if abertura_do_bau == 1:
                                     d += 1
                                     if "chave" in objetos_coletados:
-                                        print("Você conseguiu abrir o baú!")
-                                        print(bt.passar_nivel(jogador))
+                                        print("Você conseguiu!")
+                                        #print(bt.passar_nivel(jogador))
                                         while e < 1:
-                                            beber_pocao_brilhante = int(input("Há uma poção brilhante dentro do baú! Digite 1 para bebê-la!"))
+                                            beber_pocao_brilhante = int(input("Há uma poção brilhante lá dentro! Digite 1 para bebê-la..."))
                                             if beber_pocao_brilhante == 1:
                                                 e += 1
                                                 hp += 20
-                                                print(f'Você ganhou 20 HPs após beber a poção! Seus HPs: hp')
-						
+                                                print(f'Você ganhou 20 HPs após beber a poção! Seus HPs: {hp}')
+
                                         print("Também há uma nota dentro do baú... leia!")
                                         enter()
-                                        bt.delete_last_lines(1)
+                           #             bt.delete_last_lines(1)
                                         print("Na nota está escrito 'URSO'..")
                                         print("Hmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
                                         enter()
                                         while f < 1:
-                                            carregar_arma = int(input("Você encontrou um chicote no caminho! Digite 1 para obtê-lo como arma!"))
-                                            if carregar_arma == 1:
+                                            nova_arma = int(input("Você encontrou um chicote no caminho! Digite 1 para obtê-lo como arma!"))
+                                            if nova_arma == 1:
                                                 f += 1
                                                 arma = "chicote"
+                                                print(f'Sua nova arma: {arma}')
                                             else:
-                                                print("Comando não conhecido, tente novamente.")					  
+                                                print("Comando não conhecido, tente novamente.")
                                         missao_cumprida = True
                                     else:
                                         d += 1
                                         print("Oops! Você ainda não tem a chave para abrir o baú! Continue sua exploração pelo deserto e colete-a!")
                                 else:
-                                    print("Abra o baú!")                                                  
+                                    print("Abra o baú!")
                             elif escolha_1 == 2:
                                 c += 1
                                 print("Você saiu do lago. Parece que não há mais nada para fazer aqui...")
-                        else:
-                            print("Comando não conhecido, tente novamente.")
+                            else:
+                                print("Comando não conhecido, tente novamente.")
     if desbloqueio == False:
         return(f'Combinação incorreta! Você não conseguiu acesso ao oasis! Tente novamente!')
     if missao_cumprida == False:
