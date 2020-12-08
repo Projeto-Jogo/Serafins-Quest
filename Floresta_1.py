@@ -15,7 +15,7 @@ def floresta(jogador):
   
     Para sair da floresta é preciso seguir as placas com as cores mais frias
     Resposta: 1,1,2,1,2,1,1,1
-    Eventos extras:  - batalha: 105
+    Eventos extras: - batalha: 105
                    - cabana com possibilidade de arma: sala 113
                    - possiveis eventos: 110 e 117
                    - poção para passar de nível: 120
@@ -298,6 +298,7 @@ def floresta(jogador):
                 bt.enter()
                 #explorando a cabana
                 voltar = 0
+                escolha = 0
                 while escolha != 4: 
                     print('Ao entrar você percebe é capaz de enxergar uma mesa no centro do comodo, um suporte de madeira onde deveria ser a cama e um armário ao lado de uma janela.')
                     print('Assim você decidi: \n1.Olhar a mesa \n2. Se aproximar da cama \n3. Ir até o armário \n4. Voltar')
