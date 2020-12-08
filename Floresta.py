@@ -348,7 +348,7 @@ def floresta(jogador):
               print('Você se aproxima do suporte de madeira e olha ao redor dele, mas não encontra nada.')
               bt.enter()
           #armário
-          elif escolha== 3: 
+          elif escolha == 3: 
             if prob <= 15 and prob >= 11:
               print('Você anda até o armário e o abre, e para sua surpresa você encontra uma única adaga. Você quer pegar a arma:\n1.sim\n2.não')
               pegar=int(input('>>>'))
@@ -356,6 +356,7 @@ def floresta(jogador):
               if pegar == 1:
                 print('Não sabendo o que vem pela frente, você decidi pegar a adaga para poder se proteger melhor.')
                 jogador['arma'] = 'adaga'
+                bt.enter()
               #jogador não pega a arma
               elif pegar ==2:
                 print('Você observa a adaga, mas decidi não pegar.')
