@@ -144,7 +144,7 @@ while loop:
                         #print ocpcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}")
+                        print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
                             intro.bebado_1
@@ -173,7 +173,7 @@ while loop:
                         #print ocpcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}")
+                        print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
                             intro.meretriz_1
@@ -202,7 +202,7 @@ while loop:
                         #print ocpcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}")
+                        print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
                             intro.bartender_1
@@ -250,7 +250,7 @@ while loop:
                         #print ocpcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}")
+                        print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
                             intro.bibliotecaria_1
@@ -279,7 +279,7 @@ while loop:
                         #print ocpcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}")
+                        print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
                             intro.livros_1
@@ -308,7 +308,7 @@ while loop:
                         #print ocpcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}")
+                        print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
                             intro.estudante_1
@@ -356,7 +356,7 @@ while loop:
                         #print ocpcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}")
+                        print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
                             intro.sabio_1
@@ -385,7 +385,7 @@ while loop:
                         #print ocpcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}")
+                        print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
                             intro.mendigo_1
@@ -414,7 +414,7 @@ while loop:
                         #print ocpcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}")
+                        print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
                             intro.viajante_1
@@ -447,10 +447,10 @@ while loop:
 
         while loop:
 
-            print(" (1) Seguir pelo deserto\n (2) Seguir pela floresta")
+            print("\n\u001b[37;1m (1) Seguir pelo deserto\n (2) Seguir pela floresta")
             caminho = input(">>>")
             bt.delete_last_lines(1)
-            print(f">>>{caminho}")
+            print(f">>>{caminho}\u001b[0m\n")
 
             if caminho == "1":
                 ds.deserto()
