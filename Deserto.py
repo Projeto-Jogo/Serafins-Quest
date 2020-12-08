@@ -158,7 +158,8 @@ def oasis(objetos_coletados, atributos):
                             i += 1
                             if atributos[i] < 5:
                                 atributos[i] += 1
-                        print(f'Parabéns! Você desbloqueou o acesso ao oasis e seus atributos melhoraram! Força: {atributos[0]} - destreza: {atributos[1]} - intelig ência: {atributos[2]} - sorte: {atributos[3]} - carisma:  {atributos[4]}.')
+                        print(f'Parabéns! Você desbloqueou o acesso ao oasis!')
+			#bt.delete_last_lines(1)
                         print("ADICIONAR DESCRIÇÃO DO OASIS")
                         print("Há uma serpente no caminho!")
                         print(bt.batalha(Serpente, jogador))
@@ -200,7 +201,6 @@ def oasis(objetos_coletados, atributos):
                                             print("Na nota está escrito 'URSO'..")
                                             print("Hmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
                                             enter()
-                                            #bt.delete_last_lines(1)
                                             while f < 1:
                                                 carregar_arma = int(input("Você encontrou um chicote no caminho! Digite 1 para obtê-lo como arma!"))
                                                 if carregar_arma == 1:
@@ -226,42 +226,42 @@ def oasis(objetos_coletados, atributos):
     elif missao_cumprida == True:
         return(f'Parabéns! Você cumpriu esta etapa, obtendo uma dica para seguir em sua jornada!')
 def retornar(local, objetos_coletados, atributos):
-			
-	contador = 0
 	
-	if local == "Topo da montanha":
-	    print("ADICIONAR DESCRIÇÃO DO CAMINHO ATÉ O TOPO DA MONTANHA")
-	    print("Você voltou ao topo da montanha!")
-	    #bt.delete_last_lines(1)
-	    print(topo_da_montanha(objetos_coletados))
-	    print("Siga às dunas agora...")
-	    bt.enter()
-	    #bt.delete_last_lines(1)
-	    print(dunas(objetos_coletados))
-	    print("Agora só resta explorar o oasis novamente...")
-	    resultado = oasis(objetos_coletados, atributos)
-	    print(resultado)	
-	    if resultado == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':				  
-	            return(f'Você não conseguiu cumprir a missão...')
-	    else:
-		return(f'Dessa vez você conseguiu!')
+# Função utilizada para que o jogador possa retornar a locais que ele já explorou anteriormente
+
+    if local == "Topo da montanha":
+        print("ADICIONAR DESCRIÇÃO DO CAMINHO ATÉ O TOPO DA MONTANHA")
+        print("Você voltou ao topo da montanha!")
+        #bt.delete_last_lines(1)
+        print(topo_da_montanha(objetos_coletados))
+        print("Siga às dunas agora...")
+        bt.enter()
+        #bt.delete_last_lines(1)
+        print(dunas(objetos_coletados))
+        print("Agora só resta explorar o oasis novamente...")
+        resultado = oasis(objetos_coletados, atributos)
+        print(resultado)	
+        if resultado == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':				  
+            return(f'Você não conseguiu cumprir a missão...')
+        else:
+            return(f'Dessa vez você conseguiu!')
 	    
-        elif local == "Dunas:
-	    print("ADICIONAR DESCRIÇÃO DO CAMINHO ATÉ AS DUNAS")
-	    print("Você voltou às dunas")  
-	    #bt.delete_last_lines(1)
-	    print(dunas(objetos_coletados))
-	    print("Siga ao topo da montanha agora...")
-	    bt.enter()
-	    #bt.delete_last_lines(1)
-	    print(topo_da_montanha(objetos_coletados))
-	    print("Agora só resta explorar o oasis novamente...")
-	    resultado = oasis(objetos_coletados, atributos)
-	    print(resultado)							  
-	    if resultado == 'Você não conseguiu cumprir esta etapa! Continue sua exploração pelo deserto e tente novamente...':
-	        return(f'Você não conseguiu cumprir a missão...')
-	    else:
-		return(f'Dessa vez você conseguiu!')
+    elif local == "Dunas":
+        print("ADICIONAR DESCRIÇÃO DO CAMINHO ATÉ AS DUNAS")
+        print("Você voltou às dunas")  
+        #bt.delete_last_lines(1)
+        print(dunas(objetos_coletados))
+        print("Siga ao topo da montanha agora...")
+        bt.enter()
+        #bt.delete_last_lines(1)
+        print(topo_da_montanha(objetos_coletados))
+        print("Agora só resta explorar o oasis novamente...")
+        resultado = oasis(objetos_coletados, atributos)
+        print(resultado)							  
+        if resultado != 'Parabéns! Você cumpriu esta etapa, obtendo uma dica para seguir em sua jornada!':
+            return(f'Você não conseguiu cumprir a missão...')
+        else:
+            return(f'Dessa vez você conseguiu!')
 
 def Deserto(jogador):
 
