@@ -1,5 +1,5 @@
-from numpy import random as rd
-import batalha as bt
+import random as rd
+import Batalha as bt
 
 def chance(x,y):
     '''
