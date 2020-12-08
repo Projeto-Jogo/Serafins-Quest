@@ -1,9 +1,12 @@
+# contestualizaçao inicial
+
+import time
+
+
 def introducao():
 
     return
 
-
-import time
 
 string = "Você acorda...\n""Esta cercado de prisioneiros, grades te separam do mundo externo, você é um prisioneiro que já não tinha esperanças de um dia sair da cadeia até que um dia o carrasco da prisão se dirige  aos detentos:\n""-Seus trastes, a esperança de vocês chegou, um de vocês será incumbido de realizar uma missão em nome do reino para conquistar a liberdade, mas a questão é, quem será?\n"
 
@@ -12,18 +15,20 @@ for ch in string:
     print(ch, end='', flush=True)
 
 
+# historia em que se passa
 def narracaocastelo():
 
     return
 
 
-string = "-Acho q você deve ser o menos provável a fracassar, aproxime-se.\n""O guarda então lhe explica toda a situação\n""Há anos a situação entre o reino de Mitria no qual você se encontra e o reino de Nimide ao norte se mantem delicada, por receio do inicio de uma guerra ambos os reinos constantemente aumentam o seu poderio militar, aumentando cada vez mais as tensões entre os reinos.\n""Recentemente um espiao nosso que estava infiltrado no reino de Nimide descobriu recentes documentos adiquiridos pelos rivais indicando a localização de um artefato antigo conhecido como o cajado de serafim em uma caverna próxima na fronteira entre os reinos.\n"" Pouco se sabe sobre o objeto, embora lendas e historias rondeiem o artefato, poucos são os dados históricos sobre o seu uso, sabe-se apenas que tratasse de um imenso poder, mas o resto é envolto em mistérios.\n""Sabendo disso o reino não pode permitir que tal objeto cai perante as mãos rivais, entretanto o receio de dar inicio as conflitos armados entre os povos impede qualquer ação oficial do exercito mitriano.\n""Sendo assim você foi incumbido de rouba-lo e traze-lo antes que ele chegue aos cofres de Nimide./n""Porém, para impedir qualquer traição de sua parte uma maldição foi jogada sobre você, e caso você não complete a missão dentro de 72 horas e retorne a demacia, você morrerá\n""Você por não querer passar o resto de sua vida na prisão aceita a missão do guarda.\n""-Pois bem agora me acompanhe prisioneiro.\n""O guarda lhe escolta pela escura e sombria prisão, de volta ate o exterior quente e ensolarado depois de muitos anos entretanto não a tempo a perder, nenhum apoio do governo lhe sera oferecido e terras estranhas lhe aguardam a frente, será necessário adquirir mais informações para seguir em frente\n"
+string = "-Acho que você deve ser o menos provável a fracassar, aproxime-se.\n""O guarda então lhe explica toda a situação\n""Há anos a situação entre o reino de Mitria no qual você se encontra e o reino de Nimide ao norte se mantem delicada, por receio do inicio de uma guerra ambos os reinos constantemente aumentam o seu poderio militar, aumentando cada vez mais as tensões entre os reinos.\n""Recentemente um espiao nosso que estava infiltrado no reino de Nimide descobriu recentes documentos adiquiridos pelos rivais indicando a localização de um artefato antigo conhecido como o cajado de serafim em uma caverna próxima na fronteira entre os reinos.\n"" Pouco se sabe sobre o objeto, embora lendas e historias rondeiem o artefato, poucos são os dados históricos sobre o seu uso, sabe-se apenas que tratasse de um imenso poder, mas o resto é envolto em mistérios.\n""Sabendo disso o reino não pode permitir que tal objeto cai perante as mãos rivais, entretanto o receio de dar inicio as conflitos armados entre os povos impede qualquer ação oficial do exercito mitriano.\n""Sendo assim você foi incumbido de rouba-lo e traze-lo antes que ele chegue aos cofres de Nimide./n""Porém, para impedir qualquer traição de sua parte uma maldição foi jogada sobre você, e caso você não complete a missão dentro de 72 horas e retorne a demacia, você morrerá\n""Você por não querer passar o resto de sua vida na prisão aceita a missão do guarda.\n""-Pois bem agora me acompanhe prisioneiro.\n""O guarda lhe escolta pela escura e sombria prisão, de volta ate o exterior quente e ensolarado depois de muitos anos entretanto não a tempo a perder, nenhum apoio do governo lhe sera oferecido e terras estranhas lhe aguardam a frente, será necessário adquirir mais informações para seguir em frente\n"
 
 for ch in string:
     time.sleep(0.09)
     print(ch, end='', flush=True)
 
 
+# contextualizaçao taverna
 def narracaotaverna():
 
     return
@@ -35,9 +40,10 @@ for ch in string:
     print(ch, end='', flush=True)
 
 
-#bebado = input('\nFalar:\n(1) Com licenca o senhor sabe como eu faco para chegar na fronteira com ---?\n(2) Meu companheiro, me fale com chegar a fronteira norte\n(3) Oh seu vagabunda, como que faz pra cruzar a fronteira de ----')
+# opcoes de fala para falar com o bebado bebado = input('\nFalar:\n(1) Com licenca o senhor sabe como eu faco para chegar na fronteira com ---?\n(2) Meu companheiro, me fale com chegar a fronteira norte\n(3) Oh seu vagabunda, como que faz pra cruzar a fronteira de ----')
 
 
+# conversa com o bebado (qualquer que seja a escolha da fala essa é a resposta do bebado)
 def bebado123():
 
     return
@@ -50,7 +56,7 @@ for ch in string:
     print(ch, end='', flush=True)
 
 
-#bebado2 = input('\nfalar:\n(1) Calma senhor senhor nao quero problemas.\n(2) O que vc falou de mim? vem brigar seu bebado')
+# opcoes de fala para falar com o bebado depois bebado2 = input('\nfalar:\n(1) Calma senhor nao quero problemas.\n(2) O que vc falou de mim? vem brigar seu bebado')
 
 def bebeadoresp1():
 
@@ -75,9 +81,9 @@ for ch in string:
     print(ch, end='', flush=True)
 
 
-#barman = input('\nFalar:\n(1) Meu camarada ,voce sabe me falar como eu faço para chegar na fronteira ao norte?\n(2) Com a sua licença, o senhor sabe me dizer como eu faço para chegar até Nimide?\n(3) Oh seuzinho, me fala como eu chego na fronteira norte')
+# opcoes para falar com o barman barman = input('\nFalar:\n(1) Meu camarada ,voce sabe me falar como eu faço para chegar na fronteira ao norte?\n(2) Com a sua licença, o senhor sabe me dizer como eu faço para chegar até Nimide?\n(3) Oh seuzinho, me fala como eu chego na fronteira norte')
 
-
+# conversa com o barman
 def barman1():
 
     return
@@ -114,9 +120,9 @@ for ch in string:
     print(ch, end='', flush=True)
 
 
-#meretriz = input('\nFalar:\n(1) Madame, a senhora sabe me dizer como eu faco pra chegar na fronteira norte?\n(2) Hey, voce ai, como que faz pra chegar em Nimide?\n(3) Oh velha senhora, me conta como faz pra chegar na fronteira de Nimide.\n')
+# opcoes para falar com a meretriz meretriz = input('\nFalar:\n(1) Madame, a senhora sabe me dizer como eu faco pra chegar na fronteira norte?\n(2) Hey, voce ai, como que faz pra chegar em Nimide?\n(3) Oh velha senhora, me conta como faz pra chegar na fronteira de Nimide.\n')
 
-
+# conversa com a meretriz
 def meretriz1():
 
     return
@@ -149,8 +155,10 @@ def meretriz3():
 string = "Quem voce é pensa que é garoto pr falar comigo assim? Saia da minha frente."
 
 for ch in string:
-        time.sleep(0.09)
-        print(ch, end='', flush=True)
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
+
+# narraçao da biclioteca
 
 
 def narracaobiblioteca():
@@ -164,8 +172,9 @@ for ch in string:
     print(ch, end='', flush=True)
 
 
-#bibliotecaria = input('\nFalar:\n(1) Com licenca, a senhora sabe me dizer como descobrir o caminho para Nimide?\n(2) Hey, voce aí, como eu faco pra descobrir o caminho pra Nimide?\n Oh velha senhora atras do balcao, onde eu descubro como chegar em Nimide?\n')
+# opcoes pra falar com a bibiotecaria bibliotecaria = input('\nFalar:\n(1) Com licenca, a senhora sabe me dizer como descobrir o caminho para Nimide?\n(2) Hey, voce aí, como eu faco pra descobrir o caminho pra Nimide?\n Oh velha senhora atras do balcao, onde eu descubro como chegar em Nimide?\n')
 
+# conversa bibliotecaria
 def bibliotecaria1():
 
     return
@@ -202,7 +211,9 @@ for ch in string:
     time.sleep(0.09)
     print(ch, end='', flush=True)
 
-#pessoa_estudando = input('\nFalar:\n(1) Minha jovem, voce parece ser uma pessoa muito inteligente, a senhorita sabe me dizer como chegar a fronteira norte do reino?\n(2) Oh garota, voce sabe me falar como chegar em Nimide?\n(3) oh sua jovenzinha ai, voce nao sabe como faz pra chegar em Nimide nao né?\n')
+# opcoes para falar com a pessoa estudando pessoa_estudando = input('\nFalar:\n(1) Minha jovem, voce parece ser uma pessoa muito inteligente, a senhorita sabe me dizer como chegar a fronteira norte do reino?\n(2) Oh garota, voce sabe me falar como chegar em Nimide?\n(3) oh sua jovenzinha ai, voce nao sabe como faz pra chegar em Nimide nao né?\n')
+
+# conversa com pessoa estudando
 
 
 def pessoa_estudando1():
@@ -225,8 +236,8 @@ def pessoa_estudando2():
 string = "Nossa um pouco a mais de educaçao nao machuca, eu vi em algum livro que deviasse viajar pelo deserto."
 
 for ch in string:
-        time.sleep(0.09)
-        print(ch, end='', flush=True)
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
 
 
 def pessoa_estudando3():
@@ -240,6 +251,8 @@ for ch in string:
     time.sleep(0.09)
     print(ch, end='', flush=True)
 
+# contextualizacao do beco
+
 
 def narracaobeco():
 
@@ -252,7 +265,7 @@ for ch in string:
     time.sleep(0.09)
     print(ch, end='', flush=True)
 
-#sabio = input('\nFalar:\n(1)O senhor parece ser muito esperto, saberia me dizer como chegar ate a fronteira de Nimide?\n(2) Hey, o senhor ai, voce sabe me dizer como chegar a fronteira norte do reino?\n(3) Oh seu velho, me fala ai, voce sabe como eu faço pra chegar até Nimide?\n')
+# opcoes para falar com o sabio sabio = input('\nFalar:\n(1)O senhor parece ser muito esperto, saberia me dizer como chegar ate a fronteira de Nimide?\n(2) Hey, o senhor ai, voce sabe me dizer como chegar a fronteira norte do reino?\n(3) Oh seu velho, me fala ai, voce sabe como eu faço pra chegar até Nimide?\n')
 
 
 def sabio1():
@@ -277,5 +290,19 @@ string = "Nossa, um pouco de delicadeza a mais viria a calhar, voce deve ir pela
 for ch in string:
     time.sleep(0.09)
     print(ch, end='', flush=True)
-    
-def sabio3():  
+
+
+def sabio3():
+
+    return
+
+
+string = "Quem voce pensa que é pra me chamar de velho desse jeito? Nao irie te ajudar, agora saia daqui."
+
+for ch in string:
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
+
+# conversa com o viajante
+
+# opcoes para falar com o viajante viajante = input('n(1)
