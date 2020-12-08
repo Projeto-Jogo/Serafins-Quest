@@ -35,7 +35,7 @@ def atriubutos_gen():
 
     while loop:
 
-        print("\u001b[37;1mEscolha seu personagem:\n(1) Soldado\n(2) Mercenario\n(3) Ladrao")
+        print("\u001b[37;1mEscolha seu personagem:\n(1) Soldado\n(2) Mercenário\n(3) Ladrão")
         a = input(">>>")
         bt.delete_last_lines(1)
         print(f">>>{a}\u001b[0m\n")
@@ -104,17 +104,12 @@ def atriubutos_gen():
 
 personagem = atriubutos_gen()
 
-
 # Apresentacao dos atributos ao jogador
-print(f'\nVoce vai jogar de {personagem.get("nome")}\nSeus atributos:\n defesa = {personagem.get("defesa")}\n força = {personagem.get("força")}\n destreza = {personagem.get("destreza")}\n inteligência = {personagem.get("inteligência")}\n sorte = {personagem.get("sorte")}\n carisma = {personagem.get("carisma")}')
+print(f'\nVocê vai jogar de: {personagem.get("nome")}\nSeus atributos:\n defesa = {personagem.get("defesa")}\n força = {personagem.get("força")}\n destreza = {personagem.get("destreza")}\n inteligência = {personagem.get("inteligência")}\n sorte = {personagem.get("sorte")}\n carisma = {personagem.get("carisma")}')
 
 bt.enter()
 
-
-# PRIMEIRA PARTE: CASTELO
-
 print('\n(narracao)')
-
 
 loop = True
 escolha_1 = ""
@@ -127,7 +122,7 @@ while loop:
     while escolha_1 != "4":
 
         # ESCOLHA DO LOCAL DE BUSCA: TAVERNA; BIBLIOTECA; BECO
-        print('\n\u001b[37;1mProcurar informacoes:\n (1) na Taverna\n (2) na Biblioteca\n (3) no Beco\n (4) continuar a jornada')
+        print('\n\u001b[37;1mProcurar informações:\n (1) na Taverna\n (2) na Biblioteca\n (3) no Beco\n (4) continuar a jornada')
         escolha_1 = input(">>>")
         bt.delete_last_lines(1)
         print(f">>>{escolha_1}\u001b[0m\n")
@@ -141,7 +136,7 @@ while loop:
             while escolha_2 != "4":
 
                 # ESCOLHA DA CONVERSA: BEBADO; MERETRIZ; BARTENDER
-                print('\n\u001b[37;1mConversar com:\n (1) Bebado\n (2) Meretriz\n (3) Bartender\n (4) voltar')
+                print('\n\u001b[37;1mConversar com:\n (1) Bêbado\n (2) Meretriz\n (3) Bartender\n (4) voltar')
                 escolha_2 = input(">>>")
                 bt.delete_last_lines(1)
                 print(f">>>{escolha_2}\u001b[0m\n")
@@ -245,7 +240,7 @@ while loop:
             while loop:
 
                 # ESCOLHA DE PESQUISA: BIBLIOTECARIA; LIVROS; ESTUDANTE
-                print('\n\u001b[37;1mPesquisar com:\n (1) Bibliotecaria\n (2) Livros\n (3) Estudante\n (4) voltar')
+                print('\n\u001b[37;1mPesquisar com:\n (1) Bibliotecária\n (2) Livros\n (3) Estudante\n (4) voltar')
                 escolha_2 = input(">>>")
                 bt.delete_last_lines(1)
                 print(f">>>{escolha_2}\u001b[0m\n")
@@ -351,7 +346,7 @@ while loop:
             while loop:
 
                 # ESCOLHA DA CONVERSA: SABIO; MENDIGO; VIAJANTE
-                print('\n\u001b[37;1mConversar com:\n (1) Sabio\n (2) Mendigo\n (3) Viajante\n (4) voltar')
+                print('\n\u001b[37;1mConversar com:\n (1) Sábio\n (2) Mendigo\n (3) Viajante\n (4) voltar')
                 escolha_2 = input(">>>")
                 bt.delete_last_lines(1)
                 print(f">>>{escolha_2}\u001b[0m\n")
@@ -392,7 +387,7 @@ while loop:
 
                     while escolha_3 != "4":
 
-                        #print ocpcoes de fala do jogador
+                        #print opcoes de fala do jogador
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
@@ -490,6 +485,6 @@ while loop:
         break
 
     else:
-        print("\nvoce nao sabe aonde ir, entao retorna a cidade para buscar informacoes")
+        print("\nVocê não sabe aonde ir, então retorna à cidade para buscar mais informações")
 
 fn.final(personagem)
