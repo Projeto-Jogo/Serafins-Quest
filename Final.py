@@ -2,7 +2,8 @@
 Módulo com as funções que descrevem os acontecimentos da última parte do jogo
 As funções salas definem o que o jogador pode encontrar em cada sala'''
 
-import Batalha as bt 
+import Batalha as bt
+import sys
 
 def teste_atributo(atributo, min_atr = 5, max_atr = 10):
     '''Realiza um teste de atributo da seguinte forma:
@@ -681,7 +682,7 @@ def salao_final(jogador):
 def final(jogador):
     '''
     Define os acontecimentos e sua ordem dentro da mansão
-    Entrada: dicionário com os atributos do jogador 
+    Entrada: dicionário com os atributos do jogador e string com o local que ele foi 
     '''
     print('Depois de seguir alguns metros na estrada, a noite cai e você decide que é melhor esperar o sol voltar. Você sai e encontra uma pedra grande o bastante para que você possa deitar atrás dela e não ser visto da estrada. '
           'Ao acordar, sente suas energias renovadas e feridas curadas.')
@@ -713,6 +714,6 @@ def final(jogador):
     print('Você terminou o jogo!\n\nDeseja jogar outra vez:\n1 - sim\n2 - não')
     jogar_nov = input('>>>')
     if jogar_nov == '1':
-        restart_program()
+        bt.restart_program()
     elif jogar_nov == '2':
         sys.exit()
