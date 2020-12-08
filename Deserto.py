@@ -8,7 +8,10 @@ def dunas(objetos_coletados):
 # Função utilizada para a trajetória do jogador nas dunas de areia do deserto 
 
     print("ADICIONAR DESCRIÇÃO DAS DUNAS DO DESERTO")
-    a = b = c = d = e = 0 # Variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
+    a = b = c = d = e = f = 0 # Variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
+    hp = 70
+    objetos_coletados_nas_dunas = []
+    
     if "pedra" in objetos_coletados and "poção" in objetos_coletados: # Se o jogador já coletou a pedra e a poção, aparece um aviso de que não há mais objetos para coletar no local
         return(f'Você ja coletou os objetos que necessitava aqui!') 
     elif "pedra" in objetos_coletados and "poção" not in objetos_coletados: # Se o jogador já coletou a pedra, encontra apenas uma poção
@@ -16,21 +19,22 @@ def dunas(objetos_coletados):
             escolha_1 = int(input("Você encontrou uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não")) # O jogador escolhe se quer coletar a poção ou não
             if escolha_1 == 1:
                 a += 1
-                bt.delete_last_lines(1)
+                #bt.delete_last_lines(1)
                 objetos_coletados.append("poção")
-                print("Poção coletada!")
-                return(f'Seu novo item é poção')
+                objetos_coletados_nas_dunas.append("poção")
                 while b < 1:
                     escolha_2 = int(input("Beber poção? 1 - Sim / 2 - Não"))
                     if escolha_2 == 1:
                         b += 1
-                        bt.delete_last_lines(1)
+                 #      bt.delete_last_lines(1)
                         hp -= 10
-                        print(f'Ah, não! Esta poção é perigosa! Você perdeu 10 HPs!')
+                        return(f'Ah, não! Esta poção é perigosa! Você perdeu 10 HPs! Seus HPs: hp')
                     elif escolha_2 == 2:
                         b += 1
                         print("OK!")
-                        bt.delete_last_lines(1)
+                  #     bt.delete_last_lines(1)
+                        print("Poção coleada!")
+                        return(f'Seu novo item é poção!')
                     else:
                         print("Escolha uma opção válida!")
             elif escolha_1 == 2:
@@ -45,14 +49,15 @@ def dunas(objetos_coletados):
             escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
             if escolha == 1:
                 c += 1
-                bt.delete_last_lines(1)
+              #  bt.delete_last_lines(1)
                 objetos_coletados.append("pedra")
+                objetos_coletados_nas_dunas.append("pedra")
                 print("Pedra coletada!")
                 return(f'Seu novo item é pedra!')
             elif escolha == 2:
                 c += 1
                 print("OK!")
-                bt.delete_last_lines(1)
+               # bt.delete_last_lines(1)
                 return(f'Você não coletou nenhum novo item!')
             else:
                 print("Comando não conhecido, tente novamente.")
@@ -61,20 +66,21 @@ def dunas(objetos_coletados):
             escolha = int(input("Você encontrou uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não"))
             if escolha == 1:
                 d += 1
-                bt.delete_last_lines(1)
+                #bt.delete_last_lines(1)
                 objetos_coletados.append("poção")
-                print("Poção coletada!")
-                while b < 1:
+                objetos_coletados_nas_dunas.append("poção")
+                while e < 1:
                     escolha_2 = int(input("Beber poção? 1 - Sim / 2 - Não"))
                     if escolha_2 == 1:
-                        b += 1
-                        bt.delete_last_lines(1)
+                        e += 1
+                 #      bt.delete_last_lines(1)
                         hp -= 10
                         print(f'Ah, não! Esta poção é perigosa! Você perdeu 10 HPs!')
                     elif escolha_2 == 2:
-                        b += 1
+                        e += 1
                         print("OK!")
-                        bt.delete_last_lines(1)
+                  #     bt.delete_last_lines(1)
+                        print("Poção coletada!")
                     else:
                         print("Escolha uma opção válida!")
             elif escolha == 2:
@@ -84,26 +90,21 @@ def dunas(objetos_coletados):
                 print("Comando não conhecido, tente novamente.")
         print("ADICIONAR DESCRIÇÃO DE UM CAMINHO")
         enter()
-        while e < 1:
+        while f < 1:
             escolha = int(input("Você encontrou uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não"))
             if escolha == 1:
-                e += 1
-                bt.delete_last_lines(1)
+                f += 1
+                #bt.delete_last_lines(1)
                 objetos_coletados.append("pedra")
+                objetos_coletados_nas_dunas.append("pedra")
                 print("Pedra coletada!")
             elif escolha == 2:
-                e += 1
+                f += 1
                 print("OK!")
             else:
                 print("Escolha uma opção válida!")
-        if "poção" in objetos_coletados and "pedra" in objetos_coletados:
-            return(f'Seus novos itens são poção e pedra!')
-        elif "poção" in objetos_coletados and "pedra" not in objetos_coletados:
-            return(f'Seu novo item é poção!')
-        elif "pedra" in objetos_coletados and "poção" not in objetos_coletados:
-            return(f'Seu novo item é pedra!')
-        else:
-            return(f'Você não coletou novos itens!')
+
+        return(f'Seus novos itens são {objetos_coletados_nas_dunas[0]} e {objetos_coletados_nas_dunas[1]}!')
 
 def topo_da_montanha(objetos_coletados): 
 	
