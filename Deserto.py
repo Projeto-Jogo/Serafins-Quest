@@ -110,7 +110,7 @@ def topo_da_montanha(objetos_coletados):
 # Funçao autilizada para a trajetória do jogador no topo de uma montanha no deserto
     a = 0
     if "flor" in objetos_coletados: 
-        print("Você ja coletou o objeto que necessitava aqui!")
+        return(f'Você ja coletou o objeto que necessitava aqui!')
     else:
         while a < 1:
             escolha = int(input("Você encontrou uma flor do deserto! Deseja coletá-la? 1 - Sim ou 2 - Não"))
