@@ -337,13 +337,13 @@ def Deserto(jogador):
 			        resultado_etapa = retornar("Dunas", meus_objetos_coletados, meus_atributos)
 				 if resultado_etapa == 'Você não conseguiu cumprir a missão...':
 				    print("Suas chances acabaram!")					  
-				    return(f'Você não conseguiu cumprir esta etapa, mas está livre para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')					  
+				    return(f'Você não cumpriu esta etapa, mas está livre para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')					  
 				 else:
-				    return(f'Dessa vez você conseguiu cumprir a missão! Você está pronto para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...'')
+				    return(f'Você cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')
 		            else:
-			        return(f'Dessa vez você conseguiu cumprir a missão! Você está pronto para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite..')
+			        return(f'Você cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')
 		        else:
-			    return(f'Dessa vez você conseguiu cumprir a missão! Você está pronto para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite..')
+			    return(f'Você cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')
 									  
   		elif escolha_1 == 2:
 			# CAMINHO 2: DUNAS - TOPO DA MONTANHA - OASIS
@@ -401,13 +401,13 @@ def Deserto(jogador):
 			        resultado_etapa = retornar("Dunas", meus_objetos_coletados, meus_atributos)
 				 if resultado_etapa == 'Você não conseguiu cumprir a missão...':
 				    print("Suas chances acabaram!")					  
-				    return(f'Você não conseguiu cumprir esta etapa, mas está livre para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')					  
+				    return(f'Você não cumpriu esta etapa, mas está livre para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')					  
 				 else:
-				    return(f'Dessa vez você conseguiu cumprir a missão! Você está pronto para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...'')
+				    return(f'Você cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')
 		            else:
-			        return(f'Dessa vez você conseguiu cumprir a missão! Você está pronto para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite..')
+			        return(f'Você cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')
 		        else:
-			    return(f'Dessa vez você conseguiu cumprir a missão! Você está pronto para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite..')
+			    return(f'Você cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')
 
 		elif escolha_1 == 3:
 			# CAMINHO 3: OASIS - DUNAS - TOPO DA MONTANHA
@@ -470,7 +470,7 @@ def Deserto(jogador):
 				    print("Suas chances acabaram!")					  
 				    return(f'Você não cumpriu esta etapa, mas está livre para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')					  
 				 else:
-				    return(f'Você cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...'')
+				    return(f'Você cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite...')
 		            else:
 			        return(f'Você cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por uma noite..')
 		        else:
