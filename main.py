@@ -33,7 +33,7 @@ def atriubutos_gen():
 
     loop = True
 
-    while loop == True:
+    while loop:
 
         print("\u001b[37;1mEscolha seu personagem:\n(1) Soldado\n(2) Mercenario\n(3) Ladrao")
         a = input(">>>")
@@ -43,28 +43,28 @@ def atriubutos_gen():
         if a == "1" or a == "2" or a == "3":
 
 
-            while loop == True:
+            while loop:
 
                 # Dicionario da arma inicial
                 mao = {"nome": "mão", "atributo": "FOR", "dano": "0-1", "min": 0, "max": 1}
 
                 # Dicionários para atributos do jogador                                                                                                                                    atributos de batalha                             atributos gerais
-                Soldado =    {"nome": "Soldado",    'hp': 100, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3,"arma": mao}  #  Soldado      defesa media, força alta,  destreza baixa, | inteligência baixa, sorte alta,  carisma media
-                                                                                                                                                                 #                                                          |
-                Mercenario = {"nome": "Mercenário", 'hp': 100, 'defesa': 6, 'força': 2, 'destreza': 4, 'inteligência': 5, 'sorte': 3, 'carisma': 2,"arma": mao}  #  Mercenario   defesa alta,  força baixa, destreza media, | inteligência alta,  sorte media, carisma baixa
-                                                                                                                                                                 #                                                          |
-                Ladrao =     {"nome": "Ladrão",     'hp': 100, 'defesa': 4, 'força': 3, 'destreza': 5, 'inteligência': 3, 'sorte': 2, 'carisma': 5,"arma": mao}  #  Ladrao       defesa baixa, força media, destreza alta,  | inteligência media, sorte baixa, carisma alta
+                Soldado =    {"nome": "Soldado",    'hp': 100, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3, "arma": mao}  #  Soldado      defesa media, força alta,  destreza baixa, | inteligência baixa, sorte alta,  carisma media
+                                                                                                                                                                  #                                                          |
+                Mercenario = {"nome": "Mercenário", 'hp': 100, 'defesa': 6, 'força': 2, 'destreza': 4, 'inteligência': 5, 'sorte': 3, 'carisma': 2, "arma": mao}  #  Mercenario   defesa alta,  força baixa, destreza media, | inteligência alta,  sorte media, carisma baixa
+                                                                                                                                                                  #                                                          |
+                Ladrao =     {"nome": "Ladrão",     'hp': 100, 'defesa': 4, 'força': 3, 'destreza': 5, 'inteligência': 3, 'sorte': 2, 'carisma': 5, "arma": mao}  #  Ladrao       defesa baixa, força media, destreza alta,  | inteligência media, sorte baixa, carisma alta
 
                 # Os personagens tem atributos bases diferentes, a geracao e feita escolhendo um numero aleatorio entre o atributo base +- 1 ponto, e todos comecam com a mao como arma
 
                 if a == "1":
 
-                    Soldado['defesa'] = bt.dado(4,6)  # Por exemplo, o atributo base e 5, entao ira gerar um numero de 4 a 6
-                    Soldado['força'] = bt.dado(3,5)
-                    Soldado['destreza'] = bt.dado(2,4)
-                    Soldado['inteligência'] = bt.dado(1,3)
-                    Soldado['sorte'] = bt.dado(4,6)
-                    Soldado['carisma'] = bt.dado(2,4)
+                    Soldado['defesa'] = bt.dado(4, 6)  # Por exemplo, o atributo base e 5, entao ira gerar um numero de 4 a 6
+                    Soldado['força'] = bt.dado(3, 5)
+                    Soldado['destreza'] = bt.dado(2, 4)
+                    Soldado['inteligência'] = bt.dado(1, 3)
+                    Soldado['sorte'] = bt.dado(4, 6)
+                    Soldado['carisma'] = bt.dado(2, 4)
                     personagem = Soldado
                     # Esse 'if' e um anti-azar, ele nao permite progredir se a soma dos numeros gerados nao for maior que 19
                     if Soldado['defesa'] + Soldado['força'] + Soldado['destreza'] + Soldado['inteligência'] + Soldado['sorte'] + Soldado['carisma'] >= 19:
@@ -72,24 +72,24 @@ def atriubutos_gen():
 
                 elif a == "2":
 
-                    Mercenario['defesa'] = bt.dado(5,7)
-                    Mercenario['força'] = bt.dado(1,3)
-                    Mercenario['destreza'] = bt.dado(3,5)
-                    Mercenario['inteligência'] = bt.dado(4,6)
-                    Mercenario['sorte'] = bt.dado(2,4)
-                    Mercenario['carisma'] = bt.dado(1,3)
+                    Mercenario['defesa'] = bt.dado(5, 7)
+                    Mercenario['força'] = bt.dado(1, 3)
+                    Mercenario['destreza'] = bt.dado(3, 5)
+                    Mercenario['inteligência'] = bt.dado(4, 6)
+                    Mercenario['sorte'] = bt.dado(2, 4)
+                    Mercenario['carisma'] = bt.dado(1, 3)
                     personagem = Mercenario
                     if Mercenario['defesa'] + Mercenario['força'] + Mercenario['destreza'] + Mercenario['inteligência'] + Mercenario['sorte'] + Mercenario['carisma'] >= 19:
                         return personagem
 
                 elif a == "3":
 
-                    Ladrao['defesa'] = bt.dado(3,5)
-                    Ladrao['força'] = bt.dado(2,4)
-                    Ladrao['destreza'] = bt.dado(4,6)
-                    Ladrao['inteligência'] = bt.dado(2,4)
-                    Ladrao['sorte'] = bt.dado(1,3)
-                    Ladrao['carisma'] = bt.dado(4,6)
+                    Ladrao['defesa'] = bt.dado(3, 5)
+                    Ladrao['força'] = bt.dado(2, 4)
+                    Ladrao['destreza'] = bt.dado(4, 6)
+                    Ladrao['inteligência'] = bt.dado(2, 4)
+                    Ladrao['sorte'] = bt.dado(1, 3)
+                    Ladrao['carisma'] = bt.dado(4, 6)
                     personagem = Ladrao
                     if Ladrao['defesa'] + Ladrao['força'] + Ladrao['destreza'] + Ladrao['inteligência'] + Ladrao['sorte'] + Ladrao['carisma'] >= 19:
                         return personagem
@@ -477,19 +477,19 @@ while loop:
 
         break
 
-    elif trigger_deserto == True:
+    elif trigger_deserto:
 
-    #   print(historinha)
+        #print(historinha)
         ds.deserto(personagem)
         break
 
-    elif trigger_floresta == True:
+    elif trigger_floresta:
 
-    #   print(historinha)
+        #print(historinha)
         fr.floresta(personagem)
         break
 
     else:
-        print("voce nao sabe aonde ir, entao retorna a cidade para buscar informacoes")
+        print("\nvoce nao sabe aonde ir, entao retorna a cidade para buscar informacoes")
 
 fn.final(personagem)
