@@ -127,16 +127,17 @@ def topo_da_montanha(objetos_coletados):
             else:
                 print("Comando não conhecido, tente novamente.")
                 
-def oasis(objetos_coletados, atributos):
+def oasis(jogador, objetos_coletados, atributos):
 
 # Função utilizada para a trajetória do jogador em um oasis no deserto
 
-    hp = atributos[5]
+    hp = jogador["hp"]
     a = b = c = d = e = f = 0 #
     i = -1
     desbloqueio = False
     missao_cumprida = False
     combinacao_correta = ["poção", "flor", "runa", "pedra"]
+
     print("Apresente uma sequência de 4 objetos como código para desbloquear a passagem ao oasis!")
     objeto_1 = input("Qual é o primeiro objeto da sequência?")
     if objeto_1 not in combinacao_correta:
