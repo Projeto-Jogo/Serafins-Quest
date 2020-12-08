@@ -43,8 +43,7 @@ def bebado():
 
 
 
- bebado1 = input(
-    '\nFalar:\n(1) Com licenca o senhor sabe como eu faco para chegar na fronteira com ---?\n(2) Meu companheiro, me fale com chegar a fronteira norte\n(3) Oh seu vagabunda, como que faz pra cruzar a fronteira de ----')
+ bebado1 = input('\nFalar:\n(1) Com licenca o senhor sabe como eu faco para chegar na fronteira com ---?\n(2) Meu companheiro, me fale com chegar a fronteira norte\n(3) Oh seu vagabunda, como que faz pra cruzar a fronteira de ----')
 
 
 import time
@@ -61,7 +60,7 @@ bebado2 = input(
 
 if bebado2 == '1':
 
- import time
+    import time
 
 string = "Voce se afasta do bebado e volta a procurar novas fonte de informaçao"
 
@@ -96,7 +95,7 @@ if barman1 == '2':
     for ch in string:
         time.sleep(0.09)
         print(ch, end='', flush=True)
-       
+
 if barman == '3':
 
     import time
@@ -106,10 +105,53 @@ if barman == '3':
     for ch in string:
         time.sleep(0.09)
         print(ch, end='', flush=True)
-        
+
+
 def meretriz():
-    
+
     return
 
 
-meretriz1 = input('\nFalar:\n(1) Madame, a senhora sabe me dizer como eu faco pra chegar na fronteira norte?\n(2) Hey, voce ai, como que fazz pra chegar em Nimide?\n(3) Oh velha senhora, me conta como faz pra chegar na fronteira de Nimide.\n')
+meretriz1 = input('\nFalar:\n(1) Madame, a senhora sabe me dizer como eu faco pra chegar na fronteira norte?\n(2) Hey, voce ai, como que faz pra chegar em Nimide?\n(3) Oh velha senhora, me conta como faz pra chegar na fronteira de Nimide.\n')
+
+if meretriz1 == '1':
+
+    import time
+
+    string = "Oh darling, minhas garotas recebm muitos viajantes e eles dizem que o melhor é ir pela floresta, e eles falam pra seguir as cores frias no caminha, seja lá o que isso for."
+
+
+    for ch in string:
+        time.sleep(0.09)
+        print(ch, end='', flush=True)
+
+if meretriz1 == '2':
+
+    import time
+
+string = "Mas respeito garoto, por favor. Vá pela floresta que voce conseguira chegar até a fronteira."
+
+for ch in string:
+    time.sleep(0.09)
+    print(ch, end='', flush=True)
+
+if meretriz1 == '3':
+
+    import time
+
+    string = "Quem voce é pensa que é garoto pr falar comigo assim? Saia da minha frente."
+
+    for ch in string:
+        time.sleep(0.09)
+        print(ch, end='', flush=True)
+
+
+def narracaobiblioteca():
+
+    import time
+
+    string = "O conhecimento dos livros e das pessoas a sua volta deve ser util"
+
+    for ch in string:
+        time.sleep(0.09)
+        print(ch, end='', flush=True)
