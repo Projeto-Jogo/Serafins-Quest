@@ -378,7 +378,7 @@ def floresta(jogador):
                 print('Você caminha em direção a cabana e abre a porta com cuidado, escutando o rangir da porta.')
                 bt.enter()
                 #explorando a cabana
-                voltar = 0
+                escolha = 0
                 while escolha != "4": 
                     print('Ao entrar você percebe é capaz de enxergar uma mesa no centro do comodo, um suporte de madeira onde deveria ser a cama e um armário ao lado de uma janela.')
                     print('\u001b[37;1mAssim você decidi: \n (1) Olhar a mesa \n (2) Se aproximar da cama \n (3) Ir até o armário \n (4) Voltar')
