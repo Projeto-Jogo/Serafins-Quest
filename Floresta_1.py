@@ -101,7 +101,7 @@ def floresta(jogador):
         elif sala == 104:
             print ('Continuando seu caminho pela trilha, você se depara com duas possibildades: continuar em frente, como indica a placa azul, ou virar a direita na placa laranja.')
             bt.enter()
-            print ('\u001b[37;1mDiante de tais possibilidades você escolhe: \n (1) seguir em frente  \n (2) virar a direita \n3. voltar')
+            print ('\u001b[37;1mDiante de tais possibilidades você escolhe: \n (1) seguir em frente  \n (2) virar a direita \n (3) voltar')
             dir = input('>>>') #jogador escolhe o caminho
             bt.delete_last_lines(1)
             print(f">>>{dir}\u001b[0m\n")
@@ -117,7 +117,7 @@ def floresta(jogador):
                 sala = 101
             #erro
             else:
-                print ('\u001b[37;1mDiante de tais possibilidades você escolhe: \n (1) seguir em frente  \n (2) virar a direita \n3. voltar')
+                print ('\u001b[37;1mDiante de tais possibilidades você escolhe: \n (1) seguir em frente  \n (2) virar a direita \n (3) voltar')
                 dir = input('>>>')
                 bt.delete_last_lines(1)
                 print(f">>>{dir}\u001b[0m\n")
