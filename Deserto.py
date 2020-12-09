@@ -8,38 +8,38 @@ def dunas(jogador, objetos_coletados, hp, arma):
     # Função utilizada para a trajetória do jogador nas dunas do deserto
     
     a = b = c = d = e = f = 0  # Variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
-    pedra = 0
-    pocao = 0
+    pedra = 0 # Variável utilizada para saber se o jogador coletou uma pedra nas dunas
+    pocao = 0 # Variável utilizada para saber se o jogador coletou uma poção nas dunas
     objetos_coletados_nas_dunas = []
     
     print('\nADICIONAR DESCRIÇÃO DAS DUNAS DO DESERTO')
 
     if "pedra" in objetos_coletados and "poção" in objetos_coletados:  # Se o jogador já coletou a pedra e a poção, aparece um aviso de que não há mais objetos para coletar no local
         return (f'\nVocê ja coletou os objetos que necessitava aqui!')
-    elif "pedra" in objetos_coletados and "poção" not in objetos_coletados:  # Se o jogador já coletou a pedra, encontra apenas uma poção
+    elif "pedra" in objetos_coletados and "poção" not in objetos_coletados:  # Se o jogador já coletou a pedra mas não a poção, ele encontra a poção
         while a < 1:
             escolha_1 = int(input('\nVocê encontrou uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não  >>>'))  # O jogador escolhe se quer coletar a poção ou não
             if escolha_1 == 1:
                 a += 1
-                bt.delete_last_lines(1)
-                objetos_coletados.append("poção")
-                objetos_coletados_nas_dunas.append("poção")
-                while b < 1:
-                    escolha_2 = int(input('\n Beber poção? 1 - Sim / 2 - Não'  >>>'))
-                    if escolha_2 == 1:
+                bt.delete_last_lines(1) # Chamada da função "delete_last_lines(n)" do módulo "Batalha"
+                objetos_coletados.append("poção") # Se ele escolhe coletar a poção, esta é adicionada à sua lista geral de objetos coletados
+                objetos_coletados_nas_dunas.append("poção") # A poção também é adicionada à lista específica de objetos coletados nas dunas
+                while b < 1: # O jogador escolhe se quer beber a poção ou não
+                    escolha_2 = int(input('\n Beber poção? 1 - Sim / 2 - Não  >>>')) # O jogador escolhe se quer beber a poção ou não
+                    if escolha_2 == 1: 
                         b += 1
                         bt.delete_last_lines(1)
-                        hp -= 10
+                        hp -= 10  # Se o jogador beber a poção, perde 10 HPs
                         return (f'\nAh, não! Esta poção é perigosa! Você perdeu 10 HPs! Seus HPs: {hp}')
-                        if hp <= 0:
-                            bt.game_over(jogador)
-                    elif escolha_2 == 2:
+                        if hp <= 0: # Se após perder 10 HPs seu número de HPs for igual ou menor que zero, ele perde o jogo
+                            bt.game_over(jogador) # Chamada da função "game_over()" do módulo "Batalha"
+                    elif escolha_2 == 2: # 
                         b += 1
                         print("OK!")
                         bt.delete_last_lines(1)
                         return(f'\Você não coletou novos itens!')
                     else:
-                        print('\nEscolha uma opção válida!')
+                        print('\nEscolha uma opção válida!') 
             elif escolha_1 == 2:
                 a += 1
                 print("OK!")
