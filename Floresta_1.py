@@ -36,7 +36,7 @@ def floresta(jogador):
         if sala == 101:
             print('Com poucos minutos de caminhada, já imcapacitado de ver o sol, você se depara com uma encruzilhada.')
             bt.enter()
-            print('Indicando o caminho para direita há uma placa verde, enquanto para a esquerda há uma placa amarela.')
+            print('Indicando o caminho para direita há uma\u001b[32;1mplaca verde\u001b[0m, enquanto para a esquerda há uma placa \u001b[33;1mamarela\u001b[0m.')
             bt.enter()
             print('\u001b[37;1mAssim você decidi ir para: \n (1) direita  \n (2) esquerda')
             dir = input('>>>') #jogador escolhe caminho
@@ -99,7 +99,7 @@ def floresta(jogador):
 
     
         elif sala == 104:
-            print ('Continuando seu caminho pela trilha, você se depara com duas possibilidades: continuar em frente, como indica a placa azul, ou virar a direita na placa laranja.')
+            print ('Continuando seu caminho pela trilha, você se depara com duas possibilidades: continuar em frente, como indica a \u001b[34;1mplaca azul\u001b[0m, ou virar a direita na \u001b[30mplaca vermelha\u001b[0m.')
             bt.enter()
             print ('\u001b[37;1mDiante de tais possibilidades você escolhe: \n (1) seguir em frente  \n (2) virar a direita \n (3) voltar')
             dir = input('>>>') #jogador escolhe o caminho
@@ -183,7 +183,7 @@ def floresta(jogador):
         elif sala == 107:
             print ('Após um longo caminho, novamente você se depara com duas placas: uma para frente e outra para a direita.')
             bt.enter()
-            print('A placa que aponta para a direita é de cor alaranjada, enquanto a para frente é arroxeada.')
+            print('A placa que aponta para a direita é de \u001b[33;1mcor amarelada\u001b[0m, enquanto a para frente é \u001b[35marroxeada\u001b[0m.')
             bt.enter()
             print ('\u001b[37;1mE assim você segue seu caminho: \n (1) pela direita \n (2) em frente \n (3) voltar')
             dir = input('>>>') #jogador escolhe o caminho
@@ -291,7 +291,7 @@ def floresta(jogador):
             #encruzilhada
             print ('Andando mais um pouco você se depara com outra encruzilhada.')
             bt.enter()
-            print('O caminho para direita é indicado por uma placa amarela, enquanto o caminho para a esquerda é indicado por uma placa laranja')
+            print('O caminho para direita é indicado por uma \u001b[33;1mplaca amarela\u001b[0m, enquanto o caminho para a esquerda é indicado por uma \u001b[30mplaca vermelha\u001b[0m.')
             bt.enter()
             print('\u001b[37;1mAssim você decidi ir pra: \n (1) direita  \n (2) esquerda \n (3) voltar')
             dir = input('>>>') #jogador escolhe o caminho
@@ -316,7 +316,7 @@ def floresta(jogador):
 
    
         elif sala == 111:
-            print ('Seguindo em frente você se depara com uma nova bifurcação. Há uma placa roxa indicando o caminho a esquerda e uma placa vermelha apontando para o caminho a sua frente.')
+            print ('Seguindo em frente você se depara com uma nova bifurcação. Há uma \u001b[35mplaca roxa\u001b[0m indicando o caminho a esquerda e uma \u001b[30mplaca vermelha\u001b[0m apontando para o caminho a sua frente.')
             bt.enter()
             print ('\u001b[37;1mVocê decidi seguir a placa que aponta para: \n (1) frente  \n (2) esquerda \n (3) voltar')
             dir = input('>>>') #jogador escolhe o caminho a seguir
@@ -507,7 +507,7 @@ def floresta(jogador):
         elif sala == 115:
             print('Andando pela trilha, mais uma vez você se depara com a possibilidade de escolher entre dois caminhos.')
             bt.enter()
-            print('A primeira possibilidade é seguir a direita, indicada por uma placa verde. A outra possibilidade é seguir para a esquerda, indicado por uma placa azul.')
+            print('A primeira possibilidade é seguir a direita, indicada por uma \u001b[32;1mplaca verde\u001b[0m. A outra possibilidade é seguir para a esquerda, indicado por uma \u001b[34;1mplaca azul\u001b[0m.')
             bt.enter()
             print ('\u001b[37;1mAssim você decide seguir o caminho para a: \n (1) direita \n (2) esquerda \n (3) voltar')
             dir = input('>>>') #escolha do jogador
@@ -596,7 +596,7 @@ def floresta(jogador):
                     print(f">>>{escolha}\u001b[0m\n")
 
             #encruzilhada
-            print ('Andando pela trilha você se depara com uma placa roxa apontando para frente e uma placa verde apontando para a direita.')
+            print ('Andando pela trilha você se depara com uma \u001b[35mplaca roxa\u001b[0m apontando para frente e uma \u001b[32;1mplaca verde\u001b[0m apontando para a direita.')
             bt.enter()
             print ('\u001b[37;1mBaseando-se nisso você decidi seguir: \n (1) em frente \n (2) virar a direita \n (3) voltar')
             dir = input('>>>')
@@ -640,7 +640,7 @@ def floresta(jogador):
 
     
         elif sala == 119:
-            print ('Mais uma vez você se vê diante de uma encruzilhada, com uma placa azul para a direita e uma placa vermelha para a esquerda.')
+            print ('Mais uma vez você se vê diante de uma encruzilhada, com uma \u001b[34;1mplaca azul\u001b[0m para a direita e uma \u001b[30mplaca vermelha\u001b[0m para a esquerda.')
             bt.enter()
             print ('\u001b[37;1mAssim você decidi ir para: \n (1) direita \n (2) esquerda \n (3) voltar')
             dir = input('>>>')
