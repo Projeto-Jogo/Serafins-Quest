@@ -40,7 +40,7 @@ def narracaotaverna():
 
 def bebado1():
     
-    string = " (1) Com licenca o senhor sabe como eu faco para chegar na fronteira com Dimitria?"
+    string = " (1) Com licenca o senhor sabe como eu faco para chegar na fronteira com Dimitria?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -50,7 +50,7 @@ def bebado1():
 
 def bebado2():
 
-    string = " (2) Meu companheiro, me fale com chegar a fronteira norte"
+    string = " (2) Meu companheiro, me fale com chegar a fronteira norte.\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -60,7 +60,7 @@ def bebado2():
 
 def bebado3():
 
-    string = " (3) Oh seu vagabundo, como que faz pra cruzar a fronteira de Dimitria?"
+    string = " (3) Oh seu vagabundo, como que faz pra cruzar a fronteira de Dimitria?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -82,7 +82,7 @@ def bebadoresp():
 
 def barman1():
    
-    string = " (1) Meu camarada ,voce sabe me falar como eu faço para chegar na fronteira ao norte?"
+    string = " (1) Meu camarada ,voce sabe me falar como eu faço para chegar na fronteira ao norte?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -92,7 +92,7 @@ def barman1():
 
 def barman2():
 
-    string = " (2) Com a sua licença, o senhor sabe me dizer como eu faço para chegar até Nimide?"
+    string = " (2) Com a sua licença, o senhor sabe me dizer como eu faço para chegar até Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -102,7 +102,7 @@ def barman2():
 
 def barman3():
 
-    string = " (3) Oh seuzinho, me fala como eu chego na fronteira norte"
+    string = " (3) Oh seuzinho, me fala como eu chego na fronteira norte.\n"
    
     for ch in string:
         time.sleep(0.01)
@@ -144,7 +144,7 @@ def barman3resp():
 
 def meretriz1():
 
-    string = " (1) Madame, a senhora sabe me dizer como eu faco pra chegar na fronteira norte?"
+    string = " (1) Madame, a senhora sabe me dizer como eu faco pra chegar na fronteira norte?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -154,7 +154,7 @@ def meretriz1():
 
 def meretriz2():
 
-    string = " (2) Hey, voce ai, como que faz pra chegar em Nimide?"
+    string = " (2) Hey, voce ai, como que faz pra chegar em Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -164,7 +164,7 @@ def meretriz2():
 
 def meretriz3():
 
-    string = " (3) Oh velha senhora, me conta como faz pra chegar na fronteira de Nimide."
+    string = " (3) Oh velha senhora, me conta como faz pra chegar na fronteira de Nimide.\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -218,7 +218,7 @@ def narracaobiblioteca():
 
 def livro():
 
-    string = "Voce procura algum livro que possa te ajudar mas nao esta conseguindo achar, talvez alguem possa te ajudar"
+    string = "Voce procura algum livro que possa te ajudar mas nao esta conseguindo achar, talvez alguem possa te ajudar\n"
     
     for ch in string:
         time.sleep(0.01)
@@ -230,7 +230,7 @@ def livro():
 
 def bibliotecaria1():
 
-    string = " (1) Com licenca, a senhora sabe me dizer como descobrir o caminho para Nimide?"
+    string = " (1) Com licenca, a senhora sabe me dizer como descobrir o caminho para Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -240,7 +240,7 @@ def bibliotecaria1():
 
 def bibliotecaria2():
 
-    string = " (2) Hey, voce aí, como eu faco pra descobrir o caminho pra Nimide?"
+    string = " (2) Hey, voce aí, como eu faco pra descobrir o caminho pra Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -250,7 +250,7 @@ def bibliotecaria2():
 
 def bibliotecaria3():
 
-    string = " (3) Oh velha senhora atras do balcao, onde eu descubro como chegar em Nimide?"
+    string = " (3) Oh velha senhora atras do balcao, onde eu descubro como chegar em Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -270,7 +270,7 @@ def bibliotecaria1resp():
 
 def bibliotecaria2resp():
 
-    string = "Um pouco de respeito a mais seria bom meu jovem, veja nesse livro ( a bibliotecaria lhe da um livre de mapas indicando que é possivel chegar a fronteira de Nimide ao cruzar o deserto."
+    string = "Um pouco de respeito a mais seria bom meu jovem, veja nesse livro (a bibliotecaria lhe da um livro de mapas indicando que é possivel chegar a fronteira de Nimide ao cruzar o deserto)."
 
     for ch in string:
         time.sleep(0.01)
@@ -292,7 +292,7 @@ def bibliotecaria3resp():
 
 def estudante1():
     
-    string = "Minha jovem, voce parece ser uma pessoa muito inteligente, a senhorita sabe me dizer como chegar a fronteira norte do reino?"
+    string = "Minha jovem, voce parece ser uma pessoa muito inteligente, a senhorita sabe me dizer como chegar a fronteira norte do reino?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -302,7 +302,7 @@ def estudante1():
 
 def estudante2():
     
-    string = "Oh garota, voce sabe me falar como chegar em Nimide?"
+    string = "Oh garota, voce sabe me falar como chegar em Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -311,7 +311,7 @@ def estudante2():
     return
 
 def estudante3():
-    string = "Oh sua jovenzinha ai, voce nao sabe como faz pra chegar em Nimide nao né?"
+    string = "Oh sua jovenzinha ai, voce nao sabe como faz pra chegar em Nimide nao né?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -360,7 +360,7 @@ def narracaobeco():
 # SABIO
 
 def sabio1():
-    string = "O senhor parece ser muito esperto, saberia me dizer como chegar ate a fronteira de Nimide?"
+    string = "O senhor parece ser muito esperto, saberia me dizer como chegar ate a fronteira de Nimide\n?"
 
     for ch in string:
         time.sleep(0.01)
@@ -369,7 +369,7 @@ def sabio1():
     return
 
 def sabio2():
-    string = "Hey, o senhor ai, voce sabe me dizer como chegar a fronteira norte do reino?"
+    string = "Hey, o senhor ai, voce sabe me dizer como chegar a fronteira norte do reino?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -378,7 +378,7 @@ def sabio2():
     return
 
 def sabio3():
-    string = "Oh seu velho, me fala ai, voce sabe como eu faço pra chegar até Nimide?"
+    string = "Oh seu velho, me fala ai, voce sabe como eu faço pra chegar até Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -416,7 +416,7 @@ def sabio3resp():
 # VIAJANTE
 
 def viajante1():
-    string = "Com liceça, o senhor me parece ser um viajante, por acaso voce conhece o melhor caminho para Nimide?"
+    string = "Com liceça, o senhor me parece ser um viajante, por acaso voce conhece o melhor caminho para Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -425,7 +425,7 @@ def viajante1():
     return
 
 def viajante2():
-    string = "Hey andarilho, voce sabe o melhor caminho para Nimide?"
+    string = "Hey andarilho, voce sabe o melhor caminho para Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -434,7 +434,7 @@ def viajante2():
     return
 
 def viajante3():
-    string = "Oh  seu nomadiznho, voce deve saber como chegar a Nimide, me conte"
+    string = "Oh  seu nomadiznho, voce deve saber como chegar a Nimide, me conte.\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -473,7 +473,7 @@ def viajante3resp():
 
 def mendigo1():
    
-    string = " (1) Pobre senhor, voce saberia me dizer o caminho para Nimide."
+    string = " (1) Pobre senhor, voce saberia me dizer o caminho para Nimide.\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -483,7 +483,7 @@ def mendigo1():
     
 def mendigo2():
    
-    string = " (2) Oh mendigo, voce nao sabe o caminho para Nimide nao né?"
+    string = " (2) Oh mendigo, voce nao sabe o caminho para Nimide nao né?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -493,7 +493,7 @@ def mendigo2():
       
 def mendigo3():
    
-    string = " (3) Hey voce ai largado na rua, se voce souber me conta, como eu chego na fronteira norte do país?"
+    string = " (3) Hey voce ai largado na rua, se voce souber me conta, como eu chego na fronteira norte do país?\n"
 
     for ch in string:
         time.sleep(0.01)
