@@ -12,7 +12,7 @@ import Introducao as intro
 
 import Deserto as ds
 
-import Floresta_1 as fr
+import Floresta as fr
 
 import Final as fn
 
