@@ -21,26 +21,32 @@ def dunas(jogador, objetos_coletados, hp, arma):
         return (f'\nVocê ja coletou os objetos que necessitava aqui!')
     elif "pedra" in objetos_coletados and "poção" not in objetos_coletados:  # Se o jogador já coletou a pedra mas não a poção, ele encontra a poção
         while a < 1:
-            escolha_1 = input('\nChegando mais perto, você vê que é uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não  >>>')  # O jogador escolhe se quer coletar a poção ou não
+            print('\n\u001b[37;1mChegando mais perto, você vê que é uma poção! Deseja coletá-la?\n (1) sim\n (2) não')  # O jogador escolhe se quer coletar a poção ou não
+            escolha_1 = input(">>>")
+            bt.delete_last_lines(1)
+            print(f">>>{escolha_1}\u001b[0m\n")
             if escolha_1 == "1":
                 a += 1
                 bt.delete_last_lines(1) # Chamada da função "delete_last_lines(n)" do módulo "Batalha"
                 objetos_coletados.append("poção") # Se ele escolhe coletar a poção, esta é adicionada à sua lista geral de objetos coletados
                 objetos_coletados_nas_dunas.append("poção") # A poção também é adicionada à lista específica de objetos coletados nas dunas
                 while b < 1: # O jogador escolhe se quer beber a poção ou não
-                    escolha_2 = input('\n Beber poção? 1 - Sim / 2 - Não  >>>') # O jogador escolhe se quer beber a poção ou não
+                    print('\n\u001b[37;1mBeber poção?\n (1) sim\n (2) não') # O jogador escolhe se quer beber a poção ou não
+                    escolha_2 = input(">>>")
+                    bt.delete_last_lines(1)
+                    print(f">>>{escolha_2}\u001b[0m\n")
                     if escolha_2 == "1": 
                         b += 1
                         bt.delete_last_lines(1)
                         hp -= 10  # Se o jogador beber a poção, perde 10 HPs
-                        return (f'\nAh, não! Esta poção é perigosa! Você perdeu 10 HPs! Seus HPs: {hp}')
                         if hp <= 0: # Se após perder 10 HPs seu número de HPs for igual ou menor que zero, ele perde o jogo
                             bt.game_over(jogador) # Chamada da função "game_over()" do módulo "Batalha"
+                        return (f'\nAh, não! Esta poção é perigosa! Você perdeu 10 HPs! Seus HPs: {hp}')
                     elif escolha_2 == "2": # 
                         b += 1
                         print("OK!")
                         bt.delete_last_lines(1)
-                        return(f'\Você não coletou novos itens!')
+                        return(f'\nVocê não coletou novos itens!')
                     else:
                         print('\nEscolha uma opção válida!') 
             elif escolha_1 == "2":
@@ -54,7 +60,10 @@ def dunas(jogador, objetos_coletados, hp, arma):
             c += 1
             print('\n Você vê algo na areia, a poucos metros...')
             bt.enter()
-            escolha = input('\nChegando mais perto, você vê que é uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não  >>>')
+            print('\n\u001b[37;1mChegando mais perto, você vê que é uma pedra! Deseja coletá-la?\n (1) sim\n (2) não')
+            escolha = input(">>>")
+            bt.delete_last_lines(1)
+            print(f">>>{escolha}\u001b[0m\n")
             if escolha == "1":
                 c += 1
                 bt.delete_last_lines(1)
@@ -73,7 +82,10 @@ def dunas(jogador, objetos_coletados, hp, arma):
         while d < 1:
             print('\n Você vê algo na areia, a poucos metros...')
             bt.enter()
-            escolha = input('\nChegando masi perto, vê que é uma poção! Deseja coletá-la? 1 - Sim ou 2 - Não  >>>')
+            print('\n\u001b[37;1mChegando mais perto, vê que é uma poção! Deseja coletá-la?\n (1) sim\n (2) não')
+            escolha = input(">>>")
+            bt.delete_last_lines(1)
+            print(f">>>{escolha}\u001b[0m\n")
             if escolha == "1":
                 pocao = 1
                 d += 1
@@ -81,7 +93,10 @@ def dunas(jogador, objetos_coletados, hp, arma):
                 objetos_coletados.append("poção")
                 objetos_coletados_nas_dunas.append("poção")
                 while e < 1:
-                    escolha_2 = input('\nBeber poção? 1 - Sim / 2 - Não  >>>')
+                    print('\n\u001b[37;1mBeber poção?\n (1) sim\n (2) não')
+                    escolha_2 = input(">>>")
+                    bt.delete_last_lines(1)
+                    print(f">>>{escolha_2}\u001b[0m\n")
                     if escolha_2 == "1":
                         e += 1
                         bt.delete_last_lines(1)
@@ -102,7 +117,10 @@ def dunas(jogador, objetos_coletados, hp, arma):
         print("ADICIONAR DESCRIÇÃO DE UM CAMINHO")
         bt.enter()
         while f < 1:
-            escolha = input('\nCaminhando mais um pouco, você encontra uma pedra! Deseja coletá-la? 1 - Sim ou 2 - Não  >>>')
+            print('\n\u001b[37;1mCaminhando mais um pouco, você encontra uma pedra! Deseja coletá-la?\n (1) sim\n (2) não')
+            escolha = input(">>>")
+            bt.delete_last_lines(1)
+            print(f">>>{escolha}\u001b[0m\n")
             if escolha == "1":
                 pedra = 1
                 f += 1
@@ -139,7 +157,10 @@ def topo_da_montanha(objetos_coletados):
         while a < 1:
             print('\nVocê vê uma flor do deserto a poucos metros e caminha até ela...')
             bt.enter()
-            escolha = input('\nDeseja coletá-la? 1 - Sim / 2 - Não  >>>')
+            print('\n\u001b[37;1mDeseja coletá-la?\n (1) sim\n (2) não')
+            escolha = input(">>>")
+            bt.delete_last_lines(1)
+            print(f">>>{escolha}\u001b[0m\n")
             if escolha == "1":
                 objetos_coletados.append("flor")
                 a += 1
@@ -168,28 +189,40 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
     bt.enter()
     print('\nPorém, você não pode ir até ele, pois há um bloqueio na passagem...')
     print('\nPara desbloquear o caminho você deve apresentar 4 objetos dos quais você coletou, em uma determinada sequência...')
-    objeto_1 = input('\nQual é o primeiro objeto da sequência?  >>>')
+    print('\n\u001b[37;1mQual é o primeiro objeto da sequência?')
+    objeto_1 = input(">>>")
+    bt.delete_last_lines(1)
+    print(f">>>{objeto_1}\u001b[0m\n")
     if objeto_1 not in combinacao_correta:
         print('\nObjeto não identificado, tente novamente.')
         return oasis(jogador, objetos_coletados, atributos, hp, arma)
     elif objeto_1 in combinacao_correta and objeto_1 not in objetos_coletados:
         return(f'\nVocê não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente desbloquear a passagem ao oasis novamente!')
     else:
-        objeto_2 = input('\nQual é o segundo objeto da sequência?  >>>')
+        print('\n\u001b[37;1mQual é o segundo objeto da sequência?')
+        objeto_2 = input(">>>")
+        bt.delete_last_lines(1)
+        print(f">>>{objeto_2}\u001b[0m\n")
         if objeto_2 not in combinacao_correta:
             print('\nObjeto não identificado, tente novamente.')
             return oasis(jogador, objetos_coletados, atributos, hp, arma)
         elif objeto_2 in combinacao_correta and objeto_2 not in objetos_coletados:
             return(f'\nVocê não possui o objeto {objeto_2}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!')    
         else:
-            objeto_3 = input('\nQual é o terceiro objeto da sequência?  >>>')
+            print('\n\u001b[37;1mQual é o terceiro objeto da sequência?')
+            objeto_3 = input(">>>")
+            bt.delete_last_lines(1)
+            print(f">>>{objeto_3}\u001b[0m\n")
             if objeto_3 not in combinacao_correta:
                 print('\nObjeto não identificado, tente novamente.')
                 return oasis(jogador, objetos_coletados, atributos, hp, arma)         
             elif objeto_3 in combinacao_correta and objeto_3 not in objetos_coletados:
                 return(f'\nVocê não possui o objeto {objeto_3}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!')
             else:
-                objeto_4 = input('\nQual é o quarto objeto da sequência?  >>>')
+                print('\n\u001b[37;1mQual é o quarto objeto da sequência?')
+                objeto_4 = input(">>>")
+                bt.delete_last_lines(1)
+                print(f">>>{objeto_4}\u001b[0m\n")
                 if objeto_4 not in combinacao_correta:
                     print('\nObjeto não identificado, tente novamente.')
                     return oasis(jogador, objetos_coletados, atributos, hp, arma)
@@ -215,7 +248,10 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
                         bt.delete_last_lines(1)
                         print('\nNadando e chegando mais perto, você percebe que é um báu!')
                         while c < 1:
-                            escolha_1 = input('\n O que deseja fazer? 1 - Coletar o baú / 2 - Sair do lago  >>>')
+                            print('\n\u001b[37;1mO que deseja fazer?\n (1) Coletar o baú\n (2) Sair do lago')
+                            escolha_1 = input(">>>")
+                            bt.delete_last_lines(1)
+                            print(f">>>{escolha_1}\u001b[0m\n")
                             if escolha_1 == "1":
                                 c += 1
                                 bt.delete_last_lines(1)
@@ -224,14 +260,20 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
                                 bt.enter()
                                 print("Você sai do lago, sentando-se à sua beira...")
                                 bt.delete_last_lines(1)
-                                abertura_do_bau = input("Digite 1 para abrir o baú!  >>>")
+                                print("\u001b[37;1mDigite 1 para abrir o baú!")
+                                abertura_do_bau = input(">>>")
+                                bt.delete_last_lines(1)
+                                print(f">>>{abertura_do_bau}\u001b[0m\n")
                                 if abertura_do_bau == "1":
                                     d += 1
                                     if "chave" in objetos_coletados:
                                         print("\nVocê conseguiu!")
                                         bt.passar_nivel(jogador)
                                         while e < 1:
-                                            beber_pocao_brilhante = input("\nHá uma poção brilhante lá dentro! Digite 1 para bebê-la...  >>>")
+                                            print("\n\u001b[37;1mHá uma poção brilhante lá dentro! Digite 1 para bebê-la...")
+                                            beber_pocao_brilhante = input(">>>")
+                                            bt.delete_last_lines(1)
+                                            print(f">>>{beber_pocao_brilhante}\u001b[0m\n"
                                             if beber_pocao_brilhante == "1":
                                                 e += 1
                                                 hp += 20
@@ -245,7 +287,10 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
                                         print("\nHmm... o que será que isso quer dizer? Guarde esta palavra, ela pode ser útil mais tarde...")
                                         bt.enter()
                                         while f < 1:
-                                            nova_arma = input("\nVocê encontrou um chicote no caminho! Digite 1 para obtê-lo como arma!  >>>")
+                                            print("\n\u001b[37;1mVocê encontrou um chicote no caminho! Digite 1 para obtê-lo como arma!")
+                                            nova_arma = input(">>>")
+                                            bt.delete_last_lines(1)
+                                            print(f">>>{nova_arma}\u001b[0m\n"
                                             if nova_arma == "1":
                                                 f += 1
                                                 arma = "chicote"
@@ -285,7 +330,10 @@ def retornar(local, jogador, objetos_coletados, atributos, hp, arma):
         print(topo_da_montanha(objetos_coletados))
         if "chave" not in objetos_coletados:
             while i < 1:
-                coleta_de_objetos = input("\nVocê encontrou uma chave! Deseja coletá-la? 1 - Sim / 2 - Não  >>>")
+                print("\n\u001b[37;1mVocê encontrou uma chave! Deseja coletá-la?\n (1) sim\n (2) não")
+                coleta_de_objetos = input(">>>")
+                bt.delete_last_lines(1)
+                print(f">>>{coleta_de_objetos}\u001b[0m\n"
                 if coleta_de_objetos == "1":
                     i += 1
                     objetos_coletados.append("chave")
@@ -316,7 +364,10 @@ def retornar(local, jogador, objetos_coletados, atributos, hp, arma):
         print("\nAgora só resta explorar o oasis novamente...")
         if "runa" not in objetos_coletados:
             while j < 1:
-                coleta_de_objetos = input("Você encontrou uma runa! Deseja coletá-la? 1 - Sim / 2 - Não  >>>")
+                print("\u001b[37;1mVocê encontrou uma runa! Deseja coletá-la?\n (1) sim\n (2) não")
+                coleta_de_objetos = input(">>>")
+                bt.delete_last_lines(1)
+                print(f">>>{coleta_de_objetos}\u001b[0m\n"
                 if coleta_de_objetos == "1":
                     j += 1
                     objetos_coletados.append("runa")
@@ -360,7 +411,10 @@ def Deserto(jogador):
     bt.delete_last_lines(1)
 
     while r < 1:
-        escolha_1 = input("\nInicialmente, você tem três opções de caminhos para seguir. Escolha um deles: 1 - Caminho 1 / 2 - Caminho 2 / 3 - Caminho 3  >>>")
+        print("\n\u001b[37;1mInicialmente, você tem três opções de caminhos para seguir. Escolha um deles:\n (1) Caminho 1 \n (2) Caminho 2 \n (3) Caminho 3")
+        escolha_1 = input(">>>")
+        bt.delete_last_lines(1)
+        print(f">>>{escolha_1}\u001b[0m\n"
         if escolha_1 == "1":
             # CAMINHO 1: TOPO DA MONTANHA - OASIS - DUNAS
             r += 1
@@ -380,7 +434,10 @@ def Deserto(jogador):
 
             if "runa" not in meus_objetos_coletados:
                 while s < 1:
-                    coleta_de_objetos = input("\nVocê encontrou uma runa no caminho! Deseja coletá-la? 1 - Sim / 2 - Não  >>>")
+                    print("\n\u001b[37;1mVocê encontrou uma runa no caminho! Deseja coletá-la?\n (1) sim \n (2) não")
+                    coleta_de_objetos = input(">>>")
+                    bt.delete_last_lines(1)
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
                     if coleta_de_objetos == "1":
                         s += 1
                         meus_objetos_coletados.append("runa")
@@ -420,7 +477,10 @@ def Deserto(jogador):
             print("\nVocê vê algo na areia, a poucos metros...")
             if "poção" not in meus_objetos_coletados:
                 while t < 1:
-                    coleta_de_objetos = input("\n Chegando mais perto, você vê que é uma poção! Deseja coletá-la? 1 - Sim / 2 - Não  >>>")
+                    print("\n\u001b[37;1mChegando mais perto, você vê que é uma poção! Deseja coletá-la?\n (1) sim \n (2) não")
+                    coleta_de_objetos = input(">>>")
+                    bt.delete_last_lines(1)
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
                     print("\nVocê pode guardar esta poção, mas não bebê-la!")
                     if coleta_de_objetos == "1":
                         t += 1
@@ -476,7 +536,10 @@ def Deserto(jogador):
 
             if "chave" not in meus_objetos_coletados:
                 while u < 1:
-                    coleta_de_objetos = input("\nVocê encontrou uma chave! Deseja coletá-la? 1 - Sim / 2 - Não  >>>")
+                    print("\n\u001b[37;1mVocê encontrou uma chave! Deseja coletá-la?\n (1) sim\n (2) não")
+                    coleta_de_objetos = input(">>>")
+                    bt.delete_last_lines(1)
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
                     if coleta_de_objetos == "1":
                         u += 1
                         meus_objetos_coletados.append("chave")
@@ -504,7 +567,10 @@ def Deserto(jogador):
 
             if "runa" not in meus_objetos_coletados:
                 while v < 1:
-                    coleta_de_objetos = input("\nVocê encontrou uma runa! Deseja coletá-la? 1 - Sim / 2 - Não  >>>")
+                    print("\n\u001b[37;1mVocê encontrou uma runa! Deseja coletá-la?\n (1) sim\n (2) não")
+                    coleta_de_objetos = input(">>>")
+                    bt.delete_last_lines(1)
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
                     if coleta_de_objetos == "1":
                         v += 1
                         meus_objetos_coletados.append("runa")
@@ -565,7 +631,10 @@ def Deserto(jogador):
 
             if "runa" not in meus_objetos_coletados:
                 while w < 1:
-                    coleta_de_objetos = input("\nVocê encontrou uma runa! Deseja coletá-la? 1 - Sim / 2 - Não  >>>")
+                    print("\n\u001b[37;1mVocê encontrou uma runa! Deseja coletá-la?\n (1) sim\n (2) não")
+                    coleta_de_objetos = input(">>>")
+                    bt.delete_last_lines(1)
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
                     if coleta_de_objetos == "1":
                         w += 1
                         meus_objetos_coletados.append("runa")
@@ -589,7 +658,10 @@ def Deserto(jogador):
 
             if "chave" not in meus_objetos_coletados:
                 while x < 1:
-                    coleta_de_objetos = input("\nVocê encontrou uma chave! Deseja coletá-la? 1 - Sim / 2 - Não  >>>")
+                    print("\n\u001b[37;1mVocê encontrou uma chave! Deseja coletá-la?\n (1) sim\n (2) não")
+                    coleta_de_objetos = input(">>>")
+                    bt.delete_last_lines(1)
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
                     if coleta_de_objetos == "1":
                         x += 1
                         meus_objetos_coletados.append("chave")
