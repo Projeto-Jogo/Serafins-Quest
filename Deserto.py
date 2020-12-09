@@ -144,7 +144,7 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
 # Função utilizada para a trajetória do jogador em um oasis no deserto
 
     a = b = c = d = e = f = 0 #
-    Serpente = bt.Serpente
+    Serpente = {"nome": "Serpente", 'hp': 30,  'defesa': 2, 'força': 2}
     desbloqueio = False
     missao_cumprida = False
     combinacao_correta = ["poção", "flor", "runa", "pedra"]
