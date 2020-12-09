@@ -3,7 +3,7 @@
 import Batalha as bt  # Importa o módulo "Batalha"
 
 
-ddef dunas(jogador, objetos_coletados, hp, arma):
+def dunas(jogador, objetos_coletados, hp, arma):
     
     # Função utilizada para a trajetória do jogador nas dunas do deserto
     
@@ -156,7 +156,7 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
 
 # Função utilizada para a trajetória do jogador em um oasis no deserto
 
-    a = b = c = d = e = f = 0 # VVariáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
+    a = b = c = d = e = f = 0 # Variáveis utilizadas para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
     Serpente = {"nome": "Serpente", 'hp': 30,  'defesa': 2, 'força': 2}
     desbloqueio = False
     missao_cumprida = False
@@ -200,14 +200,11 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
                         bt.delete_last_lines(5)
                         print(f'\nMuito bem! Você conseguiu entrar no ao oasis!')
                         bt.enter()
-
                         bt.passar_nivel(jogador)
                         print("ADICIONAR DESCRIÇÃO DO OASIS")
                         bt.enter()
-
                         print("\nVocê encontrou uma serpente no caminho!")
                         print(bt.batalha(Serpente, jogador))
-
                         print("\nVocê segue para o lago agora...")
                         bt.enter()
                         bt.delete_last_lines(1)
