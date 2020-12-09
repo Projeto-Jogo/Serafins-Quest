@@ -273,7 +273,7 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
                                             print("\n\u001b[37;1mHá uma poção brilhante lá dentro! Digite 1 para bebê-la...")
                                             beber_pocao_brilhante = input(">>>")
                                             bt.delete_last_lines(1)
-                                            print(f">>>{beber_pocao_brilhante}\u001b[0m\n"
+                                            print(f">>>{beber_pocao_brilhante}\u001b[0m\n")
                                             if beber_pocao_brilhante == "1":
                                                 e += 1
                                                 hp += 20
@@ -291,7 +291,7 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
                                             print("\n\u001b[37;1mVocê encontrou um chicote no caminho! Digite 1 para obtê-lo como arma!")
                                             nova_arma = input(">>>")
                                             bt.delete_last_lines(1)
-                                            print(f">>>{nova_arma}\u001b[0m\n"
+                                            print(f">>>{nova_arma}\u001b[0m\n")
                                             if nova_arma == "1":
                                                 f += 1
                                                 arma = "chicote"
@@ -334,7 +334,7 @@ def retornar(local, jogador, objetos_coletados, atributos, hp, arma):
                 print("\n\u001b[37;1mVocê encontrou uma chave! Deseja coletá-la?\n (1) sim\n (2) não")
                 coleta_de_objetos = input(">>>")
                 bt.delete_last_lines(1)
-                print(f">>>{coleta_de_objetos}\u001b[0m\n"
+                print(f">>>{coleta_de_objetos}\u001b[0m\n")
                 if coleta_de_objetos == "1":
                     i += 1
                     objetos_coletados.append("chave")
@@ -368,7 +368,7 @@ def retornar(local, jogador, objetos_coletados, atributos, hp, arma):
                 print("\u001b[37;1mVocê encontrou uma runa! Deseja coletá-la?\n (1) sim\n (2) não")
                 coleta_de_objetos = input(">>>")
                 bt.delete_last_lines(1)
-                print(f">>>{coleta_de_objetos}\u001b[0m\n"
+                print(f">>>{coleta_de_objetos}\u001b[0m\n")
                 if coleta_de_objetos == "1":
                     j += 1
                     objetos_coletados.append("runa")
@@ -415,7 +415,7 @@ def Deserto(jogador):
         print("\n\u001b[37;1mInicialmente, você tem três opções de caminhos para seguir. Escolha um deles:\n (1) Caminho 1 \n (2) Caminho 2 \n (3) Caminho 3")
         escolha_1 = input(">>>")
         bt.delete_last_lines(1)
-        print(f">>>{escolha_1}\u001b[0m\n"
+        print(f">>>{escolha_1}\u001b[0m\n")
         if escolha_1 == "1":
             # CAMINHO 1: TOPO DA MONTANHA - OASIS - DUNAS
             r += 1
@@ -438,7 +438,7 @@ def Deserto(jogador):
                     print("\n\u001b[37;1mVocê encontrou uma runa no caminho! Deseja coletá-la?\n (1) sim \n (2) não")
                     coleta_de_objetos = input(">>>")
                     bt.delete_last_lines(1)
-                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n")
                     if coleta_de_objetos == "1":
                         s += 1
                         meus_objetos_coletados.append("runa")
@@ -481,7 +481,7 @@ def Deserto(jogador):
                     print("\n\u001b[37;1mChegando mais perto, você vê que é uma poção! Deseja coletá-la?\n (1) sim \n (2) não")
                     coleta_de_objetos = input(">>>")
                     bt.delete_last_lines(1)
-                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n")
                     print("\nVocê pode guardar esta poção, mas não bebê-la!")
                     if coleta_de_objetos == "1":
                         t += 1
@@ -540,7 +540,7 @@ def Deserto(jogador):
                     print("\n\u001b[37;1mVocê encontrou uma chave! Deseja coletá-la?\n (1) sim\n (2) não")
                     coleta_de_objetos = input(">>>")
                     bt.delete_last_lines(1)
-                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n")
                     if coleta_de_objetos == "1":
                         u += 1
                         meus_objetos_coletados.append("chave")
@@ -571,7 +571,7 @@ def Deserto(jogador):
                     print("\n\u001b[37;1mVocê encontrou uma runa! Deseja coletá-la?\n (1) sim\n (2) não")
                     coleta_de_objetos = input(">>>")
                     bt.delete_last_lines(1)
-                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n")
                     if coleta_de_objetos == "1":
                         v += 1
                         meus_objetos_coletados.append("runa")
@@ -635,7 +635,7 @@ def Deserto(jogador):
                     print("\n\u001b[37;1mVocê encontrou uma runa! Deseja coletá-la?\n (1) sim\n (2) não")
                     coleta_de_objetos = input(">>>")
                     bt.delete_last_lines(1)
-                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n")
                     if coleta_de_objetos == "1":
                         w += 1
                         meus_objetos_coletados.append("runa")
@@ -662,7 +662,7 @@ def Deserto(jogador):
                     print("\n\u001b[37;1mVocê encontrou uma chave! Deseja coletá-la?\n (1) sim\n (2) não")
                     coleta_de_objetos = input(">>>")
                     bt.delete_last_lines(1)
-                    print(f">>>{coleta_de_objetos}\u001b[0m\n"
+                    print(f">>>{coleta_de_objetos}\u001b[0m\n")
                     if coleta_de_objetos == "1":
                         x += 1
                         meus_objetos_coletados.append("chave")
