@@ -279,7 +279,8 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
                                                 hp += 20
                                                 objetos_coletados.append("poção brilhante")
                                                 print(f'\nVocê ganhou 20 HPs após beber a poção! Seus HPs: {hp}')
-
+                                            else:
+                                                print(f'Comando não conhecido, tente novamente.')
                                         print("\nTambém há uma nota dentro do baú... leia!")
                                         bt.enter()
                                         bt.delete_last_lines(1)
