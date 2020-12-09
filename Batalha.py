@@ -123,12 +123,12 @@ def acoes(inimigo, jogador, arma, final):
         # Exibir os comandos possiveis
         elif acao == "comandos":
             if final == False:
-                print(" (1) forte\n (2) defesa\n fugir\n comandos\n info 'comando'\n info\n")
+                print(" (1) forte\n (2) defesa\n fugir\n comandos\n info <comando>\n info\n")
             else:
                 print("comandos\ninfo 'comando'\ninfo\nforte\ndefesa\n")
 
         # Mostrar a informacao do comando "info 'comando'"
-        elif acao == "info info 'comando'":
+        elif acao == "info info <comando>":
             print("Esse comando exibe informações detalhadas sobre o comando especificado\n")
 
         # Mostrar a informacao do comando "comandos"
@@ -412,7 +412,7 @@ def batalha(inimigo, jogador, final = False):
                         enter()
 
                     # Caso o dado de 20, procederá para um cálculo do acerto crítico
-                    elif dado_inimigo + inimigo['força'] >= 20:
+                    elif dado_inimigo >= 20:
 
                         print(f'\nO dado({dado_inimigo}) mais força do inimigo({inimigo.get("força")}) deu {dado_inimigo + inimigo["força"]}')
                         print('\nVocê recebeu um ataque crítico!')
@@ -454,7 +454,7 @@ def batalha(inimigo, jogador, final = False):
                     inimigo["defesa"] += 2
 
             else:
-                print(f'\nVocê derrotou  o inimigo!')
+                print(f'\nVocê derrotou  o inimigo!\n')
 
         # Trazer os atributos do jogador de volta ao normal
         if defende == True:
