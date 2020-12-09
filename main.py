@@ -121,7 +121,8 @@ while loop:
     escolha_3 = ""
     
     while escolha_1 != "4":
-
+        
+        escolha_1 = ""
         # ESCOLHA DO LOCAL DE BUSCA: TAVERNA; BIBLIOTECA; BECO
         print('\n\u001b[37;1mProcurar informações:\n (1) na Taverna\n (2) na Biblioteca\n (3) no Beco\n (4) continuar a jornada')
         escolha_1 = input(">>>")
@@ -133,10 +134,10 @@ while loop:
 
             intro.narracaotaverna()
             bt.enter()
+            escolha_2 = ""
 
             while escolha_2 != "4":
 
-                escolha_2 = ""
                 # ESCOLHA DA CONVERSA: BEBADO; MERETRIZ; BARMAN
                 print('\n\u001b[37;1mConversar com:\n (1) Bêbado\n (2) Meretriz\n (3) Barman\n (4) voltar')
                 escolha_2 = input(">>>")
@@ -146,12 +147,15 @@ while loop:
                 # BEBADO
                 if escolha_2 == '1':
 
+                    escolha_3 = ""
+                    intro.bebado1()
+                    intro.bebado2()
+                    intro.bebado3()
+                    print(" (4) voltar")
+
                     while escolha_3 != "4":
 
                         escolha_3 = ""
-                        intro.bebado1()
-                        intro.bebado2()
-                        intro.bebado3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
@@ -159,14 +163,20 @@ while loop:
                         if escolha_3 == "1":
                             intro.bebadoresp()
                             bt.enter()
+                            break
 
                         elif escolha_3 == "2":
                             intro.bebadoresp()
                             bt.enter()
+                            break
 
                         elif escolha_3 == "3":
                             intro.bebadoresp()
                             bt.enter()
+                            break
+
+                        elif escolha_3 == "4":
+                            pass
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
@@ -176,12 +186,15 @@ while loop:
                 # MERETRIZ
                 elif escolha_2 == '2':
 
+                    escolha_3 = ""
+                    intro.meretriz1()
+                    intro.meretriz2()
+                    intro.meretriz3()
+                    print(" (4) voltar")
+
                     while escolha_3 != "4":
 
                         escolha_3 = ""
-                        intro.meretriz1()
-                        intro.meretriz2()
-                        intro.meretriz3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
@@ -190,15 +203,21 @@ while loop:
                             intro.meretriz1resp()
                             trigger_floresta = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "2":
                             intro.meretriz2resp()
                             trigger_floresta = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "3":
                             intro.meretriz3resp()
                             bt.enter()
+                            break
+
+                        elif escolha_3 == "4":
+                            pass
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
@@ -208,12 +227,15 @@ while loop:
                 # BARMAN
                 elif escolha_2 == '3':
 
+                    escolha_3 = ""
+                    intro.barman1()
+                    intro.barman2()
+                    intro.barman3()
+                    print(" (4) voltar")
+
                     while escolha_3 != "4":
 
                         escolha_3 = ""
-                        intro.barman1()
-                        intro.barman2()
-                        intro.barman3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
@@ -222,15 +244,21 @@ while loop:
                             intro.barman1resp()
                             trigger_deserto = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "2":
                             intro.barman2resp()
                             trigger_deserto = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "3":
                             intro.barman3resp()
                             bt.enter()
+                            break
+
+                        elif escolha_3 == "4":
+                            pass
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
@@ -250,6 +278,7 @@ while loop:
 
             intro.narracaobiblioteca()
             bt.enter()
+            escolha_2 = ""
 
             while escolha_2 != "4":
 
@@ -263,12 +292,16 @@ while loop:
                 # BIBLIOTECARIA
                 if escolha_2 == '1':
 
+                    escolha_3 = ""
+                    intro.bibliotecaria1()
+                    intro.bibliotecaria2()
+                    intro.bibliotecaria3()
+                    print(" (4) voltar")
+
                     while escolha_3 != "4":
 
                         escolha_3 = ""
-                        intro.bibliotecaria1()
-                        intro.bibliotecaria2()
-                        intro.bibliotecaria3()
+
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
@@ -277,15 +310,21 @@ while loop:
                             intro.bibliotecaria1resp()
                             trigger_deserto = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "2":
                             intro.bibliotecaria2resp()
                             trigger_deserto = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "3":
                             intro.bibliotecaria3resp()
                             bt.enter()
+                            break
+
+                        elif escolha_3 == "4":
+                            pass
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
@@ -301,12 +340,16 @@ while loop:
                 # ESTUDANTE
                 elif escolha_2 == '3':
 
+                    escolha_3 = ""
+                    intro.estudante1()
+                    intro.estudante2()
+                    intro.estudante3()
+                    print(" (4) voltar")
+
                     while escolha_3 != "4":
 
                         escolha_3 = ""
-                        intro.estudante1()
-                        intro.estudante2()
-                        intro.estudante3()
+
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
@@ -315,15 +358,21 @@ while loop:
                             intro.estudante1resp()
                             trigger_deserto = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "2":
                             intro.estudante2resp()
                             trigger_deserto = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "3":
                             intro.estudante3resp()
                             bt.enter()
+                            break
+
+                        elif escolha_3 == "4":
+                            pass
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
@@ -343,6 +392,7 @@ while loop:
 
             intro.narracaobeco()
             bt.enter()
+            escolha_2 = ""
 
             while escolha_2 != "4":
 
@@ -356,12 +406,16 @@ while loop:
                 # SABIO
                 if escolha_2 == '1':
 
+                    escolha_3 = ""
+                    intro.sabio1()
+                    intro.sabio2()
+                    intro.sabio3()
+                    print(" (4) voltar")
+
                     while escolha_3 != "4":
 
                         escolha_3 = ""
-                        intro.sabio1()
-                        intro.sabio2()
-                        intro.sabio3()
+
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
@@ -370,15 +424,21 @@ while loop:
                             intro.sabio1resp()
                             trigger_floresta = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "2":
                             intro.sabio2resp()
                             trigger_floresta = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "3":
                             intro.sabio3resp()
                             bt.enter()
+                            break
+
+                        elif escolha_3 == "4":
+                            pass
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
@@ -388,12 +448,16 @@ while loop:
                 # MENDIGO
                 elif escolha_2 == '2':
 
+                    escolha_3 = ""
+                    intro.mendigo1()
+                    intro.mendigo2()
+                    intro.mendigo3()
+                    print(" (4) voltar")
+
                     while escolha_3 != "4":
 
                         escolha_3 = ""
-                        intro.mendigo1()
-                        intro.mendigo2()
-                        intro.mendigo3()
+
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
@@ -401,14 +465,20 @@ while loop:
                         if escolha_3 == "1":
                             intro.mendigoresp()
                             bt.enter()
+                            break
 
                         elif escolha_3 == "2":
                             intro.mendigoresp()
                             bt.enter()
+                            break
 
                         elif escolha_3 == "3":
                             intro.mendigoresp()
                             bt.enter()
+                            break
+
+                        elif escolha_3 == "4":
+                            pass
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
@@ -418,12 +488,15 @@ while loop:
                 # VIAJANTE
                 elif escolha_2 == '3':
 
+                    escolha_3 = ""
+                    intro.viajante1()
+                    intro.viajante2()
+                    intro.viajante3()
+
                     while escolha_3 != "4":
 
                         escolha_3 = ""
-                        intro.viajante1()
-                        intro.viajante2()
-                        intro.viajante3()
+
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
@@ -432,15 +505,18 @@ while loop:
                             intro.viajante1resp()
                             trigger_floresta = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "2":
                             intro.viajante2resp()
                             trigger_floresta = True
                             bt.enter()
+                            break
 
                         elif escolha_3 == "3":
                             intro.viajante3resp()
                             bt.enter()
+                            break
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
