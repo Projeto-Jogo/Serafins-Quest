@@ -711,6 +711,3 @@ def floresta(jogador):
     bt.enter()
 
 
-mao = {"nome": "mão", "atributo": "FOR", "dano": "0-1", "min": 0, "max": 1}
-Soldado =    {"nome": "Soldado",    'hp': 100, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3, "arma": mao}
-floresta(Soldado)
