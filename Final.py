@@ -56,7 +56,7 @@ def armadilha_armario(jogador):
         bt.delete_last_lines(1)
         print(f">>>{pocao}\u001b[0m\n")
 
-        if pocao == '1': #Bebe a poção da Serpente - morte instantanea
+        if pocao == '1': #Bebe a poção da Serpente - morte instantânea
             flag_enigma = True
             print('Você bebe a poção e sente um gosto amargo dominar sua boca. Nos primeiros segundos nada acontece e a mancha para de crescer em sua mão. '
                   'Mas repentinamente suas pernas falham e você cai no chão. Sua energia se esvai e a última coisa que você escuta é uma risada aguda.')
@@ -143,7 +143,7 @@ def armadilha_armario(jogador):
                         if flag_pocao == False: #Checa se o jogador digitou um comando inválido
                             print('\nComando não reconhecido, tente novamente.\n')
                     flag_espada = False #Flag para resposta de pegar a espada
-                    while flag_espada == False: #Garante que o imput se repita caso o jogador digite uma opção inválida
+                    while flag_espada == False: #Garante que o input se repita caso o jogador digite uma opção inválida
                         print('\u001b[37;1mDeseja substituir sua arma atual pela espada?\n (1) sim\n (2) não')
                         pegar = input('>>>')
                         bt.delete_last_lines(1)
@@ -170,7 +170,7 @@ def armadilha_armario(jogador):
         if n == 2: #Checa se o jogador já fez duas tentativas
             flag_enigma = True
             flag_veneno = True
-            print('Você se lembra da frase do bilhete que diz que você tem apenas duas chances. A mancha já cobre toda sua mão. Subtamente, você sente como se algo tivesse atingido seu coração com força e a mancha desaparece.')
+            print('Você se lembra da frase do bilhete que diz que você tem apenas duas chances. A mancha já cobre toda sua mão. Subitamente, você sente como se algo tivesse atingido seu coração com força e a mancha desaparece.')
             bt.enter()
             jogador['hp'] -= dano
             print(f'Você levou {dano} pontos de dano. Seu hp: {jogador["hp"]}')
@@ -319,7 +319,7 @@ def sala2(jogador):
                     print(f'Sua força: {jogador["força"]}')
                 elif pocao_azul == '2': #Não bebe a poção
                     flag_pa = True
-                    print('Não é hora de correr riscos, deixa essa garrafa onde está.')
+                    print('Não é hora de correr riscos, deixe essa garrafa onde está.')
                 if flag_pa == False: #Checa se o jogador digitou um comando inválido
                     print('\nComando não reconhecido, tente novamente.\n')
             bt.enter()
@@ -400,8 +400,8 @@ def sala3(jogador):
     Saída: sala_atual
     '''
     global sala_atual
-    print('Quando você entra na sala, a luz se acende e a porta se fecha atrás de você. Apenas para ter certeza, você tenta abrí-la, mas já está trancada.')
-    print('Três beliches e um armário vazio são, aparentemente, a única mobilia do local. Um Goblin dorme em uma das camas, mas quando a luz acende ele levanta e não perde tempo antes de te atacar.')
+    print('Quando você entra na sala, a luz se acende e a porta se fecha atrás de você. Apenas para ter certeza, você tenta abri-la, mas já está trancada.')
+    print('Três beliches e um armário vazio são, aparentemente, a única mobília do local. Um Goblin dorme em uma das camas, mas quando a luz acende ele levanta e não perde tempo antes de te atacar.')
     #dicionário com os atributos do Goblin
     Goblin = Goblin = {'nome': 'Goblin', 'hp': 55,  'defesa': 4, 'força': 3}
     bt.enter()
@@ -418,7 +418,7 @@ def sala3(jogador):
         if bau == '1': #Vê o baú
             flag_bau = True
             print('\nNo interior do baú há dois frascos: um deles possui um líquido viscoso e esbranquiçado e o outro um líquido vermelho.')
-            #Testes de inteligencia do jogador para saber se ele reconhece ou não as poções
+            #Testes de inteligência do jogador para saber se ele reconhece ou não as poções
             teste_pb = teste_atributo(jogador['inteligência'], 7, 10) #Teste para a poção branca
             teste_pv = teste_atributo(jogador['inteligência'], 5, 7) #Teste para a poção vermelha
             if teste_pb == True and teste_pv == True: #Reconhece as duas
@@ -427,7 +427,7 @@ def sala3(jogador):
                 print('Você não sabe o que é a poção branca, mas sabe que a vermelha aumentará sua vida.')
             elif teste_pv == False: #Não reconhece nenhuma
                 print('Você não sabe o efeito de nenhuma das poções.')
-            flag_pb = False #Flag para respota de beber ou não a poção branca
+            flag_pb = False #Flag para resposta de beber ou não a poção branca
             while flag_pb == False: #Garante que o input se repita caso o jogador digite uma opção inválida
                 print('\u001b[37;1mDeseja tomar a poção esbranquiçada?\n (1) sim\n (2) não')
                 poção_branca = input('>>>')
@@ -478,7 +478,7 @@ def sala3(jogador):
             flag_cochilo = True
             print('Você deita em uma das camas e aproveita para descansar, em estado semi-alerta. Alguns minutos se passam e você se sente descansado e recuperado.')
             jogador['hp'] += 20
-            print(f'Você recuperou 20 ponts de hp. Sua vida: {jogador["hp"]}')
+            print(f'Você recuperou 20 pontos de hp. Sua vida: {jogador["hp"]}')
         elif cochilo == '2': #Não dorme
             flag_cochilo = True
             print('É arriscado demais baixar a guarda desse jeito, melhor não.')
@@ -499,13 +499,13 @@ def sala4(jogador):
     print('Uma vela em cima de uma mesa no centro do cômodo fornece uma fraca iluminação. Estantes com pedaços de armadura e armamentos quebrados ou não terminados indicam que o local devia ser utilizado como arsenal anteriormente.')
     bt.enter()
     print('Há também um armário de aço com uma única porta cuja maçaneta parece ser de ouro maciço com um pequeno diamante no centro.')
-    #Teste de inteligencia para saber se o jogador identifica algo estranho
+    #Teste de inteligência para saber se o jogador identifica algo estranho
     armadilha = teste_atributo(jogador['inteligência'])
     if armadilha == True: #Identifica algo estranho
         print('Você percebe que a maçaneta possui uma mancha incomum para uma peça de ouro e que o diamante é falso, além de ter algo pequeno e fino na superfície apontando para fora.')
     flag_armario = False #Flag para a resposta de abrir o armário
     while flag_armario == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-        print('\u001b[37;1mVocê tenta abrí-lo?\n (1) sim\n (2) não')
+        print('\u001b[37;1mVocê tenta abri-lo?\n (1) sim\n (2) não')
         armario = input('>>>')
         bt.delete_last_lines(1)
         print(f">>>{armario}\u001b[0m\n")
@@ -552,7 +552,7 @@ def sala6(jogador):
     bt.enter()
     #Discurso do Guardião
     print('- Eu sabia que era apenas uma questão de tempo até alguém chegar. Não importo qual lado você representa, mas não posso deixar qualquer um roubar essa relíquia, seja qual for o motivo. Talvez você não saiba, mas ela '
-          'aumenta muito a força do seu portador e intefere também em seu exército. Minha missão nesse mundo é protegê-la não importa a que custo.')
+          'aumenta muito a força do seu portador e interfere também em seu exército. Minha missão nesse mundo é protegê-la não importa a que custo.')
     bt.enter()
     print('Sem esperar uma resposta, o guardião se levanta e te ataca sem nenhuma misericórdia.')
     bt.enter()
@@ -570,7 +570,7 @@ def sala7(jogador):
     print('\nApós dar dois passos para a frente e virar à direita, você segue por um corredor não muito longo e pouco iluminado até chegar em outra porta. Você entra e escuta um barulho de tranca. '
           'Surpreso, tenta abrir a porta, mas ela está trancada.')
     bt.enter()
-    print('Uma análise rápida e você percebe se tratar de uma cozinha. Um fogão simples e sem lenha num canto, uma pia sem torneira e uma geladeira sem porta fazem o local parecer abandonado há anos. '
+    print('Uma análise rápida e você percebe se tratar de uma cozinha. Um fogão simples e sem lenha num canto, uma pia sem torneira e uma geladeira sem porta fazem o local parece abandonado há anos. '
           'Uma pilha de ossos no canto começa a se mexer, formando um esqueleto vivo que te ataca!')
     bt.enter()
     #Dicionário com os atributos do Esqueleto parte 1
@@ -583,7 +583,7 @@ def sala7(jogador):
     bt.enter()
     bt.batalha(Esqueleto_2, jogador, True)
     bt.enter()
-    print('Dessa vez, ao derrortá-lo você separa os ossos, prendendo um pouco dentro do forno, um tanto na geladeira e um tanto na pia, utilizando alguns pedaços de corda que encontrou para amarrá-lo.')
+    print('Dessa vez, ao derrotá-lo você separa os ossos, prendendo um pouco dentro do forno, um tanto na geladeira e um tanto na pia, utilizando alguns pedaços de corda que encontrou para amarrá-lo.')
     bt.enter()
     print('Nesse momento, há apenas um caminho para seguir, uma porta branca à direita.')
     sala_atual = 2
@@ -591,7 +591,7 @@ def sala7(jogador):
 
 def sala8(jogador):
     global sala_atual
-    print('A única tocha no alto da parede é suficiente para você ver entender que entrou na jaula de um grande Javali. O animal tem certa de 2 metros de comprimento, o pelo cinza está sujo e ele parece faminto, já que a única coisa além dele é um balde com água. '
+    print('A única tocha no alto da parede é suficiente para você ver entender que entrou na jaula de um grande Javali. O animal tem cerca de 2 metros de comprimento, o pelo cinza está sujo e ele parece faminto, já que a única coisa além dele é um balde com água. '
           'Como esperado, ele olha para você, pronto para devorar o novo jantar.')
     bt.enter()
     #Dicionário do Javali
@@ -619,7 +619,7 @@ def sala8(jogador):
 
     bt.enter()
     print('Aparentemente a grade é a única saída, porém está trancada. Lembrando da porta que apareceu sozinha na sala anterior, você decide explorar as paredes em busca de algo semelhante. '
-          'Ao encostar na parede da direita, subtamente ela desaparece por completo. Antes que ela volte, você entra no espaço escuro atrás dela. Um barulho indica que a parede voltou ao seu lugar. '
+          'Ao encostar na parede da direita, subitamente ela desaparece por completo. Antes que ela volte, você entra no espaço escuro atrás dela. Um barulho indica que a parede voltou ao seu lugar. '
           'No segundo seguinte, uma série de tochas se acende, iluminando um corredor que segue em frente por alguns passos antes de virar à direita.')
     bt.enter()
     print('As paredes do corredor estão repletas de pinturas e inscrições que não possuem nenhum significado para você. Distraído com elas, não percebe que as paredes estão se fechando até estarem quase encostando em você. '
@@ -694,7 +694,7 @@ def sala8(jogador):
 
 def salao_final(jogador):
     print('Após subir toda a escada, você chega em um grande salão no alto da torre. O artefato está lá, em cima de uma mesa ao lado da porta e você corre pegá-lo. Nesse momento você entende o que o guardião disse sobre o encanto dele. '
-          'Subtamente, seus ferimentos se curam e você se sente mais forte do que em qualquer outro momento da vida.')
+          'Subitamente, seus ferimentos se curam e você se sente mais forte do que em qualquer outro momento da vida.')
     bt.enter()
     #Recupera toda a vida do jogador e aumenta todos os atributos em um ponto
     jogador['hp'] = 100
@@ -709,7 +709,7 @@ def salao_final(jogador):
     print('Você então olha para o ambiente. O primeiro cômodo que não parecia totalmente abandonado. Além da pequena mesa, há um longo sofá branco e vazio de frente para a sacada aberta, de onde se tem uma bela vista da noite na fronteira entre os reinos. '
           'Tapeçarias representando a criação do artefato e diferentes batalhas cobrem as paredes. Um belo lustre de cristal no alto do teto ilumina o ambiente.')
     bt.enter()
-    print('Quando você se prepara para voltar, uma risada faz você olhar para o sofá. Um homem se levanta e te olha. Surpreso, você percebe ser o guardião que derrotou ateriormente. Ele sorri antes de começar a falar, sua voz grave ecoando no ambiente.')
+    print('Quando você se prepara para voltar, uma risada faz você olhar para o sofá. Um homem se levanta e te olha. Surpreso, você percebe ser o guardião que derrotou anteriormente. Ele sorri antes de começar a falar, sua voz grave ecoando no ambiente.')
     bt.enter()
     print('- Você não pode ter achado que seria tão fácil. Eu observei sua jornada, jovem guerreiro. Apesar de ter matado meus criados, meu animal de estimação e minha marionete, se mostrou merecedor de encontrar esse local e a relíquia. '
           'Mas isso não é o bastante. Eu não posso deixá-lo sair daqui com isso, sem mais nem menos.')
