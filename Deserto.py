@@ -163,7 +163,7 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
     combinacao_correta = ["poção", "flor", "runa", "pedra"]
     pocoes = []
     
-    print('\nVocê se encontra próximo ao oásis, que se destaca muito em meio àquela paisagem remota... é quase surreal ver um imenso lago, a vegetação e alguns coqueiros em meio ao deserto.")
+    print('\nVocê se encontra próximo ao oásis, que se destaca muito em meio àquela paisagem remota... é quase surreal ver um imenso lago, a vegetação e alguns coqueiros em meio ao deserto.')
     bt.enter()
     print('\nPorém, você não pode ir até ele, pois há um bloqueio na passagem...')
     print('\nPara desbloquear o caminho você deve apresentar 4 objetos dos quais você coletou, em uma determinada sequência...")
