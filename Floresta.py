@@ -25,6 +25,11 @@ def floresta(jogador):
     sala = 101 #localização do personagem na floresta
     saida = 0
     primeira_vez = True # se o jogador já tiver passado por esse caminho ele não luta novamente com o urso na sala 105
+    
+    # dicionarios
+    Urso = {"nome": "Urso", 'hp': 45,  'defesa': 3, 'força': 3} #inimigo sala 105
+    adaga = {"nome": "adaga", "atributo": "DES", "dano": "2-4", "min": 2, "max": 4} #arma sala 113
+
 
     print('Seguindo a trilha você se depara com a floresta e suas imponentes árvores que escondem a fauna da luz do sol.')
     bt.enter()
@@ -127,8 +132,6 @@ def floresta(jogador):
             #batalha com um urso
             if primeira_vez == True: 
                 print('Enquanto você caminhava, você se depara com um urso.')
-                #inimigo
-                Urso = {"nome": "Urso", 'hp': 45,  'defesa': 3, 'força': 3}
                 #chama a função batalha do módulo batalha
                 bt.batalha(Urso,jogador)
                 primeira_vez = False
@@ -397,7 +400,7 @@ def floresta(jogador):
                             #jogador pega a arma
                             if pegar == "1": 
                                 print('Sem saber o que lhe aguarda pela frente, você decidi pegar a adaga. Isso faz com que você se sinta mais seguro.')
-                                jogador['arma'] = 'adaga'
+                                jogador['arma'] = adaga
                                 bt.enter()
                             #jogador não pega a arma
                             elif pegar == "2": 
@@ -422,7 +425,7 @@ def floresta(jogador):
                             #jogador pega a arma
                             if pegar == "1":
                                 print('Incerto sobre o que lhe aguarde, você decidi pegar a adaga.')
-                                jogador['arma'] = 'adaga'
+                                jogador['arma'] = adaga
                                 bt.enter()
                             #jogador não pega a arma
                             elif pegar == "2": 
@@ -448,7 +451,7 @@ def floresta(jogador):
                             #jogador pega a arma
                             if pegar == "1":
                                 print('Não sabendo o que vem pela frente, você decidi pegar a adaga para poder se proteger melhor.')
-                                jogador['arma'] = 'adaga'
+                                jogador['arma'] = adaga
                                 bt.enter()
                             #jogador não pega a arma
                             elif pegar == "2":
