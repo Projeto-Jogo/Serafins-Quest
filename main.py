@@ -33,7 +33,7 @@ def atriubutos_gen():
 
     while loop:
 
-        print("\u001b[37;1mEscolha seu personagem:\n(1) Soldado\n(2) Mercenário\n(3) Ladrão")
+        print("\u001b[37;1mEscolha seu personagem:\n (1) Soldado\n (2) Mercenário\n (3) Ladrão")
         a = input(">>>")
         bt.delete_last_lines(1)
         print(f">>>{a}\u001b[0m\n")
@@ -147,6 +147,7 @@ while loop:
                 # BEBADO
                 if escolha_2 == '1':
 
+                    print("\u001b[37;1m","")
                     escolha_3 = ""
                     intro.bebado1()
                     intro.bebado2()
@@ -186,6 +187,7 @@ while loop:
                 # MERETRIZ
                 elif escolha_2 == '2':
 
+                    print("\u001b[37;1m","")
                     escolha_3 = ""
                     intro.meretriz1()
                     intro.meretriz2()
@@ -227,6 +229,7 @@ while loop:
                 # BARMAN
                 elif escolha_2 == '3':
 
+                    print("\u001b[37;1m","")
                     escolha_3 = ""
                     intro.barman1()
                     intro.barman2()
@@ -292,6 +295,7 @@ while loop:
                 # BIBLIOTECARIA
                 if escolha_2 == '1':
 
+                    print("\u001b[37;1m","")
                     escolha_3 = ""
                     intro.bibliotecaria1()
                     intro.bibliotecaria2()
@@ -340,6 +344,7 @@ while loop:
                 # ESTUDANTE
                 elif escolha_2 == '3':
 
+                    print("\u001b[37;1m","")
                     escolha_3 = ""
                     intro.estudante1()
                     intro.estudante2()
@@ -406,6 +411,7 @@ while loop:
                 # SABIO
                 if escolha_2 == '1':
 
+                    print("\u001b[37;1m","")
                     escolha_3 = ""
                     intro.sabio1()
                     intro.sabio2()
@@ -448,6 +454,7 @@ while loop:
                 # MENDIGO
                 elif escolha_2 == '2':
 
+                    print("\u001b[37;1m","")
                     escolha_3 = ""
                     intro.mendigo1()
                     intro.mendigo2()
@@ -488,6 +495,7 @@ while loop:
                 # VIAJANTE
                 elif escolha_2 == '3':
 
+                    print("\u001b[37;1m","")
                     escolha_3 = ""
                     intro.viajante1()
                     intro.viajante2()
