@@ -686,10 +686,12 @@ def floresta(jogador):
                     bt.passar_nivel(jogador)
                     print('Vendo que nã há mais nada de interessante, você decidi retornar pelo caminho que veio.')
                     sala = 119
+                    bt.enter()
                 # jogador não bebe a poção
                 if beber == "2":
                     print('O bom censo fala mais alto e você decidi que seria melho não arriscar. Então você decidi voltar pelo caminho que você veio.')
                     sala = 119
+                    bt.enter()
                 # erro
                 else:
                     print('Ao se aproximar você vê os requicíos de um fogueira e uma cabana mal feita. Olhando dentro você repara que há alguns frascos vazios, exceto por um preeenchido por um líquido brilhante.\n\u001b[37;1mAssim você decidi:\n (1) beber o frasco\n (2) não beber')
