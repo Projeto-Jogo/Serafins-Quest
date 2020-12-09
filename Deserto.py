@@ -130,8 +130,8 @@ def topo_da_montanha(objetos_coletados):
     # Funçao utilizada para a trajetória do jogador no topo de uma montanha no deserto
     
     a = 0 # Variável utilizada para o mecanismo de repetição de perguntas caso o jogador não tenha selecionado uma resposta válida
-    
-    print('\nVocê se encontra no topo da montanha. O vento é mais ainda mais forte e, pela altura, você tem uma visão ampla de grande parte do deserto...")
+
+    print('\nVocê se encontra no topo da montanha. O vento é mais ainda mais forte e, pela altura, você tem uma visão ampla de grande parte do deserto...')
         
     if "flor" in objetos_coletados:
         return (f'\nVocê ja coletou o objeto que necessitava aqui!')
@@ -151,7 +151,6 @@ def topo_da_montanha(objetos_coletados):
                 return (f'\nVocê não coletou novos itens!')
             else:
                 print('\nComando não conhecido, tente novamente.')
-
 
 def oasis(jogador, objetos_coletados, atributos, hp, arma):
 
