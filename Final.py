@@ -11,11 +11,11 @@ def teste_atributo(atributo, min_atr = 5, max_atr = 10):
        Outro valor aleatório entre 0 e 5 é somado ao valor do atributo do jogador
        Caso a soma seja maior ou igual ao valor a ser atingido, o jogador passa no teste e a função retorna True
        Caso seja menor, o jogador não passa e a função retorna False
-       
+
        Argumentos obrigatórios: atributo (int)
        Argumentos opcionais: min_atr (int) e max_atr (int)
        Saída: True ou False'''
-       
+
     valor = bt.dado(min_atr, max_atr)
     if atributo == 5: #Joga com vantagem
         dado = bt.dado(4, 5)
@@ -25,13 +25,13 @@ def teste_atributo(atributo, min_atr = 5, max_atr = 10):
         return True
     elif atributo + dado < valor: #Não passa no teste
         return False
-    
+
 def armadilha_armario(jogador):
     '''
     Descreve os acontecimentos da armadilha para a sala 4 - enigma de poções e gaveta
     Argumento: dicionário dos atributos do jogador
     '''
-    
+
     n = 0 #Contador para que o jogador tenha apenas duas tentativas
     dano = 25
     print('No instante em que encosta na maçaneta, você sente algo espetar a palma de sua mão. A porta se abre e você observa o interior. '
@@ -51,10 +51,13 @@ def armadilha_armario(jogador):
     flag_enigma = False #Flag para resposta de qual poção beber
     flag_veneno = False #Flag para checar se escolheu a poção certa
     while flag_enigma == False or flag_veneno == False: #Garante que o input se repita caso o jogador digite uma opção inválida e tente mais uma vez
-        print('Qual poção você irá beber?\n1 - SERPENTE\n2 - GALINHA\n3 - PEIXE\n4 - GATO\n5 - URSO\n6 - ÁGUIA\n7 - MACACO\n8 - CORVO')
+        print('\u001b[37;1mQual poção você irá beber?\n (1) SERPENTE\n (2) GALINHA\n (3) PEIXE\n (4) GATO\n (5) URSO\n (6) ÁGUIA\n (7) MACACO\n (8) CORVO')
         pocao = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{pocao}\u001b[0m\n")
+
         if pocao == '1': #Bebe a poção da Serpente - morte instantanea
-            flag_enigma = True 
+            flag_enigma = True
             print('Você bebe a poção e sente um gosto amargo dominar sua boca. Nos primeiros segundos nada acontece e a mancha para de crescer em sua mão. '
                   'Mas repentinamente suas pernas falham e você cai no chão. Sua energia se esvai e a última coisa que você escuta é uma risada aguda.')
             jogador['hp'] = 0
@@ -68,7 +71,7 @@ def armadilha_armario(jogador):
                   'Você fecha os olhos quando todos seus ossos doem e, quando abre novamente, voltou ao normal e a mancha verde agora tem o dobro do tamanho.')
             bt.enter()
             dano += 5 #Aumenta o dano em 5 pontos
-            n += 1 
+            n += 1
         elif pocao == '3' or pocao == '7': #Bebe a poção do Peixe ou do Macaco - diminui metade do dano
             flag_enigma = True
             dano //= 2
@@ -88,8 +91,11 @@ def armadilha_armario(jogador):
             print('Uma olhada mais atenta ao frasco revela uma pequena chave no seu interior. Você o joga no chão e ele se quebra em vários cacos, liberando a chave, que se encaixa perfeitamente na fechadura da gaveta.\n')
             flag_gaveta = False #Flag para a resposta de abrir ou não a gaveta
             while flag_gaveta == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-                print('Deseja abrir a gaveta:\n1 - sim\n2 - não')
+                print('\u001b[37;1mDeseja abrir a gaveta:\n (1) sim\n (2) não')
                 gaveta = input('>>>')
+                bt.delete_last_lines(1)
+                print(f">>>{gaveta}\u001b[0m\n")
+
                 if gaveta == '1': #Abre a gaveta
                     flag_gaveta = True
                     print('Você gira a chave e a gaveta se abre. 3 itens no interior chamam a sua atenção:\n'
@@ -101,8 +107,11 @@ def armadilha_armario(jogador):
                     bt.enter()
                     flag_pocao = False #Flag para a resposta de beber ou não a poção
                     while flag_pocao == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-                        print('Deseja tomar as poções?\n1 - Sim, as duas\n2 - Apenas a vermelha\n3 - Apenas a verde\n4 - Não')
+                        print('\u001b[37;1mDeseja tomar as poções?\n (1) Sim, as duas\n (2) Apenas a vermelha\n (3) Apenas a verde\n (4) Não')
                         pocao = input('>>>')
+                        bt.delete_last_lines(1)
+                        print(f">>>{pocao}\u001b[0m\n")
+
                         if pocao == '1': #Bebe as duas poções
                             flag_pocao = True
                             print('\nVocê bebe primeiro a poção verde. Ela não possui sabor algum, mas você se sente mais forte de alguma forma.')
@@ -135,8 +144,11 @@ def armadilha_armario(jogador):
                             print('\nComando não reconhecido, tente novamente.\n')
                     flag_espada = False #Flag para resposta de pegar a espada
                     while flag_espada == False: #Garante que o imput se repita caso o jogador digite uma opção inválida
-                        print('Deseja substituir sua arma atual pela espada?\n1 - sim\n2 - não')
+                        print('\u001b[37;1mDeseja substituir sua arma atual pela espada?\n (1) sim\n (2) não')
                         pegar = input('>>>')
+                        bt.delete_last_lines(1)
+                        print(f">>>{pegar}\u001b[0m\n")
+
                         if pegar == '1': #Pega a espada
                             flag_espada = True
                             print(f'Você deixou {jogador["arma"]} e pegou a espada!')
@@ -171,7 +183,7 @@ def sala1(jogador):
     Argumento: dicionário dos atributos do jogador
     Saída: sala_atual
     '''
-    
+
     global sala_atual
     print('Ao entrar, você chega em uma grande sala. Os dois sofás velhos ao redor de uma mesa de centro, juntamente com uma lareira apagada na parede da direita e a falta de decoração fazem o ambiente parecer frio e abandonado. '
           'O lugar estava vazio até um pequeno Goblin entrar. Ele não perde tempo e logo te ataca!')
@@ -182,7 +194,7 @@ def sala1(jogador):
     bt.enter()
     print('Os sons da batalha atraem um Segurança para a sala!')
     bt.enter()
-    #Dicionário do Segurança 
+    #Dicionário do Segurança
     Seguranca = {'nome': 'Segurança', 'hp': 60,  'defesa': 5, 'força': 3}
     bt.batalha(Seguranca, jogador, True)
     bt.enter()
@@ -190,8 +202,11 @@ def sala1(jogador):
     print('Há duas portas de madeira lisa na sala: uma na parede em frente a você e outra à esquerda.')
     flag_porta = False #Flag para resposta de qual caminho seguir
     while flag_porta == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-        print('Qual você escolhe?\n1 - frente\n2 - esquerda')
+        print('\u001b[37;1mQual você escolhe?\n (1) frente\n (2) esquerda')
         prox = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{prox}\u001b[0m\n")
+
         if prox == '1': #Segue pela porta da frente
             sala_atual = 7 #Manda o jogador para a sala 7
             flag_porta = True
@@ -204,7 +219,7 @@ def sala1(jogador):
 
 def sala2(jogador):
     '''
-    Descreve os acontecimentos da sala 2 - busca nas caixas (comida, poções, batalha e encontrar espada), 
+    Descreve os acontecimentos da sala 2 - busca nas caixas (comida, poções, batalha e encontrar espada),
     batalha no corredor e escolha de caminho
     Argumento: dicionário dos atributos do jogador
     Saída: sala_atual
@@ -215,16 +230,22 @@ def sala2(jogador):
     bt.enter()
     flag_caixa = False #Flag para resposta de olhar ou não as caixas
     while flag_caixa == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-        print('Deseja olhar dentro das caixas?\n1 - sim\n2 - não')
+        print('\u001b[37;1mDeseja olhar dentro das caixas?\n (1) sim\n (2) não')
         caixa = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{caixa}\u001b[0m\n")
+
         if caixa == '1': #Olha as caixas
             flag_caixa = True
             print('\nConforme você mexe nas caixas, percebe que a maioria contém apenas roupas e comidas de aparência suspeita.')
             bt.enter()
             flag_comida = False #Flag para resposta de comer ou não
             while flag_comida == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-                print('Deseja comer algo?\n1 - sim\n2 - não')
+                print('\u001b[37;1mDeseja comer algo?\n (1) sim\n (2) não')
                 comida = input('>>>')
+                bt.delete_last_lines(1)
+                print(f">>>{comida}\u001b[0m\n")
+
                 if comida == '1': #Come
                     flag_comida = True
                     #Teste de sorte para ver se a comida está estragada ou não
@@ -245,7 +266,7 @@ def sala2(jogador):
                     bt.enter()
                 if flag_comida == False: #Checa se o jogador digitou um comando inválido
                     print('\nComando não reconhecido, tente novamente.\n')
-                    
+
             print('\nVocê ouve um barulho estranho vindo de uma caixa, mas continua mexendo e um escorpião do tamanho de um filhote de cachorro pula da caixa.')
             bt.enter()
             #Dicionário dos atributos do escorpião (ajustar atributos)
@@ -255,8 +276,11 @@ def sala2(jogador):
             print('Após derrotar o escorpião, você olha a caixa em que ele estava e encontra uma espada em seu interior!')
             flag_espada = False #Flag para resposta de pegar ou não a espada
             while flag_espada == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-                print('Deseja pegar a espada?\n1 - sim\n2 - não')
+                print('\u001b[37;1mDeseja pegar a espada?\n (1) sim\n (2) não')
                 pegar = input('>>>')
+                bt.delete_last_lines(1)
+                print(f">>>{[pegar]}\u001b[0m\n")
+
                 if pegar == '1': #Pega a espada
                     flag_espada = True
                     print(f'Você deixa sua arma no local e pega a espada!')
@@ -277,13 +301,16 @@ def sala2(jogador):
             teste_pl = teste_atributo(jogador['inteligência']) #Teste se o jogador reconhece a poção laranja
             if teste_pl == True:
                 print('\nO cheiro do líquido laranja lhe é familiar e você percebe se tratar de uma simples poção de cura.')
-            teste_pr = teste_atributo(jogador['inteligência'], 6, 7) #Teste se o jogador reconhece a poção roxa 
+            teste_pr = teste_atributo(jogador['inteligência'], 6, 7) #Teste se o jogador reconhece a poção roxa
             if teste_pr == True:
                 print('\nVocê se lembra já ter visto esse veneno roxo antes e sabe que não deve bebê-lo.')
             flag_pa = False #Flag para resposta de beber ou não a poção azul
             while flag_pa == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-                print('Deseja beber a poção azul?\n1 - sim\n2 - não')
+                print('\u001b[37;1mDeseja beber a poção azul?\n (1) sim\n (2) não')
                 pocao_azul = input('>>>')
+                bt.delete_last_lines(1)
+                print(f">>>{pocao_azul}\u001b[0m\n")
+
                 if pocao_azul == '1': #Bebe a poção
                     flag_pa = True
                     print('Você bebe a poção, que não possui sabor algum, mas sente que, de alguma forma, está mais forte.\n')
@@ -297,8 +324,11 @@ def sala2(jogador):
             bt.enter()
             flag_pl = False #Flag para resposta de beber ou não a poção laranja
             while flag_pl == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-                print('Deseja beber a poção laranja?\n1 - sim\n2 - não')
+                print('\u001b[37;1mDeseja beber a poção laranja?\n (1) sim\n (2) não')
                 pocao_laranja = input('>>>')
+                bt.delete_last_lines(1)
+                print(f">>>{pocao_laranja}\u001b[0m\n")
+
                 if pocao_laranja == '1': #Bebe a poção
                     flag_pl = True
                     print('A doce poção com sabor de suco de laranja te passa a sensação de estar revigorado.')
@@ -312,8 +342,11 @@ def sala2(jogador):
             bt.enter()
             flag_pr = False #Flag para resposta de beber ou não a poção roxa
             while flag_pr == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-                print('Deseja beber a poção roxa?\n1 - sim\n2 - não')
+                print('\u001b[37;1mDeseja beber a poção roxa?\n (1) sim\n (2) não')
                 pocao_roxa = input('>>>')
+                bt.delete_last_lines(1)
+                print(f">>>{pocao_roxa}\u001b[0m\n")
+
                 if pocao_roxa == '1': #Bebe a poção
                     flag_pr = True
                     print('A bebida tem uma consistência estranha e você se arrepende de beber. Uma fumaça roxa sai de sua boca e você se sente repentinamente mais cansado.')
@@ -342,8 +375,11 @@ def sala2(jogador):
     print('Ao seguir pelo corredor, você vê que na parede esquerda existem duas ramificações.')
     flag_ramif = False #Flag para resposta de qual ramificação seguir
     while flag_ramif == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-        print('Deseja seguir pela primeira ou pela segunda?\n1 - primeira\n2 - segunda')
+        print('\u001b[37;1mDeseja seguir pela primeira ou pela segunda?\n (1) primeira\n (2) segunda')
         prox = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{prox}\u001b[0m\n")
+
         if prox == '1': #Segue pela primeira ramificação
             print('\nVocê vira na primeira ramificação e a péssima iluminação mostra apenas a porta aberta de uma sala escura ao final do corredor.')
             sala_atual = 3 #Manda o jogador para a sala 3
@@ -373,8 +409,11 @@ def sala3(jogador):
     print('Você vê, no canto esquerdo da sala, um pequeno baú dourado com a tampa aberta.')
     flag_bau = False #Flag para resposta de ver ou não o baú
     while flag_bau == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-        print('Deseja ver seu conteúdo?\n1 - sim\n2 - não')
-        bau = input('>>>') 
+        print('\u001b[37;1mDeseja ver seu conteúdo?\n (1) sim\n (2) não')
+        bau = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{bau}\u001b[0m\n")
+
         if bau == '1': #Vê o baú
             flag_bau = True
             print('\nNo interior do baú há dois frascos: um deles possui um líquido viscoso e esbranquiçado e o outro um líquido vermelho.')
@@ -389,8 +428,11 @@ def sala3(jogador):
                 print('Você não sabe o efeito de nenhuma das poções.')
             flag_pb = False #Flag para respota de beber ou não a poção branca
             while flag_pb == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-                print('Deseja tomar a poção esbranquiçada?\n1 - sim\n2 - não')
+                print('\u001b[37;1mDeseja tomar a poção esbranquiçada?\n (1) sim\n (2) não')
                 poção_branca = input('>>>')
+                bt.delete_last_lines(1)
+                print(f">>>{poção_branca}\u001b[0m\n")
+
                 if poção_branca == '1': #Bebe
                     flag_pb = True
                     bt.passar_nivel(jogador)
@@ -402,7 +444,11 @@ def sala3(jogador):
             flag_pv = False #Flag para resposta de beber ou não a poção vermelha
             while flag_pv == False: #Garante que o input se repita caso o jogador digite uma opção inválida
                 bt.enter()
-                poção_vermelha = input('Deseja tomar a poção vermelha?\n1 - sim\n2 - não')
+                print('\u001b[37;1mDeseja tomar a poção vermelha?\n (1) sim\n (2) não')
+                poção_vermelha = input(">>>")
+                bt.delete_last_lines(1)
+                print(f">>>{poção_vermelha}\u001b[0m\n")
+
                 if poção_vermelha == '1': #Bebe a poção
                     flag_pv = True
                     jogador['hp'] += 25 #Aumenta a vida do jogador
@@ -422,8 +468,11 @@ def sala3(jogador):
     print('Você olha para as camas e se pergunta se um rápido cochilo pode ser bom para recuperar as energias ou se é melhor não perder tempo.')
     flag_cochilo = False  #Flag para resposta de cochilar ou não
     while flag_cochilo == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-        print('O que você escolhe?\n1 - Cochilar\n2 - Não perder tempo')
+        print('\u001b[37;1mO que você escolhe?\n (1) Cochilar\n (2) Não perder tempo')
         cochilo = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{cochilo}\u001b[0m\n")
+
         if cochilo == '1': #Dorme
             flag_cochilo = True
             print('Você deita em uma das camas e aproveita para descansar, em estado semi-alerta. Alguns minutos se passam e você se sente descansado e recuperado.')
@@ -455,8 +504,11 @@ def sala4(jogador):
         print('Você percebe que a maçaneta possui uma mancha incomum para uma peça de ouro e que o diamante é falso, além de ter algo pequeno e fino na superfície apontando para fora.')
     flag_armario = False #Flag para a resposta de abrir o armário
     while flag_armario == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-        print('Você tenta abrí-lo?\n1 - sim\n2 - não')
+        print('\u001b[37;1mVocê tenta abrí-lo?\n (1) sim\n (2) não')
         armario = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{armario}\u001b[0m\n")
+
         if armario == '1': #Abre o armário
             flag_armario = True
             armadilha_armario(jogador)
@@ -548,8 +600,11 @@ def sala8(jogador):
     print('O Javali desaparece quase por inteiro na frente dos seus olhos, restando apenas sua pele. Você a observa e vê que está limpa por dentro e é mais leve do que parece.')
     flag = False
     while flag == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-        print('Deseja vestir a pele do javali?\n1 - sim\n2 - não')
+        print('\u001b[37;1mDeseja vestir a pele do javali?\n (1) sim\n (2) não')
         pele = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{pele}\u001b[0m\n")
+
         if pele == '1':
             flag = True
             print('Você veste a pele e ela adere à sua roupa magicamente, como uma armadura, e sua defesa aumenta!')
@@ -560,7 +615,7 @@ def sala8(jogador):
             print('Uma pele como essa só iria atrapalhar, melhor deixar onde está.')
         if flag == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
-   
+
     bt.enter()
     print('Aparentemente a grade é a única saída, porém está trancada. Lembrando da porta que apareceu sozinha na sala anterior, você decide explorar as paredes em busca de algo semelhante. '
           'Ao encostar na parede da direita, subtamente ela desaparece por completo. Antes que ela volte, você entra no espaço escuro atrás dela. Um barulho indica que a parede voltou ao seu lugar. '
@@ -569,19 +624,22 @@ def sala8(jogador):
     print('As paredes do corredor estão repletas de pinturas e inscrições que não possuem nenhum significado para você. Distraído com elas, não percebe que as paredes estão se fechando até estarem quase encostando em você. '
           'Vendo a velocidade com que elas se aproximam e a distância para sair do corredor, você percebe que não terá tempo de correr e precisará de um jeito de desarmar.')
     bt.enter()
-    
+
     flag = False
     flag_armadilha = False
     n = 0 #Contador para que o jogador tenha apenas duas tentativas
     while flag == False or flag_armadilha == False: #Garante que o input se repita caso o jogador digite uma opção inválida e permite que o jogador tente mais uma vez
-        print('\nVocê tenta parar a armadilha usando força, inteligência ou sorte?\n1 - força\n2 - inteligência\n3 - sorte')
+        print('\n\u001b[37;1mVocê tenta parar a armadilha usando força, inteligência ou sorte?\n (1) força\n (2) inteligência\n (3) sorte')
         armadilha = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{armadilha}\u001b[0m\n")
+
         if armadilha == '1': #Tenta desarmar usando força
             flag = True
             print('\nVocê apoia as costas e as mãos em uma parede e coloca os dois pés na outra. As paredes estão próximas o bastante para que seus joelhos se dobrem.'
                   'Você aplica toda sua força nas pernas, empurrando a parede.')
             #Teste de força. Se a força do jogador for maior que a da armadilha ele consegue parar as paredes.
-            forca = teste_atributo(jogador['força'], 8, 9) 
+            forca = teste_atributo(jogador['força'], 8, 9)
             if forca == True: #Passa no teste
                 flag_armadilha = True
                 print('Elas param de se aproximar e você intensifica a força. Um estalo se faz ouvir em todo o corredor e as paredes voltam para suas posições iniciais.')
@@ -594,7 +652,7 @@ def sala8(jogador):
             flag = True
             print('Você olha os itens que tem consigo e tenta elaborar um plano para desativar o sistema da armadilha.')
             #Teste de inteligência. Se passar, ele consegue desativar o sistema.
-            inteligencia = teste_atributo(jogador['inteligência'], 8, 9) 
+            inteligencia = teste_atributo(jogador['inteligência'], 8, 9)
             if inteligencia == True: #Passa no teste
                 flag_armadilha = True
                 print('Você observa atentamente as paredes e consegue ver através de um buraco na parede o mecanismo da armadilha. Pega então uma pedra no chão e joga nesse buraco. '
@@ -623,10 +681,10 @@ def sala8(jogador):
                 print('Seu tempo acabou. As paredes se fecham sobre você, colocando um fim a sua jornada.')
                 jogador['hp'] = 0
                 bt.game_over(jogador)
-                
+
         if flag == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
-            
+
     bt.enter()
     print('O corredor faz mais uma curva à esquerda antes de outra porta aparecer.')
     bt.enter()
@@ -638,7 +696,7 @@ def salao_final(jogador):
           'Subtamente, seus ferimentos se curam e você se sente mais forte do que em qualquer outro momento da vida.')
     bt.enter()
     #Recupera toda a vida do jogador e aumenta todos os atributos em um ponto
-    jogador['hp'] = 100 
+    jogador['hp'] = 100
     jogador['defesa'] += 1
     jogador['força'] += 1
     jogador['destreza'] += 1
@@ -664,8 +722,11 @@ def salao_final(jogador):
     bt.enter()
     flag = False
     while flag == False: #Garante que o input se repita caso o jogador digite uma opção inválida
-        print('Você irá devolver o artefato ou fugir com ele?\n1 - Entregar\n2 - Fugir')
+        print('\u001b[37;1mVocê irá devolver o artefato ou fugir com ele?\n (1) Entregar\n (2) Fugir')
         final = input('>>>')
+        bt.delete_last_lines(1)
+        print(f">>>{final}\u001b[0m\n")
+
         if final == '1': #Final 1 - o jogador devolve o artefato para o rei
             flag = True
             print('Você tinha uma vida antes de ser preso e gostaria muito de recuperá-la. Sem perder tempo, você sai da casa, percebendo que agora todas as portas estão abertas. '
@@ -677,12 +738,12 @@ def salao_final(jogador):
                   'Com o artefato em mãos, você segue para outro país se aprofundar no estudo da magia de artefatos. Em menos de um ano, se torna um poderoso e temido mago e ninguém ousa te desafiar ou entrar em seu caminho.')
         if flag == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
-    
+
 
 def final(jogador):
     '''
     Define os acontecimentos e sua ordem dentro da mansão
-    Entrada: dicionário com os atributos do jogador e string com o local que ele foi 
+    Entrada: dicionário com os atributos do jogador e string com o local que ele foi
     '''
     print('Depois de seguir alguns metros na estrada, a noite cai e você decide que é melhor esperar o sol voltar. Você sai e encontra uma pedra grande o bastante para que você possa deitar atrás dela e não ser visto da estrada. '
           'Ao acordar, sente suas energias renovadas e feridas curadas.')
@@ -711,8 +772,11 @@ def final(jogador):
             sala8(jogador)
     salao_final(jogador)
     bt.enter()
-    print('Você terminou o jogo!\n\nDeseja jogar outra vez:\n1 - sim\n2 - não')
+    print('Você terminou o jogo!\n\n\u001b[37;1mDeseja jogar outra vez:\n (1) sim\n (2) não')
     jogar_nov = input('>>>')
+    bt.delete_last_lines(1)
+    print(f">>>{jogar_nov}\u001b[0m\n")
+
     if jogar_nov == '1':
         bt.restart_program()
     elif jogar_nov == '2':
