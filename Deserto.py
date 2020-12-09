@@ -119,7 +119,9 @@ def dunas(jogador, objetos_coletados, hp, arma):
             return(f'\n Você não coletou nenhum novo item!')
 
 def topo_da_montanha(objetos_coletados):
+    
     # Funçao utilizada para a trajetória do jogador no topo de uma montanha no deserto
+    
     a = 0
     if "flor" in objetos_coletados:
         return (f'\nVocê ja coletou o objeto que necessitava aqui!')
@@ -154,28 +156,28 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
     objeto_1 = input('\n Qual é o primeiro objeto da sequência?')
     if objeto_1 not in combinacao_correta:
         print('\n Objeto não identificado, tente novamente.')
-        return oasis(objetos_coletados, atributos)
+        return oasis(jogador, objetos_coletados, atributos, hp, arma)
     elif objeto_1 in combinacao_correta and objeto_1 not in objetos_coletados:
         return(f'\n Você não possui o objeto {objeto_1}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente desbloquear a passagem ao oasis novamente!')
     else:
         objeto_2 = input('\n Qual é o segundo objeto da sequência?')
         if objeto_2 not in combinacao_correta:
             print("\n Objeto não identificado, tente novamente.")
-            return oasis(objetos_coletados, atributos)
+            return oasis(jogador, objetos_coletados, atributos, hp, arma)
         elif objeto_2 in combinacao_correta and objeto_2 not in objetos_coletados:
             return(f'\n Você não possui o objeto {objeto_2}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!')    
         else:
             objeto_3 = input("\n Qual é o terceiro objeto da sequência?")
             if objeto_3 not in combinacao_correta:
                 print('\n Objeto não identificado, tente novamente.')
-                return oasis(objetos_coletados, atributos)         
+                return oasis(jogador, objetos_coletados, atributos, hp, arma)         
             elif objeto_3 in combinacao_correta and objeto_3 not in objetos_coletados:
                 return(f'\n Você não possui o objeto {objeto_3}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!')
             else:
                 objeto_4 = input('\n Qual é o quarto objeto da sequência?')
                 if objeto_4 not in combinacao_correta:
                     print('\n Objeto não identificado, tente novamente.')
-                    return oasis(objetos_coletados, atributos)
+                    return oasis(jogador, objetos_coletados, atributos, hp, arma)
                 elif objeto_4 in combinacao_correta and objeto_4 not in objetos_coletados:
                     return(f'\n Você não possui o objeto {objeto_4}! Continue sua caminhada pelo deserto e colete mais objetos. Em seguida, volte e tente conseguir a passagem ao oasis novamente!')
                 else:
@@ -323,6 +325,7 @@ def retornar(local, jogador, objetos_coletados, atributos, hp, arma):
             return (f'\n Dessa vez você conseguiu!')
 
 def Deserto(jogador):
+    
 # Função principal que chama as demais funções (dunas(), topo_da_montanha() e oasis()), descrevendo toda a trajetória do jogador pela etapa do deserto.
 
     r = s = t = u = v = w = x = y = z = 0  # Variáveis de controle para o mecanismo de repetição (caso o jogador tenha digitado um comando inválido)
@@ -435,7 +438,7 @@ def Deserto(jogador):
             r += 1
             print("\nVocê está nas dunas do deserto...")
             print("\nADICIONAR DESCRIÇÃO DAS DUNAS")
-            print(bt.enter())
+            bt.enter()
             bt.delete_last_lines(1)
             print(dunas(jogador, meus_objetos_coletados, hp, arma))
             print("\nVocê está prosseguindo sua caminhada...")
