@@ -95,7 +95,7 @@ def acoes(inimigo, jogador, arma, final):
 
         # Opcão do jogador receber informações sobre si mesmo, e do oponente
         if acao == "info":
-            print(f"\nVocê:\nHP {jogador['hp']}  DEF {jogador['defesa']}  FOR {jogador['força']}  DES {jogador['destreza']}\n\nArma:   {arma['nome']}\nAtr. {arma['atributo']}  Dano {arma['dano']}\n\n{inimigo['nome']}:\nHP {inimigo['hp']}  DEF {inimigo['defesa']}  FOR {inimigo['força']}  DES {inimigo['destreza']}")
+            print(f"\nVocê:\nHP {jogador['hp']}  DEF {jogador['defesa']}  FOR {jogador['força']}  DES {jogador['destreza']}\n\nArma:   {arma['nome']}\nAtr. {arma['atributo']}  Dano {arma['dano']}\n\n{inimigo['nome']}:\nHP {inimigo['hp']}  DEF {inimigo['defesa']}  FOR {inimigo['força']}")
 
         # Se o jogador tiver escolhido fugir de uma batalha em que ele pode, nao vai chegar a esse ponto do codigo e nao vai repetir o input
         elif acao == "fugir":
@@ -153,7 +153,6 @@ def acoes(inimigo, jogador, arma, final):
             print("\nComando não reconhecido, tente novamente")
             time.sleep(2)
             delete_last_lines(4)
-
 
 # Função para determinar a proxima acao do inimigo baseado em chance, 10% para defesa, 20% para ataque forte, 70% para ataque leve
 def acao_inimigo():
@@ -305,21 +304,17 @@ def calculo_dano(d20,jogador,inimigo):
             print('\nAtaque mal sucedido')
             enter()
 
-
-
 fugir = False
 
 defende = False
 
 forte = False
 
-
 inimigo_acao = ""
 
 divisoria = '~'
 
 divisoria2 = '/'
-
 
 # Função para as batalha entre jogador e inimigo
 def batalha(inimigo, jogador, final = False):
