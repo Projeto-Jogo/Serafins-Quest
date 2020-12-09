@@ -40,13 +40,16 @@ def enter():
 def game_over(jogador):
 
     if jogador["hp"] <= 0:
-        print(f"\n   \u001b[37;1m\u001b[7mGAME OVER\u001b[0m\u001b[37;1m\n\nJogar novamente?\n\n(1)sim    (2)não")
+        print(f"\n   \u001b[37;1m\u001b[7mGAME OVER\u001b[0m\u001b[37;1m\n\nJogar novamente?\n (1) sim  \n (2) não")
 
         loop = True
 
         while loop == True:
 
-            a = input("\n>>>\u001b[0m")
+            a = input("\n>>>")
+            delete_last_lines(1)
+            print(f">>>{a}\u001b[0m\n")
+
 
             # Reiniciar o programa
             if a == "1":
@@ -175,8 +178,11 @@ def passar_nivel(jogador):
     enter()
     flag_atributo = False #Flag para resposta de qual atributo aumentar
     while flag_atributo == False:
-        print('\nQual atributo deseja aumentar?\n1 - defesa\n2 - força\n3 - destreza\n4 - inteligência\n5 - sorte\n6 - carisma')
+        print('\n\u001b[37;1mQual atributo deseja aumentar?\n (1) defesa\n (2) força\n (3) destreza\n (4) inteligência\n (5) sorte\n (6) carisma')
         ponto = input('>>>')
+        delete_last_lines(1)
+        print(f">>>{ponto}\u001b[0m\n")
+
         if ponto == '1': #Aumenta a defesa
             flag_atributo = True
             jogador['defesa'] += 1
@@ -465,12 +471,3 @@ def batalha(inimigo, jogador, final = False):
             game_over(jogador)
 
     fugir = False
-
-
-
-
-"""
-LEMBRETES:
--balanceamento dos valores
--cores para os comandos
-"""
