@@ -22,7 +22,7 @@ print('JOGAR (nome do jogo)')
 
 bt.enter()
 
-#intro.introducao()
+intro.introducao()
 
 bt.enter()
 
@@ -107,7 +107,7 @@ print(f'\nVocê é um: {personagem.get("nome")}\nSeus atributos:\n defesa = {per
 
 bt.enter()
 
-#intro.narracaocastelo()
+intro.narracaocastelo()
 
 loop = True
 trigger_floresta = False
