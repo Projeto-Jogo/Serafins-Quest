@@ -191,6 +191,7 @@ def sala1(jogador):
     #Dicionário do Goblin
     Goblin = {'nome': 'Goblin', 'hp': 55,  'defesa': 4, 'força': 3}
     bt.batalha(Goblin, jogador, True)
+    Goblin["hp"] = 55
     bt.enter()
     print('Os sons da batalha atraem um Segurança para a sala!')
     bt.enter()
