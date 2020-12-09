@@ -292,7 +292,7 @@ def bibliotecaria3resp():
 
 def estudante1():
     
-    string = "Minha jovem, voce parece ser uma pessoa muito inteligente, a senhorita sabe me dizer como chegar a fronteira norte do reino?\n"
+    string = " (1) Minha jovem, voce parece ser uma pessoa muito inteligente, a senhorita sabe me dizer como chegar a fronteira norte do reino?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -302,7 +302,7 @@ def estudante1():
 
 def estudante2():
     
-    string = "Oh garota, voce sabe me falar como chegar em Nimide?\n"
+    string = " (2) Oh garota, voce sabe me falar como chegar em Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -311,7 +311,7 @@ def estudante2():
     return
 
 def estudante3():
-    string = "Oh sua jovenzinha ai, voce nao sabe como faz pra chegar em Nimide nao né?\n"
+    string = " (3) Oh sua jovenzinha ai, voce nao sabe como faz pra chegar em Nimide nao né?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -360,7 +360,7 @@ def narracaobeco():
 # SABIO
 
 def sabio1():
-    string = "O senhor parece ser muito esperto, saberia me dizer como chegar ate a fronteira de Nimide\n?"
+    string = " (1) O senhor parece ser muito esperto, saberia me dizer como chegar ate a fronteira de Nimide\n?"
 
     for ch in string:
         time.sleep(0.01)
@@ -369,7 +369,7 @@ def sabio1():
     return
 
 def sabio2():
-    string = "Hey, o senhor ai, voce sabe me dizer como chegar a fronteira norte do reino?\n"
+    string = " (2) Hey, o senhor ai, voce sabe me dizer como chegar a fronteira norte do reino?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -378,7 +378,7 @@ def sabio2():
     return
 
 def sabio3():
-    string = "Oh seu velho, me fala ai, voce sabe como eu faço pra chegar até Nimide?\n"
+    string = " (3) Oh seu velho, me fala ai, voce sabe como eu faço pra chegar até Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -416,7 +416,7 @@ def sabio3resp():
 # VIAJANTE
 
 def viajante1():
-    string = "Com liceça, o senhor me parece ser um viajante, por acaso voce conhece o melhor caminho para Nimide?\n"
+    string = " (1) Com liceça, o senhor me parece ser um viajante, por acaso voce conhece o melhor caminho para Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -425,7 +425,7 @@ def viajante1():
     return
 
 def viajante2():
-    string = "Hey andarilho, voce sabe o melhor caminho para Nimide?\n"
+    string = " (2) Hey andarilho, voce sabe o melhor caminho para Nimide?\n"
 
     for ch in string:
         time.sleep(0.01)
@@ -434,7 +434,7 @@ def viajante2():
     return
 
 def viajante3():
-    string = "Oh  seu nomadiznho, voce deve saber como chegar a Nimide, me conte.\n"
+    string = " (3) Oh  seu nomadiznho, voce deve saber como chegar a Nimide, me conte.\n"
 
     for ch in string:
         time.sleep(0.01)
