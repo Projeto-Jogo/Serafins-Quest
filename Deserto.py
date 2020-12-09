@@ -3,7 +3,7 @@
 import Batalha as bt  # Importa o módulo "Batalha"
 
 
-def dunas(jogador, objetos_coletados, hp, arma):
+ddef dunas(jogador, objetos_coletados, hp, arma):
     
     # Função utilizada para a trajetória do jogador nas dunas do deserto
     
