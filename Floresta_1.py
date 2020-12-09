@@ -476,7 +476,7 @@ def floresta(jogador):
                     bt.enter()
                     sala = 111
                 #voltar
-            elif dir == '2':
+            elif dir == "2":
                 sala = 111  
             #erro
             else: 
@@ -495,7 +495,7 @@ def floresta(jogador):
             print(f">>>{dir}\u001b[0m\n")
 
             #voltar
-            if dir == '1': 
+            if dir == "1": 
                 sala = 115
             #erro
             else:
@@ -516,13 +516,13 @@ def floresta(jogador):
             print(f">>>{dir}\u001b[0m\n")
 
             # virar a direita
-            if dir == '1': 
+            if dir == "1": 
                 sala = 114
             #virar a esquerda  
-            elif dir == '2': 
+            elif dir == "2": 
                 sala= 116
             #voltar
-            elif dir == '3': 
+            elif dir == "3": 
                 sala = 110
             #erro
             else:
@@ -543,10 +543,10 @@ def floresta(jogador):
             print(f">>>{dir}\u001b[0m\n")
 
             #frente
-            if dir == '1': 
+            if dir == "1": 
                 sala = 117
             #voltar
-            elif dir == '2': 
+            elif dir == "2": 
                 sala = 115
             #erro
             else:
@@ -570,7 +570,7 @@ def floresta(jogador):
                 print(f">>>{escolha}\u001b[0m\n")
 
                 #comer as frutinhas
-                if escolha == '1': 
+                if escolha == "1": 
                     prob2 = chance(1,21) 
                     #frutinhas são venenosas
                     if prob2 + jogador['sorte'] <= 10: 
@@ -587,7 +587,7 @@ def floresta(jogador):
                         bt.enter()
                         print('Apesar disso a fome fala mais alto, então você continua se alimentando. Depois de comer um punhado, você decidi continuar a caminhada.')
                     #não comer as frutinhas
-                elif escolha == '2': 
+                elif escolha == "2": 
                     print('Apesar da fome, a desconfiança fala mais alto, então você decidi apenas ignorar a fome e descansar para continuar sua viagem.')
                     bt.enter()
                 else:
@@ -605,13 +605,13 @@ def floresta(jogador):
             print(f">>>{dir}\u001b[0m\n")
 
             #frente
-            if dir == '1': 
+            if dir == "1": 
                 sala = 119
             #direita
-            elif dir == '2': 
+            elif dir == "2": 
                 sala= 118
             #voltar  
-            elif dir == '3': 
+            elif dir == "3": 
                 sala = 116
             #erro
             else:
@@ -630,7 +630,7 @@ def floresta(jogador):
             print(f">>>{dir}\u001b[0m\n")
 
             #voltar
-            if dir == '1': 
+            if dir == "1": 
                 sala = 117
             #erro
             else:
@@ -649,13 +649,13 @@ def floresta(jogador):
             print(f">>>{dir}\u001b[0m\n")
 
             #direita
-            if dir == '1':
+            if dir == "1":
                 sala = saida
             #esquerda
-            elif dir == '2': 
+            elif dir == "2": 
                 sala= 120
             #volta
-            elif dir == '3': 
+            elif dir == "3": 
                 sala = 117
             #erro
             else:
@@ -674,20 +674,20 @@ def floresta(jogador):
             print(f">>>{dir}\u001b[0m\n")
 
             #olhar o acampamento
-            if dir == '1':
+            if dir == "1":
                 print('Ao se aproximar você vê os requicíos de um fogueira e uma cabana mal feita. Olhando dentro você repara que há alguns frascos vazios, exceto por um preeenchido por um líquido brilhante.\n\u001b[37;1m Assim você decidi:\n (1) beber o frasco\n (2) não beber')
                 beber = input('>>>')
                 bt.delete_last_lines(1)
                 print(f">>>{beber}\u001b[0m\n")
 
                 #jogador bebe a poção
-                if beber == '1': 
+                if beber == "1": 
                     print('Curioso para saber o que aconteceria você bebe a poção e imediatamente se sente bem.')
                     bt.passar_nivel(jogador)
                     print('Vendo que nã há mais nada de interessante, você decidi retornar pelo caminho que veio.')
                     sala = 119
                 # jogador não bebe a poção
-                if beber == '2':
+                if beber == "2":
                     print('O bom censo fala mais alto e você decidi que seria melho não arriscar. Então você decidi voltar pelo caminho que você veio.')
                     sala = 119
                 # erro
@@ -698,7 +698,7 @@ def floresta(jogador):
                     print(f">>>{beber}\u001b[0m\n")
       
             # voltar
-            if dir == '2':
+            if dir == "2":
                 sala = 119
             #erro
             else:
