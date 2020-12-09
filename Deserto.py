@@ -32,7 +32,7 @@ def dunas(jogador, objetos_coletados, hp, arma):
                         hp -= 10
                         return (f'\n Ah, não! Esta poção é perigosa! Você perdeu 10 HPs! Seus HPs: {hp}')
                         if hp <= 0:
-                            bt.game_over()
+                            bt.game_over(jogador)
                     elif escolha_2 == 2:
                         b += 1
                         print("OK!")
@@ -326,11 +326,11 @@ def Deserto(jogador):
 # Função principal que chama as demais funções (dunas(), topo_da_montanha() e oasis()), descrevendo toda a trajetória do jogador pela etapa do deserto.
 
     r = s = t = u = v = w = x = y = z = 0  # Variáveis de controle para o mecanismo de repetição (caso o jogador tenha digitado um comando inválido)
-    Serpente = bt.Serpente
+    Serpente = {"nome": "Serpente", 'hp': 30,  'defesa': 2, 'força': 2}
     meus_objetos_coletados = []
     forca = jogador["força"]
     destreza = jogador["destreza"]
-    inteligencia = bt.jogador["inteligência"]
+    inteligencia = jogador["inteligência"]
     sorte = jogador["sorte"]
     carisma = jogador["carisma"]
     hp = jogador["hp"]
@@ -373,7 +373,7 @@ def Deserto(jogador):
                     else:
                         print("\nComando não conhecido, tente novamente.")
 
-            print(enter())
+            bt.enter()
             bt.delete_last_lines(1)
             print("\nO oasis está a alguns metros... siga até lá!")
             print("ADICIONAR DESCRIÇÃO DO CAMINHO ENTRE O TOPO DA MONTANHA E O OASIS")
@@ -453,7 +453,7 @@ def Deserto(jogador):
                         u += 1
                         print("\nOK!")
 
-            print(enter())
+            bt.enter()
             bt.delete_last_lines(1)
             print("\nVocê chegou ao topo da montanha...")
             print(topo_da_montanha(meus_objetos_coletados))
@@ -489,7 +489,7 @@ def Deserto(jogador):
                 print(retornar("Topo da montanha", jogador, meus_objetos_coletados, meus_atributos, hp, arma))
                 if "poção brilhante" not in meus_objetos_coletados:
                     print("\nHmm... parece que você não conseguiu de novo. Aproveite sua última chance!")
-                    enter()
+                    bt.enter()
                     print("\nADICIONAR DESCRIÇÃO DO CAMINHO ÀS DUNAS")
                     print(retornar("Dunas", jogador, meus_objetos_coletados, meus_atributos, hp, arma))
                     if "poção brilhante" not in meus_objetos_coletados:
@@ -534,7 +534,7 @@ def Deserto(jogador):
             bt.delete_last_lines(1)
             print(dunas(jogador, meus_objetos_coletados, hp, arma))
             print("\nVocê está prosseguindo sua caminhada...")
-            bt.delete_last_lines()
+            bt.delete_last_lines(1)
             print("\nSó resta um local para explorar agora...")
             print("\nADICIONAR DESCRIÇÃO DO CAMINHO ENTRE AS DUNAS E O TOPO DA MONTANHA")
 
