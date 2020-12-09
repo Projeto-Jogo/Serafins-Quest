@@ -381,7 +381,7 @@ def floresta(jogador):
                 voltar = 0
                 while escolha != "4": 
                     print('Ao entrar você percebe é capaz de enxergar uma mesa no centro do comodo, um suporte de madeira onde deveria ser a cama e um armário ao lado de uma janela.')
-                    print('\u001b[37;1mAssim você decidi: \n (1) Olhar a mesa \n (2) Se aproximar da cama \n (3) Ir até o armário \n4. Voltar')
+                    print('\u001b[37;1mAssim você decidi: \n (1) Olhar a mesa \n (2) Se aproximar da cama \n (3) Ir até o armário \n (4) Voltar')
                     escolha = input('>>>') #jogador escolhe para onde ir
                     bt.delete_last_lines(1)
                     print(f">>>{escolha}\u001b[0m\n")
