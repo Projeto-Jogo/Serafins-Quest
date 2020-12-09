@@ -22,11 +22,9 @@ print('JOGAR (nome do jogo)')
 
 bt.enter()
 
-# HISTORIA DE INTRODUCAO AO JOGO
-print('(historia de introducao)')
+#intro.introducao()
 
 bt.enter()
-
 
 # GERACAO INICIAL DOS ATRIBUTOS
 def atriubutos_gen():
@@ -105,20 +103,23 @@ def atriubutos_gen():
 personagem = atriubutos_gen()
 
 # Apresentacao dos atributos ao jogador
-print(f'\nVocê vai jogar de: {personagem.get("nome")}\nSeus atributos:\n defesa = {personagem.get("defesa")}\n força = {personagem.get("força")}\n destreza = {personagem.get("destreza")}\n inteligência = {personagem.get("inteligência")}\n sorte = {personagem.get("sorte")}\n carisma = {personagem.get("carisma")}')
+print(f'\nVocê é um: {personagem.get("nome")}\nSeus atributos:\n defesa = {personagem.get("defesa")}\n força = {personagem.get("força")}\n destreza = {personagem.get("destreza")}\n inteligência = {personagem.get("inteligência")}\n sorte = {personagem.get("sorte")}\n carisma = {personagem.get("carisma")}')
 
 bt.enter()
 
-print('\n(narracao)')
+#intro.narracaocastelo()
 
 loop = True
-escolha_1 = ""
-escolha_2 = ""
-escolha_3 = ""
+trigger_floresta = False
+trigger_deserto = False
 
 # O while vai ser diversamente usado para repetir o input caso o jogador de um comando invalido
 while loop:
 
+    escolha_1 = ""
+    escolha_2 = ""
+    escolha_3 = ""
+    
     while escolha_1 != "4":
 
         # ESCOLHA DO LOCAL DE BUSCA: TAVERNA; BIBLIOTECA; BECO
@@ -130,13 +131,14 @@ while loop:
         # TAVERNA
         if escolha_1 == '1':
 
-            print('\n(narracao)')
+            intro.narracaotaverna()
             bt.enter()
 
             while escolha_2 != "4":
 
-                # ESCOLHA DA CONVERSA: BEBADO; MERETRIZ; BARTENDER
-                print('\n\u001b[37;1mConversar com:\n (1) Bêbado\n (2) Meretriz\n (3) Bartender\n (4) voltar')
+                escolha_2 = ""
+                # ESCOLHA DA CONVERSA: BEBADO; MERETRIZ; BARMAN
+                print('\n\u001b[37;1mConversar com:\n (1) Bêbado\n (2) Meretriz\n (3) Barman\n (4) voltar')
                 escolha_2 = input(">>>")
                 bt.delete_last_lines(1)
                 print(f">>>{escolha_2}\u001b[0m\n")
@@ -146,21 +148,24 @@ while loop:
 
                     while escolha_3 != "4":
 
-                        #print ocpcoes de fala do jogador
+                        escolha_3 = ""
+                        intro.bebado1()
+                        intro.bebado2()
+                        intro.bebado3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
-                            intro.bebado_1
+                            intro.bebadoresp()
                             bt.enter()
 
                         elif escolha_3 == "2":
-                            intro.bebado_2
+                            intro.bebadoresp()
                             bt.enter()
 
                         elif escolha_3 == "3":
-                            intro.bebado_3
+                            intro.bebadoresp()
                             bt.enter()
 
                         else:
@@ -171,25 +176,28 @@ while loop:
                 # MERETRIZ
                 elif escolha_2 == '2':
 
-                    # print as opcoes de fala do jogador
-
                     while escolha_3 != "4":
 
-                        #print ocpcoes de fala do jogador
+                        escolha_3 = ""
+                        intro.meretriz1()
+                        intro.meretriz2()
+                        intro.meretriz3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
-                            intro.meretriz_1
+                            intro.meretriz1resp()
+                            trigger_floresta = True
                             bt.enter()
 
                         elif escolha_3 == "2":
-                            intro.meretriz_2
+                            intro.meretriz2resp()
+                            trigger_floresta = True
                             bt.enter()
 
                         elif escolha_3 == "3":
-                            intro.meretriz_3
+                            intro.meretriz3resp()
                             bt.enter()
 
                         else:
@@ -197,34 +205,40 @@ while loop:
                             time.sleep(2)
                             bt.delete_last_lines(4)
 
-                # BARTENDER
+                # BARMAN
                 elif escolha_2 == '3':
 
-                    # print as opcoes de fala do jogador
-
                     while escolha_3 != "4":
 
-                        #print ocpcoes de fala do jogador
+                        escolha_3 = ""
+                        intro.barman1()
+                        intro.barman2()
+                        intro.barman3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
-                            intro.bartender_1
+                            intro.barman1resp()
+                            trigger_deserto = True
                             bt.enter()
 
                         elif escolha_3 == "2":
-                            intro.bartender_2
+                            intro.barman2resp()
+                            trigger_deserto = True
                             bt.enter()
 
                         elif escolha_3 == "3":
-                            intro.bartender_3
+                            intro.barman3resp()
                             bt.enter()
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
                             time.sleep(2)
                             bt.delete_last_lines(4)
+
+                elif escolha_2 == "4":
+                    pass
 
                 else:
                     print("\nComando não reconhecido, tente novamente")
@@ -234,11 +248,12 @@ while loop:
         # BIBLIOTECA
         elif escolha_1 == '2':
 
-            print('\n(narracao)')
+            intro.narracaobiblioteca()
             bt.enter()
 
-            while loop:
+            while escolha_2 != "4":
 
+                escolha_2 = ""
                 # ESCOLHA DE PESQUISA: BIBLIOTECARIA; LIVROS; ESTUDANTE
                 print('\n\u001b[37;1mPesquisar com:\n (1) Bibliotecária\n (2) Livros\n (3) Estudante\n (4) voltar')
                 escolha_2 = input(">>>")
@@ -248,25 +263,28 @@ while loop:
                 # BIBLIOTECARIA
                 if escolha_2 == '1':
 
-                    # print as opcoes de fala do jogador
-
                     while escolha_3 != "4":
 
-                        #print ocpcoes de fala do jogador
+                        escolha_3 = ""
+                        intro.bibliotecaria1()
+                        intro.bibliotecaria2()
+                        intro.bibliotecaria3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
-                            intro.bibliotecaria_1
+                            intro.bibliotecaria1resp()
+                            trigger_deserto = True
                             bt.enter()
 
                         elif escolha_3 == "2":
-                            intro.bibliotecaria_2
+                            intro.bibliotecaria2resp()
+                            trigger_deserto = True
                             bt.enter()
 
                         elif escolha_3 == "3":
-                            intro.bibliotecaria_3
+                            intro.bibliotecaria3resp()
                             bt.enter()
 
                         else:
@@ -277,60 +295,43 @@ while loop:
                 # LIVROS
                 elif escolha_2 == '2':
 
-                    # print as opcoes de fala do jogador
+                    escolha_3 = ""
+                    intro.livro()
 
-                    while escolha_3 != "4":
-
-                        #print ocpcoes de fala do jogador
-                        escolha_3 = input(">>>")
-                        bt.delete_last_lines(1)
-                        print(f">>>{escolha_3}\u001b[0m\n")
-
-                        if escolha_3 == "1":
-                            intro.livros_1
-                            bt.enter()
-
-                        elif escolha_3 == "2":
-                            intro.livros_2
-                            bt.enter()
-
-                        elif escolha_3 == "3":
-                            intro.livros_3
-                            bt.enter()
-
-                        else:
-                            print("\nComando não reconhecido, tente novamente")
-                            time.sleep(2)
-                            bt.delete_last_lines(4)
-
-                # PESSOA ESTUDANDO
+                # ESTUDANTE
                 elif escolha_2 == '3':
 
-                    # print as opcoes de fala do jogador
-
                     while escolha_3 != "4":
 
-                        #print ocpcoes de fala do jogador
+                        escolha_3 = ""
+                        intro.estudante1()
+                        intro.estudante2()
+                        intro.estudante3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
-                            intro.estudante_1
+                            intro.estudante1resp()
+                            trigger_deserto = True
                             bt.enter()
 
                         elif escolha_3 == "2":
-                            intro.estudante_2
+                            intro.estudante2resp()
+                            trigger_deserto = True
                             bt.enter()
 
                         elif escolha_3 == "3":
-                            intro.estudante_3
+                            intro.estudante3resp()
                             bt.enter()
 
                         else:
                             print("\nComando não reconhecido, tente novamente")
                             time.sleep(2)
                             bt.delete_last_lines(4)
+
+                elif escolha_2 == "4":
+                    pass
 
                 else:
                     print("\nComando não reconhecido, tente novamente")
@@ -340,11 +341,12 @@ while loop:
         # BECO
         elif escolha_1 == '3':
 
-            print('\n(narracao)')
+            intro.narracaobeco()
             bt.enter()
 
-            while loop:
+            while escolha_2 != "4":
 
+                escolha_2 = ""
                 # ESCOLHA DA CONVERSA: SABIO; MENDIGO; VIAJANTE
                 print('\n\u001b[37;1mConversar com:\n (1) Sábio\n (2) Mendigo\n (3) Viajante\n (4) voltar')
                 escolha_2 = input(">>>")
@@ -354,25 +356,28 @@ while loop:
                 # SABIO
                 if escolha_2 == '1':
 
-                    # print as opcoes de fala do jogador
-
                     while escolha_3 != "4":
 
-                        #print ocpcoes de fala do jogador
+                        escolha_3 = ""
+                        intro.sabio1()
+                        intro.sabio2()
+                        intro.sabio3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
-                            intro.sabio_1
+                            intro.sabio1resp()
+                            trigger_floresta = True
                             bt.enter()
 
                         elif escolha_3 == "2":
-                            intro.sabio_2
+                            intro.sabio2resp()
+                            trigger_floresta = True
                             bt.enter()
 
                         elif escolha_3 == "3":
-                            intro.sabio_3
+                            intro.sabio3resp()
                             bt.enter()
 
                         else:
@@ -383,25 +388,26 @@ while loop:
                 # MENDIGO
                 elif escolha_2 == '2':
 
-                    # print as opcoes de fala do jogador
-
                     while escolha_3 != "4":
 
-                        #print opcoes de fala do jogador
+                        escolha_3 = ""
+                        intro.mendigo1()
+                        intro.mendigo2()
+                        intro.mendigo3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
-                            intro.mendigo_1
+                            intro.mendigoresp()
                             bt.enter()
 
                         elif escolha_3 == "2":
-                            intro.mendigo_2
+                            intro.mendigoresp()
                             bt.enter()
 
                         elif escolha_3 == "3":
-                            intro.mendigo_3
+                            intro.mendigoresp()
                             bt.enter()
 
                         else:
@@ -412,25 +418,28 @@ while loop:
                 # VIAJANTE
                 elif escolha_2 == '3':
 
-                    # print as opcoes de fala do jogador
-
                     while escolha_3 != "4":
 
-                        #print ocpcoes de fala do jogador
+                        escolha_3 = ""
+                        intro.viajante1()
+                        intro.viajante2()
+                        intro.viajante3()
                         escolha_3 = input(">>>")
                         bt.delete_last_lines(1)
                         print(f">>>{escolha_3}\u001b[0m\n")
 
                         if escolha_3 == "1":
-                            intro.viajante_1
+                            intro.viajante1resp()
+                            trigger_floresta = True
                             bt.enter()
 
                         elif escolha_3 == "2":
-                            intro.viajente_2
+                            intro.viajante2resp()
+                            trigger_floresta = True
                             bt.enter()
 
                         elif escolha_3 == "3":
-                            intro.viajante_3
+                            intro.viajante3resp()
                             bt.enter()
 
                         else:
@@ -438,10 +447,16 @@ while loop:
                             time.sleep(2)
                             bt.delete_last_lines(4)
 
+                elif escolha_2 == "4":
+                    pass
+
                 else:
                     print("\nComando não reconhecido, tente novamente")
                     time.sleep(2)
                     bt.delete_last_lines(4)
+
+        elif escolha_1 == "4":
+            print("Voce sai em direcao a sua jornada")
 
         else:
             print("\nComando não reconhecido, tente novamente")
@@ -458,10 +473,12 @@ while loop:
             print(f">>>{caminho}\u001b[0m\n")
 
             if caminho == "1":
-                ds.deserto(personagem)
+
+                ds.Deserto(personagem)
                 break
 
             elif caminho == "2":
+
                 fr.floresta(personagem)
                 break
 
@@ -475,7 +492,7 @@ while loop:
     elif trigger_deserto:
 
         #print(historinha)
-        ds.deserto(personagem)
+        ds.Deserto(personagem)
         break
 
     elif trigger_floresta:
