@@ -9,7 +9,6 @@ def chance(x,y):
 
 
 def floresta(jogador):
-  
     '''
     Essa função define o labirinto na floresta, nele há caminhos sem saída, eventos aleatórios e uma batalha
   
