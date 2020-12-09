@@ -41,7 +41,7 @@ def floresta(jogador):
         if sala == 101:
             print('Com poucos minutos de caminhada, já imcapacitado de ver o sol, você se depara com uma encruzilhada.')
             bt.enter()
-            print('Indicando o caminho para direita há uma \u001b[32;1mplaca verde\u001b[0m, enquanto para a esquerda há uma placa \u001b[33;1mamarela\u001b[0m.')
+            print('Indicando o caminho para direita há uma \u001b[32;1mplaca verde\u001b[0m, enquanto\n para a esquerda há uma placa \u001b[33;1mamarela\u001b[0m.')
             bt.enter()
             print('\u001b[37;1mAssim você decidi ir para: \n (1) direita  \n (2) esquerda')
             dir = input('>>>') #jogador escolhe caminho
@@ -63,7 +63,7 @@ def floresta(jogador):
 
         
         elif sala == 102: 
-            print ('Durante a caminhada você escuta o barulho de galhos se quebrando, mas devido a escuridão não é possível ver o responsável pelo som.')
+            print ('Durante a caminhada você escuta o barulho de galhos se quebrando, mas devido a escuridão não é possível ver o \nresponsável pelo som.')
             bt.enter()
             print ('\u001b[37;1mDessa forma você decide: \n (1) seguir em frente \n (2) voltar para a encruzilhada')
             dir = input('>>>')#jogador escolhe o caminho
@@ -104,7 +104,7 @@ def floresta(jogador):
 
     
         elif sala == 104:
-            print ('Continuando seu caminho pela trilha, você se depara com duas possibilidades: continuar em frente, como indica a \u001b[34;1mplaca azul\u001b[0m, ou virar a direita na \u001b[31mplaca vermelha\u001b[0m.')
+            print ('Continuando seu caminho pela trilha, você se depara com duas possibilidades: continuar em frente, \ncomo indica a \u001b[34;1mplaca azul\u001b[0m, ou virar a direita na \u001b[31mplaca vermelha\u001b[0m.')
             bt.enter()
             print ('\u001b[37;1mDiante de tais possibilidades você escolhe: \n (1) seguir em frente  \n (2) virar a direita \n (3) voltar')
             dir = input('>>>') #jogador escolhe o caminho
@@ -186,7 +186,7 @@ def floresta(jogador):
         elif sala == 107:
             print ('Após um longo caminho, novamente você se depara com duas placas: uma para frente e outra para a direita.')
             bt.enter()
-            print('A placa que aponta para a direita é de \u001b[33;1mcor amarelada\u001b[0m, enquanto a para frente é \u001b[35marroxeada\u001b[0m.')
+            print('A placa que aponta para a direita é de \u001b[33;1mcor amarelada\u001b[0m, enquanto a \npara frente é \u001b[35marroxeada\u001b[0m.')
             bt.enter()
             print ('\u001b[37;1mE assim você segue seu caminho: \n (1) pela direita \n (2) em frente \n (3) voltar')
             dir = input('>>>') #jogador escolhe o caminho
@@ -294,7 +294,7 @@ def floresta(jogador):
             #encruzilhada
             print ('Andando mais um pouco você se depara com outra encruzilhada.')
             bt.enter()
-            print('O caminho para direita é indicado por uma \u001b[33;1mplaca amarela\u001b[0m, enquanto o caminho para a esquerda é indicado por uma \u001b[31mplaca vermelha\u001b[0m.')
+            print('O caminho para direita é indicado por uma \u001b[33;1mplaca amarela\u001b[0m, enquanto\n o caminho para a esquerda é indicado por uma \u001b[31mplaca vermelha\u001b[0m.')
             bt.enter()
             print('\u001b[37;1mAssim você decidi ir pra: \n (1) direita  \n (2) esquerda \n (3) voltar')
             dir = input('>>>') #jogador escolhe o caminho
@@ -319,7 +319,7 @@ def floresta(jogador):
 
    
         elif sala == 111:
-            print ('Seguindo em frente você se depara com uma nova bifurcação. Há uma \u001b[35mplaca roxa\u001b[0m indicando o caminho a esquerda e uma \u001b[31mplaca vermelha\u001b[0m apontando para o caminho a sua frente.')
+            print ('Seguindo em frente você se depara com uma nova bifurcação. Há uma \u001b[35mplaca roxa\u001b[0m indicando\n o caminho a esquerda e uma \u001b[31mplaca vermelha\u001b[0m apontando para o caminho a sua frente.')
             bt.enter()
             print ('\u001b[37;1mVocê decidi seguir a placa que aponta para: \n (1) frente  \n (2) esquerda \n (3) voltar')
             dir = input('>>>') #jogador escolhe o caminho a seguir
@@ -382,7 +382,7 @@ def floresta(jogador):
                 #explorando a cabana
                 escolha = 0
                 while escolha != "4": 
-                    print('Ao entrar você percebe é capaz de enxergar uma mesa no centro do cômodo, um suporte de madeira onde deveria ser a cama e um armário ao lado de uma janela.')
+                    print('Ao entrar você percebe é capaz de enxergar uma mesa no centro do cômodo, um suporte de madeira onde deveria ser a cama \ne um armário ao lado de uma janela.')
                     print('\u001b[37;1mAssim você decide: \n (1) Olhar a mesa \n (2) Se aproximar da cama \n (3) Ir até o armário \n (4) Voltar')
                     escolha = input('>>>') #jogador escolhe para onde ir
                     bt.delete_last_lines(1)
@@ -510,7 +510,7 @@ def floresta(jogador):
         elif sala == 115:
             print('Andando pela trilha, mais uma vez você se depara com a possibilidade de escolher entre dois caminhos.')
             bt.enter()
-            print('A primeira possibilidade é seguir a direita, indicada por uma \u001b[32;1mplaca verde\u001b[0m. A outra possibilidade é seguir para a esquerda, indicado por uma \u001b[34;1mplaca azul\u001b[0m.')
+            print('A primeira possibilidade é seguir a direita, indicada por uma \u001b[32;1mplaca verde\u001b[0m. \nA outra possibilidade é seguir para a esquerda, indicado por uma \u001b[34;1mplaca azul\u001b[0m.')
             bt.enter()
             print ('\u001b[37;1mAssim você decide seguir o caminho para a: \n (1) direita \n (2) esquerda \n (3) voltar')
             dir = input('>>>') #escolha do jogador
@@ -578,19 +578,19 @@ def floresta(jogador):
                     if prob2 + jogador['sorte'] <= 10: 
                         print('Você colha algumas frutinhas e as coloca na boca. Ao colocar a primeira frutinha na boca, você sente o sabor doce.')
                         bt.enter()
-                        print('Feliz pela refeição repentina, você começa a comer as deliciosas frutinhas. Já se sentindo satisfeito você se levanta, ao fazer isso você se sente zonzo, o que lhe obriga a se apoiar em uma árvore.')
+                        print('Feliz pela refeição repentina, você começa a comer as deliciosas frutinhas. Já se sentindo satisfeito você se levanta, \nao fazer isso você se sente zonzo, o que lhe obriga a se apoiar em uma árvore.')
                         bt.enter()
-                        print('Imediatamente você liga ao seu mal estar repentino as pequenas frutinhas recém ingeridas. Arrependido você continua sua viagem.')
+                        print('Imediatamente você liga ao seu mal estar repentino as pequenas frutinhas recém ingeridas. Arrependido você continua sua \nviagem.')
                         jogador['hp'] -=5 #jogador perde vida
                         bt.game_over(jogador) #confirmar que o jogador ainda possui hp
                     # são frutinhas normais
                     else: 
                         print('Você colha algumas frutinhas e as coloca na boca. Imediatamente você sente o sabor azedo lhe atingir.')
                         bt.enter()
-                        print('Apesar disso a fome fala mais alto, então você continua se alimentando. Depois de comer um punhado, você decidi continuar a caminhada.')
+                        print('Apesar disso a fome fala mais alto, então você continua se alimentando. Depois de comer um punhado, você decidi \ncontinuar a caminhada.')
                     #não comer as frutinhas
                 elif escolha == '2': 
-                    print('Apesar da fome, a desconfiança fala mais alto, então você decidi apenas ignorar a fome e descansar para continuar sua viagem.')
+                    print('Apesar da fome, a desconfiança fala mais alto, então você decidi apenas ignorar a fome e descansar para continuar sua \nviagem.')
                     bt.enter()
                 else:
                     print('\u001b[37;1mSentindo seu estomago roncar, depois de horas de caminhada, você decide: \n (1) comer as frutinhas \n (2) não comer')
@@ -599,7 +599,7 @@ def floresta(jogador):
                     print(f">>>{escolha}\u001b[0m\n")
 
             #encruzilhada
-            print ('Andando pela trilha você se depara com uma \u001b[35mplaca roxa\u001b[0m apontando para frente e uma \u001b[32;1mplaca verde\u001b[0m apontando para a direita.')
+            print ('Andando pela trilha você se depara com uma \u001b[35mplaca roxa\u001b[0m apontando\n para frente e uma \u001b[32;1mplaca verde\u001b[0m apontando para a direita.')
             bt.enter()
             print ('\u001b[37;1mBaseando-se nisso você decidi seguir: \n (1) em frente \n (2) virar a direita \n (3) voltar')
             dir = input('>>>')
@@ -643,7 +643,7 @@ def floresta(jogador):
 
     
         elif sala == 119:
-            print ('Mais uma vez você se vê diante de uma encruzilhada, com uma \u001b[34;1mplaca azul\u001b[0m para a direita e uma \u001b[31mplaca vermelha\u001b[0m para a esquerda.')
+            print ('Mais uma vez você se vê diante de uma encruzilhada, com uma \u001b[34;1mplaca azul\u001b[0m para \na direita e uma \u001b[31mplaca vermelha\u001b[0m para a esquerda.')
             bt.enter()
             print ('\u001b[37;1mAssim você decidi ir para: \n (1) direita \n (2) esquerda \n (3) voltar')
             dir = input('>>>')
@@ -668,7 +668,7 @@ def floresta(jogador):
 
     
         elif sala == 120: #sem saída
-            print('Ao longe é possível ver a luz do sol novamente, ansioso, você se apressa. Contudo, você repara que essa não era a saída e sim uma clareira com um lago de águas cristalinas.')
+            print('Ao longe é possível ver a luz do sol novamente, ansioso, você se apressa. Contudo, você repara que essa não era a saída \ne sim uma clareira com um lago de águas cristalinas.')
             bt.enter()
             print('\u001b[37;1mAo olhar ao redor você repara em algo que parece um acampamento improvisado. Você decide:\n (1) olhar o acampamento\n (2) voltar')
             dir = input('>>>')
@@ -677,7 +677,7 @@ def floresta(jogador):
 
             #olhar o acampamento
             if dir == '1':
-                print('Ao se aproximar você vê os resquícios de um fogueira e uma cabana mal feita. Olhando dentro você repara que há alguns frascos vazios, exceto por um preenchido por um líquido brilhante.\n\u001b[37;1m Assim você decidi:\n (1) beber o frasco\n (2) não beber')
+                print('Ao se aproximar você vê os resquícios de um fogueira e uma cabana mal feita. Olhando dentro você repara que há alguns \nfrascos vazios, exceto por um preenchido por um líquido brilhante.\n\u001b[37;1m Assim você decidi:\n (1) beber o frasco\n (2) não beber')
                 beber = input('>>>')
                 bt.delete_last_lines(1)
                 print(f">>>{beber}\u001b[0m\n")
@@ -690,11 +690,11 @@ def floresta(jogador):
                     sala = 119
                 # jogador não bebe a poção
                 elif beber == '2':
-                    print('O bom senso fala mais alto e você decidi que seria melho não arriscar. Então você decidi voltar pelo caminho que você veio.')
+                    print('O bom senso fala mais alto e você decidi que seria melho não arriscar. Então você decidi voltar pelo caminho que você \nveio.')
                     sala = 119
                 # erro
                 else:
-                    print('Ao se aproximar você vê os resquicíos de um fogueira e uma cabana mal feita. Olhando dentro você repara que há alguns frascos vazios, exceto por um preenchido por um líquido brilhante.\n\u001b[37;1mAssim você decidi:\n (1) beber o frasco\n (2) não beber')
+                    print('Ao se aproximar você vê os resquicíos de um fogueira e uma cabana mal feita. Olhando dentro você repara que há alguns \nfrascos vazios, exceto por um preenchido por um líquido brilhante.\n\u001b[37;1mAssim você decidi:\n (1) beber o frasco\n (2) não beber')
                     beber = input('>>>')   
                     bt.delete_last_lines(1)
                     print(f">>>{beber}\u001b[0m\n")
@@ -710,7 +710,7 @@ def floresta(jogador):
                 print(f">>>{dir}\u001b[0m\n")
 
   
-    print('Depois de uma longa caminhada pela floresta finalmente é possível ver a luz do dia novamente e ao longe você avista o castelo.')
+    print('Depois de uma longa caminhada pela floresta finalmente é possível ver a luz do dia novamente e ao longe você avista o \ncastelo.')
     bt.enter()
 
 
