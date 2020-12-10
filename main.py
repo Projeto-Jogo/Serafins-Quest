@@ -47,11 +47,11 @@ def atriubutos_gen():
                 mao = {"nome": "mão", "atributo": "FOR", "dano": "0-1", "min": 0, "max": 1}
  
                 # Dicionários para atributos do jogador                                                                                                                                    atributos de batalha                             atributos gerais
-                Soldado =    {"nome": "Soldado",    'hp': 150, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3, "arma": mao}  #  Soldado      defesa média, força alta,  destreza baixa, | inteligência baixa, sorte alta,  carisma média
+                Soldado =    {"nome": "Soldado",    'hp': 120, 'defesa': 5, 'força': 4, 'destreza': 3, 'inteligência': 2, 'sorte': 5, 'carisma': 3, "arma": mao}  #  Soldado      defesa média, força alta,  destreza baixa, | inteligência baixa, sorte alta,  carisma média
                                                                                                                                                                   #                                                          |
-                Mercenario = {"nome": "Mercenário", 'hp': 150, 'defesa': 6, 'força': 2, 'destreza': 4, 'inteligência': 5, 'sorte': 3, 'carisma': 2, "arma": mao}  #  Mercenário   defesa alta,  força baixa, destreza média, | inteligência alta,  sorte media, carisma baixa
+                Mercenario = {"nome": "Mercenário", 'hp': 120, 'defesa': 6, 'força': 2, 'destreza': 4, 'inteligência': 5, 'sorte': 3, 'carisma': 2, "arma": mao}  #  Mercenário   defesa alta,  força baixa, destreza média, | inteligência alta,  sorte media, carisma baixa
                                                                                                                                                                   #                                                          |
-                Ladrao =     {"nome": "Ladrão",     'hp': 150, 'defesa': 4, 'força': 3, 'destreza': 5, 'inteligência': 3, 'sorte': 2, 'carisma': 5, "arma": mao}  #  Ladrao       defesa baixa, força média, destreza alta,  | inteligência média, sorte baixa, carisma alta
+                Ladrao =     {"nome": "Ladrão",     'hp': 120, 'defesa': 4, 'força': 3, 'destreza': 5, 'inteligência': 3, 'sorte': 2, 'carisma': 5, "arma": mao}  #  Ladrao       defesa baixa, força média, destreza alta,  | inteligência média, sorte baixa, carisma alta
  
                 # Os personagens tem atributos bases diferentes, a geração é feita escolhendo um número aleatório entre o atributo base +- 1 ponto, e todos começam com a mão como arma
  
