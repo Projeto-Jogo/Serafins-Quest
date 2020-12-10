@@ -34,7 +34,7 @@ def armadilha_armario(jogador):
     n = 0 #Contador para que o jogador tenha apenas duas tentativas
     dano = 25
     print('No instante em que encosta na maçaneta, você sente algo espetar a palma de sua mão. A porta se abre e você observa o \ninterior. \n'
-          'Diversas prateleiras contendo frascos de poções. Cada poção possui a figura de um animal no rótulo e cada prateleira é \ncomposta de poções do mesmo animal.\n '
+          'Diversas prateleiras contendo frascos de poções. Cada poção possui a figura de um animal no rótulo e cada prateleira é \ncomposta de poções do mesmo animal.\n'
           'Além disso, há também uma grande gaveta trancada. Seu olhar recai sobre um bilhete caído aos seus pés e você se abaixa \npara lê-lo.\n')
     bt.enter()
     print('\nTEXTO DO BILHETE:\n"Ao maldito curioso, uma punição merecida\nUma dose de veneno e um mistério a resolver\n8 bebidas, 5 efeitos, 2 chances\n'
@@ -44,8 +44,8 @@ def armadilha_armario(jogador):
           'Aquele que pelo chão segue o afunda na terra final\nAquele que pela água segue o leva a recuar\n'
           'Aquele que cisca o fará se sentir como um igual\nAqueles que sobram não vão além do natural"\n')
     bt.enter()
-    print('Você percebe nesse momento uma mancha verde crescendo na palma de sua mão, partindo de onde sentiu espetar ao abrir o \narmário.\n '
-          'Também presta atenção nos animais nos frascos e vê a seguinte ordem, de cima para baixo: SERPENTE, GALINHA, PEIXE, GATO,\n URSO, ÁGUIA, MACACO e CORVO\n')
+    print('Você percebe nesse momento uma mancha verde crescendo na palma de sua mão, partindo de onde sentiu espetar ao abrir o \narmário.\n'
+          'Também presta atenção nos animais nos frascos e vê a seguinte ordem, de cima para baixo: SERPENTE, GALINHA, PEIXE, GATO,\nURSO, ÁGUIA, MACACO e CORVO\n')
     bt.enter()
     flag_enigma = False #Flag para resposta de qual poção beber
     flag_veneno = False #Flag para checar se escolheu a poção certa
@@ -57,16 +57,16 @@ def armadilha_armario(jogador):
 
         if pocao == '1': #Bebe a poção da Serpente - morte instantanea
             flag_enigma = True
-            print('Você bebe a poção e sente um gosto amargo dominar sua boca. Nos primeiros segundos nada acontece e a mancha para de \ncrescer em sua mão.\n '
+            print('Você bebe a poção e sente um gosto amargo dominar sua boca. Nos primeiros segundos nada acontece e a mancha para de \ncrescer em sua mão.\n'
                   'Mas repentinamente suas pernas falham e você cai no chão. Sua energia se esvai e a última coisa que você escuta é uma \nrisada aguda.\n')
             jogador['hp'] = 0
             bt.game_over(jogador)
         elif pocao == '2': #Bebe a poção da Galinha - vira uma galinha
             flag_enigma = True
-            print('Em um único gole você bebe todo o conteúdo do frasco. Uma sensação parecida com cócegas percorre seu corpo e você tem a \nsensação de que seu interior está queimando e a sala está crescendo.\n '
+            print('Em um único gole você bebe todo o conteúdo do frasco. Uma sensação parecida com cócegas percorre seu corpo e você tem a \nsensação de que seu interior está queimando e a sala está crescendo.\n'
                   'Ao tentar falar, apenas cacareja. Você vê seu reflexo em um pequeno espelho na parte interna da porta do armário. Você \nvirou uma galinha!\n')
             bt.enter()
-            print('\nDesesperado, sai pulando pela sala, pensando em como enfrentaria o guardião da relíquia nessa forma. Alguns minutos se \npassam e a sensação de que seu corpo está queimando retorna.\n '
+            print('\nDesesperado, sai pulando pela sala, pensando em como enfrentaria o guardião da relíquia nessa forma. Alguns minutos se \npassam e a sensação de que seu corpo está queimando retorna.\n'
                   'Você fecha os olhos quando todos seus ossos doem e, quando abre novamente, voltou ao normal e a mancha verde agora tem \no dobro do tamanho.\n')
             bt.enter()
             dano += 5 #Aumenta o dano em 5 pontos
@@ -138,7 +138,7 @@ def armadilha_armario(jogador):
                             bt.enter()
                         elif pocao == '4': #Não bebe nenhuma poção
                             flag_pocao = True
-                            print('Você não pode assumir riscos desnecessário, então simplesmente fecha a gaveta.\n')
+                            print('Você não pode assumir riscos desnecessário, então simplesmente ignora as poções.\n')
                         if flag_pocao == False: #Checa se o jogador digitou um comando inválido
                             print('\nComando não reconhecido, tente novamente.\n')
                     flag_espada = False #Flag para resposta de pegar a espada
@@ -251,7 +251,7 @@ def sala2(jogador):
                     #Teste de sorte para ver se a comida está estragada ou não
                     estraga = teste_atributo(jogador['sorte'], 6, 8)
                     if estraga == True: #Passa no teste - não está estragada
-                        print('\nA fome fala mais alto e você pega um pão escuro. Estava um pouco salgado e com gosto de queimado, mas até que estava bom.\n '
+                        print('\nA fome fala mais alto e você pega um pão escuro. Estava um pouco salgado e com gosto de queimado, mas até que estava bom.\n'
                               'A fome passa e você sente suas energias renovadas!\n')
                         jogador['hp'] += 5
                     elif estraga == False: #Não passa no teste - está estragada
@@ -283,7 +283,7 @@ def sala2(jogador):
 
                 if pegar == '1': #Pega a espada
                     flag_espada = True
-                    print(f'Você deixa sua arma no local e pega a espada!\n')
+                    print('Você deixa sua arma no local e pega a espada!\n')
                     #Dicionário com os atributos da espada
                     espada_longa = {'nome': 'espada longa', 'atributo': 'FOR', 'dano': '3-5', 'min': 3, 'max': 5}
                     jogador['arma'] = espada_longa #definir atributos da espada
@@ -293,7 +293,7 @@ def sala2(jogador):
                 if flag_espada == False: #Checa se o jogador digitou um comando inválido
                     print('\nComando não reconhecido, tente novamente.\n')
             bt.enter()
-            print('Em outra caixa, você encontra diferentes garrafas. Enquanto abre uma por uma, vê que a maioria é água ou café velho, \nexceto por três delas.\n '
+            print('Em outra caixa, você encontra diferentes garrafas. Enquanto abre uma por uma, vê que a maioria é água ou café velho, \nexceto por três delas.\n'
                   'Uma possui um líquido roxo, outra um líquido azul e a última um líquido laranja.')
             teste_pa = teste_atributo(jogador['inteligência'], 8, 9) #Teste se o jogador reconhece a poção azul
             if teste_pa == True: #Passa no teste
@@ -332,7 +332,7 @@ def sala2(jogador):
                 if pocao_laranja == '1': #Bebe a poção
                     flag_pl = True
                     print('A doce poção com sabor de suco de laranja te passa a sensação de estar revigorado.\n')
-                    jogador['hp'] += 25
+                    jogador['hp'] += 35
                     print(f'Sua vida: {jogador["hp"]}')
                 elif pocao_laranja == '2': #Não bebe a poção
                     flag_pl = True
@@ -363,8 +363,8 @@ def sala2(jogador):
         if flag_caixa == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
     bt.enter()
-    print('Uma saída sem porta leva a um caminho que vira à esquerda em um longo corredor com apenas uma tocha no meio do caminho \npara iluminar tudo.\n '
-            'Você segue em frente e a única opção ao final é virar à esquerda outra vez.\n')
+    print('Uma saída sem porta leva a um caminho que vira à esquerda em um longo corredor com apenas uma tocha no meio do caminho \npara iluminar tudo.\n'
+          'Você segue em frente e a única opção ao final é virar à esquerda outra vez.\n')
     bt.enter()
     print('Um estranho morto vivo estava parado e te ataca!\n')
     bt.enter()
@@ -476,8 +476,8 @@ def sala3(jogador):
         if cochilo == '1': #Dorme
             flag_cochilo = True
             print('Você deita em uma das camas e aproveita para descansar, em estado semi-alerta. Alguns minutos se passam e você se sente \ndescansado e recuperado.\n')
-            jogador['hp'] += 20
-            print(f'Você recuperou 20 ponts de hp. Sua vida: {jogador["hp"]}\n')
+            jogador['hp'] += 30
+            print(f'Você recuperou 30 pontos de hp. Sua vida: {jogador["hp"]}\n')
         elif cochilo == '2': #Não dorme
             flag_cochilo = True
             print('É arriscado demais baixar a guarda desse jeito, melhor não.\n')
@@ -518,7 +518,7 @@ def sala4(jogador):
         if flag_armario == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
     bt.enter()
-    print('No meio da parede à esquerda, uma porta com um enorme X vermelho pintado fecha a única saída existente já que, como tem \nacontecido, a porta pela qual você entrou se trancou sozinha.\n '
+    print('No meio da parede à esquerda, uma porta com um enorme X vermelho pintado fecha a única saída existente já que, como tem \nacontecido, a porta pela qual você entrou se trancou sozinha.\n'
           'Você sai por ela e, após alguns passos, se depara com uma porta aberta de uma sala escura.\n')
     bt.enter()
     sala_atual = 3 #Manda o jogador pra sala 3
@@ -531,14 +531,14 @@ def sala5(jogador):
     Saída: sala_atual
     '''
     global sala_atual
-    print('Você decide seguir pela porta da esquerda, pensando que poderia tentar o outro caminho caso necessário, porém a porta se\ntranca sozinha assim que você passa por ela. Sem outra opção, você olha a sala em que entrou.\n '
+    print('Você decide seguir pela porta da esquerda, pensando que poderia tentar o outro caminho caso necessário, porém a porta se\ntranca sozinha assim que você passa por ela. Sem outra opção, você olha a sala em que entrou.\n'
           'Não há nenhum móvel no local, apenas o que parece ser uma grande escultura. Mas quando você se aproxima ela se levanta e\nse vira para você, que percebe que na verdade a estátua era um Troll adormecido!\n')
     #Dicionário com os atributos do troll
     Troll = {'nome': 'Troll', 'hp': 70,  'defesa': 5, 'força': 2}
     bt.enter()
     bt.batalha(Troll, jogador, True)
     bt.enter()
-    print('Assim que o Troll morre, um leve tremor percorre a sala. O contorno de uma porta que não existia antes surge na parede a\nsua frente. Ela se abre e você continua sua busca pelo artefato.\n '
+    print('Assim que o Troll morre, um leve tremor percorre a sala. O contorno de uma porta que não existia antes surge na parede a\nsua frente. Ela se abre e você continua sua busca pelo artefato.\n'
           'O corredor mal iluminado vira à esquerda e depois à direita antes de chegar a uma porta feita de grossas barras de ferro\ncruzadas formando uma grade, como a prisão de algo ou alguém.\n')
     bt.enter()
     sala_atual = 8 #Manda o jogador para a sala 8
@@ -546,7 +546,7 @@ def sala5(jogador):
 
 def sala6(jogador):
     global sala_atual
-    print('Ao adentrar a sala, você finalmente o vê. Sentado em uma cadeira, com os braços apoiados na mesa, te encarando como se \nesperasse sua chegada. Contudo, o artefato não está em nenhum lugar visível.\n '
+    print('Ao adentrar a sala, você finalmente o vê. Sentado em uma cadeira, com os braços apoiados na mesa, te encarando como se \nesperasse sua chegada. Contudo, o artefato não está em nenhum lugar visível.\n'
           'Na verdade, além da cadeira e da mesa, não há mais nada no cômodo.\n')
     bt.enter()
     #Discurso do Guardião
@@ -559,17 +559,17 @@ def sala6(jogador):
     Guardiao = {'nome': 'Guardião da relíquia', 'hp': 75,  'defesa': 5, 'força': 4}
     bt.batalha(Guardiao, jogador, True)
     sala_atual = 0 #Encerra a parte das salas para seguir para o final
-    print('Após derrotar o guardião, ele se desfaz em um pequeno monte de poeira verde. Você faz uma busca pela sala, mas não \nencontra nada. Todas as portas estão trancadas e, aparentemente, não há uma saída.\n '
+    print('Após derrotar o guardião, ele se desfaz em um pequeno monte de poeira verde. Você faz uma busca pela sala, mas não \nencontra nada. Todas as portas estão trancadas e, aparentemente, não há uma saída.\n'
           'Começando a acreditar que está no lugar errado, você se senta na cadeira em que ele estava e vê um discreto botão \ncamuflado na lateral do tampo da mesa. \n'
           'Você o aperta, o teto começa a se mexer e uma nuvem de poeira cai por todo o local. Quando finalmente a poeira abaixa, \nvocê vê uma escada circular no canto da sala e resolve subir.\n')
     return sala_atual
 
 def sala7(jogador):
     global sala_atual
-    print('\nApós dar dois passos para a frente e virar à direita, você segue por um corredor não muito longo e pouco iluminado até \nchegar em outra porta. Você entra e escuta um barulho de tranca.\n '
+    print('\nApós dar dois passos para a frente e virar à direita, você segue por um corredor não muito longo e pouco iluminado até \nchegar em outra porta. Você entra e escuta um barulho de tranca.\n'
           'Surpreso, tenta abrir a porta, mas ela está trancada.\n')
     bt.enter()
-    print('Uma análise rápida e você percebe se tratar de uma cozinha. Um fogão simples e sem lenha num canto, uma pia sem torneira\ne uma geladeira sem porta fazem o local parecer abandonado há anos. \n'
+    print('Uma análise rápida e você percebe se tratar de uma cozinha. Um fogão simples e sem lenha num canto, uma pia sem torneira\ne uma geladeira sem porta fazem o local parecer abandonado há anos.\n'
           'Uma pilha de ossos no canto começa a se mexer, formando um esqueleto vivo que te ataca!\n')
     bt.enter()
     #Dicionário com os atributos do Esqueleto parte 1
@@ -590,7 +590,7 @@ def sala7(jogador):
 
 def sala8(jogador):
     global sala_atual
-    print('A única tocha no alto da parede é suficiente para você ver entender que entrou na jaula de um grande Javali. O animal \ntem certa de 2 metros de comprimento, o pelo cinza está sujo e ele parece faminto, já que a única coisa além dele é um balde com água.\n '
+    print('A única tocha no alto da parede é suficiente para você ver entender que entrou na jaula de um grande Javali. O animal \ntem certa de 2 metros de comprimento, o pelo cinza está sujo e ele parece faminto, já que a única coisa além dele é um balde com água.\n'
           'Como esperado, ele olha para você, pronto para devorar o novo jantar.\n')
     bt.enter()
     #Dicionário do Javali
@@ -617,11 +617,11 @@ def sala8(jogador):
             print('\nComando não reconhecido, tente novamente.\n')
 
     bt.enter()
-    print('Aparentemente a grade é a única saída, porém está trancada. Lembrando da porta que apareceu sozinha na sala anterior, \nvocê decide explorar as paredes em busca de algo semelhante.\n '
-          'Ao encostar na parede da direita, subtamente ela desaparece por completo. Antes que ela volte, você entra no espaço \nescuro atrás dela. Um barulho indica que a parede voltou ao seu lugar.\n '
+    print('Aparentemente a grade é a única saída, porém está trancada. Lembrando da porta que apareceu sozinha na sala anterior, \nvocê decide explorar as paredes em busca de algo semelhante.\n'
+          'Ao encostar na parede da direita, subtamente ela desaparece por completo. Antes que ela volte, você entra no espaço \nescuro atrás dela. Um barulho indica que a parede voltou ao seu lugar.\n'
           'No segundo seguinte, uma série de tochas se acende, iluminando um corredor que segue em frente por alguns passos antes \nde virar à direita.\n')
     bt.enter()
-    print('As paredes do corredor estão repletas de pinturas e inscrições que não possuem nenhum significado para você. Distraído \ncom elas, não percebe que as paredes estão se fechando até estarem quase encostando em você. \n'
+    print('As paredes do corredor estão repletas de pinturas e inscrições que não possuem nenhum significado para você. Distraído \ncom elas, não percebe que as paredes estão se fechando até estarem quase encostando em você.\n'
           'Vendo a velocidade com que elas se aproximam e a distância para sair do corredor, você percebe que não terá tempo de \ncorrer e precisará de um jeito de desarmar.\n')
     bt.enter()
 
@@ -639,7 +639,7 @@ def sala8(jogador):
             print('\nVocê apoia as costas e as mãos em uma parede e coloca os dois pés na outra. As paredes estão próximas o bastante para \nque seus joelhos se dobrem.\n'
                   'Você aplica toda sua força nas pernas, empurrando a parede.\n')
             #Teste de força. Se a força do jogador for maior que a da armadilha ele consegue parar as paredes.
-            forca = teste_atributo(jogador['força'], 8, 9)
+            forca = teste_atributo(jogador['força'], 7, 9)
             if forca == True: #Passa no teste
                 flag_armadilha = True
                 print('Elas param de se aproximar e você intensifica a força. Um estalo se faz ouvir em todo o corredor e as paredes voltam \npara suas posições iniciais.\n')
@@ -652,13 +652,13 @@ def sala8(jogador):
             flag = True
             print('Você olha os itens que tem consigo e tenta elaborar um plano para desativar o sistema da armadilha.\n')
             #Teste de inteligência. Se passar, ele consegue desativar o sistema.
-            inteligencia = teste_atributo(jogador['inteligência'], 8, 9)
+            inteligencia = teste_atributo(jogador['inteligência'], 7, 9)
             if inteligencia == True: #Passa no teste
                 flag_armadilha = True
-                print('Você observa atentamente as paredes e consegue ver através de um buraco na parede o mecanismo da armadilha. Pega então \numa pedra no chão e joga nesse buraco.\n '
+                print('Você observa atentamente as paredes e consegue ver através de um buraco na parede o mecanismo da armadilha. Pega então \numa pedra no chão e joga nesse buraco.\n'
                       'Escuta-se um barulho de algo quebrando e as paredes param de se aproximar.\n\nParabéns! Você conseguiu travar o sistema \nda armadilha!\n')
             if inteligencia == False: #Não passa no teste
-                print('Você tenta parar as paredes prendendo sua arma em uma fresta entre a parede e o chão. Até funciona por um tempo e você \ncomeça a correr para sair do corredor,\n '
+                print('Você tenta parar as paredes prendendo sua arma em uma fresta entre a parede e o chão. Até funciona por um tempo e você \ncomeça a correr para sair do corredor,\n'
                       'mas então a arma se solta e acerta seu braço esquerdo. As paredes voltam a se fechar e agora você tem menos tempo para \nencontrar uma solução.\n')
                 jogador['hp'] -= 5
                 bt.game_over(jogador)
@@ -666,7 +666,7 @@ def sala8(jogador):
             flag = True
             print('Você resolve confiar na sorte e tenta encontrar algo que pare a armadilha, aliás os moradores precisam passar de alguma \nforma.\n')
             #Teste de sorte. Se a sorte do jogador for maior que a da armadilha, ele encontra o botão para desligar o sistema.
-            sorte = teste_atributo(jogador['sorte'], 8, 9)
+            sorte = teste_atributo(jogador['sorte'], 7, 9)
             if sorte == True: #Passa no teste
                 flag_armadilha = True
                 print('Você analisa atentamente as paredes e encontra um pequeno botão vermelho. Ao pressioná-lo, escuta um click e as paredes \nparam de se aproximar.\n')
@@ -692,7 +692,7 @@ def sala8(jogador):
     return sala_atual
 
 def salao_final(jogador):
-    print('Após subir toda a escada, você chega em um grande salão no alto da torre. O cajado está lá, em cima de uma mesa ao \nlado da porta e você corre pegá-lo. Nesse momento você entende o que o guardião disse sobre o encanto dele.\n '
+    print('Após subir toda a escada, você chega em um grande salão no alto da torre. O cajado está lá, em cima de uma mesa ao \nlado da porta e você corre pegá-lo. Nesse momento você entende o que o guardião disse sobre o encanto dele.\n'
           'Subtamente, seus ferimentos se curam e você se sente mais forte do que em qualquer outro momento da vida.\n')
     bt.enter()
     #Recupera toda a vida do jogador e aumenta todos os atributos em um ponto
@@ -705,19 +705,19 @@ def salao_final(jogador):
     jogador['carisma'] += 1
     print(f'Seus atributos:\n defesa = {jogador.get("defesa")}\n força = {jogador.get("força")}\n destreza = {jogador.get("destreza")}\n inteligência = {jogador.get("inteligência")}\n sorte = {jogador.get("sorte")}\n carisma = {jogador.get("carisma")}')
     bt.enter()
-    print('Você então olha para o ambiente. O primeiro cômodo que não parecia totalmente abandonado. Além da pequena mesa, há um \nlongo sofá branco e vazio de frente para a sacada aberta, de onde se tem uma bela vista da noite na fronteira entre os \nreinos.\n '
+    print('Você então olha para o ambiente. O primeiro cômodo que não parecia totalmente abandonado. Além da pequena mesa, há um \nlongo sofá branco e vazio de frente para a sacada aberta, de onde se tem uma bela vista da noite na fronteira entre os \nreinos.\n'
           'Tapeçarias representando a criação do artefato e diferentes batalhas cobrem as paredes. Um belo lustre de cristal no \nalto do teto ilumina o ambiente.\n')
     bt.enter()
     print('Quando você se prepara para voltar, uma risada faz você olhar para o sofá. Um homem se levanta e te olha. Surpreso, você\npercebe ser o guardião que derrotou ateriormente. Ele sorri antes de começar a falar, sua voz grave ecoando no ambiente.\n')
     bt.enter()
-    print('- Você não pode ter achado que seria tão fácil. Eu observei sua jornada, jovem guerreiro. Apesar de ter matado meus \ncriados, meu animal de estimação e minha marionete, se mostrou merecedor de encontrar esse local e a relíquia.\n '
+    print('- Você não pode ter achado que seria tão fácil. Eu observei sua jornada, jovem guerreiro. Apesar de ter matado meus \ncriados, meu animal de estimação e minha marionete, se mostrou merecedor de encontrar esse local e a relíquia.\n'
           'Mas isso não é o bastante. Eu não posso deixá-lo sair daqui com isso, sem mais nem menos.\n')
     bt.enter()
     #Dicionário do Guardião real
     Guardiao_real = {"nome": "Guardião real", 'hp': 100, 'defesa': 6, 'força': 5}
     bt.batalha(Guardiao_real, jogador, True)
     bt.enter()
-    print('Após finalmente derrotá-lo, você tem a certeza que o artefato realmente te deixa mais forte. Você poderia ser o mais \nforte de todos os reinos com ele. \n'
+    print('Após finalmente derrotá-lo, você tem a certeza que o artefato realmente te deixa mais forte. Você poderia ser o mais \nforte de todos os reinos com ele.\n'
           'Voltar a ser um homem livre, obter todas as recompensas do rei deve ser bom, mas será que vale a pena? As opções passam \npor sua mente e você precisa decidir logo.\n')
     bt.enter()
     flag = False
@@ -729,12 +729,12 @@ def salao_final(jogador):
 
         if final == '1': #Final 1 - o jogador devolve o artefato para o rei
             flag = True
-            print('Você tinha uma vida antes de ser preso e gostaria muito de recuperá-la. Sem perder tempo, você sai da casa, percebendo \nque agora todas as portas estão abertas.\n '
-                  'Agora que conhece o caminho, não tem problemas para voltar para o castelo. O mesmo soldado que te guiou para fora te \nespera nos portões. Você é guiado até a presença do rei de Mitra.\n '
+            print('Você tinha uma vida antes de ser preso e gostaria muito de recuperá-la. Sem perder tempo, você sai da casa, percebendo \nque agora todas as portas estão abertas.\n'
+                  'Agora que conhece o caminho, não tem problemas para voltar para o castelo. O mesmo soldado que te guiou para fora te \nespera nos portões. Você é guiado até a presença do rei de Mitra.\n'
                   'Você recebe a liberdade e uma grande recompensa em ouro e terras. Quando a guerra finalmente estoura, seu reino possui \nvantagem por conta do artefato e vence a guerra.\n')
         elif final == '2': #Final 2 - o jogador foge com o artefato
             flag = True
-            print('Sua vida anterior não era assim tão boa e nada que o rei possa oferecer é tão bom quanto à grande quantidade de poder \nque o cajado lhe fornece. Além de tudo, não importa o resultado da guerra se você já estiver longe. \n'
+            print('Sua vida anterior não era assim tão boa e nada que o rei possa oferecer é tão bom quanto à grande quantidade de poder \nque o cajado lhe fornece. Além de tudo, não importa o resultado da guerra se você já estiver longe.\n'
                   'Com o artefato em mãos, você segue para outro reino para se aprofundar no estudo da magia de artefatos. Em menos de um ano, se\ntorna um poderoso e temido mago e ninguém ousa te desafiar ou entrar em seu caminho.\n')
         if flag == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
@@ -745,14 +745,14 @@ def final(jogador):
     Define os acontecimentos e sua ordem dentro da mansão
     Entrada: dicionário com os atributos do jogador e string com o local que ele foi
     '''
-    print('Depois de seguir alguns metros na estrada, a noite cai e você decide que é melhor esperar o sol voltar. Você sai e \nencontra uma pedra grande o bastante para que você possa deitar atrás dela e não ser visto da estrada. \n'
+    print('Depois de seguir alguns metros na estrada, a noite cai e você decide que é melhor esperar o sol voltar. Você sai e \nencontra uma pedra grande o bastante para que você possa deitar atrás dela e não ser visto da estrada.\n'
           'Ao acordar, sente suas energias renovadas e feridas curadas.\n')
     if jogador['hp'] < 120: #Checa se o jogador perdeu hp antes de chegar nessa parte e volta para o máximo
         jogador['hp'] = 120
     print(f'Seu hp: {jogador["hp"]}')
     bt.enter()
     print('Volta então retorna para a estrada e continua o caminho até finalmente avistar seu destino.\n')
-    print('Uma casa comum, de pedra cinza, sem muitos detalhes a vista. O que chama a atenção, porém, é uma grande torre do lado \ndireito, sem portas ou janelas.\n '
+    print('Uma casa comum, de pedra cinza, sem muitos detalhes a vista. O que chama a atenção, porém, é uma grande torre do lado \ndireito, sem portas ou janelas à vista.\n '
           'A porta preta da frente não é exatamente convidativa, mas mesmo assim você adentra o local.\n')
     bt.enter()
     sala1(jogador)
