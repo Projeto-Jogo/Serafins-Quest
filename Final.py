@@ -747,7 +747,8 @@ def final(jogador):
     '''
     print('Depois de seguir alguns metros na estrada, a noite cai e você decide que é melhor esperar o sol voltar. Você sai e \nencontra uma pedra grande o bastante para que você possa deitar atrás dela e não ser visto da estrada. \n'
           'Ao acordar, sente suas energias renovadas e feridas curadas.\n')
-    jogador['hp'] = 120
+    if jogador['hp'] < 120: #Checa se o jogador perdeu hp antes de chegar nessa parte e volta para o máximo
+        jogador['hp'] = 120
     print(f'Seu hp: {jogador["hp"]}')
     bt.enter()
     print('Volta então retorna para a estrada e continua o caminho até finalmente avistar seu destino.\n')
