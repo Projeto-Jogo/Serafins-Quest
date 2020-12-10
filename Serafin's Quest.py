@@ -541,7 +541,7 @@ while loop:
                     bt.delete_last_lines(4)
  
         elif escolha_1 == "4":
-            print("Voce sai em direção a sua jornada")
+            print("Você sai em direção a sua jornada")
  
         else:
             print("\nComando não reconhecido, tente novamente")
