@@ -354,13 +354,14 @@ def retornar(local, jogador, objetos_coletados):
                 elif coleta_de_objetos == "2":
                     i += 1
                     print("OK!")
-        print("\nSiga às dunas agora...")
+        print("\nAgora você pode visitar as dunas novamente...")
         bt.enter()
+        print("\nVocê faz o caminho de descida da montanha rapidamente e segue às dunas do deserto novamente...")
         bt.delete_last_lines(1)
         
         print(dunas(jogador, objetos_coletados))
         
-        print("\nAgora só resta explorar o oasis novamente...")
+        print("\nSó resta explorar o oasis novamente...")
         print("\nVocê retornou ao oásis...")
         bt.enter()
         
@@ -376,14 +377,16 @@ def retornar(local, jogador, objetos_coletados):
         bt.delete_last_lines(1)
         
         print(dunas(jogador, objetos_coletados))
-        
-        print("\nSiga ao topo da montanha agora...")
+        print("\nVocê pode seguir ao topo da montanha novamente agora...")
         bt.enter()
+        print("\nVocê faz o caminho já conhecido e chega até lá...")
         bt.delete_last_lines(1)
         
         print(topo_da_montanha(objetos_coletados))
+
+        print("\Só resta um local para retornar agora...")
+        bt.enter()
         
-        print("\nAgora só resta explorar o oasis novamente...")
         if "runa" not in objetos_coletados:
             while j < 1:
                 print("\u001b[37;1mVocê encontrou uma runa! Deseja coletá-la?\n (1) sim\n (2) não")
@@ -402,7 +405,8 @@ def retornar(local, jogador, objetos_coletados):
                 else:
                     print("\nComando não conhecido, tente novamente.")
 
-        print('\nVocê retornou ao oásis...')
+        print("\nVocê voltou ao oásis!")
+        print("\nTente desbloquear a passagem novamente...")
         bt.enter()
 
         print(oasis(jogador, objetos_coletados))
@@ -441,8 +445,7 @@ def Deserto(jogador):
             print("\nSeu destino é o topo da montanha. Ao chegar até ela, você encontra uma subida bastante íngreme.")
             bt.enter()
             print("\nApós uma longa caminhada, você finalmente chega...")
-            print(
-                '\nVocê se encontra no topo da montanha. O vento é mais ainda mais forte e, pela altura, você tem uma visão ampla de grande\nparte do deserto...')
+            print('\nVocê se encontra no topo da montanha. O vento é mais ainda mais forte e, pela altura, você tem uma visão ampla de grande\nparte do deserto...')
             bt.enter()
             bt.delete_last_lines(1)
 
@@ -496,7 +499,7 @@ def Deserto(jogador):
             print("\nVocê segue em direção ao seu destino final no deserto...")
             print("\nVocê continua caminhando pela mesma estrada...")
             bt.enter()
-            print("\nVocê entra em um estreito caminho, partindo da estrada, e segue para leste...")
+            print("\nVocê entra em um estreito caminho, partindo da estrada, e segue para o leste...")
 
             print("\nVocê encontrou uma serpente no caminho!")
             bt.batalha(Serpente, jogador)  # chamada da função "batalha" do módulo "Batalha"
@@ -505,6 +508,7 @@ def Deserto(jogador):
             print("\nVocê então segue em sua caminhada...")
             bt.enter()
             print("\nVocê vê algo na areia, a poucos metros...")
+            bt.enter()
             if "poção" not in meus_objetos_coletados:
                 while t < 1:
                     print("\n\u001b[37;1mChegando mais perto, você vê que é uma poção! Deseja coletá-la?\n (1) sim \n (2) não")
