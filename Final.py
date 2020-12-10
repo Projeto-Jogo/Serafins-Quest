@@ -692,7 +692,7 @@ def sala8(jogador):
     return sala_atual
 
 def salao_final(jogador):
-    print('Após subir toda a escada, você chega em um grande salão no alto da torre. O artefato está lá, em cima de uma mesa ao \nlado da porta e você corre pegá-lo. Nesse momento você entende o que o guardião disse sobre o encanto dele.\n '
+    print('Após subir toda a escada, você chega em um grande salão no alto da torre. O cajado está lá, em cima de uma mesa ao \nlado da porta e você corre pegá-lo. Nesse momento você entende o que o guardião disse sobre o encanto dele.\n '
           'Subtamente, seus ferimentos se curam e você se sente mais forte do que em qualquer outro momento da vida.\n')
     bt.enter()
     #Recupera toda a vida do jogador e aumenta todos os atributos em um ponto
@@ -730,12 +730,12 @@ def salao_final(jogador):
         if final == '1': #Final 1 - o jogador devolve o artefato para o rei
             flag = True
             print('Você tinha uma vida antes de ser preso e gostaria muito de recuperá-la. Sem perder tempo, você sai da casa, percebendo \nque agora todas as portas estão abertas.\n '
-                  'Agora que conhece o caminho, não tem problemas para voltar para o castelo. O mesmo soldado que te guiou para fora te \nespera nos portões. Você é guiado até a presença do rei.\n '
+                  'Agora que conhece o caminho, não tem problemas para voltar para o castelo. O mesmo soldado que te guiou para fora te \nespera nos portões. Você é guiado até a presença do rei de Mitra.\n '
                   'Você recebe a liberdade e uma grande recompensa em ouro e terras. Quando a guerra finalmente estoura, seu reino possui \nvantagem por conta do artefato e vence a guerra.\n')
         elif final == '2': #Final 2 - o jogador foge com o artefato
             flag = True
-            print('Sua vida anterior não era assim tão boa e nada que o rei possa oferecer é tão bom quanto à grande quantidade de poder \nque o artefato lhe fornece. Além de tudo, não importa o resultado da guerra se você já estiver longe. \n'
-                  'Com o artefato em mãos, você segue para outro país se aprofundar no estudo da magia de artefatos. Em menos de um ano, se\ntorna um poderoso e temido mago e ninguém ousa te desafiar ou entrar em seu caminho.\n')
+            print('Sua vida anterior não era assim tão boa e nada que o rei possa oferecer é tão bom quanto à grande quantidade de poder \nque o cajado lhe fornece. Além de tudo, não importa o resultado da guerra se você já estiver longe. \n'
+                  'Com o artefato em mãos, você segue para outro reino para se aprofundar no estudo da magia de artefatos. Em menos de um ano, se\ntorna um poderoso e temido mago e ninguém ousa te desafiar ou entrar em seu caminho.\n')
         if flag == False: #Checa se o jogador digitou um comando inválido
             print('\nComando não reconhecido, tente novamente.\n')
 
