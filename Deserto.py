@@ -325,7 +325,7 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
                                     print(f">>>{nova_arma}\u001b[0m\n")
                                     if nova_arma == "1":
                                         f += 1
-                                        arma = "chicote"
+                                        arma = chicote
                                         print(f'\nSua nova arma: {arma}')
                                     else:
                                         print("\nComando não conhecido, tente novamente.")
