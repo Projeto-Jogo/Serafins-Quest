@@ -267,6 +267,8 @@ def oasis(jogador, objetos_coletados, atributos, hp, arma):
                                     while d < 1:
                                         print("\u001b[37;1mDigite 1 para abrir o baú!")
                                         abertura_do_bau = input(">>>")
+                                        bt.delete_last_lines(1)
+                                        print(f">>>{abertura_do_bau}\u001b[0m\n")
                                         if abertura_do_bau == "1":
                                             d += 1
                                             if "chave" in objetos_coletados:  
