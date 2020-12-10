@@ -132,7 +132,7 @@ def acoes(inimigo, jogador, arma, final):
             if final == False:
                 print(" (1) forte\n (2) defesa\n fugir\n comandos\n info <comando>\n info\n")
             else:
-                print("comandos\ninfo 'comando'\ninfo\nforte\ndefesa\n")
+                print(" (1) forte\n (2) defesa\n comandos\n info <comando>\n info\n")
  
         # Mostrar a informação do comando "info 'comando'"
         elif acao == "info info <comando>":
