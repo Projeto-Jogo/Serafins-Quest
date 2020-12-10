@@ -70,7 +70,7 @@ def bebado3():
 
 def bebadoresp():
     
-    string = "O que voce falou? Tá querendo brigar? Vem resolver isso aqui seu fracote.\n(Voce se afasta do bebado para nap instigar uma briga)"
+    string = "O que voce falou? Tá querendo brigar? Vem resolver isso aqui seu fracote.\n(Voce se afasta do bebado para não instigar uma briga)"
 
     for ch in string:
         time.sleep(0.01)
