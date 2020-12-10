@@ -260,7 +260,7 @@ def bibliotecaria3():
  
 def bibliotecaria1resp():
  
-    string = "Mas é claro meu jovem rapaz, veja nesse livro aqui (a bibliotecária lhe dá um livro de viagens com anotações de outros \nviajantes mostrando que o melhor caminho é o deserto e que para ajudar na jornada existem alguns objetos no caminho mas \nque nem todos são confiáveis.\n"
+    string = "Mas é claro meu jovem rapaz, veja nesse livro aqui (a bibliotecária lhe dá um livro de viagens com anotações de outros \nviajantes mostrando que o melhor caminho é o deserto e que para ajudar na jornada existem alguns objetos no caminho, mas \nque nem todos são confiáveis.\n"
  
     for ch in string:
         time.sleep(0.01)
