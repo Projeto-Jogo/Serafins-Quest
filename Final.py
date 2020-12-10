@@ -150,10 +150,10 @@ def armadilha_armario(jogador):
 
                         if pegar == '1': #Pega a espada
                             flag_espada = True
-                            print(f'Você deixou {jogador["arma"]} e pegou a espada!\n')
+                            print(f'Você pegou a espada!\n')
                             #Dicionário com os atributos da espada
                             espada_longa = {'nome': 'espada longa', 'atributo': 'FOR', 'dano': '3-5', 'min': 3, 'max': 5}
-                            jogador['arma'] = espada_longa #definir atributos da espada
+                            jogador['arma'] = espada_longa 
                         elif pegar == '2': #Não pega a espada
                             flag_espada = True
                             print('Você deixa a espada onde ela está.\n')
@@ -169,7 +169,7 @@ def armadilha_armario(jogador):
         if n == 2: #Checa se o jogador já fez duas tentativas
             flag_enigma = True
             flag_veneno = True
-            print('Você se lembra da frase do bilhete que diz que você tem apenas duas chances. A mancha já cobre toda sua mão. Subtamente,\nvocê sente como se algo tivesse atingido seu coração com força e a mancha desaparece.\n')
+            print('Você se lembra da frase do bilhete que diz que você tem apenas duas chances. A mancha já cobre toda sua mão. Subitamente,\nvocê sente como se algo tivesse atingido seu coração com força e a mancha desaparece.\n')
             bt.enter()
             jogador['hp'] -= dano
             print(f'Você levou {dano} pontos de dano. Seu hp: {jogador["hp"]}')
