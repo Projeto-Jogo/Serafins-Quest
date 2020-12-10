@@ -1,1 +1,1 @@
-# Execute main.py para rodar o jogo
+# Execute main.py com o Python3 para rodar o jogo
