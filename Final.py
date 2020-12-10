@@ -696,7 +696,7 @@ def salao_final(jogador):
           'Subtamente, seus ferimentos se curam e você se sente mais forte do que em qualquer outro momento da vida.\n')
     bt.enter()
     #Recupera toda a vida do jogador e aumenta todos os atributos em um ponto
-    jogador['hp'] = 150
+    jogador['hp'] = 120
     jogador['defesa'] += 1
     jogador['força'] += 1
     jogador['destreza'] += 1
@@ -747,7 +747,7 @@ def final(jogador):
     '''
     print('Depois de seguir alguns metros na estrada, a noite cai e você decide que é melhor esperar o sol voltar. Você sai e \nencontra uma pedra grande o bastante para que você possa deitar atrás dela e não ser visto da estrada. \n'
           'Ao acordar, sente suas energias renovadas e feridas curadas.\n')
-    jogador['hp'] = 150
+    jogador['hp'] = 120
     print(f'Seu hp: {jogador["hp"]}')
     bt.enter()
     print('Volta então retorna para a estrada e continua o caminho até finalmente avistar seu destino.\n')
