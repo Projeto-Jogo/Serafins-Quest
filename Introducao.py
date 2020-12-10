@@ -502,7 +502,7 @@ def mendigo3():
     return
   
 def mendigoresp():
-    string = "Oh meu senhor, eu lá tenho cara de quem viaja pra fora do reino? Eu nao sei nao\n"
+    string = "Oh meu senhor, eu lá tenho cara de quem viaja pra fora do reino? Eu não sei não\n"
  
     for ch in string:
         time.sleep(0.01)
