@@ -35,8 +35,7 @@ def dunas(jogador, objetos_coletados):
                         b += 1
                         bt.delete_last_lines(1)
                         jogador["hp"] -= 10  # Se o jogador beber a poção, perde 10 HPs
-                        jogador["hp"] <= 0:  # Se após perder 10 HPs seu número de HPs for igual ou menor que zero, ele perde o jogo
-                            bt.game_over(jogador)  # Chamada da função "game_over()" do módulo "Batalha"
+                        bt.game_over(jogador)  # Chamada da função "game_over()" do módulo "Batalha"
                         return (f'\nAh, não! Esta poção é perigosa! Você perdeu 10 HPs! Seus HPs: {jogador["hp"]}')
                     elif escolha_2 == "2":  # 
                         b += 1
@@ -98,8 +97,7 @@ def dunas(jogador, objetos_coletados):
                         bt.delete_last_lines(1)
                         jogador["hp"] -= 10
                         print(f'\nAh, não! Esta poção é perigosa! Você perdeu 10 HPs! Seus HPs: {jogador["hp"]}')
-                        if jogador["hp"] <= 0:
-                            bt.game_over()
+                        bt.game_over(jogador)
                     elif escolha_2 == "2":
                         e += 1
                         print("OK!")
@@ -412,7 +410,7 @@ def Deserto(jogador):
     # Função principal que chama as demais funções (dunas(), topo_da_montanha() e oasis()), descrevendo toda a trajetória do jogador pela etapa do deserto.
 
     r = s = t = u = v = w = x = y = z = 0  # Variáveis de controle para o mecanismo de repetição (caso o jogador tenha digitado um comando inválido)
-    Serpente = {"nome": "Serpente", 'hp': 30, 'defesa': 2, 'força': 2
+    Serpente = {"nome": "Serpente", 'hp': 30, 'defesa': 2, 'força': 2}
 
 
     print("\nVOCÊ CHEGOU AO DESERTO!")
@@ -797,4 +795,4 @@ def Deserto(jogador):
                 return (
                     f'\nVocê cumpriu a missão! Está pronto(a) para continuar sua jornada. Antes de prosseguir, você decide parar e descansar por\numa noite...')
 
-    print(hp)
+    print(jogador['hp'])
