@@ -167,15 +167,16 @@ def acoes(inimigo, jogador, arma, final):
 def acao_inimigo():
     # Função para determinar a próxima ação do inimigo baseado em chance, 10% para defesa, 20% para ataque forte, 70% para ataque leve
 
-    global inimigo_acao
  
     chance = dado(1, 10)
  
     if chance == 1 or chance == 2:
         inimigo_acao = 1
+        return inimigo_acao
  
     elif chance == 3:
         inimigo_acao = 0
+        return inimigo_acao
  
 
 def passar_nivel(jogador):
@@ -326,16 +327,12 @@ defende = False
  
 forte = False
  
-inimigo_acao = ""
- 
 divisoria = '~'
  
 divisoria2 = '/'
  
 def batalha(inimigo, jogador, final = False):
     # Função para as batalha entre jogador e inimigo
-
-    global inimigo_acao
  
     global fugir
  
@@ -349,8 +346,8 @@ def batalha(inimigo, jogador, final = False):
     # O while serve para manter o ciclo dos turnos até que alguém morra
     while (inimigo['hp'] > 0 and jogador['hp'] > 0 and fugir == False) == True:
  
-        acao_inimigo()
- 
+        inimigo_acao = acao_inimigo()
+
         # Ver a ação do inimigo e preparar os atributos para o turno do jogador
         if inimigo_acao == 1:
             print(f'\nO {inimigo.get("nome")} prepara um ataque forte')
@@ -483,6 +480,3 @@ def batalha(inimigo, jogador, final = False):
  
     fugir = False
  
- 
- 
-
